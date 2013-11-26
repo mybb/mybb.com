@@ -16,7 +16,8 @@
 						<nav>
 							<ul>
 							{% assign i = 0 %}
-							{% for catpage in site.pages %}
+							{% assign sorted_pages = site.pages | sort:"name" %}
+							{% for catpage in sorted_pages %}
 								{% for pc in catpage.categories %}
 								{% if pc == "features" %}
 									<li{% if catpage.url == page.url %} class="selected"{% endif %}>{{ pc[1] }}<a href="{{ site.baseurl }}{{ catpage.url }}">{{ catpage.title }}</a></li>
@@ -40,7 +41,7 @@
 
 					<div class="tourNavigation">
 					{% assign i = 0 %}
-					{% for catpage in site.pages %}
+					{% for catpage in sorted_pages %}
 						{% for pc in catpage.categories %}
 						{% if pc == "features" %}
 							{% assign i = i | plus:1 %}
