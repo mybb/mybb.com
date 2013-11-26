@@ -1,0 +1,47 @@
+---
+layout: default
+section: download
+
+title: Translations
+description: Language packs allow you to change the language of your copy to MyBB or provide additional languages for users of your board. Language packs listed on this page are compatible with the release of MyBB indicated.
+---
+
+<aside id="sidebar">
+	<section>
+		<h1>International Support</h1>
+		<p>
+			Various third-party communities exist for international users to receive support in their language. You can find <a href="http://community.mybb.com/forum-168.html">a list of them at the Community Forums</a>.</p>
+	</section>
+	<section class="alt">
+		<h1>Translated MyBB?</h1>
+		<p>
+			If you've developed a language pack for a language not listed here, please post in our <a href="http://community.mybb.com/forum-163.html">Translation Releases forum</a>.</p>
+	</section>
+</aside>
+
+<div id="contentBlock">
+	<section class="general">
+		<h1>Translations</h1>
+		<table class="standard_table" summary="MyBB Translations">
+			<thead>
+				<tr>
+					<th style="width: 50%">
+						Language</th>
+					<th style="width: 25%;">
+						MyBB Version</th>
+					<th style="width: 25%">
+						Download</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for translation in site.data.translations %}
+				<tr>
+					<th class="row">{{ translation.language }}</th>
+					<td>{{ translation.version }}</td>
+					<td><a href="{{ translation.url }}">Download</a></td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</section>
+</div>

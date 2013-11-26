@@ -1,0 +1,71 @@
+{% include header.html %}
+
+    	<article>
+	    	<section id="mainFeature">
+	    		<div class="wrapper">
+	    			<hgroup>
+					<h1>MyBB Feature Tour</h1>
+					<h2>From administration to posting a reply, MyBB is full of useful and to-the-point features for both you and your visitors. Take a look at the tour below to explore some of its best capabilities.</h2>
+	    			</hgroup>
+				</div>
+			</section>
+			<div class="wrapper">
+				<aside id="sidebar">
+					<section>
+						<h1>Feature Tour</h1>
+						<nav>
+							<ul>
+							{% assign i = 0 %}
+							{% for catpage in site.pages %}
+								{% for pc in catpage.categories %}
+								{% if pc == "features" %}
+									<li{% if catpage.url == page.url %} class="selected"{% endif %}>{{ pc[1] }}<a href="{{ site.baseurl }}{{ catpage.url }}">{{ catpage.title }}</a></li>
+									{% assign i = i | plus:1 %}
+									{% if catpage.url == page.url %}
+									{% assign current = i %}
+									{% endif %}
+								{% endif %}
+								{% endfor %}
+							{% endfor %}
+							</ul>
+						</nav>
+					</section>
+				</aside>
+
+				<div id="contentBlock">
+					<section class="general">
+						<h1>{{ page.title }}</h1>
+						{{ content }}
+					</section>
+
+					<div class="tourNavigation">
+					{% assign i = 0 %}
+					{% for catpage in site.pages %}
+						{% for pc in catpage.categories %}
+						{% if pc == "features" %}
+							{% assign i = i | plus:1 %}
+							{% assign next = current | plus:1 %}
+							{% assign previous = current | minus:1 %}
+
+							{% if i == next %}
+							<div class="nextFeature">
+								<a href="{{ site.baseurl }}{{ catpage.url }}">{{ catpage.title }} &rarr;</a>
+							</div>
+							{% endif %}
+
+							{% if i == previous %}
+							<div class="previousFeature">
+								<a href="{{ site.baseurl }}{{ catpage.url }}">&larr; {{ catpage.title }}</a>
+							</div>
+							{% endif %}
+							
+						{% endif %}
+						{% endfor %}
+					{% endfor %}
+				</div>
+				</div>
+			</div>
+	    	</div>
+	</article>
+
+{% include footer.html %}

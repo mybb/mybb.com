@@ -1,0 +1,31 @@
+---
+layout: feature
+section: features
+categories: [features]
+
+title: DBMS Support
+---
+<h2>
+	Support for multiple database types</h2>
+<p>
+	MyBB supports the following types of database servers:</p>
+<ul>
+	<li>
+		MySQL v4 and above</li>
+	<li>
+		PostgreSQL v8 and above</li>
+	<li>
+		SQLite v3</li>
+</ul>
+<p>
+	It doesn't end there though - we'll be experimenting with support for additional database server types for future releases too.</p>
+<h2>
+	Database fall-over support</h2>
+<p>
+	With MyBB, it's possible to specify a list of database servers that MyBB should attempt to connect to. If the connection fails or an error message is received while connecting, MyBB will then move on to the next available database server in the list.</p>
+<p>
+	This is fantastic for large forums who have database replication configured and multiple master servers spread out over multiple locations.</p>
+<h2>
+	Master/slave replication support</h2>
+<p>
+	MyBB also contains built-in support for master/slave replication support. Larger forums requiring more than one database server will be able to set up automatic replication between their servers and have all write database queries fed off to a separate server than all content is fetched from.</p>

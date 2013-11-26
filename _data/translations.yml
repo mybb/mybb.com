@@ -1,0 +1,80 @@
+- language: Arabic
+  version: 1.6.0
+  version_code: 1600
+  url: http://community.mybb.com/attachment.php?aid=25726
+- language: Chinese
+  version: 1.6.0
+  version_code: 1600
+  url: http://www.mybb.com/download/96/zip
+- language: Czech
+  version: 1.6.10
+  version_code: 1610
+  url: http://community.mybb.com/attachment.php?aid=29064
+- language: English (United Kingdom)
+  version: 1.6.0
+  version_code: 1600
+  url: http://www.mybb.com/download/98/zip
+- language: French (Français)
+  version: 1.6.11
+  version_code: 1611
+  url: http://upload.mybb.fr/French_language_pack.1.6.11.zip
+- language: German - Informal (Deutsch Du)
+  version: 1.6.11
+  version_code: 1611
+  url: http://www.mybboard.de/downloads/langdu-zip/
+- language: German - Formal (Deutsch Sie)
+  version: 1.6.11
+  version_code: 1611
+  url: http://www.mybboard.de/downloads/langsie-zip/
+- language: Greek (Ελλήνικα)
+  version: 1.6.4
+  version_code: 1604
+  url: http://www.mybb.com/download/108/zip
+- language: Hungarian
+  version: 1.6.1
+  version_code: 1601
+  url: http://community.mybb.com/attachment.php?aid=20860
+- language: Persian (فارسی)
+  version: 1.6.11
+  version_code: 1611
+  url: http://community.mybb.com/attachment.php?aid=30300
+- language: Pirate
+  version: 1.6.8
+  version_code: 1608
+  url: https://github.com/TommM/Pirate-Language-Pack/zipball/master
+- language: Polish
+  version: 1.6.10
+  version_code: 1610
+  url: http://community.mybb.com/attachment.php?aid=29159
+- language: Portuguese (Portugal)
+  version: 1.6.11
+  version_code: 1611
+  url: http://community.mybb.com/attachment.php?aid=27820
+- language: Portuguese (Brazil)
+  version: 1.6.11
+  version_code: 1611
+  url: http://community.mybb.com/attachment.php?aid=30423
+- language: Romanian
+  version: 1.6.11
+  version_code: 1611
+  url: http://community.mybb.com/attachment.php?aid=30318
+- language: Russian
+  version: 1.6.10
+  version_code: 1610
+  url: http://community.mybb.com/attachment.php?aid=30267
+- language: Serbian
+  version: 1.6.11
+  version_code: 1611
+  url: http://community.mybb.com/attachment.php?aid=30301
+- language: Spanish (Español)
+  version: 1.6.11
+  version_code: 1611
+  url: http://community.mybb.com/attachment.php?aid=30427
+- language: Swedish
+  version: 1.6.11
+  version_code: 1611
+  url: http://mybboard.se/attachment.php?aid=12
+- language: Turkish
+  version: 1.6.10
+  version_code: 1610
+  url: http://community.mybb.com/attachment.php?aid=29059
