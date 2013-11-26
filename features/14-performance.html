@@ -1,0 +1,27 @@
+---
+layout: feature
+section: features
+categories: [features]
+
+title: Performance
+---
+<h2>
+	So fast, you're still going to be chasing it</h2>
+<p>
+	MyBB 1.2 was fast and efficient for what it needed to do. We made further improvements with MyBB 1.4 though to make it even faster and handle larger sized forums than what were previously possible.</p>
+<p>
+	Working closely some of the largest forums on the web has allowed us to determine the bottlenecks in MyBB 1.2 and completely eradicate them from MyBB 1.4.</p>
+<p>
+	We haven't had a chance to run the numbers yet but when we do, we’ll be sure to let you know.</p>
+<h2>
+	Built-in support for eAccelerator, memcached and X-Cache caching</h2>
+<p>
+	In a standard installation of MyBB, we already cache the most frequently accessed items (a list of forums, user groups, birthdays etc) to either the database or the file system. While this is a great speed and optimization improvement, having this information stored in memory on the server is quicker once again.</p>
+<p>
+	MyBB also has the ability to store cached information using built-in shared memory caching from PHP modules such as X-Cache and eAccelerator and also has the ability to interface with memcached servers for cache storage.</p>
+<h2>
+	Delayed thread view counter updates</h2>
+<p>
+	MyBB keeps track of whenever a user views a thread to provide the number of views it's received. For larger forums, constantly updating this in the threads table meant tables were locked by the database server and posting time &amp; modification would be affected.</p>
+<p>
+	It's now possible to have the number of views a thread receives updated in batches by the automated task scheduling system. The number of views a thread receives can now optionally be updated every X minutes instead of instantly.</p>

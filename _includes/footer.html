@@ -1,0 +1,34 @@
+		</div>
+		<footer>
+    		<div class="wrapper">
+    			<small>Copyright &copy; {{ site.time | date: '%Y' }} MyBB Group</small>
+   				<ul>
+    				<li><a href="{{ site.baseurl }}">Home</a></li>
+    				<li><a href="{{ site.baseurl }}/about">About MyBB</a></li>
+    				<li><a href="{{ site.baseurl }}/download">Download MyBB</a></li>
+    				<li><a href="http://community.mybb.com">Support Forum</a></li>
+   					<li><a href="{{ site.baseurl }}/about/license">License Agreement</a></li>
+   					<li><a href="{{ site.baseurl }}/contact">Contact MyBB Group</a></li>
+   				</ul>
+			</div>
+    	</footer>
+	</div> <!--! end of #container -->
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="{{ site.baseurl }}/assets/js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+	<script src="{{ site.baseurl }}/assets/js/jquery.anythingslider.min.js"></script>
+
+	<!-- scripts concatenated and minified via ant build script-->
+	<script defer src="{{ site.baseurl }}/assets/js/plugins.js"></script>
+	<script defer src="{{ site.baseurl }}/assets/js/script.js"></script>
+	<!-- end scripts-->
+
+
+	<!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+	<![endif]-->
+
+  
+</body>
+</html>
