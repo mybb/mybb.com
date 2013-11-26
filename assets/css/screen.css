@@ -1035,7 +1035,7 @@ section#mainFeature.features div.screenshots > .wrapper {
 }
 
 section#mainFeature.features div.screenshots .smallScreenshotRight {
-	background: #fff url("../images/tour/screenshots/home/small_screenshot_right.png");
+	background: #fff url("../images/tour/home/small_screenshot_right.png");
 	float: right;
 	width: 250px;
 	height: 215px;
@@ -1047,7 +1047,7 @@ section#mainFeature.features div.screenshots .smallScreenshotRight {
 }
 
 section#mainFeature.features div.screenshots .smallScreenshotLeft {
-	background: #fff url("../images/tour/screenshots/home/small_screenshot_left.png");
+	background: #fff url("../images/tour/home/small_screenshot_left.png");
 	float: left;
 	width: 250px;
 	height: 215px;
@@ -1059,7 +1059,7 @@ section#mainFeature.features div.screenshots .smallScreenshotLeft {
 }
 
 section#mainFeature.features div.screenshots .largeScreenshot {
-	background: #fff url("../images/tour/screenshots/home/large_screenshot.png");
+	background: #fff url("../images/tour/home/large_screenshot.png");
 	width: 480px;
 	height: 250px;
 	position: relative;
