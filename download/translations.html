@@ -34,7 +34,8 @@ description: Language packs allow you to change the language of your copy to MyB
 				</tr>
 			</thead>
 			<tbody>
-				{% for translation in site.data.translations %}
+				{% assign sorted_translations = site.data.translations | sort:"language" %}
+				{% for translation in sorted_translations %}
 				<tr>
 					<th class="row">{{ translation.language }}</th>
 					<td>{{ translation.version }}</td>

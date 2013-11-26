@@ -10,7 +10,8 @@
 		</tr>
 	</thead>
 	<tbody>
-		{% for member in include.team_data %}
+		{% assign sorted_team_data = include.team_data | sort:"name" %}
+		{% for member in sorted_team_data %}
 		<tr>
 			<th class="row">{{ member.name }}</th>
 			<td><a href="http://community.mybb.com/user-{{ member.uid }}.html">{{ member.username }}</a></td>
