@@ -137,14 +137,14 @@ div#container {
 .wrapper:after { clear: both; }
 .wrapper { *zoom: 1; }
 
-header {
+#container > header {
 	border-bottom: 4px solid #3a3a3a;
 	text-align: right;
 }
 
-header:before, header:after { content: " "; display: table; }
-header:after { clear: both; }
-header { *zoom: 1; }
+#container > header:before, #container > header:after { content: " "; display: table; }
+#container > header:after { clear: both; }
+#container > header { *zoom: 1; }
 
 /* Logo */
 header nav#logoLink a {
@@ -295,7 +295,7 @@ section#mainFeature h1 {
 	margin: 0;
 }
 
-section#mainFeature h2 {
+section#mainFeature p.description {
 	font-weight: normal;
 	font-size: 1.4em;
 	line-height: 1.4;
@@ -386,16 +386,20 @@ section.general:first-child {
 	padding-top: 0;
 }
 
-section.general h1 {
+section.general h1,
+section.general header h1 {
 	font-size: 1.3em;
 	color: #0375c0;
 }
 
-section.general h2 {
+section.general h2,
+section.general header p {
 	font-size: 1.1em;
 	/*color: #f37200;*/
 	color: #ff7500;
 	font-weight: normal;
+	padding: 0;
+	margin: 0;
 }
 
 section.general h3 {
@@ -704,18 +708,18 @@ section#mainFeature.home .panel1 .featureScreenshot {
 	float: left;
 }
 
-section#mainFeature.home h2 {
+section#mainFeature.home p.description {
 	margin: 10px 0;
 	line-height: 1.6;
 }
 
-section#mainFeature.home p {
+section#mainFeature.home p.links {
 	margin-top: 25px;
 	font-size: 1.2em;
 	color: #777;
 }
 
-section#mainFeature.home p a.download {
+section#mainFeature.home p.links a.download {
 	color: #fff;
 	background: #0070b9; /* Old browsers */
 	background: -moz-linear-gradient(top, #0070b9 0%, #005084 100%); /* FF3.6+ */
@@ -735,7 +739,7 @@ section#mainFeature.home p a.download {
 	text-decoration: none;
 }
 
-section#mainFeature.home p a.download:hover {
+section#mainFeature.home p.links a.download:hover {
 	/*background-color: #ff7701;*/
 	background: #ff7500; /* Old browsers */
 	background: -moz-linear-gradient(top, #ff7500 0%, #db6200 100%); /* FF3.6+ */
@@ -747,7 +751,7 @@ section#mainFeature.home p a.download:hover {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7500', endColorstr='#db6200',GradientType=0 ); /* IE6-9 */
 }
 
-section#mainFeature.home p a.learnMore {
+section#mainFeature.home p.links a.learnMore {
 	margin-left: 5px;
 }
 
@@ -1195,7 +1199,7 @@ div.tourNavigation div.currentFeature {
 section#mainFeature.download {
 }
 
-section#mainFeature.download h2 {
+section#mainFeature.download p.description {
 	float: left;
 	width: 650px;
 }
