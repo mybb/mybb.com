@@ -1,16 +1,15 @@
 {% include header.html %}
 
-    	<article>
-	    	<section id="mainFeature">
-	    		<div class="wrapper">
-					<h1>{{ page.title }}</h1>
-					<p class="description">{{ page.description | replace:"!SITE_BASEURL!",site.baseurl }}</p>
-				</div>
-			</section>
-			<div class="wrapper">
-				{{ content }}
+	<article>
+    	<header id="mainFeature">
+    		<div class="wrapper">
+				<h1>{{ page.title }}</h1>
+				<p class="description">{{ page.description | replace:"!SITE_BASEURL!",site.baseurl }}</p>
 			</div>
-	    	</div>
+		</header>
+		<div class="wrapper">
+			{{ content }}
+		</div>
 	</article>
 
 {% include footer.html %}
