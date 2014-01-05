@@ -6,10 +6,6 @@
   uid: 8242
   username: dvb
   website: ""
-- name: Josh Medeiros
-  uid: 24611
-  username: Jammerx2
-  website: http://joshmedeiros.net
 - name: Justin Soltesz
   uid: 1830
   username: Justin S.
@@ -18,10 +14,6 @@
   uid: 7331
   username: Audentio
   website: http://audentio.com
-- name: pavemen
-  uid: 8020
-  username: pavemen
-  website: ""
 - name: Pirata Nervo
   uid: 8582
   username: Pirata Nervo
@@ -34,3 +26,7 @@
   uid: 14621
   username: Tomm M
   website: http://xekko.co.uk
+- name: Nathan Malcolm
+  uid: 27579
+  username: Nathan Malcolm
+  website: http://mybbsecurity.net
