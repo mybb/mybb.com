@@ -1259,6 +1259,10 @@ article p.githubButtons {
 	margin-top: 2px;
 }
 
+article #sidebar p.githubButtons {
+	float: none;
+}
+
 /* */
 
 /* ==|== non-semantic helper classes ======================================== */
