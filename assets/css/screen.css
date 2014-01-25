@@ -190,7 +190,7 @@ nav#mainMenu ul li.selected a {
 	margin: 18px 0 14px 0;
 }
 
-#siteSearch label.searchContainer {
+#siteSearch .searchContainer {
 	display: block;
 	border: 1px solid #ddd;
 	-moz-border-radius: 6px;
