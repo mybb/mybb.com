@@ -9,7 +9,7 @@ permalink: version_check.json
 	"friendly_name": "MyBB {{ site.data.latest_mybb.version }}",
 	"latest_version": "{{ site.data.latest_mybb.version }}",
 	"version_code": "{{ site.data.latest_mybb.version_code }}",
-	"download_url": "http://resources.mybb.com/downloads/mybb_{{ site.data.latest_mybb.version_code }}.zip",
+	"download_url": "{{ site.data.latest_mybb.url }}",
 	"release_date": "{{ site.data.latest_mybb.release }}",
 	"download_size": "{{ site.data.latest_mybb.size }}",
 	"type": "{{ site.data.latest_mybb.type }}"
