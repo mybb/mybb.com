@@ -65,7 +65,7 @@ td { vertical-align: top; }
 
 
 /* ==|== primary styles =====================================================
-   Author: Justin Soltesz, MyBB Group - http://mybb.com
+   Author: Justin Soltesz, MyBB Group - http://www.mybb.com
    ========================================================================== */
 
 p {
@@ -397,7 +397,7 @@ section.general span.asterisk {
 	border: 0;
 	padding: 0 2px;
 }
- 
+
 section.form p {
 	margin: 0;
 	padding: 7px 10px 12px 10px;
@@ -938,7 +938,7 @@ aside#about .social div.twitter {
 	border: 0;
 	-webkit-box-shadow: #222 0 0 5px;
 	-moz-box-shadow: #222 0 0 5px;
-	box-shadow: #222 0 0 5px;	
+	box-shadow: #222 0 0 5px;
 }
 
 #mainFeature.features div.screenshots .smallScreenshotLeft {
@@ -950,7 +950,7 @@ aside#about .social div.twitter {
 	border: 0;
 	-webkit-box-shadow: #222 0 0 5px;
 	-moz-box-shadow: #222 0 0 5px;
-	box-shadow: #222 0 0 5px;	
+	box-shadow: #222 0 0 5px;
 }
 
 #mainFeature.features div.screenshots .largeScreenshot {
@@ -962,7 +962,7 @@ aside#about .social div.twitter {
 	border: 0;
 	-webkit-box-shadow: #222 0 0 5px;
 	-moz-box-shadow: #222 0 0 5px;
-	box-shadow: #222 0 0 5px;	
+	box-shadow: #222 0 0 5px;
 }
 
 .featurePages > h1 {
@@ -1291,13 +1291,13 @@ article #sidebar p.githubButtons {
 
 
 /* ==|== print styles ======================================================= */
- 
+
 @media print {
-  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } 
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; }
   a, a:visited { text-decoration: underline; }
   a[href]:after { content: " (" attr(href) ")"; }
   abbr[title]:after { content: " (" attr(title) ")"; }
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; } 
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
   pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
   thead { display: table-header-group; }
   tr, img { page-break-inside: avoid; }
