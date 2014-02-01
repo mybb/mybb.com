@@ -1,0 +1,61 @@
+---
+layout: default
+section: get-involved
+
+title: Security Hall of Fame
+description: Below is a list of people who have contributed their time to finding vulnerabilities within MyBB. We thank all researchers for being responsible in their quest to improve MyBB's security.
+meta_description: Security researchers who have responsibly disclosed software vulnerabilities.
+---
+
+<aside id="sidebar">
+	<section>
+		<h1>Get Involved</h1>
+		<nav>
+			<ul>
+				<li><a href="{{ site.baseurl }}/get-involved/development">Development</a></li>
+				<li><a href="{{ site.baseurl }}/get-involved/resources">Resources</a></li>
+				<li><a href="{{ site.baseurl }}/get-involved/support">Support</a></li>
+				<li class="selected"><a href="{{ site.baseurl }}/get-involved/security">Security Research</a></li>
+			</ul>
+		</nav>
+	</section>
+</aside>
+
+<div id="contentBlock">
+	<section class="general">
+		<header>
+			<h1>Security Researchers</h1>
+			<p></p>
+		</header>
+		<table class="standard_table" summary="Security researchers">
+			<thead>
+				<tr>
+					<th style="width: 33%">
+						Name</th>
+					<th style="width: 33%">
+						Date Reported</th>
+					<th style="width: 33%">
+						Personal Website</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% assign sorted_security_researchers = site.data.security_researchers | sort:"name" %}
+				{% for researcher in sorted_security_researchers %}
+				<tr>
+					<th class="row">{{ researcher.name }}</th>
+					<td>{{ researcher.date }}</td>
+					<td>{% if researcher.website == "" %}
+						&ndash;
+						{% else %}
+						<a href="{{ researcher.website }}" rel="nofollow" target="_blank">{{ researcher.website }}</a>
+						{% endif %}
+					</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		<br>
+		<p>If you have an understanding of web application security and wish to help track down and report security issues to us, please take a look at the <a href="{{ site.baseurl }}/get-involved/security/">Security Research</a> page to understand what we're looking for and what the conditions are.</p>
+		<p>If you're not on the list and feel you should be, please feel free to <a href="{{ site.baseurl }}/contact">contact us</a>.</p>
+	</section>
+</div>
