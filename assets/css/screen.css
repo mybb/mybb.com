@@ -1263,6 +1263,12 @@ article #sidebar p.githubButtons {
 	float: none;
 }
 
+article #sidebar div.github,
+article #sidebar div.facebook,
+article #sidebar div.twitter {
+	margin-top: 8px;
+}
+
 /* */
 
 /* ==|== non-semantic helper classes ======================================== */
