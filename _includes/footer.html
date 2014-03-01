@@ -18,6 +18,23 @@
 	<script>window.jQuery || document.write('<script src="{{ site.baseurl }}/assets/js/libs/jquery-1.6.2.min.js"><\/script>')</script>
 	<script src="{{ site.baseurl }}/assets/js/jquery.anythingslider.min.js"></script>
 
+	{% if page.path contains 'features/' %}
+	<script type="text/javascript" src="{{ site.baseurl }}/assets/js/fancyBox/jquery.fancybox.js"></script>
+	<link rel="stylesheet" href="{{ site.baseurl }}/assets/js/fancyBox/jquery.fancybox.css" />
+
+	<script>
+	    $(document).ready(function() {
+	        $('.fancybox').fancybox({
+		    helpers:  {
+		        title : {
+		            type : 'over'
+		        }
+		   }
+	        });
+	    });
+	</script>
+	{% endif %}
+
 	<!-- scripts concatenated and minified via ant build script-->
 	<script defer src="{{ site.baseurl }}/assets/js/plugins.js"></script>
 	<script defer src="{{ site.baseurl }}/assets/js/script.js"></script>
