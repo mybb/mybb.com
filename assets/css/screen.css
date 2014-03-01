@@ -1134,6 +1134,13 @@ div.tourNavigation div.currentFeature {
 	margin-top: 15px;
 }
 
+p.note {
+	background: #e6e6e6;
+	border-left: 8px solid #0185D9;
+	margin: 1.5em 10px;
+	padding: 0.5em 10px;
+}
+
 article#download aside {
 	background: #f7f3c7;
 	border: 1px solid #f9d25f;
