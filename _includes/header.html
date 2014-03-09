@@ -15,7 +15,9 @@
 	</title>
 	<meta name="viewport" content="width=device-width" />
 	<meta name="author" content="MyBB Group" />
+	{% if page.meta_description %}
 	<meta name="description" content="{{ page.meta_description }}" />
+	{% endif %}
 	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/syntax.css" />
 	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/screen.css" />
 	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/anythingslider.css" />
