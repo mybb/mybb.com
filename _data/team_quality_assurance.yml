@@ -1,16 +1,21 @@
-- name: Conor Calby
+- name: "Conor Calby"
   uid: 24127
-  username: Conor C.
+  username: "Conor C."
   website: ""
-- name: Imad Jomaa
+- name: "Imad Jomaa"
   uid: 6928
-  username: Imad Jomaa
+  username: "Imad Jomaa"
   website: ""
-- name: King Louis
-  uid: 57502
-  username: King Louis
-  website: http://jonesboard.de
-- name: Kieran Dunbar
+- name: "Jordan Mussi"
+  uid: 51459
+  username: "JordanMussi"
+  website: ""
+- name: "Kieran Dunbar"
   uid: 15525
-  username: Polarbear541
-  website: ""
+  username: "Polarbear541"
+  website: "http://opennotion.net"
+- name: "King Louis"
+  uid: 57502
+  username: "King Louis"
+  website: "http://jonesboard.de"
+  lead: true

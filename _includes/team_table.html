@@ -12,6 +12,21 @@
 	<tbody>
 		{% assign sorted_team_data = include.team_data | sort:"name" %}
 		{% for member in sorted_team_data %}
+		{% if member.lead == true %}
+		<tr>
+			<th class="row teamLead">{{ member.name }}</th>
+			<td><a href="http://community.mybb.com/user-{{ member.uid }}.html">{{ member.username }}</a></td>
+			<td>{% if member.website == "" %}
+				&ndash;
+				{% else %}
+				<a href="{{ member.website }}">{{ member.website }}</a>
+				{% endif %}
+			</td>
+		</tr>
+		{% endif %}
+		{% endfor %}
+		{% for member in sorted_team_data %}
+		{% if member.lead != true %}
 		<tr>
 			<th class="row">{{ member.name }}</th>
 			<td><a href="http://community.mybb.com/user-{{ member.uid }}.html">{{ member.username }}</a></td>
@@ -22,6 +37,7 @@
 				{% endif %}
 			</td>
 		</tr>
+		{% endif %}
 		{% endfor %}
 	</tbody>
 </table>

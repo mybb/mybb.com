@@ -1,28 +1,25 @@
-- name: Alan Shepperson
+- name: "Alan Shepperson"
   uid: 24328
-  username: Alan S.
+  username: "Alan S."
   website: ""
-- name: Dylan M.
+- name: "Dylan M."
   uid: 22890
-  username: Dylan M.
+  username: "Dylan M."
   website: ""
-- name: Jovan Jojkić
+- name: "Jovan Jojkić"
   uid: 26592
-  username: Jovan J.
-  website: http://fluidsea.com
-- name: Matt Rogowski
+  username: "Jovan J."
+  website: "http://fluidsea.com"
+- name: "Matt Rogowski"
   uid: 13556
-  username: Matt.
-  website: http://mattrogowski.co.uk
-- name: Omar Gonzalez
-  uid: 25096
-  username: Omar G.
-  website: http://omarg.me
-- name: Tindris
+  username: "Matt."
+  website: "http://mattrogowski.co.uk"
+  lead: true
+- name: "Tindris"
   uid: 57824
-  username: Tindris
-  website: http://forumgenius.com
-- name: Dennis Tsang
+  username: "Tindris"
+  website: "http://forumgenius.com"
+- name: "Dennis Tsang"
   uid: 81
-  username: Dennis Tsang
-  website: http://dennistt.net
+  username: "Dennis Tsang"
+  website: "http://dennistt.net"

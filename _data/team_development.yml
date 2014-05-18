@@ -1,28 +1,33 @@
-- name: Justin Soltesz
+- name: "Justin Soltesz"
   uid: 1830
-  username: Justin S.
-  website: http://jsoltesz.com
-- name: Mike Creuzer
+  username: "Justin S."
+  website: "http://jsoltesz.com"
+- name: "Mike Creuzer"
   uid: 7331
-  username: Audentio
-  website: http://audentio.com
-- name: Pirata Nervo
-  uid: 8582
-  username: Pirata Nervo
-  website: http://mybb-plugins.com
-- name: Stefan T.
-  uid: 2824
-  username: StefanT
-  website: http://mybboard.de
-- name: Nathan Malcolm
-  uid: 27579
-  username: Nathan Malcolm
-  website: http://mybbsecurity.net
-- name: Paul Bender
+  username: "Audentio"
+  website: "http://audentio.com"
+- name: "Omar Gonzalez"
+  uid: 25096
+  username: "Omar G."
+  website: "http://omarg.me"
+- name: "Paul Bender"
   uid: 4041
-  username: Starpaul20
-  website: http://galaxiesrealm.com
-- name: dvb
+  username: "Starpaul20"
+  website: "http://galaxiesrealm.com"
+- name: "Pirata Nervo"
+  uid: 8582
+  username: "Pirata Nervo"
+  website: "http://mybb-plugins.net"
+- name: "Stefan T."
+  uid: 2824
+  username: "StefanT"
+  website: "http://mybboard.de"
+  lead: true
+- name: "dvb"
   uid: 8242
-  username: dvb
+  username: "dvb"
   website: ""
+- name: "Wildcard"
+  uid: 55383
+  username: "Wildcard"
+  website: "http://www.rantcentralforums.com"

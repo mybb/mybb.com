@@ -1,12 +1,13 @@
-- name: Jitendra Maharaj
+- name: "Jitendra Maharaj"
   uid: 12694
-  username: Jitendra M
-  website: http://jitendra-maharaj.com
-- name: Paul Hedman
+  username: "Jitendra M"
+  website: "http://jitendra-maharaj.com"
+- name: "Paul Hedman"
   uid: 37431
-  username: Paul H.
-  website: http://paulhedman.com
-- name: Ryan Loos
+  username: "Paul H."
+  website: "http://paulhedman.com"
+- name: "Ryan Loos"
   uid: 3971
-  username: Ryan Loos
-  website: http://facebook.com/rloos
+  username: "Ryan Loos"
+  website: "http://facebook.com/rloos"
+  lead: true

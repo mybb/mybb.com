@@ -608,6 +608,10 @@ table.standard_table tr:nth-child(even) {
 	background: #f5f5f5;
 }
 
+table.standard_table th.teamLead {
+	color: #FF7500;
+}
+
 /* Footer */
 footer {
 	clear: both;

@@ -1,8 +1,9 @@
-- name: Chris Boulton
+- name: "Chris Boulton"
   uid: 1
-  username: Chris Boulton
-  website: http://chrisboulton.com
-- name: Tim Bell
+  username: "Chris Boulton"
+  website: "http://chrisboulton.com"
+  lead: true
+- name: "Tim Bell"
   uid: 8198
-  username: Tim B.
+  username: "Tim B."
   website: ""
