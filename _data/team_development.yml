@@ -23,10 +23,6 @@
   username: "StefanT"
   website: "http://mybboard.de"
   lead: true
-- name: "dvb"
-  uid: 8242
-  username: "dvb"
-  website: ""
 - name: "Mark Vincent"
   uid: 55383
   username: "Wildcard"
