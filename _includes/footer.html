@@ -19,8 +19,7 @@
 	<script src="{{ site.baseurl }}/assets/js/jquery.anythingslider.min.js"></script>
 
 	{% if page.path contains 'features/' %}
-	<script type="text/javascript" src="{{ site.baseurl }}/assets/js/fancyBox/jquery.fancybox.js"></script>
-	<link rel="stylesheet" href="{{ site.baseurl }}/assets/js/fancyBox/jquery.fancybox.css" />
+	<script type="text/javascript" src="{{ site.baseurl }}/assets/js/fancyBox/jquery.fancybox.min.js"></script>
 
 	<script>
 	    $(document).ready(function() {
@@ -35,9 +34,29 @@
 	</script>
 	{% endif %}
 
+
+	<script defer src="{{ site.baseurl }}/assets/js/libs/modernizr-2.0.6.min.js"></script>
+
+	<script defer type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-11443733-2']);
+	  _gaq.push(['_setDomainName', 'none']);
+	  _gaq.push(['_setAllowLinker', true]);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	  	if (location.hostname == 'www.mybb.com')
+	  	{
+		  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  	}
+	  })();
+	</script>
+
 	<!-- scripts concatenated and minified via ant build script-->
 	<script defer src="{{ site.baseurl }}/assets/js/plugins.js"></script>
-	<script defer src="{{ site.baseurl }}/assets/js/script.js"></script>
+	<script defer src="{{ site.baseurl }}/assets/js/script.min.js"></script>
 	<!-- end scripts-->
 
 
