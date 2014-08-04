@@ -5,7 +5,7 @@
 - name: "Frances Leese"
   uid: 23276
   username: "Leefish"
-  website: "http://www.leefish.nl/mybb/"
+  website: "http://leefish.nl/mybb"
 - name: "Jovan Jojkić"
   uid: 26592
   username: "Jovan J."
@@ -19,3 +19,7 @@
   uid: 57824
   username: "Tindris"
   website: "http://britishswede.com"
+- name: "Destroy666"
+  uid: 58253
+  username: "Destroy666"
+  website: ""
