@@ -114,7 +114,7 @@ div#container {
 }
 
 #main {
-	background: #fafafa;
+	background: #fafafa url(../images/p4a.png);
 }
 
 #main > .wrapper,
