@@ -1,6 +1,6 @@
-version: "1.6.13"
-version_code: 1613
-release: "April 26, 2014"
+version: "1.6.15"
+version_code: 1615
+release: "August 4, 2014"
 size: "2.00 MB"
 type: "security and maintenance"
-url: "http://resources.mybb.com/downloads/mybb_1613.zip"
+url: "http://resources.mybb.com/downloads/mybb_1615.zip"
