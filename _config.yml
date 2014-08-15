@@ -3,4 +3,4 @@ markdown: redcarpet
 pygments: true
 category-list: [features]
 permalink: pretty
-baseurl: //mybb.github.io/mybb.com
+baseurl: //www.mybb.com
