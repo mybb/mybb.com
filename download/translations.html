@@ -39,11 +39,16 @@ meta_description: Third-party language packs for the latest version of MyBB.
 				{% for translation in sorted_translations %}
 				<tr>
 					<th class="row">{{ translation.language }}</th>
-					<td>{{ translation.version }}</td>
+					{% if translation.version == site.data.latest_mybb.version %}
+						<td><span style="font-weight: bold;">{{ translation.version }}</span></td>
+					{% else %}
+						<td>{{ translation.version }}</td>
+					{% endif %}
 					<td><a href="{{ translation.url }}">Download</a></td>
 				</tr>
 				{% endfor %}
 			</tbody>
 		</table>
+		<span style="font-weight: bold;">Bold</span> MyBB version indicates that the language is suitable for the current version of MyBB ({{ site.data.latest_mybb.version }}).
 	</section>
 </div>
