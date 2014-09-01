@@ -1,17 +1,17 @@
 		</div>
 		<footer>
-    		<div class="wrapper">
-    			<small>Copyright &copy; {{ site.time | date: '%Y' }} MyBB Group</small>
-   				<ul>
-    				<li><a href="{{ site.baseurl }}">Home</a></li>
-    				<li><a href="{{ site.baseurl }}/about/">About MyBB</a></li>
-    				<li><a href="{{ site.baseurl }}/download/">Download MyBB</a></li>
-    				<li><a href="{{ site.baseurl }}/support/">Support</a></li>
-   					<li><a href="{{ site.baseurl }}/about/license/">License Agreement</a></li>
-   					<li><a href="{{ site.baseurl }}/contact/">Contact MyBB Group</a></li>
-   				</ul>
+			<div class="wrapper">
+				<small>Copyright &copy; {{ site.time | date: '%Y' }} MyBB Group</small>
+				<ul>
+					<li><a href="{{ site.baseurl }}">Home</a></li>
+					<li><a href="{{ site.baseurl }}/about/">About MyBB</a></li>
+					<li><a href="{{ site.baseurl }}/download/">Download MyBB</a></li>
+					<li><a href="{{ site.baseurl }}/support/">Support</a></li>
+					<li><a href="{{ site.baseurl }}/about/license/">License Agreement</a></li>
+					<li><a href="{{ site.baseurl }}/contact/">Contact MyBB Group</a></li>
+				</ul>
 			</div>
-    	</footer>
+		</footer>
 	</div> <!--! end of #container -->
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
@@ -22,15 +22,15 @@
 	<script type="text/javascript" src="{{ site.baseurl }}/assets/js/fancyBox/jquery.fancybox.min.js"></script>
 
 	<script>
-	    $(document).ready(function() {
-	        $('.fancybox').fancybox({
-		    helpers:  {
-		        title : {
-		            type : 'over'
-		        }
+		$(document).ready(function() {
+			$('.fancybox').fancybox({
+			helpers:  {
+				title : {
+					type : 'over'
+				}
 		   }
-	        });
-	    });
+			});
+		});
 	</script>
 	{% endif %}
 
@@ -38,20 +38,19 @@
 	<script defer src="{{ site.baseurl }}/assets/js/libs/modernizr-2.0.6.min.js"></script>
 
 	<script defer type="text/javascript">
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-11443733-2']);
-	  _gaq.push(['_setDomainName', 'none']);
-	  _gaq.push(['_setAllowLinker', true]);
-	  _gaq.push(['_trackPageview']);
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-11443733-2']);
+		_gaq.push(['_setDomainName', 'none']);
+		_gaq.push(['_setAllowLinker', true]);
+		_gaq.push(['_trackPageview']);
 
-	  (function() {
-	  	if (location.hostname == 'www.mybb.com')
-	  	{
-		  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  	}
-	  })();
+		(function() {
+			if (location.hostname == 'www.mybb.com') {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			}
+		})();
 	</script>
 
 	<!-- scripts concatenated and minified via ant build script-->
@@ -61,8 +60,12 @@
 
 
 	<!--[if lt IE 7 ]>
-    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+	<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+	<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
 	<![endif]-->
+
+	<!-- InstantClick -->
+	<script src="{{ site.baseurl }}/assets/js/instantclick.min.js" data-no-instant></script>
+	<script data-no-instant>InstantClick.init();</script>
 </body>
 </html>

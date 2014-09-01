@@ -12,7 +12,7 @@ meta_description: Download the latest version of MyBB, a free and open source PH
 			<h1>Download MyBB to get your community rolling.</h1>
 			<p class="description">The latest MyBB release is <strong>MyBB {{ site.data.latest_mybb.version }}</strong>. It was released {{ site.data.latest_mybb.release }}, and is a {{site.data.latest_mybb.type }} release. Once you have downloaded MyBB, we have a <a href="http://docs.mybb.com/1.8/install/">complete installation guide</a> to help you through the setup process.</p>
 			<div class="downloadBit">
-				<a href="{{ site.data.latest_mybb.url }}" class="download">
+				<a href="{{ site.data.latest_mybb.url }}" class="download" data-no-instant>
 					<span>Download MyBB {{ site.data.latest_mybb.version }}</span>
 				</a>
 				<span class="details">.zip &ndash; {{ site.data.latest_mybb.size }}</span>
@@ -35,7 +35,7 @@ meta_description: Download the latest version of MyBB, a free and open source PH
 			<aside id="previousSeries">
 				<h1>{{ site.data.previous_mybb.series_header }}</h1>
 				<div class="downloadBit">
-					<a href="{{ site.data.previous_mybb.url }}" class="download"><span>Download MyBB {{ site.data.previous_mybb.version }}</span></a>
+					<a href="{{ site.data.previous_mybb.url }}" class="download" data-no-instant><span>Download MyBB {{ site.data.previous_mybb.version }}</span></a>
 					<span class="details">.zip &ndash; {{ site.data.previous_mybb.size }}</span>
 				</div>
 			</aside>
