@@ -1,4 +1,0 @@
----
-layout: redirect
----
-{{ site.baseurl }}/features/plugin-system/
