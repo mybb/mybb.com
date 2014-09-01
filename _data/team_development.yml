@@ -1,23 +1,31 @@
-- name: "Justin Soltesz"
-  uid: 1830
-  username: "Justin S."
-  website: "http://jsoltesz.com"
 - name: "Mike Creuzer"
   uid: 7331
   username: "Audentio"
   website: "http://audentio.com"
+- name: "Euan T"
+  uid: 21114
+  username: "Euan T"
+  website: "http://mybbstuff.com"
+- name: "Jovan Jojkić"
+  uid: 26592
+  username: "Jovan J."
+  website: "http://fluidsea.com"
+- name: "Justin Soltesz"
+  uid: 1830
+  username: "Justin S."
+  website: "http://jsoltesz.com"
 - name: "Omar Gonzalez"
   uid: 25096
   username: "Omar G."
   website: "http://omarg.me"
-- name: "Paul Bender"
-  uid: 4041
-  username: "Starpaul20"
-  website: "http://galaxiesrealm.com"
 - name: "Diogo Parrinha"
   uid: 8582
   username: "Pirata Nervo"
   website: "http://mybb-plugins.com"
+- name: "Paul Bender"
+  uid: 4041
+  username: "Starpaul20"
+  website: "http://galaxiesrealm.com"
 - name: "Stefan T."
   uid: 2824
   username: "StefanT"
@@ -27,7 +35,3 @@
   uid: 55383
   username: "Wildcard"
   website: "http://rantcentralforums.com"
-- name: "Euan T"
-  uid: 21114
-  username: "Euan T"
-  website: "http://mybbstuff.com"

@@ -2,6 +2,11 @@
   uid: 6928
   username: "Imad Jomaa"
   website: ""
+- name: "Jones"
+  uid: 57502
+  username: "Jones H"
+  website: "http://jonesboard.de"
+  lead: true
 - name: "Jordan Mussi"
   uid: 51459
   username: "JordanMussi"
@@ -10,8 +15,3 @@
   uid: 15525
   username: "Polarbear541"
   website: "http://opennotion.net"
-- name: "Jones"
-  uid: 57502
-  username: "Jones H"
-  website: "http://jonesboard.de"
-  lead: true

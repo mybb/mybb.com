@@ -40,6 +40,13 @@ meta_description: Take a closer look at the people who make MyBB possible.
 	</section>
 	<section class="general">
 		<header>
+			<h1>Support Team</h1>
+			<p>Always on hand to help MyBB's users</p>
+		</header>
+		{% include team_table.html team_name="Support Team" team_data=site.data.team_support %}
+	</section>
+	<section class="general">
+		<header>
 			<h1>Development Team</h1>
 			<p>Pushing the limits of modern forum software</p>
 		</header>
@@ -47,10 +54,10 @@ meta_description: Take a closer look at the people who make MyBB possible.
 	</section>
 	<section class="general">
 		<header>
-			<h1>Support Team</h1>
-			<p>Always on hand to help MyBB's users</p>
+			<h1>Resources Team</h1>
+			<p>Manage the many resources available to our users</p>
 		</header>
-		{% include team_table.html team_name="Support Team" team_data=site.data.team_support %}
+		{% include team_table.html team_name="Resources Team" team_data=site.data.team_resources %}
 	</section>
 	<section class="general">
 		<header>
@@ -65,12 +72,5 @@ meta_description: Take a closer look at the people who make MyBB possible.
 			<p>Dedicated to spreading, promoting, and managing MyBB's community</p>
 		</header>
 		{% include team_table.html team_name="Community Team" team_data=site.data.team_community %}
-	</section>
-	<section class="general">
-		<header>
-			<h1>Resources Team</h1>
-			<p>Manage the many resources available to our users</p>
-		</header>
-		{% include team_table.html team_name="Resources Team" team_data=site.data.team_resources %}
 	</section>
 </div>
