@@ -1,0 +1,8 @@
+show: false
+series_header: "Download the latest release from the 1.6 series"
+version: "1.6.15"
+version_code: 1615
+release: "August 4, 2014"
+size: "2.00 MB"
+type: "security and maintenance"
+url: "http://resources.mybb.com/downloads/mybb_1615.zip"

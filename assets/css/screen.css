@@ -1130,7 +1130,44 @@ div.tourNavigation div.currentFeature {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7500', endColorstr='#db6200',GradientType=0 ); /* IE6-9 */
 }
 
-#mainFeature.download div.downloadBit span.details {
+aside#previousSeries div.downloadBit {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: 300px;
+	margin-top: 20px;
+}
+
+aside#previousSeries div.downloadBit a.download {
+	color: #fff;
+	background: #0070b9; /* Old browsers */
+	background: -moz-linear-gradient(top, #0070b9 0%, #005084 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0070b9), color-stop(100%,#005084)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #0070b9 0%,#005084 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #0070b9 0%,#005084 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #0070b9 0%,#005084 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #0070b9 0%,#005084 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0070b9', endColorstr='#005084',GradientType=0 ); /* IE6-9 */
+	border: 1px solid #333;
+	padding: 12px 20px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	text-decoration: none;
+}
+
+aside#previousSeries div.downloadBit a.download:hover {
+	background: #ff7500; /* Old browsers */
+	background: -moz-linear-gradient(top, #ff7500 0%, #db6200 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff7500), color-stop(100%,#db6200)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ff7500 0%,#db6200 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ff7500 0%,#db6200 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ff7500 0%,#db6200 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #ff7500 0%,#db6200 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7500', endColorstr='#db6200',GradientType=0 ); /* IE6-9 */
+}
+
+span.details {
 	display: block;
 	color: #777;
 	font-size: 0.9em;
@@ -1255,14 +1292,6 @@ article #sidebar section.downloadBit.mergeSystem a.download:hover {
 	background: linear-gradient(to bottom, #ff7500 0%,#db6200 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7500', endColorstr='#db6200',GradientType=0 ); /* IE6-9 */
 	border-color: #c65e02;
-}
-
-article #sidebar section.downloadBit.mergeSystem span.details {
-	display: block;
-	color: #777;
-	font-size: 0.9em;
-	text-align: center;
-	margin-top: 15px;
 }
 
 article p.githubButtons {
