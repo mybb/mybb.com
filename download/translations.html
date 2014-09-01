@@ -28,10 +28,12 @@ meta_description: Third-party language packs for the latest version of MyBB.
 				<tr>
 					<th style="width: 50%">
 						Language</th>
-					<th style="width: 25%;">
+					<th style="width: 10%;">
 						MyBB Version</th>
-					<th style="width: 25%">
+					<th style="width: 10%">
 						Download</th>
+					<th style="width: 30%">
+						Translator</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -41,6 +43,7 @@ meta_description: Third-party language packs for the latest version of MyBB.
 					<th class="row">{{ translation.language }}</th>
 					<td>{{ translation.version }}</td>
 					<td><a href="{{ translation.url }}">Download</a></td>
+					<td><a href="{{ translation.translatorurl }}">{{ translation.translator }}</a></td>
 				</tr>
 				{% endfor %}
 			</tbody>
