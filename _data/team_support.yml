@@ -1,3 +1,7 @@
+- name: "Destroy666"
+  uid: 58253
+  username: "Destroy666"
+  website: ""
 - name: "Mark Janssen"
   uid: 24419
   username: "dragonexpert"
@@ -15,7 +19,3 @@
   uid: 57824
   username: "Tindris"
   website: "http://britishswede.com"
-- name: "Destroy666"
-  uid: 58253
-  username: "Destroy666"
-  website: ""
