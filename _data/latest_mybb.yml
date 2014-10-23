@@ -1,6 +1,6 @@
-version: "1.8.0"
-version_code: 1800
-release: "September 1, 2014"
-size: "2.19 MB"
+version: "1.8.1"
+version_code: 1801
+release: "October 23, 2014"
+size: "2.20 MB"
 type: "feature"
-url: "http://resources.mybb.com/downloads/mybb_1800.zip"
+url: "http://resources.mybb.com/downloads/mybb_1801.zip"
