@@ -31,15 +31,6 @@ meta_description: Download the latest version of MyBB, a free and open source PH
 				<p>
 					MyBB offers a <a href="http://docs.mybb.com/1.8/install/" title="Installing MyBB">complete installation guide</a> to guide you through the setup process. If you need more help, the <a href="http://community.mybb.com/forum-127.html">support forums</a> are always open for your questions, monitored by our dedicated support team.</p>
 			</aside>
-			{% if site.data.previous_mybb.show == true %}
-			<aside id="previousSeries">
-				<h1>{{ site.data.previous_mybb.series_header }}</h1>
-				<div class="downloadBit">
-					<a href="{{ site.data.previous_mybb.url }}" class="download" data-no-instant><span>Download MyBB {{ site.data.previous_mybb.version }}</span></a>
-					<span class="details">.zip &ndash; {{ site.data.previous_mybb.size }}</span>
-				</div>
-			</aside>
-			{% endif %}
 		</div>
 		<div class="more clearFix">
 			<section id="mergeSystem">
@@ -60,5 +51,15 @@ meta_description: Download the latest version of MyBB, a free and open source PH
 				<p><a href="http://community.mybb.com/mods.php">Visit MyBB Mods &rarr;</a></p>
 			</section>
 		</div>
+		{% if site.data.previous_mybb.show == true %}
+		<aside id="previousSeries" class="clearFix">
+			<h1>{{ site.data.previous_mybb.series_header }}</h1>
+			<div class="downloadBit">
+				<a href="{{ site.data.previous_mybb.url }}" class="download" data-no-instant><span>Download MyBB {{ site.data.previous_mybb.version }}</span></a>
+				<span class="details">.zip &ndash; {{ site.data.previous_mybb.size }}</span>
+			</div>
+			<p class="describe">MyBB {{ site.data.latest_mybb.version }} is the latest, most up-to-date version of MyBB. If you would you like to download the last release of the previous MyBB release series, you can download MyBB {{ site.data.previous_mybb.version }} here.</p>
+		</aside>
+		{% endif %}
 	</div>
 </article>

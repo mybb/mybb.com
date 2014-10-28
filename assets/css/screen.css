@@ -1130,12 +1130,21 @@ div.tourNavigation div.currentFeature {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7500', endColorstr='#db6200',GradientType=0 ); /* IE6-9 */
 }
 
+article#download aside#previousSeries {
+	width: auto;
+	background: #eee;
+	border-color: #ccc;
+	float: none;
+	margin: 30px 0 -5px 0;
+}
+
 aside#previousSeries div.downloadBit {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
-	width: 300px;
+	width: 220px;
 	margin-top: 20px;
+	float: right;
 }
 
 aside#previousSeries div.downloadBit a.download {
@@ -1165,6 +1174,7 @@ aside#previousSeries div.downloadBit a.download:hover {
 	background: -ms-linear-gradient(top, #ff7500 0%,#db6200 100%); /* IE10+ */
 	background: linear-gradient(to bottom, #ff7500 0%,#db6200 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7500', endColorstr='#db6200',GradientType=0 ); /* IE6-9 */
+	border-color: #c65e02;
 }
 
 span.details {
@@ -1198,6 +1208,11 @@ article#download aside {
 article#download aside h1 {
 	display: inline;
 	font-size: 1.15em;
+}
+
+
+article#download aside#previousSeries p.describe {
+	margin-bottom: 0;
 }
 
 article#download aside#connect,
