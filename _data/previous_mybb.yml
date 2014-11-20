@@ -1,8 +1,8 @@
 show: true
 series_header: "Download the latest release from the 1.6 series"
-version: "1.6.15"
-version_code: 1615
-release: "August 4, 2014"
-size: "2.00 MB"
-type: "security and maintenance"
-url: "http://resources.mybb.com/downloads/mybb_1615.zip"
+version: "1.6.16"
+version_code: 1616
+release: "November 20, 2014"
+size: "1.89 MB"
+type: "security"
+url: "http://resources.mybb.com/downloads/mybb_1616.zip"

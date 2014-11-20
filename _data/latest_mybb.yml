@@ -1,6 +1,6 @@
-version: "1.8.2"
-version_code: 1802
-release: "November 13, 2014"
-size: "2.20 MB"
-type: "feature"
-url: "http://resources.mybb.com/downloads/mybb_1802.zip"
+version: "1.8.3"
+version_code: 1803
+release: "November 20, 2014"
+size: "2.23 MB"
+type: "security"
+url: "http://resources.mybb.com/downloads/mybb_1803.zip"
