@@ -16,6 +16,7 @@ meta_description: Download the latest version of MyBB, a free and open source PH
 					<span>Download MyBB {{ site.data.latest_mybb.version }}</span>
 				</a>
 				<span class="details">.zip &ndash; {{ site.data.latest_mybb.size }}</span>
+				<span class="details" style="margin-top:0px;">(MDS: {{ site.data.latest_mybb.md5 }})</span>
 			</div>
 		</div>
 	</header>
@@ -57,6 +58,7 @@ meta_description: Download the latest version of MyBB, a free and open source PH
 			<div class="downloadBit">
 				<a href="{{ site.data.previous_mybb.url }}" class="download" data-no-instant><span>Download MyBB {{ site.data.previous_mybb.version }}</span></a>
 				<span class="details">.zip &ndash; {{ site.data.previous_mybb.size }}</span>
+				<span class="details">(MD5: {{ site.data.previous_mybb.md5 }})</span>
 			</div>
 			<p class="describe">MyBB {{ site.data.latest_mybb.version }} is the latest, most up-to-date version of MyBB. If you would you like to download the last release of the previous MyBB release series, you can download MyBB {{ site.data.previous_mybb.version }} here.</p>
 		</aside>

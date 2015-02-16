@@ -1142,7 +1142,7 @@ aside#previousSeries div.downloadBit {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
-	width: 220px;
+	width: 300px;
 	margin-top: 20px;
 	float: right;
 }
@@ -1158,7 +1158,7 @@ aside#previousSeries div.downloadBit a.download {
 	background: linear-gradient(to bottom, #0070b9 0%,#005084 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0070b9', endColorstr='#005084',GradientType=0 ); /* IE6-9 */
 	border: 1px solid #333;
-	padding: 12px 20px;
+	padding: 12px 60px;
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;
 	border-radius: 6px;
@@ -1183,6 +1183,14 @@ span.details {
 	font-size: 0.9em;
 	text-align: center;
 	margin-top: 15px;
+}
+
+aside#previousSeries div.downloadBit span.details:nth-child(2) {
+	margin-top: 0px;
+}
+
+#mainFeature.download div.downloadBit span.details:nth-child(2) {
+	margin-top: 0px;
 }
 
 p.note {
