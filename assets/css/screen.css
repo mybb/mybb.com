@@ -1284,6 +1284,11 @@ article #sidebar section.downloadBit.mergeSystem {
 	margin-top: 10px;
 }
 
+article #sidebar section.downloadBit.mergeSystem span.details:nth-child(2) {
+	margin-top:0px;
+	font-size:.8em;
+}
+
 article #sidebar section.downloadBit.mergeSystem a.download {
 	color: #fff;
 	background: #0070b9; /* Old browsers */
