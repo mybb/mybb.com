@@ -2938,10 +2938,10 @@ d5d83d711314eeef5f6d0e25b427e79e ./misc.php
 d82ce1fb6414ed8f89407b998df2516c ./modcp.php
 629c594c6ec8f07a94614ba9f21dee7c ./modcp.php
 576ed989113f4564e1d3dd77b99e906a ./modcp.php
-feb4a2ce9caa4e46e015250c7cc34669 ./moderation.php
-1189ce078662da1890017f15a063a6f8 ./moderation.php
-feb4a2ce9caa4e46e015250c7cc34669 ./moderation.php
-2f977628be35885c8385c9718d12de8d ./moderation.php
+c88dfb2ffa58b8b4f6e0aa0b23677c83 ./moderation.php
+fe1f8ac350117343b18bbca8bc9d5828 ./moderation.php
+c88dfb2ffa58b8b4f6e0aa0b23677c83 ./moderation.php
+dd5a22e32434ccd22d7d7444cbfcc535 ./moderation.php
 eae2c05051608f08e9387b027e01b1d3 ./newreply.php
 523768cbd6011ce635b8ed39be558029 ./newreply.php
 eae2c05051608f08e9387b027e01b1d3 ./newreply.php
