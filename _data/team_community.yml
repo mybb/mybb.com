@@ -5,6 +5,7 @@
   uid: 37431
   username: "Paul H."
   website: "http://paulhedman.com"
+  lead: true
 - name: "Tom Kent"
   uid: 22017
   username: "Tom K."
