@@ -1,0 +1,67 @@
+==================================================================
+https://keybase.io/mybb
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://www.mybb.com
+  * I am mybb (https://keybase.io/mybb) on keybase.
+  * I have a public key with fingerprint FAD7 E3EA 1523 680F 1B8C  2280 5D8D 8D20 AB35 F4A6
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "fad7e3ea1523680f1b8c22805d8d8d20ab35f4a6",
+            "host": "keybase.io",
+            "key_id": "5d8d8d20ab35f4a6",
+            "kid": "01016f6961288550894ef58388f63b8d0433fc085d4abf7e8c448cff4ec45de299290a",
+            "uid": "a856692cd627d4ca00e50af1579f5219",
+            "username": "mybb"
+        },
+        "service": {
+            "hostname": "www.mybb.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1425527785,
+    "expire_in": 157680000,
+    "prev": "b9a30983f7423c2954679122fde541a3bc93772b1890ab4f29bc9ed1b1cfeb1b",
+    "seqno": 2,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.8
+Comment: https://keybase.io/crypto
+
+yMIfAnicbVJbSBVBGF4zLx2xixFJhNRGRnWU3dmd3dmDkmVEaZp2NS1sZ3fGVvPs
+6ZyjZqZRmoFPiRV043RBLJWUSkIQs6wgiywquhEkQmXig1BoPUSzYm/NPAzz/d/3
+zXw//8PYcM4VFrr94eT11rjUsKf3U8q47ROvRqp4bJuVvKeKLyFTB7W8RcTv81ve
+IO/hqW6qRCK6CIGkIIGKGBkAIAGaiG0g6FiCVNYV3s3vtwOOgtlgPUCSLZth7FJo
+mQz9D79kqiCIgqhQRVNEgBCEAtJkQiGSEKKKhJEpyJJEDQFBU9YxVQkyZBkZlMrE
+kKFJgKYBTdCZXdmUnY6gomjAMBWgmrKhCwKBgk5FqGoUAlFziAHi9+qlhLFLKzHm
+q908Q8otgzjxnRTT1YqKimSHkWzYpUzn89tB27APsMr+YNDncYTBSt8Uk+DCaY9C
+bHlN1kImKCf+gGV7eY/ImEbQckxFGUAIVBVBN08O+Sw/KbQcBlRZd9lyniHlzBJr
+uiRoSKKqDCQDaFBWVE0EgJoEyqIuYUOTVBVgEbH4WKZAYwgxRSwalGAR806qg16b
+9wD2Tb2IWQasIq8eLPMTvvpB356ZXJiLi4yY4QwB55o1999onGmP5hq/LAiPGcxe
+kr6q6VHV43WNvUmPyhKycmvGOzfufhnbzZU8Jz1rEndueNl5OO9Oal3Xk7GIxfNH
+82+Yvo4PK0LH03veuW+u3dfWP7Q8/+nglXufj15LizqSEd7wPXLpL8gPvxkrleKv
+vAenAt2XtuaNGO1DXXH5HbWZox0xRtt6V8pA0ST3OqOFe10wrs87Nxl/M2nHrrbz
+nxKbnp317aytzvxRvCxuYPJ3wmfzbRbIrc9tf+M6fWug2d3SrBVc/lYMJtx7P/bW
+iQ1bBi80DYde5KyeRTrrF2yy3q4MDeTMIf017kVcm3J1X1rriWzZv3nhjJio+G2z
+7/55dzG66djXvp/lfwG+USVw
+=92Fx
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/mybb
+
+==================================================================
