@@ -42,7 +42,7 @@ meta_description: Security researchers who have responsibly disclosed software v
 			<tbody>
 				{% if site.data.security_researchers.none == true %}
 				<tr>
-					<td colspan="3" style="text-align: center;">There are currently no secuirty researchers. Take a look at the <a href="{{ site.baseurl }}/get-involved/security/">Security Research</a> page and see if you qualify to be listed here.</td>
+					<td colspan="3" style="text-align: center;">There are currently no security researchers. Take a look at the <a href="{{ site.baseurl }}/get-involved/security/">Security Research</a> page and see if you qualify to be listed here.</td>
 				</tr>
 				{% else %}
 				{% assign sorted_security_researchers = site.data.security_researchers | sort:"name" %}
