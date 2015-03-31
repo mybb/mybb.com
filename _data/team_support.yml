@@ -10,6 +10,7 @@
   uid: 58253
   username: "Destroy666"
   website: ""
+  lead: true
 - name: "Mark Janssen"
   uid: 24419
   username: "dragonexpert"
@@ -22,7 +23,6 @@
   uid: 13556
   username: "Matt."
   website: "http://mattrogowski.co.uk"
-  lead: true
 - name: "Annika"
   uid: 57824
   username: "Tindris"

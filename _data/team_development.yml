@@ -6,6 +6,10 @@
   uid: 21114
   username: "Euan T"
   website: "http://mybbstuff.com"
+  lead: true
+- name: "Jitendra Maharaj"
+  uid: 12694
+  username: "Jitendra M"
 - name: "Jovan Jojkić"
   uid: 26592
   username: "Jovan J."
@@ -22,12 +26,10 @@
   uid: 4041
   username: "Starpaul20"
   website: "http://galaxiesrealm.com"
-- name: "Stefan T."
-  uid: 2824
-  username: "StefanT"
-  website: "http://mybboard.de"
-  lead: true
 - name: "Tom Moore"
   uid: 14621
   username: "Tomm M"
   website: "http://twitter.com/mooseypx"
+- name: "Will P"
+  uid: 6700
+  username: "Will P"
