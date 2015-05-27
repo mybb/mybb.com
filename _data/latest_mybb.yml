@@ -1,6 +1,6 @@
-version: "1.8.4"
-version_code: 1804
-release: "February 15, 2015"
+version: "1.8.5"
+version_code: 1805
+release: "May 27, 2015"
 size: "2.10 MB"
-type: "feature, maintenance and security"
-url: "http://resources.mybb.com/downloads/mybb_1804.zip"
+type: "maintenance and security"
+url: "http://resources.mybb.com/downloads/mybb_1805.zip"
