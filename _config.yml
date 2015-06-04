@@ -4,3 +4,4 @@ pygments: true
 category-list: [features]
 permalink: pretty
 baseurl: //www.mybb.com
+safebaseurl: www.mybb.com
