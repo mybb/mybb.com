@@ -916,6 +916,11 @@ aside#about .social div.twitter {
 	margin-right: 11px;
 }
 
+aside#about .social div.youtube {
+	margin-top:-3px;
+	margin-left:8px;
+}
+
 /* Features */
 #mainFeature.features {
 	text-align: center;
