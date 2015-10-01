@@ -1,4 +1,4 @@
-show: true
+show: false
 series_header: "Download the latest release from the 1.6 series"
 version: "1.6.18"
 version_code: 1618
