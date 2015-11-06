@@ -11,10 +11,6 @@
   username: "Destroy666"
   website: ""
   lead: true
-- name: "Mark Janssen"
-  uid: 24419
-  username: "dragonexpert"
-  website: ""
 - name: "Frances Leese"
   uid: 23276
   username: "Leefish"
@@ -23,7 +19,3 @@
   uid: 13556
   username: "Matt."
   website: "http://mattrogowski.co.uk"
-- name: "Annika"
-  uid: 57824
-  username: "Tindris"
-  website: "http://britishswede.com"
