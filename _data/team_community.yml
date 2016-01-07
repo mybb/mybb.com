@@ -10,6 +10,7 @@
 - name: "Tom Kent"
   uid: 22017
   username: "Tom K."
+  website: "http://tomkent.me"
 - name: "Josh Harmon"
   uid: 43697
   username: "Josh H."
