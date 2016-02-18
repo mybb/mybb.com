@@ -1,5 +1,5 @@
 name: MyBB
-markdown: redcarpet
+markdown: kramdown
 pygments: true
 category-list: [features]
 permalink: pretty
