@@ -29,6 +29,12 @@
 		<link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/assets/images/mybb-icon.ico" sizes="16x16" />
 	<!-- end icons -->
 
+	<script>
+		if ((window.location.host == "www.mybb.com") && (window.location.protocol != "https:")) {
+			window.location.protocol = "https";
+		}
+	</script>
+
 </head>
 <body>
 	<div id="container">
