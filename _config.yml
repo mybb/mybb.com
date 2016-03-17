@@ -3,5 +3,5 @@ markdown: kramdown
 pygments: true
 category-list: [features]
 permalink: pretty
-baseurl: //www.mybb.com
-safebaseurl: www.mybb.com
+baseurl: https://www.mybb.com
+safebaseurl: https://www.mybb.com
