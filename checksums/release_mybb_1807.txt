@@ -934,10 +934,6 @@ e5164f9b36f60d16d01ea335f2f94999 ./images/collapse_collapsed.png
 d18d9e12cc9c37098d6758bb0e5ce6dd ./images/collapse_collapsed.png
 461ee335db11dbdcaa8b6881bfe74b44 ./images/collapse_collapsed.png
 bd69bee08ddf6f89c8c118f251f44d76 ./images/collapse_collapsed.png
-2a164ba1f4e9307181a42012a6a09e2a ./images/colors/Thumbs.db
-4331f1a12998db9be8eab323d57c29cb ./images/colors/Thumbs.db
-55c275e9dbd089ed0fcefd4253f72003 ./images/colors/Thumbs.db
-5e8d6f270db62e89bace59a9b0022779 ./images/colors/Thumbs.db
 700df39bf4a1cd86af105b335b74c8a2 ./images/colors/black_header.png
 cd57c5bd2641ed3900c5fb2eb41e7ef3 ./images/colors/black_header.png
 68e4ed1b2ac8d5ec947d76afc529f1da ./images/colors/black_header.png
