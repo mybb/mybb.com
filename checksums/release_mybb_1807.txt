@@ -1550,10 +1550,10 @@ cd8c58b18b67ee8b36d1c3f7149aeeba ./inc/adminfunctions_templates.php
 707725bb53ae5c87332fc72cd7c5b6ed ./inc/adminfunctions_templates.php
 cd8c58b18b67ee8b36d1c3f7149aeeba ./inc/adminfunctions_templates.php
 4334b9f269204f46a868f84715ff0b27 ./inc/adminfunctions_templates.php
-9e6978e6a244de074bc9d600f812f8f3 ./inc/cachehandlers/apc.php
-8f0fd82832c6111541c0297ab4e858df ./inc/cachehandlers/apc.php
-9e6978e6a244de074bc9d600f812f8f3 ./inc/cachehandlers/apc.php
-83299825f96b56ac49df25bc403baadf ./inc/cachehandlers/apc.php
+36b02cae269686f1a4cb141668bfdff4 ./inc/cachehandlers/apc.php
+a7ea65037f8cec52ab9191b2cecc3c3e ./inc/cachehandlers/apc.php
+36b02cae269686f1a4cb141668bfdff4 ./inc/cachehandlers/apc.php
+3c1ce0c3117f15dbc4f333c1f8348180 ./inc/cachehandlers/apc.php
 a1e40f84a50edf4156168ed25ca132f2 ./inc/cachehandlers/disk.php
 121702074312c30915928699094e0d9f ./inc/cachehandlers/disk.php
 a1e40f84a50edf4156168ed25ca132f2 ./inc/cachehandlers/disk.php
