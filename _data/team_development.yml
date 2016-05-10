@@ -1,16 +1,8 @@
-- name: "Mike Creuzer"
-  uid: 7331
-  username: "Audentio"
-  website: "http://audentio.com"
 - name: "Euan T"
   uid: 21114
   username: "Euan T"
   website: "http://mybbstuff.com"
   lead: true
-- name: "Jitendra Maharaj"
-  uid: 12694
-  username: "Jitendra M"
-  website: ""
 - name: "Justin Soltesz"
   uid: 1830
   username: "Justin S."
