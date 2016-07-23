@@ -148,9 +148,20 @@ nav#logoLink a {
 	text-align: left;
 	text-indent: -999em;
 	background: url("../images/logo.png") no-repeat;
+	background-position: top left;
 	margin: 15px 0 0 -10px;
 	display: block;
 	position: relative;
+}
+
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) {
+
+    nav#logoLink a {
+    	background-image: url("../images/logo@2x.png");
+    	background-size: 224px 64px;
+    }
 }
 
 /* Main Menu */
