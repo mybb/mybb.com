@@ -1,6 +1,6 @@
 name: MyBB
 markdown: kramdown
-pygments: true
+highlighter: rouge
 category-list: [features]
 permalink: pretty
 baseurl: https://www.mybb.com
