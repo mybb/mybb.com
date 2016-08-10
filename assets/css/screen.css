@@ -65,7 +65,7 @@ td { vertical-align: top; }
 
 
 /* ==|== primary styles =====================================================
-   Author: Justin Soltesz, MyBB Group - http://www.mybb.com
+   Author: Justin Soltesz, MyBB Group - https://www.mybb.com
    ========================================================================== */
 
 p {
@@ -154,8 +154,8 @@ nav#logoLink a {
 	position: relative;
 }
 
-@media 
-(-webkit-min-device-pixel-ratio: 2), 
+@media
+(-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
 
     nav#logoLink a {

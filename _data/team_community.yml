@@ -5,19 +5,19 @@
 - name: "Paul Hedman"
   uid: 37431
   username: "Paul H."
-  website: "http://paulhedman.com"
+  website: "https://paulhedman.com"
   lead: true
 - name: "Tom Kent"
   uid: 22017
   username: "Tom K."
-  website: "http://tomkent.me"
+  website: "https://tomkent.me"
 - name: "Josh Harmon"
   uid: 43697
   username: "Josh H."
   website: "https://joshharmon.me"
 - name: "Ben C"
   uid: 90348
-  username: "Ben C"
+  username: "Ben"
   website: "http://www.gamersix.com"
 - name: "Andrew Shemo"
   uid: 10832
