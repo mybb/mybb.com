@@ -3,8 +3,7 @@ markdown: kramdown
 highlighter: rouge
 category-list: [features]
 permalink: pretty
-baseurl: https://www.mybb.com
-safebaseurl: https://www.mybb.com
+url: https://www.mybb.com
 
 collections:
   features:

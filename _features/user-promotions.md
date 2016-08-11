@@ -12,7 +12,7 @@ redirect_from:
 
 Also available in MyBB is a user promotions system whereby a user can be promoted to a new primary user group or a new additional user group when they reach a specific combination based on the number of posts they’ve made, the reputation they’ve received or the registration date.
 
-<p class="tourScreenshot"><img alt="Creating a User Promotion" src="{{ site.baseurl }}/assets/images/tour/user-promotions/promotion.png" /></p>
+<p class="tourScreenshot"><img alt="Creating a User Promotion" src="{{ site.url }}/assets/images/tour/user-promotions/promotion.png" /></p>
 
 User promotions cover one of the most popular requests we receive, for forum administrators to give special privileges to members after they've been registered for a few months.
 
