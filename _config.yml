@@ -5,3 +5,10 @@ category-list: [features]
 permalink: pretty
 baseurl: https://www.mybb.com
 safebaseurl: https://www.mybb.com
+
+collections:
+  features:
+    output: true
+
+gems:
+  - jekyll-redirect-from
