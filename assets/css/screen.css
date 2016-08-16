@@ -1241,14 +1241,10 @@ article#download aside#connect p {
 	color: #777;
 }
 
-article#download aside#connect .facebook {
-	float: left;
-	margin: 0 0 -5px -10px;
-}
-
+article#download aside#connect .facebook,
 article#download aside#connect .twitter {
-	margin: 18px 0 0 20px;
 	float: left;
+	padding: 20px 10px;
 }
 
 article#download aside#gettingStarted p {
