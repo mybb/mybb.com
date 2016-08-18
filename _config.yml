@@ -9,5 +9,9 @@ collections:
   features:
     output: true
 
+sass:
+  sass_dir: _sass
+  style: compressed
+
 gems:
   - jekyll-redirect-from

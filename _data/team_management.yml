@@ -2,8 +2,11 @@
   uid: 1
   username: "Chris Boulton"
   website: "http://chrisboulton.com"
+  github: "chrisboulton"
+  twitter: "chrisboulton"
   lead: true
 - name: "Stefan T."
   uid: 2824
   username: "StefanT"
+  github: "Stefan-ST"
   website: "https://mybb.de"

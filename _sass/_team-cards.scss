@@ -1,0 +1,112 @@
+.team-cards {
+    padding: 10px 0 0 0;
+    @extend .clearFix;
+
+    .card {
+        width: 49%;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        float: left;
+        box-sizing: border-box;
+        padding: 20px 45px;
+        margin-bottom: 15px;
+
+        &:nth-child(odd) {
+            margin-right: 1%;
+        }
+
+        &:nth-child(even) {
+            margin-left: 1%;
+        }
+
+        .card__name {
+            text-align: center;
+            font-size: 1.4em;
+            font-weight: normal;
+            margin: 0 0 5px 0;
+            // margin: 69px 0 3px 0;
+            // transition: margin 0.3s ease;
+        }
+
+        .card__role {
+            text-align: center;
+            color: #888;
+            margin: 0 0 10px 0;
+            padding: 0 0 10px 0;
+            border-bottom: 1px solid #dadada;
+            // margin: 0 0 -57px 0;
+            // transition: margin 0.3s ease;
+
+            .fa {
+                margin-right: 5px;
+            }
+
+            &.card__role--management .fa {
+                color: #00aa00;
+            }
+
+            &.card__role--support .fa {
+                color: #ff0000;
+            }
+
+            &.card__role--development .fa {
+                color: #e34976;
+            }
+
+            &.card__role--quality-assurance .fa {
+                color: #880063;
+            }
+
+            &.card__role--community .fa {
+                color: #095c66;
+            }
+        }
+
+        .card__detail {
+            // visibility: hidden;
+            // opacity: 0;
+            margin: 0;
+            // transition: visibility 0s, opacity 0.3s ease;
+            // transition-delay: 0s;
+            color: #666;
+            font-size: 0.9em;
+
+            .fa {
+                color: #aaa;
+                margin-right: 3px;
+                font-size: 14px;
+            }
+
+            .card__detail__title {
+                @extend .visuallyHidden;
+            }
+
+            .card__detail__link {
+                color: #666;
+                
+                &:hover, &:active {
+                    color: #ff7500;
+                }
+            }
+        }
+
+        // &:hover {
+        //
+        //     .card__name {
+        //         margin: 0 0 3px 0;
+        //     }
+        //
+        //     .card__role {
+        //         margin: 0 0 10px 0;
+        //         border-bottom: 1px solid #dadada;
+        //     }
+        //
+        //     .card__detail {
+        //         visibility: visible;
+        //         opacity: 1;
+        //         height: auto;
+        //         transition-delay: 0.2s;
+        //     }
+        // }
+    }
+}

@@ -33,37 +33,14 @@ meta_description: Take a closer look at the people who make MyBB possible.
 	</section>
 	<section class="general">
 		<header>
-			<h1>Management Team</h1>
-			<p>Tasked with running all facets of the MyBB project</p>
+			<h1>The MyBB Team</h1>
 		</header>
-		{% include team_table.html team_name="Management Team" team_data=site.data.team_management %}
-	</section>
-	<section class="general">
-		<header>
-			<h1>Support Team</h1>
-			<p>Always on hand to help MyBB's users</p>
-		</header>
-		{% include team_table.html team_name="Support Team" team_data=site.data.team_support %}
-	</section>
-	<section class="general">
-		<header>
-			<h1>Development Team</h1>
-			<p>Pushing the limits of modern forum software</p>
-		</header>
-		{% include team_table.html team_name="Development Team" team_data=site.data.team_development %}
-	</section>
-	<section class="general">
-		<header>
-			<h1>Quality Assurance Team</h1>
-			<p>MyBB's intrepid group of software testers</p>
-		</header>
-		{% include team_table.html team_name="Quality Assurance Team" team_data=site.data.team_quality_assurance %}
-	</section>
-	<section class="general">
-		<header>
-			<h1>Community Team</h1>
-			<p>Dedicated to spreading, promoting, and managing MyBB's community</p>
-		</header>
-		{% include team_table.html team_name="Community Team" team_data=site.data.team_community %}
+		<div class="team-cards">
+			{% include team_cards.html team_name="Management" team_data=site.data.team_management %}
+			{% include team_cards.html team_name="Support" team_data=site.data.team_support %}
+			{% include team_cards.html team_name="Development" team_data=site.data.team_development %}
+			{% include team_cards.html team_name="Quality Assurance" team_data=site.data.team_quality_assurance %}
+			{% include team_cards.html team_name="Community" team_data=site.data.team_community %}
+		</div>
 	</section>
 </div>
