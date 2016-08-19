@@ -10,6 +10,7 @@
         box-sizing: border-box;
         padding: 20px 45px;
         margin-bottom: 15px;
+        text-align: center;
 
         &:nth-child(odd) {
             margin-right: 1%;
@@ -31,11 +32,17 @@
         .card__role {
             text-align: center;
             color: #888;
-            margin: 0 0 10px 0;
-            padding: 0 0 10px 0;
-            border-bottom: 1px solid #dadada;
+            margin: 0 0 15px 0;
+            font-size: 0.9em;
             // margin: 0 0 -57px 0;
             // transition: margin 0.3s ease;
+
+            .card__role__container {
+                padding: 2px 8px;
+                border: 1px solid #e9e9e9;
+                display: inline-block;
+                border-radius: 4px;
+            }
 
             .fa {
                 margin-right: 5px;
@@ -68,13 +75,12 @@
             margin: 0;
             // transition: visibility 0s, opacity 0.3s ease;
             // transition-delay: 0s;
-            color: #666;
             font-size: 0.9em;
+            display: inline-block;
 
             .fa {
-                color: #aaa;
                 margin-right: 3px;
-                font-size: 14px;
+                font-size: 20px;
             }
 
             .card__detail__title {
@@ -82,8 +88,8 @@
             }
 
             .card__detail__link {
-                color: #666;
-                
+                color: #888;
+
                 &:hover, &:active {
                     color: #ff7500;
                 }

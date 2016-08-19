@@ -19,54 +19,50 @@
 			</span>
 		</p>
 		<p class="card__detail card__detail--profile">
-			<i class="fa fa-fw fa-user"></i>
-			<span class="card__detail__title">Profile</span>
-			<a href="https://community.mybb.com/user-{{ member.uid }}.html" class="card__detail__link">{{ member.username }}</a>
+			<a href="https://community.mybb.com/user-{{ member.uid }}.html" class="card__detail__link" title="Profile - {{ member.username }}">
+				<i class="fa fa-fw fa-user"></i>
+				<span class="card__detail__title">Profile</span>
+			</a>
 		</p>
+		{% if member.website != "" %}
 		<p class="card__detail card__detail--website">
-			<i class="fa fa-fw fa-globe"></i>
-			<span class="card__detail__title">Website</span>
-			{% if member.website != "" %}
-			<a href="{{ member.website }}" class="card__detail__link">{{ member.website }}</a>
-			{% else %}
-			&ndash;
-			{% endif %}
+			<a href="{{ member.website }}" class="card__detail__link" title="Website - {{ member.website || remove: "https://" | remove: "http://" }}">
+				<i class="fa fa-fw fa-globe"></i>
+				<span class="card__detail__title">Website</span>
+			</a>
 		</p>
+		{% endif %}
+		{% if member.github %}
 		<p class="card__detail card__detail--github">
-			<i class="fa fa-fw fa-github"></i>
-			<span class="card__detail__title">GitHub</span>
-			{% if member.github %}
-			<a href="https://github.com/{{ member.github }}" class="card__detail__link">{{ member.github }}</a>
-			{% else %}
-			&ndash;
-			{% endif %}
+			<a href="https://github.com/{{ member.github }}" class="card__detail__link" title="GitHub - {{ member.github }}">
+				<i class="fa fa-fw fa-github"></i>
+				<span class="card__detail__title">GitHub</span>
+			</a>
 		</p>
+		{% endif %}
+		{% if member.twitter %}
 		<p class="card__detail card__detail--twitter">
-			<i class="fa fa-fw fa-twitter"></i>
-			<span class="card__detail__title">Twitter</span>
-			{% if member.twitter %}
-			<a href="https://twitter.com/{{ member.twitter }}" class="card__detail__link">{{ member.twitter }}</a>
-			{% else %}
-			&ndash;
-			{% endif %}
+			<a href="https://twitter.com/{{ member.twitter }}" class="card__detail__link" title="Twitter - @{{ member.twitter }}">
+				<i class="fa fa-fw fa-twitter"></i>
+				<span class="card__detail__title">Twitter</span>
+			</a>
 		</p>
+		{% endif %}
+		{% if member.keybase %}
 		<p class="card__detail card__detail--keybase">
-			<i class="fa fa-fw fa-user-secret"></i>
-			<span class="card__detail__title">Keybase.io</span>
-			{% if member.keybase %}
-			<a href="https://keybase.io/{{ member.keybase }}" class="card__detail__link">{{ member.keybase }}</a>
-			{% else %}
-			&ndash;
-			{% endif %}
+			<a href="https://keybase.io/{{ member.keybase }}" class="card__detail__link" title="keybase.io/{{ member.keybase }}">
+				<i class="fa fa-fw fa-user-secret"></i>
+				<span class="card__detail__title">Keybase.io</span>
+			</a>
 		</p>
+		{% endif %}
+		{% if member.pgp %}
 		<p class="card__detail card__detail--pgp">
-			<i class="fa fa-fw fa-key"></i>
-			<span class="card__detail__title">PGP</span>
-			{% if member.pgp %}
-			<span>{{ member.pgp }}</span>
-			{% else %}
-			&ndash;
-			{% endif %}
+			<a href="#" class="card__detail__link" title="PGP - {{ member.pgp }}">
+				<i class="fa fa-fw fa-key"></i>
+				<span class="card__detail__title">PGP</span>
+			</a>
 		</p>
+		{% endif %}
 	</div>
 	{% endfor %}
