@@ -1,5 +1,3 @@
-new Clipboard('.copy-text');
-
 $(function() {
 
     $('#slider').anythingSlider({

@@ -56,12 +56,12 @@
 			</a>
 		</p>
 		{% endif %}
-		{% if member.pgp %}
+		{% if member.pgp_fingerprint and member.pgp_link %}
 		<p class="card__detail card__detail--pgp">
-			<button class="card__detail__link copy-text" title="PGP Key - {{ member.pgp }}" data-clipboard-action="copy" data-clipboard-text="{{ member.pgp }}">
+			<a href="{{ member.pgp_link }}" class="card__detail__link" data-powertip="PGP Fingerprint - &lt;span class=&quot;pgp_key&quot;&gt;{{ member.pgp_fingerprint | replace: '-', '&lt;/span&gt;&lt;span class=&quot;pgp_key&quot;&gt;' }}&lt;/span&gt;">
 				<i class="fa fa-fw fa-key"></i>
-				<span class="card__detail__title">PGP Key</span>
-			</button>
+				<span class="card__detail__title">PGP</span>
+			</a>
 		</p>
 		{% endif %}
 	</div>
