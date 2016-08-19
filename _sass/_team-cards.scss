@@ -25,8 +25,6 @@
             font-size: 1.4em;
             font-weight: normal;
             margin: 0 0 5px 0;
-            // margin: 69px 0 3px 0;
-            // transition: margin 0.3s ease;
         }
 
         .card__role {
@@ -34,8 +32,6 @@
             color: #888;
             margin: 0 0 15px 0;
             font-size: 0.9em;
-            // margin: 0 0 -57px 0;
-            // transition: margin 0.3s ease;
 
             .card__role__container {
                 padding: 2px 8px;
@@ -70,11 +66,7 @@
         }
 
         .card__detail {
-            // visibility: hidden;
-            // opacity: 0;
             margin: 0;
-            // transition: visibility 0s, opacity 0.3s ease;
-            // transition-delay: 0s;
             font-size: 0.9em;
             display: inline-block;
 
@@ -89,6 +81,10 @@
 
             .card__detail__link {
                 color: #888;
+                background: none;
+                border: none;
+                margin: 0;
+                padding: 0;
 
                 &:hover, &:active {
                     color: #ff7500;
@@ -96,23 +92,8 @@
             }
         }
 
-        // &:hover {
-        //
-        //     .card__name {
-        //         margin: 0 0 3px 0;
-        //     }
-        //
-        //     .card__role {
-        //         margin: 0 0 10px 0;
-        //         border-bottom: 1px solid #dadada;
-        //     }
-        //
-        //     .card__detail {
-        //         visibility: visible;
-        //         opacity: 1;
-        //         height: auto;
-        //         transition-delay: 0.2s;
-        //     }
-        // }
+        .card__detail__key {
+            display: none;
+        }
     }
 }

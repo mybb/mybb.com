@@ -2,12 +2,14 @@
   uid: 57502
   username: "Jones H"
   website: "http://jonesboard.de"
+  github: "JN-Jones"
   lead: true
 - name: "Tomasz Mlynski"
   uid: 47371
   username: "Devilshakerz"
+  github: "Devilshakerz"
   website: "https://devilshakerz.com"
 - name: "Nathan"
   uid: 84380
   username: "nth"
-  website: ""
+  github: "dequeues"

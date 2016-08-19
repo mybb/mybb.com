@@ -1,3 +1,5 @@
+new Clipboard('.copy-text');
+
 $(function() {
 
     $('#slider').anythingSlider({
@@ -143,6 +145,7 @@ $(function() {
     });
 
     $('.card__detail__link').powerTip({
-    	placement: 's'
+    	placement: 's',
+        mouseOnToPopup: true
     });
 });

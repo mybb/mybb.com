@@ -24,7 +24,7 @@
 				<span class="card__detail__title">Profile</span>
 			</a>
 		</p>
-		{% if member.website != "" %}
+		{% if member.website %}
 		<p class="card__detail card__detail--website">
 			<a href="{{ member.website }}" class="card__detail__link" title="Website - {{ member.website || remove: "https://" | remove: "http://" }}">
 				<i class="fa fa-fw fa-globe"></i>
@@ -58,10 +58,10 @@
 		{% endif %}
 		{% if member.pgp %}
 		<p class="card__detail card__detail--pgp">
-			<a href="#" class="card__detail__link" title="PGP - {{ member.pgp }}">
+			<button class="card__detail__link copy-text" title="PGP Key - {{ member.pgp }}" data-clipboard-action="copy" data-clipboard-text="{{ member.pgp }}">
 				<i class="fa fa-fw fa-key"></i>
-				<span class="card__detail__title">PGP</span>
-			</a>
+				<span class="card__detail__title">PGP Key</span>
+			</button>
 		</p>
 		{% endif %}
 	</div>
