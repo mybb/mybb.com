@@ -2,24 +2,37 @@
   uid: 21114
   username: "Euan T"
   website: "http://mybbstuff.com"
+  twitter: "euantor"
+  github: "euantorano"
   lead: true
 - name: "Justin Soltesz"
   uid: 1830
   username: "Justin"
+  github: "justinsoltesz"
+  twitter: "justinsoltesz"
   website: "http://jsoltesz.com"
 - name: "Omar Gonzalez"
   uid: 25096
   username: "Omar G."
+  github: "Sama34"
   website: "http://omarg.me"
 - name: "Paul Bender"
   uid: 4041
   username: "Starpaul20"
+  github: "PaulBender"
   website: "http://galaxiesrealm.com"
 - name: "Tom Moore"
   uid: 14621
   username: "Tomm M"
-  website: "http://twitter.com/mooseypx"
+  github: "tommm"
+  twitter: "mooseypx"
 - name: "Eric J."
   uid: 13376
   username: "Eric J."
+  github: "Eric-Jackson"
   website: "http://digitalrelativity.com"
+- name: "Josh Harmon"
+  uid: 43697
+  username: "Josh H."
+  github: "JoshHarmon"
+  website: "https://joshharmon.me"
