@@ -1,36 +1,34 @@
-- uid: 14772
-  username: "José F."
+- username: "José F."
+  uid: 14772
   website: ""
-- name: "Paul Hedman"
+- username: "Paul H."
   uid: 37431
-  username: "Paul H."
+  name: "Paul Hedman"
   github: "PenguinPaul"
   website: "https://paulhedman.com"
   keybase: "acolyte"
   pgp_fingerprint: "15C9 FB19 27F2 DAFB 314E FBE9 AD83 2792 6F63 53CA"
   pgp_link: "https://keybase.io/acolyte/key.asc"
-- name: "Tom Kent"
+- username: "Tom K."
   uid: 22017
-  username: "Tom K."
+  name: "Tom Kent"
   github: "tommykent1210"
   website: "https://tomkent.me"
   keybase: "tomkent"
   pgp_fingerprint: "A1D0 FD17 3275 FE38 6210 72FD BE0D 5DC8 5562 2BEF"
   pgp_link: "https://keybase.io/tomkent/key.asc"
   lead: true
-- name: "Ben C"
+- username: "Ben"
   uid: 90348
-  username: "Ben"
   github: "Ben-Conway"
   website: "http://www.gamersix.com"
-- name: "Andrew Shemo"
+- username: "andrewjs18"
   uid: 10832
-  username: "andrewjs18"
-  website: ""
+  name: "Andrew Shemo"
   github: "andrewjs18"
-- name: "Jordan Mussi"
+- username: JordanMussi
   uid: 51459
-  username: JordanMussi
+  name: "Jordan Mussi"
   github: "JordanMussi"
   twitter: "JordanLMussi"
   keybase: "jordanmussi"

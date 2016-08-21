@@ -1,17 +1,17 @@
-- uid: 57502
-  username: "Jones H"
+- username: "Jones H"
+  uid: 57502
   website: "http://jonesboard.de"
   github: "JN-Jones"
   lead: true
-- name: "Tomasz Mlynski"
+- username: "Devilshakerz"
   uid: 47371
-  username: "Devilshakerz"
+  name: "Tomasz Mlynski"
   github: "Devilshakerz"
   website: "https://devilshakerz.com"
   keybase: "devilshakerz"
   pgp_fingerprint: "DF3A 34D9 A627 42E5 BC6A 6750 1F2F B8AA 28FF E1BC"
   pgp_link: "https://devilshakerz.com/pgp"
-- name: "Nathan"
+- username: "nth"
   uid: 84380
-  username: "nth"
+  name: "Nathan"
   github: "dequeues"

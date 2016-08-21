@@ -1,28 +1,28 @@
-- uid: 52123
-  username: ".m."
-- uid: 60940
-  username: "mmadhankumar"
+- username: ".m."
+  uid: 52123
+- username: "mmadhankumar"
+  uid: 60940
   github: "mmadhankumar"
-- uid: 58253
-  username: "Destroy666"
+- username: "Destroy666"
+  uid: 58253
   github: "Destroy666x"
   keybase: "destroy666"
   pgp_fingerprint: "1F5C 70F6 A83B 3BB2 12C7 90EF FF1F F8D9 9D4D CD32"
   pgp_link: "https://keybase.io/destroy666/key.asc"
   lead: true
-- name: "Frances Leese"
+- username: "Leefish"
   uid: 23276
-  username: "Leefish"
+  name: "Frances Leese"
   github: "leefish"
   website: "http://leefish.nl/mybb"
-- name: "Matt Rogowski"
+- username: "Matt"
   uid: 13556
-  username: "Matt"
+  name: "Matt Rogowski"
   github: "MattRogowski"
   website: "https://matt.rogow.ski"
   keybase: "mattrogowski"
   pgp_fingerprint: "79D4 5D23 079A F220 2312 E4AA 90B3 F250 C1BF 7C81"
   pgp_link: "https://keybase.io/mattrogowski/key.asc"
-- name: "Phil Marsh"
+- username: "Katos"
   uid: 104958
-  username: "Katos"
+  name: "Phil Marsh"
