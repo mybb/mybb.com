@@ -4,6 +4,9 @@
   website: "http://mybbstuff.com"
   twitter: "euantor"
   github: "euantorano"
+  keybase: "euantorano"
+  pgp_fingerprint: "3705 B534 4400 C2AC 5C1E FFB8 8DCD 87C3 275A 7B24"
+  pgp_link: "https://keybase.io/euantorano/key.asc"
   lead: true
 - name: "Justin Soltesz"
   uid: 1830
@@ -36,3 +39,6 @@
   username: "Josh H."
   github: "JoshHarmon"
   website: "https://joshharmon.me"
+  keybase: "joshharmon"
+  pgp_fingerprint: "9163 CDB6 2513 5205 28E0 5EF5 2FF1 92C4 5261 6DF0"
+  pgp_link: "https://keybase.io/joshharmon/key.asc"

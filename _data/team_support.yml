@@ -9,6 +9,9 @@
   uid: 58253
   username: "Destroy666"
   github: "Destroy666x"
+  keybase: "destroy666"
+  pgp_fingerprint: "1F5C 70F6 A83B 3BB2 12C7 90EF FF1F F8D9 9D4D CD32"
+  pgp_link: "https://keybase.io/destroy666/key.asc"
   lead: true
 - name: "Frances Leese"
   uid: 23276
@@ -20,6 +23,9 @@
   username: "Matt"
   github: "MattRogowski"
   website: "https://matt.rogow.ski"
+  keybase: "mattrogowski"
+  pgp_fingerprint: "79D4 5D23 079A F220 2312 E4AA 90B3 F250 C1BF 7C81"
+  pgp_link: "https://keybase.io/mattrogowski/key.asc"
 - name: "Phil Marsh"
   uid: 104958
   username: "Katos"
