@@ -3,23 +3,23 @@
 			<div class="wrapper">
 				<small>Copyright &copy; {{ site.time | date: '%Y' }} MyBB Group</small>
 				<ul>
-					<li><a href="{{ site.baseurl }}">Home</a></li>
-					<li><a href="{{ site.baseurl }}/about/">About MyBB</a></li>
-					<li><a href="{{ site.baseurl }}/download/">Download MyBB</a></li>
-					<li><a href="{{ site.baseurl }}/support/">Support</a></li>
-					<li><a href="{{ site.baseurl }}/about/license/">License Agreement</a></li>
-					<li><a href="{{ site.baseurl }}/contact/">Contact MyBB Group</a></li>
+					<li><a href="{{ site.url }}">Home</a></li>
+					<li><a href="{{ site.url }}/about/">About MyBB</a></li>
+					<li><a href="{{ site.url }}/download/">Download MyBB</a></li>
+					<li><a href="{{ site.url }}/support/">Support</a></li>
+					<li><a href="{{ site.url }}/about/license/">License Agreement</a></li>
+					<li><a href="{{ site.url }}/contact/">Contact MyBB Group</a></li>
 				</ul>
 			</div>
 		</footer>
 	</div> <!--! end of #container -->
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="{{ site.baseurl }}/assets/js/libs/jquery-1.11.3.min.js"><\/script>')</script>
-	<script src="{{ site.baseurl }}/assets/js/jquery.anythingslider.min.js"></script>
+	<script>window.jQuery || document.write('<script src="{{ site.url }}/assets/js/libs/jquery-1.11.3.min.js"><\/script>')</script>
+	<script src="{{ site.url }}/assets/js/jquery.anythingslider.min.js"></script>
 
 	{% if page.path contains 'features/' %}
-	<script type="text/javascript" src="{{ site.baseurl }}/assets/js/fancyBox/jquery.fancybox.min.js"></script>
+	<script type="text/javascript" src="{{ site.url }}/assets/js/fancyBox/jquery.fancybox.min.js"></script>
 
 	<script>
 		$(document).ready(function() {
@@ -35,7 +35,7 @@
 	{% endif %}
 
 
-	<script defer src="{{ site.baseurl }}/assets/js/libs/modernizr-2.0.6.min.js"></script>
+	<script defer src="{{ site.url }}/assets/js/libs/modernizr-2.0.6.min.js"></script>
 
 	<script defer type="text/javascript">
 		var _gaq = _gaq || [];
@@ -54,8 +54,8 @@
 	</script>
 
 	<!-- scripts concatenated and minified via ant build script-->
-	<script defer src="{{ site.baseurl }}/assets/js/plugins.js"></script>
-	<script defer src="{{ site.baseurl }}/assets/js/script.min.js"></script>
+	<script defer src="{{ site.url }}/assets/js/plugins.js"></script>
+	<script defer src="{{ site.url }}/assets/js/script.min.js"></script>
 	<!-- end scripts-->
 
 
@@ -65,7 +65,7 @@
 	<![endif]-->
 
 	<!-- InstantClick -->
-	<script src="{{ site.baseurl }}/assets/js/instantclick.min.js" data-no-instant></script>
+	<script src="{{ site.url }}/assets/js/instantclick.min.js" data-no-instant></script>
 	<script data-no-instant>InstantClick.init();</script>
 </body>
 </html>
