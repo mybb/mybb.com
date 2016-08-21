@@ -22,12 +22,12 @@ This includes things like:
 * Sending out mass-emails and newsletters
 * Lifting expired user account bans and suspensions
 
-<p class="tourScreenshot"><img alt="Scheduled Tasks" src="{{ site.url }}/assets/images/tour/tasks/tasks.png" /></p>
+<p class="tourScreenshot"><img alt="Scheduled Tasks" src="{{ site.baseurl }}/assets/images/tour/tasks/tasks.png" /></p>
 
 ## View when a task was run & what it actually did
 It's great that there’s a lot of automation happening behind the scenes but how can you tell that it's actually working? MyBB will let you know when a task was last run, when it is next due to run and also keeps a complete history when a task was run and if it was successful or not.
 
-<p class="tourScreenshot"><img alt="Scheduled Task Log" src="{{ site.url }}/assets/images/tour/tasks/tasklog.png" /></p>
+<p class="tourScreenshot"><img alt="Scheduled Task Log" src="{{ site.baseurl }}/assets/images/tour/tasks/tasklog.png" /></p>
 
 ## Automatic backups
 

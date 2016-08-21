@@ -16,7 +16,7 @@ MyBB includes a revolutionary theme system and an advanced template editor to ma
 
 With MyBB, you can create additional stylesheets that can be used either globally or on individual pages (and individual actions within those pages). This is in addition to the global stylesheet, and a set of pre-included stylesheets that contain styles specific to pages such as the User CP, Mod CP, and thread pages.
 
-<p class="tourScreenshot"><a href="{{ site.url }}/assets/images/tour/template-themes/stylesheets.png" class="fancybox" title="Customizing your forum has been made easy, even for those with no previous design experience."><img alt="Edit stylesheet properties" src="{{ site.url }}/assets/images/tour/template-themes/stylesheets.png" width="500" height="350" /></a></p>
+<p class="tourScreenshot"><a href="{{ site.baseurl }}/assets/images/tour/template-themes/stylesheets.png" class="fancybox" title="Customizing your forum has been made easy, even for those with no previous design experience."><img alt="Edit stylesheet properties" src="{{ site.baseurl }}/assets/images/tour/template-themes/stylesheets.png" width="500" height="350" /></a></p>
 
 ## Attachable base colors
 
@@ -28,4 +28,4 @@ MyBB lets you easily edit every selector in a stylesheet, not just a predefined 
 
 Additionally, MyBB offers an "Advanced Mode", which allows users who are more familiar with CSS to edit the stylesheet directly. You also can use the Advanced Mode to add new selectors, which you will then be able to edit using the simple editor.</p>
 
-<p class="tourScreenshot"><a href="{{ site.url }}/assets/images/tour/template-themes/theme-editor.png" class="fancybox" title="The simple theme editor makes both designing themes and learning CSS an enjoyable experience."><img alt="Stylesheet editor" src="{{ site.url }}/assets/images/tour/template-themes/theme-editor.png" width="600" height="330" /></a></p>
+<p class="tourScreenshot"><a href="{{ site.baseurl }}/assets/images/tour/template-themes/theme-editor.png" class="fancybox" title="The simple theme editor makes both designing themes and learning CSS an enjoyable experience."><img alt="Stylesheet editor" src="{{ site.baseurl }}/assets/images/tour/template-themes/theme-editor.png" width="600" height="330" /></a></p>

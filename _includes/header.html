@@ -18,15 +18,15 @@
 	{% if page.meta_description %}
 	<meta name="description" content="{{ page.meta_description }}" />
 	{% endif %}
-	<link rel="stylesheet" href="{{ site.url }}/assets/css/syntax.min.css" />
-	<link rel="stylesheet" href="{{ site.url }}/assets/css/main.css" />
-	<link rel="stylesheet" href="{{ site.url }}/assets/css/anythingslider.min.css" />
-	<link rel="stylesheet" href="{{ site.url }}/assets/js/fancyBox/jquery.fancybox.min.css" />
+	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/syntax.min.css" />
+	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css" />
+	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/anythingslider.min.css" />
+	<link rel="stylesheet" href="{{ site.baseurl }}/assets/js/fancyBox/jquery.fancybox.min.css" />
 
 	<!-- icons -->
-		<link rel="apple-touch-icon-precomposed" href="{{ site.url }}/assets/images/mybb-precomposed.ico" />
-		<link rel="shortcut icon" type="image/x-icon" href="{{ site.url }}/assets/images/mybb-icon.ico" sizes="16x16" />
-		<link rel="icon" type="image/x-icon" href="{{ site.url }}/assets/images/mybb-icon.ico" sizes="16x16" />
+		<link rel="apple-touch-icon-precomposed" href="{{ site.baseurl }}/assets/images/mybb-precomposed.ico" />
+		<link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/assets/images/mybb-icon.ico" sizes="16x16" />
+		<link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/assets/images/mybb-icon.ico" sizes="16x16" />
 	<!-- end icons -->
 
 	<script>
@@ -41,7 +41,7 @@
 		<header id="pageHeader">
 			<div class="wrapper">
 				<nav id="logoLink">
-					<a href="{{ site.url }}/">Go to MyBB homepage</a>
+					<a href="{{ site.baseurl }}/">Go to MyBB homepage</a>
 				</nav>
 				<h1 id="pageName" class="visuallyHidden">MyBB - Free and Open Source Forum Software</h1>
 
@@ -59,11 +59,11 @@
 
 				<nav id="mainMenu">
 					<ul>
-						<li{% if page.section == "home" %} class="selected"{% endif %}><a href="{{ site.url }}/">Home</a></li>
-						<li{% if page.section == "features" %} class="selected"{% endif %}><a href="{{ site.url }}/features/">Features</a></li>
-						<li{% if page.section == "download" %} class="selected"{% endif %}><a href="{{ site.url }}/download/">Download</a></li>
+						<li{% if page.section == "home" %} class="selected"{% endif %}><a href="{{ site.baseurl }}/">Home</a></li>
+						<li{% if page.section == "features" %} class="selected"{% endif %}><a href="{{ site.baseurl }}/features/">Features</a></li>
+						<li{% if page.section == "download" %} class="selected"{% endif %}><a href="{{ site.baseurl }}/download/">Download</a></li>
 						<li><a href="https://community.mybb.com" title="Community">Community</a></li>
-						<li{% if page.section == "get-involved" %} class="selected"{% endif %}><a href="{{ site.url }}/get-involved/" title="Get Involved">Get Involved</a></li>
+						<li{% if page.section == "get-involved" %} class="selected"{% endif %}><a href="{{ site.baseurl }}/get-involved/" title="Get Involved">Get Involved</a></li>
 						<li><a href="https://community.mybb.com/mods.php" title="Extend">Extend</a></li>
 						<li><a href="https://docs.mybb.com" title="Docs">Docs</a></li>
 						<li><a href="https://blog.mybb.com" title="Blog">Blog</a></li>
