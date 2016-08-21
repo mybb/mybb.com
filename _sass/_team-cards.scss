@@ -1,6 +1,17 @@
 .team-cards {
     padding: 10px 0 0 0;
-    @extend .clearFix;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
 
     .card {
         width: 49%;
@@ -12,14 +23,6 @@
         margin-bottom: 15px;
         text-align: center;
 
-        &:nth-child(odd) {
-            margin-right: 1%;
-        }
-
-        &:nth-child(even) {
-            margin-left: 1%;
-        }
-        
         .card__username {
             text-align: center;
             font-size: 1.4em;
