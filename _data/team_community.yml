@@ -7,12 +7,12 @@
   username: "Paul H."
   github: "PenguinPaul"
   website: "https://paulhedman.com"
-  lead: true
 - name: "Tom Kent"
   uid: 22017
   username: "Tom K."
   github: "tommykent1210"
   website: "https://tomkent.me"
+  lead: true
 - name: "Ben C"
   uid: 90348
   username: "Ben"
