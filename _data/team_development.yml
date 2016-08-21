@@ -1,5 +1,4 @@
-- name: "Euan T"
-  uid: 21114
+- uid: 21114
   username: "Euan T"
   website: "http://mybbstuff.com"
   twitter: "euantor"
@@ -29,8 +28,7 @@
   username: "Tomm M"
   github: "tommm"
   twitter: "mooseypx"
-- name: "Eric J."
-  uid: 13376
+- uid: 13376
   username: "Eric J."
   github: "Eric-Jackson"
   website: "http://digitalrelativity.com"

@@ -19,12 +19,24 @@
         &:nth-child(even) {
             margin-left: 1%;
         }
-
-        .card__name {
+        
+        .card__username {
             text-align: center;
             font-size: 1.4em;
             font-weight: normal;
-            margin: 0 0 5px 0;
+            margin: 8px 0 18px 0;
+        }
+
+        .card__username--has-name {
+            margin: 0;
+        }
+
+        .card__name {
+            text-align: center;
+            font-size: 0.8em;
+            font-weight: normal;
+            color: #888;
+            margin: 0 0 8px 0;
         }
 
         .card__role {
