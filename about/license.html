@@ -9,15 +9,7 @@ meta_description: MyBB is offered for free under version 3 of the GNU Lesser Gen
 <aside id="sidebar">
 	<section>
 		<h1>All About MyBB</h1>
-		<nav>
-			<ul>
-				<li><a href="{{ site.url }}/about/">About MyBB</a></li>
-				<li><a href="{{ site.url }}/about/team/">About the Team</a></li>
-				<li class="selected"><a href="{{ site.url }}/about/license/">License Agreement</a></li>
-				<li><a href="{{ site.url }}/about/donations/">Donate to MyBB</a></li>
-				<li><a href="{{ site.url }}/contact/">Contact the MyBB Group</a></li>
-			</ul>
-		</nav>
+		{% include section_nav.html section='about' %}
 	</section>
 </aside>
 
