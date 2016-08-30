@@ -8,6 +8,9 @@ url: https://mybb.com
 collections:
   features:
     output: true
+  rfcs:
+    output: true
+    permalink: /about/rfcs/:path/
 
 sass:
   sass_dir: _sass
