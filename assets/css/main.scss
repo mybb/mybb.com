@@ -1100,6 +1100,43 @@ div.tourNavigation div.currentFeature {
 	color: #999;
 }
 
+/* Ecosystem showcase */
+.logo-item-box {
+	display: table;
+	width: 95%;
+	background: #fafafa;
+	border: 1px solid #eee;
+	border-radius: 6px;
+	padding: 12px 15px 15px 15px;
+	margin: 10px 0;
+
+	.logo {
+		display: table-cell;
+		width: 100px;
+		border-right: solid 2px #eee;
+		padding-right: 10px;
+		text-align: center;
+		vertical-align: top;
+
+		p {
+			font-size: 18px;
+			color: #aaa;
+		}
+
+		img {
+			margin-top: 10px;
+			max-width: 80px;
+			max-height: 60px;
+		}
+	}
+
+	.content {
+		display: table-cell;
+		padding-left: 10px;
+		vertical-align: top;
+	}
+}
+
 /* Download */
 #mainFeature.download p.description {
 	float: left;
