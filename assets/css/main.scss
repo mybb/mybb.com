@@ -1101,48 +1101,114 @@ div.tourNavigation div.currentFeature {
 }
 
 /* Ecosystem showcase */
-.logo-item-box {
-	display: table;
-	width: 95%;
-	background: #fafafa;
+.simple-table {
 	border: 1px solid #eee;
 	border-radius: 6px;
 	padding: 12px 15px 15px 15px;
-	margin: 10px 0;
+	margin-bottom: 20px;
 
-	.logo {
-		display: table-cell;
-		width: 100px;
-		border-right: solid 2px #eee;
-		padding-right: 10px;
-		text-align: center;
-		vertical-align: top;
+	.heading {
+		padding-top: 10px;
 
 		p {
 			font-size: 18px;
-			color: #aaa;
+			color: #888;
+		}
+
+		.subtitle {
+			font-size: 16px;
+			color: #CCC;
 		}
 
 		img {
-			margin-top: 10px;
 			max-width: 80px;
 			max-height: 60px;
 		}
 	}
 
 	.content {
-		display: table-cell;
-		padding-left: 10px;
-		vertical-align: top;
-
 		.platform-link {
 			padding: 2px 6px;
-			background: #fff;
 			border: solid 1px #e9e9e9;
 			border-radius: 4px;
 			font-size: 0.9em;
 			text-decoration: none;
 		}
+	}
+
+	&--vertical {
+		display: table;
+		width: 95%;
+
+		.heading, .content {
+			display: table-cell;
+		}
+
+		.heading {
+			padding-right: 10px;
+			width: 100px;
+			border-right: solid 2px #eee;
+			text-align: center;
+			vertical-align: top;
+
+			.fa {
+				font-size: 2em;
+			}
+		}
+
+		.content {
+			padding-left: 10px;
+			vertical-align: top;
+		}
+	}
+
+	&--horizontal {
+		.heading {
+			padding-bottom: 10px;
+			border-bottom: solid 2px #eee;
+
+			.fa, p {
+				display: inline-block;
+			}
+
+			.fa {
+				margin-right: 6px;
+				font-size: inherit;
+			}
+
+			p {
+				margin: 0;
+				color: #333;
+			}
+
+			.description {
+				color: #AAA;
+			}
+		}
+
+		.content {
+			padding-top: 10px;
+		}
+	}
+
+	&.role--management .fa {
+		color: #00aa00;
+	}
+
+	&.role--support .fa {
+		color: #ff0000;
+	}
+
+	&.role--development .fa {
+		color: #e34976;
+	}
+
+	&.role--quality-assurance .fa {
+		color: #880063;
+	}
+
+	&.role--community .fa {
+		color: #095c66;
 	}
 }
 
