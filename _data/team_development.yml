@@ -28,15 +28,3 @@
   name: "Tom Moore"
   github: "tommm"
   twitter: "mooseypx"
-- username: "Eric J."
-  uid: 13376
-  github: "Eric-Jackson"
-  website: "http://digitalrelativity.com"
-- username: "Josh H."
-  uid: 43697
-  name: "Josh Harmon"
-  github: "JoshHarmon"
-  website: "https://joshharmon.me"
-  keybase: "joshharmon"
-  pgp_fingerprint: "9163 CDB6 2513 5205 28E0 5EF5 2FF1 92C4 5261 6DF0"
-  pgp_link: "https://keybase.io/joshharmon/key.asc"
