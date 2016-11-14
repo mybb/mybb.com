@@ -1,14 +1,6 @@
 - username: "José F."
   uid: 14772
   website: ""
-- username: "Paul H."
-  uid: 37431
-  name: "Paul Hedman"
-  github: "PenguinPaul"
-  website: "https://paulhedman.com"
-  keybase: "acolyte"
-  pgp_fingerprint: "15C9 FB19 27F2 DAFB 314E FBE9 AD83 2792 6F63 53CA"
-  pgp_link: "https://keybase.io/acolyte/key.asc"
 - username: "Tom K."
   uid: 22017
   name: "Tom Kent"
