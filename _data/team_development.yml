@@ -28,3 +28,11 @@
   name: "Tom Moore"
   github: "tommm"
   twitter: "mooseypx"
+- username: "Matt"
+  uid: 13556
+  name: "Matt Rogowski"
+  github: "MattRogowski"
+  website: "https://matt.rogow.ski"
+  keybase: "mattrogowski"
+  pgp_fingerprint: "79D4 5D23 079A F220 2312 E4AA 90B3 F250 C1BF 7C81"
+  pgp_link: "https://keybase.io/mattrogowski/key.asc"
