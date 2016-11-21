@@ -7,7 +7,7 @@
 				{% if page.description == "empty" %}
 				
 				{% else %}
-				<p class="description">{{ page.description | replace:"!SITE_BASEURL!",site.baseurl }}</p>
+				<p class="description">{{ page.description | replace:"!SITE_url!",site.url }}</p>
 				{% endif %}
 			</div>
 		</header>

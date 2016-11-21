@@ -1,6 +1,20 @@
 name: MyBB
-markdown: redcarpet
-pygments: true
+markdown: kramdown
+highlighter: rouge
 category-list: [features]
 permalink: pretty
-baseurl: //www.mybb.com
+url: https://mybb.com
+
+collections:
+  features:
+    output: true
+  rfcs:
+    output: true
+    permalink: /about/rfcs/:path/
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+gems:
+  - jekyll-redirect-from

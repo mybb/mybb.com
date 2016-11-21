@@ -1,16 +1,28 @@
-- name: "Fábio Maia"
-  uid: 16693
-  username: "Fábio Maia"
-  website: ""
-- name: "José F."
+- username: "José F."
   uid: 14772
-  username: "José F."
   website: ""
-- name: "Paul Hedman"
-  uid: 37431
-  username: "Paul H."
-  website: "http://paulhedman.com"
-  lead: true
-- name: "Tom Kent"
+- username: "Tom K."
   uid: 22017
-  username: "Tom K."
+  name: "Tom Kent"
+  github: "tommykent1210"
+  website: "https://tomkent.me"
+  keybase: "tomkent"
+  pgp_fingerprint: "A1D0 FD17 3275 FE38 6210 72FD BE0D 5DC8 5562 2BEF"
+  pgp_link: "https://keybase.io/tomkent/key.asc"
+  lead: true
+- username: "Ben"
+  uid: 90348
+  github: "Ben-Conway"
+  website: "http://www.gamersix.com"
+- username: "andrewjs18"
+  uid: 10832
+  name: "Andrew Shemo"
+  github: "andrewjs18"
+- username: JordanMussi
+  uid: 51459
+  name: "Jordan Mussi"
+  github: "JordanMussi"
+  twitter: "JordanLMussi"
+  keybase: "jordanmussi"
+  pgp_fingerprint: "61D7 A864 200A 9009 8F61 DEAB 6F6B 458A BB9B 0598"
+  pgp_link: "https://keybase.io/jordanmussi/key.asc"

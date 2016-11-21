@@ -1,4 +1,4 @@
-[![MyBB](https://raw.github.com/mybb/mybb/feature/images/logo.png "MyBB")](http://www.mybb.com "MyBB")
+[![MyBB](https://raw.github.com/mybb/mybb/feature/images/logo.png "MyBB")](https://www.mybb.com "MyBB")
 
 # New MyBB.com Website
 This repository is available to aid in the collaboration and development of MyBB's new website.

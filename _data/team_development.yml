@@ -1,35 +1,38 @@
-- name: "Mike Creuzer"
-  uid: 7331
-  username: "Audentio"
-  website: "http://audentio.com"
-- name: "Euan T"
+- username: "Euan T"
   uid: 21114
-  username: "Euan T"
   website: "http://mybbstuff.com"
+  twitter: "euantor"
+  github: "euantorano"
+  keybase: "euantorano"
+  pgp_fingerprint: "3705 B534 4400 C2AC 5C1E FFB8 8DCD 87C3 275A 7B24"
+  pgp_link: "https://keybase.io/euantorano/key.asc"
   lead: true
-- name: "Jitendra Maharaj"
-  uid: 12694
-  username: "Jitendra M"
-- name: "Jovan Jojkić"
-  uid: 26592
-  username: "Jovan J."
-  website: "http://fluidsea.com"
-- name: "Justin Soltesz"
+- username: "Justin"
   uid: 1830
-  username: "Justin S."
+  name: "Justin Soltesz"
+  github: "justinsoltesz"
+  twitter: "justinsoltesz"
   website: "http://jsoltesz.com"
-- name: "Omar Gonzalez"
+- username: "Omar G."
   uid: 25096
-  username: "Omar G."
+  name: "Omar Gonzalez"
+  github: "Sama34"
   website: "http://omarg.me"
-- name: "Paul Bender"
+- username: "Starpaul20"
   uid: 4041
-  username: "Starpaul20"
+  name: "Paul Bender"
+  github: "PaulBender"
   website: "http://galaxiesrealm.com"
-- name: "Tom Moore"
+- username: "Tomm M"
   uid: 14621
-  username: "Tomm M"
-  website: "http://twitter.com/mooseypx"
-- name: "Will P"
-  uid: 6700
-  username: "Will P"
+  name: "Tom Moore"
+  github: "tommm"
+  twitter: "mooseypx"
+- username: "Matt"
+  uid: 13556
+  name: "Matt Rogowski"
+  github: "MattRogowski"
+  website: "https://matt.rogow.ski"
+  keybase: "mattrogowski"
+  pgp_fingerprint: "79D4 5D23 079A F220 2312 E4AA 90B3 F250 C1BF 7C81"
+  pgp_link: "https://keybase.io/mattrogowski/key.asc"

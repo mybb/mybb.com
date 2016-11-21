@@ -4,13 +4,16 @@ section: download
 
 title: Download
 meta_description: Download the latest version of MyBB, a free and open source PHP forum software.
+
+redirect_from:
+- /downloads/
 ---
 
 <article id="download">
 	<header id="mainFeature" class="download clearFix">
 		<div class="wrapper clearFix">
 			<h1>Download MyBB to get your community rolling.</h1>
-			<p class="description">The latest MyBB release is <strong>MyBB {{ site.data.latest_mybb.version }}</strong>. It was released {{ site.data.latest_mybb.release }}, and is a {{site.data.latest_mybb.type }} release. Once you have downloaded MyBB, we have a <a href="http://docs.mybb.com/1.8/install/">complete installation guide</a> to help you through the setup process.</p>
+			<p class="description">The latest MyBB release is <strong>MyBB {{ site.data.latest_mybb.version }}</strong>. It was released {{ site.data.latest_mybb.release }}, and is a {{site.data.latest_mybb.type }} release. Once you have downloaded MyBB, we have a <a href="https://docs.mybb.com/1.8/install/">complete installation guide</a> to help you through the setup process.</p>
 			<div class="downloadBit">
 				<a href="{{ site.data.latest_mybb.url }}" class="download" data-no-instant>
 					<span>Download MyBB {{ site.data.latest_mybb.version }}</span>
@@ -29,7 +32,7 @@ meta_description: Download the latest version of MyBB, a free and open source PH
 			<aside id="gettingStarted">
 				<h1>Need help getting started?</h1>
 				<p>
-					MyBB offers a <a href="http://docs.mybb.com/1.8/install/" title="Installing MyBB">complete installation guide</a> to guide you through the setup process. If you need more help, the <a href="http://community.mybb.com/forum-127.html">support forums</a> are always open for your questions, monitored by our dedicated support team.</p>
+					MyBB offers a <a href="https://docs.mybb.com/1.8/install/" title="Installing MyBB">complete installation guide</a> to guide you through the setup process. If you need more help, the <a href="https://community.mybb.com/forum-127.html">support forums</a> are always open for your questions, monitored by our dedicated support team.</p>
 			</aside>
 		</div>
 		<div class="more clearFix">
@@ -37,18 +40,18 @@ meta_description: Download the latest version of MyBB, a free and open source PH
 				<h1>Merge System</h1>
 				<p>
 					MyBB's Merge System allows you to directly convert from several forum softwares and merge into a single MyBB forum. The Merge System allows you to convert only the items you want - such as only users, forums, posts, and threads.</p>
-				<p><a href="{{ site.baseurl }}/download/merge-system/">Download the MyBB Merge System &rarr;</a></p>
+				<p><a href="{{ site.url }}/download/merge-system/">Download the MyBB Merge System &rarr;</a></p>
 			</section>
 			<section id="translations">
 				<h1>Translations</h1>
 				<p>
 					MyBB comes with an English language pack; however, the MyBB Community has also produced a large number of official MyBB translations for visitors who don't speak English. There are even language packs available for right-to-left languages.</p>
-				<p><a href="http://community.mybb.com/mods.php?action=browse&category=19">View a list of MyBB translations &rarr;</a></p>
+				<p><a href="https://community.mybb.com/mods.php?action=browse&category=19">View a list of MyBB translations &rarr;</a></p>
 			</section>
 			<section id="extendMyBB">
 				<h1>Extend MyBB further</h1>
 				<p>There are two ways to push MyBB beyond the default installation: plugins and themes. Plugins extend the default functionality of MyBB, and take just a few clicks to install. Themes give your discussion board a distinctive feel.</p>
-				<p><a href="http://community.mybb.com/mods.php">Visit MyBB Mods &rarr;</a></p>
+				<p><a href="https://community.mybb.com/mods.php">Visit MyBB Mods &rarr;</a></p>
 			</section>
 		</div>
 		{% if site.data.previous_mybb.show == true %}

@@ -1,9 +1,16 @@
-- name: "Chris Boulton"
+- username: "Chris Boulton"
   uid: 1
-  username: "Chris Boulton"
   website: "http://chrisboulton.com"
+  github: "chrisboulton"
+  twitter: "surfichris"
+  keybase: "chrisboulton"
+  pgp_fingerprint: "EBBA FB32 E168 60D6 88B2 9E7E 331D EF09 F700 31FA"
+  pgp_link: "https://keybase.io/chrisboulton/key.asc"
   lead: true
-- name: "Stefan T."
+- username: "StefanT"
   uid: 2824
-  username: "StefanT"
+  github: "Stefan-ST"
   website: "https://mybb.de"
+  keybase: "stefan_mybb"
+  pgp_fingerprint: "BE7C 74D0 B70A 0CB2 345A 62F0 B416 029E 76B7 D04A"
+  pgp_link: "https://keybase.io/stefan_mybb/key.asc"

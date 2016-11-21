@@ -1,0 +1,100 @@
+---
+layout: default
+section: home
+title: RFC Documents
+description: Accepted MyBB RFC documents and the Request For Comments process.
+meta_description: Accepted MyBB RFC documents and the Request For Comments process.
+---
+
+<aside id="sidebar">
+	<section>
+		<h1>All About MyBB</h1>
+		{% include section_nav.html section='about' %}
+	</section>
+</aside>
+
+<div id="contentBlock">
+	<section class="general">
+		<h1>Accepted RFC documents</h1>
+		<table class="standard_table" summary="Accepted RFC documents">
+			<thead>
+				<tr>
+					<th>MyBB RFC</th>
+					<th>Document title</th>
+					<th>Date accepted</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% assign documents = (site.rfcs | sort: 'rfc_date') | reverse %}
+				{% for document in documents %}
+					{% assign rfc_title_words = document.relative_path | replace: "_rfcs/" | replace: ".md" | split: "-" %}
+					{% assign rfc_public_id = rfc_title_words[0] %}
+					<tr>
+				  		<td><a href="{{ document.url }}"><strong>#{{ rfc_public_id }}</strong></a></td>
+				  		<td><a href="{{ document.url }}">{{ document.title }}</a></td>
+				  		<td>{{ document.date | date_to_string }}</td>
+			  		</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</section>
+	<section class="general">
+{% capture markdown %}
+# MyBB RFC Process
+This document serves to outline the details of MyBB’s internal RFC process, including vocabulary, rule and procedures.
+
+An RFC may be called for on decisions which are clearly contentious, controversial or have a significant impact on MyBB, its process, its staff, its software or its community.
+
+## Format
+- The RFC must be proposed as a question or statement with a yes or no response and an abstain option.
+- The RFC must be in the following format:
+    - **Title** - this can be the thread title
+    - **Author(s)** - this may be omitted if the only author is the author of the RFC thread.
+    - **Proposal** - what the proposal is in as much detail as possible.
+    - **Justification** - why the author(s) are putting forward the proposal.
+    - **Actions** - what actions will be taken if the RFC is accepted.
+    - **Effects & Implications** - any effects / implications of the RFC being accepted.
+    - **Quorum & Voting** - the voting times, what the quorum is etc.
+
+
+## Statuses
+- **Draft** - The RFC is not ready for discussion and is being worked on by the author(s).
+- **Discussion** - The RFC is being discussed by the staff, changes or amendments may occur to the RFC.
+- **Voting** - The RFC is being voted on.
+- **Accepted** - The RFC has been accepted in accordance with the voting process.
+- **Rejected** - The RFC has been rejected in accordance with the voting process.
+- **Implemented** - The actions mandated by the RFC have been done to the satisfaction of the MyBB staff.
+
+## Process
+1. **Draft**
+    1. The RFC is being written by the author(s).
+    2. The RFC will move from Draft into Discussion once the author(s) are happy with it.
+2. **Discussion**
+    1. The RFC is published somewhere publicly where it can be discussed, amendments can be suggested.
+    2. The discussion phase will last until the author(s) are happy to take it to a vote.
+3. **Voting**
+    1. The author(s) will set the end date for the vote and announce that the RFC is now ready to be voted on.
+    2. Members will cast their votes over this period.
+    3. Once the end date has past, the author(s) will declare the result.
+4. **Accepted or Rejected**
+    1. If accepted, the author(s) will ensure that the actions laid out in the RFC are completed.
+5. **Implemented**
+    1. The author(s) will place the RFC in the implemented state once they are satisfied that the actions have been completed.
+
+## Voting Procedure
+- Each staff member has one vote on each RFC. They may vote for either the yes option, the no option or the abstain option.
+- Abstentions will count towards quorum but will be considered neutral and not be counted towards the majority calculation.
+- In order for an RFC to be accepted, the yes vote must hold a half+1 majority of the total number of votes (minus abstentions). The vote must also meet quorum (including abstentions).
+- The vote will be open for a period of 2 weeks, after which the vote will be closed and the result declared.
+- Quorum calculation: `(S2)+1` where S is the total number of active staff (active staff are those not declared away nor on the inactive list).
+- Voting calculation: `N>=Q && x >=((N-A)2)+1` where N is the total number of votes cast, Q is quorum, x is the number of yes votes and A is the number of abstentions. In sentence form: “The total number of votes cast must be greater than or equal to quorum and the number of yes votes must be greater than or equal to half of the total number of non-abstention votes plus one”. For any non-integers that form part of the calculations for voting or quorum, round down to the nearest integer.
+
+## Quorum
+- The quorum shall be half+1 of the total active MyBB staff. A staff member is not considered active if he or she has declared themselves as ‘away’ or they are on the inactive list.
+- If we fail to meet quorum, there is to be a review of the active member base to determine if there are members who should be placed on the inactive list and therefore not counted towards quorum.
+- If an RFC fails to meet quorum the vote is to be re-scheduled.
+
+{% endcapture %}
+{{ markdown | markdownify }}
+	</section>
+</div>

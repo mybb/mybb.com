@@ -13,19 +13,11 @@
 						<h1>Feature Tour</h1>
 						<nav>
 							<ul>
-							{% assign i = 0 %}
-							{% assign sorted_pages = site.pages | sort:"name" %}
-							{% for catpage in sorted_pages %}
-								{% for pc in catpage.categories %}
-								{% if pc == "features" %}
-									<li{% if catpage.url == page.url %} class="selected"{% endif %}>{{ pc[1] }}<a href="{{ site.baseurl }}{{ catpage.url }}">{{ catpage.title }}</a></li>
-									{% assign i = i | plus:1 %}
-									{% if catpage.url == page.url %}
-									{% assign current = i %}
-									{% endif %}
-								{% endif %}
-								{% endfor %}
-							{% endfor %}
+                                {% for item in site.data.features %}
+                                    {% assign item_url = item | prepend:"/features/" | append:"/" %}
+                                    {% assign p = site.features | where:"url", item_url | first %}
+                                  <li {% if item_url == page.url %} class="selected"{% endif %}><a href="{{ site.url }}{{ item_url }}">{{ p.title }}</a></li>
+                                {% endfor %}
 							</ul>
 						</nav>
 					</section>
@@ -37,31 +29,32 @@
 						{{ content }}
 					</section>
 
-					<div class="tourNavigation">
-					{% assign i = 0 %}
-					{% for catpage in sorted_pages %}
-						{% for pc in catpage.categories %}
-						{% if pc == "features" %}
-							{% assign i = i | plus:1 %}
-							{% assign next = current | plus:1 %}
-							{% assign previous = current | minus:1 %}
-
-							{% if i == next %}
-							<div class="nextFeature">
-								<a href="{{ site.baseurl }}{{ catpage.url }}">{{ catpage.title }} &rarr;</a>
-							</div>
-							{% endif %}
-
-							{% if i == previous %}
-							<div class="previousFeature">
-								<a href="{{ site.baseurl }}{{ catpage.url }}">&larr; {{ catpage.title }}</a>
-							</div>
-							{% endif %}
-							
-						{% endif %}
-						{% endfor %}
-					{% endfor %}
-					</div>
+                    {% for item in site.data.features %}
+                        {% assign item_url = item | prepend:"/features/" | append:"/" %}
+                            {% if item_url == page.url %}
+                                <div class="tourNavigation">
+                                    {% if forloop.last %}
+                                    {% else %}
+                                        {% assign next = forloop.index0 | plus: 1 %}
+                                        {% assign next_page = site.data.features[next] | prepend:"/features/" | append:"/" %}
+                                        {% assign next_p = site.features | where:"url", next_page | first %}
+                                        <div class="nextFeature">
+                                            <a href="{{ next_page }}" class="next">{{ next_p.title }} &rarr;</a>
+                                        </div>
+                                    {% endif %}
+                                    {% if forloop.first %}
+                                    {% else %}
+                                    <div class="previousFeature">
+                                        {% assign previous = forloop.index0 | minus: 1 %}
+                                        {% assign previous_page = site.data.features[previous] | prepend:"/features/" | append:"/" %}
+                                        {% assign prev_p = site.features | where:"url", previous_page | first %}
+                                        <a href="{{ previous_page }}" class="prev">&larr; {{ prev_p.title }}</a>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            {% break %}
+                        {% endif %}
+                    {% endfor %}
 				</div>
 			</div>
 		</article>

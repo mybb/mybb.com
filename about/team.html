@@ -9,61 +9,31 @@ meta_description: Take a closer look at the people who make MyBB possible.
 <aside id="sidebar">
 	<section>
 	<h1>All About MyBB</h1>
-		<nav>
-			<ul>
-				<li><a href="{{ site.baseurl }}/about/">About MyBB</a></li>
-				<li class="selected"><a href="{{ site.baseurl }}/about/team/">About the Team</a></li>
-				<li><a href="{{ site.baseurl }}/about/license/">License Agreement</a></li>
-				<li><a href="{{ site.baseurl }}/about/donations/">Donate to MyBB</a></li>
-				<li><a href="{{ site.baseurl }}/contact/">Contact the MyBB Group</a></li>
-			</ul>
-		</nav>
+		{% include section_nav.html section='about' %}
 	</section>
 	<section class="alt">
 		<h1>Joining the MyBB Team</h1>
 		<p>Interested in joining the MyBB team? It all starts by getting involved with the community such as through development or support.</p>
-		<p><a href="{{ site.baseurl }}/get-involved/"><strong>Get Involved &rarr;</strong></a></p>
+		<p><a href="{{ site.url }}/get-involved/"><strong>Get Involved &rarr;</strong></a></p>
 	</section>
 </aside>
 
 <div id="contentBlock">
 	<section class="general">
-		<p>
-			The MyBB team is composed of volunteers committed to developing, supporting, and managing the MyBB forum software project. They have a single mission: to make the best forum software possible. While the MyBB team is divided into separate groups below, these groups represent only primary tasks. Each member of the MyBB team is charged with pushing the MyBB project forward in any way they see fit.</p>
+		<p>The MyBB team is composed of volunteers committed to developing, supporting, and managing the MyBB forum software project. They have a single mission: to make the best forum software possible.</p>
+		<p>All members have a <a href="{{ site.url }}/about/team/groups/">Team group</a> assigned, which indicates their main focus within the Project.</p>
+		<p>All Team changes follow the <a href="{{ site.url }}/about/team/personnel-management/">Personnel management guide</a>.</p>
 	</section>
 	<section class="general">
 		<header>
-			<h1>Management Team</h1>
-			<p>Tasked with running all facets of the MyBB project</p>
+			<h1>The MyBB Team</h1>
 		</header>
-		{% include team_table.html team_name="Management Team" team_data=site.data.team_management %}
-	</section>
-	<section class="general">
-		<header>
-			<h1>Support Team</h1>
-			<p>Always on hand to help MyBB's users</p>
-		</header>
-		{% include team_table.html team_name="Support Team" team_data=site.data.team_support %}
-	</section>
-	<section class="general">
-		<header>
-			<h1>Development Team</h1>
-			<p>Pushing the limits of modern forum software</p>
-		</header>
-		{% include team_table.html team_name="Development Team" team_data=site.data.team_development %}
-	</section>
-	<section class="general">
-		<header>
-			<h1>Quality Assurance Team</h1>
-			<p>MyBB's intrepid group of software testers</p>
-		</header>
-		{% include team_table.html team_name="Quality Assurance Team" team_data=site.data.team_quality_assurance %}
-	</section>
-	<section class="general">
-		<header>
-			<h1>Community Team</h1>
-			<p>Dedicated to spreading, promoting, and managing MyBB's community</p>
-		</header>
-		{% include team_table.html team_name="Community Team" team_data=site.data.team_community %}
+		<div class="team-cards">
+			{% include team_cards.html team_name="Management" team_data=site.data.team_management %}
+			{% include team_cards.html team_name="Support" team_data=site.data.team_support %}
+			{% include team_cards.html team_name="Development" team_data=site.data.team_development %}
+			{% include team_cards.html team_name="Quality Assurance" team_data=site.data.team_quality_assurance %}
+			{% include team_cards.html team_name="Community" team_data=site.data.team_community %}
+		</div>
 	</section>
 </div>

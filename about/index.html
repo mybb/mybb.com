@@ -4,35 +4,31 @@ section: home
 title: About MyBB
 description: MyBB is a free and open source, community-based forum software project managed, developed, and supported by volunteers. Since its conception in 2002, the MyBB Group has been committed to developing the best forum software possible.
 meta_description: MyBB is a free and open source, community-based forum software project managed, developed, and supported by volunteers.
+
+redirect_from:
+- /about/mybb/
+- /about/community/
 ---
 
 <aside id="sidebar">
 	<section>
 		<h1>All About MyBB</h1>
-		<nav>
-			<ul>
-				<li class="selected"><a href="{{ site.baseurl }}/about/">About MyBB</a></li>
-				<li><a href="{{ site.baseurl }}/about/team/">About the Team</a></li>
-				<li><a href="{{ site.baseurl }}/about/license/">License Agreement</a></li>
-				<li><a href="{{ site.baseurl }}/about/donations/">Donate to MyBB</a></li>
-				<li><a href="{{ site.baseurl }}/contact/">Contact the MyBB Group</a></li>
-			</ul>
-		</nav>
+		{% include section_nav.html section='about' %}
 	</section>
 	<section class="alt">
 		<h1>Get the latest about MyBB</h1>
 		<nav>
 			<ul>
-				<li><a href="http://twitter.com/MyBB">MyBB on Twitter</a></li>
-				<li><a href="http://facebook.com/MyBBoard">MyBB on Facebook</a></li>
-				<li><a href="http://blog.mybb.com">MyBB Development Blog</a></li>
+				<li><a href="https://twitter.com/MyBB">MyBB on Twitter</a></li>
+				<li><a href="https://facebook.com/MyBBoard">MyBB on Facebook</a></li>
+				<li><a href="https://blog.mybb.com">MyBB Development Blog</a></li>
 			</ul>
 		</nav>
 	</section>
 	<section>
 		<h1>Get Involved with MyBB!</h1>
 		<p>Contribute to MyBB's future through development, testing, support, or resources.</p>
-		<p><a href="{{ site.baseurl }}/get-involved/">More information &rarr;</a></p>
+		<p><a href="{{ site.url }}/get-involved/">More information &rarr;</a></p>
 	</section>
 </aside>
 
@@ -45,9 +41,9 @@ meta_description: MyBB is a free and open source, community-based forum software
 		<p>
 			Years ago, Chris Boulton, web34rk, and b0ndman were on a team developing the XMB forum software. After some time, web34rk and b0ndman left the team and Chris became lead developer of a team with two other developers. Over time, staff shifted again and several developers didn't like the way things were heading and left the team, together forking the project as DevBB. &nbsp;DevBB was the predecessor to MyBB, a temporary solution for people to use whilst MyBB, at the time MyBulletinBoard, was being developed from scratch.</p>
 		<p>
-			MyBB 1.0 was released to the public on December 9, 2005 after several years of steady development and testing. In the years since, MyBB has undergone active development, further extending MyBB's capabilities through new features and the capabilities of third-party developers with improved plugin support. Over 60 versions of MyBB have been released since 1.0, ever improving MyBB's status in the forum software industry. Today, MyBB is a mature forum software with a wide range of useful <a href="{{ site.baseurl }}/features/">features</a>.</p>
+			MyBB 1.0 was released to the public on December 9, 2005 after several years of steady development and testing. In the years since, MyBB has undergone active development, further extending MyBB's capabilities through new features and the capabilities of third-party developers with improved plugin support. Over 60 versions of MyBB have been released since 1.0, ever improving MyBB's status in the forum software industry. Today, MyBB is a mature forum software with a wide range of useful <a href="{{ site.url }}/features/">features</a>.</p>
 		<p>
-			Soon, the MyBB team will begin development on MyBB 2.0, a complete rewrite of the software. While the MyBB team is responsible for planning MyBB's future, MyBB also relies on the <a href="{{ site.baseurl }}/get-involved/">involvement</a> of its community to execute this vision by contributing in development, testing, support, or resources. If you have any suggestions for MyBB 2.0, please post them in the <a href="http://community.mybb.com/forum-158.html">2.0 Suggestions and Feedback</a> forum.</p>
+			Development of MyBB 2.0, a complete rewrite of the software, is currently underway. While the MyBB team is responsible for planning MyBB's future, MyBB also relies on the <a href="{{ site.url }}/get-involved/">involvement</a> of its community to execute this vision by contributing in development, testing, support, or resources. If you have suggestions or would like to find out more about the development of MyBB 2.0, see the <a href="https://community.mybb.com/forum-166.html">MyBB 2.0 Development</a> forum.</p>
 	</section>
 
 	<section class="general">
@@ -56,6 +52,6 @@ meta_description: MyBB is a free and open source, community-based forum software
 			<p>Members of the MyBB Group are responsible for planning MyBB's future</p>
 		</header>
 		<p>
-			Members of the MyBB Group, often referred to as the <a href="{{ site.baseurl }}/about/team/">MyBB team</a>, are volunteers committed to developing, supporting, and managing the MyBB forum software project. As an open source project, the MyBB team is pushing to open up its development process as much as possible to make it easier for community members to <a href="{{ site.baseurl }}/get-involved/">get involved</a> with the project. Community members actively contributing to the MyBB project are recruited to join the team in an official capacity.</p>
+			Members of the MyBB Group, often referred to as the <a href="{{ site.url }}/about/team/">MyBB team</a>, are volunteers committed to developing, supporting, and managing the MyBB forum software project. As an open source project, the MyBB team is pushing to open up its development process as much as possible to make it easier for community members to <a href="{{ site.url }}/get-involved/">get involved</a> with the project. Community members actively contributing to the MyBB project are recruited to join the team in an official capacity.</p>
 	</section>
 </div>

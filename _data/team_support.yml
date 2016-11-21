@@ -1,29 +1,17 @@
-- name: ".m."
+- username: ".m."
   uid: 52123
-  username: ".m."
-  website: ""
-- name: "mmadhankumar"
+- username: "mmadhankumar"
   uid: 60940
-  username: "mmadhankumar"
-  website: ""
-- name: "Destroy666"
+  github: "mmadhankumar"
+- username: "Destroy666"
   uid: 58253
-  username: "Destroy666"
-  website: ""
+  github: "Destroy666x"
+  keybase: "destroy666"
+  pgp_fingerprint: "1F5C 70F6 A83B 3BB2 12C7 90EF FF1F F8D9 9D4D CD32"
+  pgp_link: "https://keybase.io/destroy666/key.asc"
   lead: true
-- name: "Mark Janssen"
-  uid: 24419
+- username: "Katos"
+  uid: 104958
+  name: "Phil Marsh"
   username: "dragonexpert"
-  website: ""
-- name: "Frances Leese"
-  uid: 23276
-  username: "Leefish"
-  website: "http://leefish.nl/mybb"
-- name: "Matt Rogowski"
-  uid: 13556
-  username: "Matt."
-  website: "http://mattrogowski.co.uk"
-- name: "Annika"
-  uid: 57824
-  username: "Tindris"
-  website: "http://britishswede.com"
+  uid: 24419

@@ -3,21 +3,13 @@ layout: default
 section: get-involved
 
 title: Resources
-description: One of the primary goals of MyBB's <a href="!SITE_BASEURL!/about/team/">community team</a> is to maintain MyBB's <a href="http://docs.mybb.com">official documentation</a> and website. Through <a href="http://github.com/mybb">GitHub</a>, you can contribute to both the official documentation and the website.
+description: One of the primary goals of MyBB's <a href="!SITE_url!/about/team/">community team</a> is to maintain MyBB's <a href="https://docs.mybb.com">official documentation</a> and website. Through <a href="https://github.com/mybb">GitHub</a>, you can contribute to both the official documentation and the website.
 meta_description: Get involved by helping maintain MyBB's official documentation or website.
 ---
 <aside id="sidebar">
 	<section>
 		<h1>Get Involved</h1>
-		<nav>
-			<ul>
-				<li><a href="{{ site.baseurl }}/get-involved/development/">Development</a></li>
-				<li class="selected"><a href="{{ site.baseurl }}/get-involved/resources/">Resources</a></li>
-				<li><a href="{{ site.baseurl }}/get-involved/support/">Support</a></li>
-				<li><a href="{{ site.baseurl }}/get-involved/security/">Security Research</a></li>
-				<li><a href="{{ site.baseurl }}/get-involved/irc-channel/">IRC Channel</a></li>
-			</ul>
-		</nav>
+		{% include section_nav.html section='get-involved' %}
 	</section>
 	<section class="alt">
 		<h1>Resources on GitHub</h1>
@@ -37,7 +29,7 @@ meta_description: Get involved by helping maintain MyBB's official documentation
 			<p>Contribute to the MyBB Documentation using GitHub</p>
 		</header>
 		<p>
-			MyBB uses a GitHub repository to manage the official <a href="http://docs.mybb.com">MyBB Documentation</a>, allowing MyBB users and staff to easily collaborate and contribute to the documentation. To make contributions, you just need to fork the <a href="https://github.com/mybb/docs.mybb.com">docs.mybb.com repository</a>, add or update pages, push the changes to your forked repository, then send a pull request for review. Once the pull request is approved, your changes will be merged into the official MyBB Documentation.</p>
+			MyBB uses a GitHub repository to manage the official <a href="https://docs.mybb.com">MyBB Documentation</a>, allowing MyBB users and staff to easily collaborate and contribute to the documentation. To make contributions, you just need to fork the <a href="https://github.com/mybb/docs.mybb.com">docs.mybb.com repository</a>, add or update pages, push the changes to your forked repository, then send a pull request for review. Once the pull request is approved, your changes will be merged into the official MyBB Documentation.</p>
 		<p>
 			More information on making contributions to the documentation is available on the <a href="https://github.com/mybb/docs.mybb.com">MyBB Documentation repository on GitHub</a>.</p>
 	</section>
