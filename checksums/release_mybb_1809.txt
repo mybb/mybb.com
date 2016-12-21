@@ -2674,10 +2674,6 @@ cd37467185ef4e12ccff09f495410fb7 ./jscripts/sceditor/editor_themes/default.css
 aa1571ee7065c14b5a763151272c09e2 ./jscripts/sceditor/editor_themes/default.css
 cd37467185ef4e12ccff09f495410fb7 ./jscripts/sceditor/editor_themes/default.css
 26d539df46a794125c6d70821f186ff3 ./jscripts/sceditor/editor_themes/default.css
-b7b3af4e2092a157da7679ac820694f5 ./jscripts/sceditor/editor_themes/emoticons/Thumbs.db
-8a3a089d9f08c7a3bbbf19256ff009ed ./jscripts/sceditor/editor_themes/emoticons/Thumbs.db
-a63951a1e6738af6f0d06ec28616c320 ./jscripts/sceditor/editor_themes/emoticons/Thumbs.db
-1efc4b02e71e22aef63dccfc25e2dbb4 ./jscripts/sceditor/editor_themes/emoticons/Thumbs.db
 3f67788a4cd0e2884244ffd766237f78 ./jscripts/sceditor/editor_themes/emoticons/alien.png
 27868efb31b01ea896e1cb1174ace358 ./jscripts/sceditor/editor_themes/emoticons/alien.png
 e88d2a82f2d38c5296630aad21e82e5f ./jscripts/sceditor/editor_themes/emoticons/alien.png
