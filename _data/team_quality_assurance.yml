@@ -1,8 +1,3 @@
-- username: "Jones H"
-  uid: 57502
-  website: "http://jonesboard.de"
-  github: "JN-Jones"
-  lead: true
 - username: "Devilshakerz"
   uid: 47371
   name: "Tomasz Mlynski"
@@ -11,6 +6,7 @@
   keybase: "devilshakerz"
   pgp_fingerprint: "DF3A 34D9 A627 42E5 BC6A 6750 1F2F B8AA 28FF E1BC"
   pgp_link: "https://devilshakerz.com/pgp"
+  lead: true
 - username: "nth"
   uid: 84380
   name: "Nathan"
