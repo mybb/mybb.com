@@ -22,7 +22,11 @@
   uid: 4041
   name: "Paul Bender"
   github: "PaulBender"
+  twitter: "Paul_Bender"
   website: "http://galaxiesrealm.com"
+  keybase: "paulbender"
+  pgp_fingerprint: "6DF4 335B 945A 1B35 FE65 8761 04C2 36D1 6780 088B"
+  pgp_link: "https://keybase.io/paulbender/key.asc"
 - username: "Tomm M"
   uid: 14621
   name: "Tom Moore"
