@@ -1738,10 +1738,10 @@ d241240a121ceeb7af3cf332c7ec5d34 ./inc/db_pgsql.php
 47f2b5dee4d8faf6021409d77165c82b ./inc/db_sqlite.php
 85d7bdbe8e86db022ab28c65343fdf24 ./inc/db_sqlite.php
 405cd66376e8709f41b45423c9ef7419 ./inc/db_sqlite.php
-d51ded65b490fa5256d2e39c6ba56726 ./inc/functions.php
-e0442c39416e85895607d44c5774314f ./inc/functions.php
-9b0ab7a3657dfa5d2e010cd5e8a6ba1e ./inc/functions.php
-7be064c69df5666373bbb8e9b9dd32dd ./inc/functions.php
+ac7cf933baa253dc0c37ca6b57114596 ./inc/functions.php
+fda4fa35940681ef1b323848a0e29076 ./inc/functions.php
+fc929147b69e58cc3f626b350909d1a1 ./inc/functions.php
+ddd1797cf445e78d481f45c85d4ca3dc ./inc/functions.php
 9c093a99bb60c6c72c77a939cbd72f36 ./inc/functions_archive.php
 a861a63fc79173670ee7be99df7d2634 ./inc/functions_archive.php
 9c093a99bb60c6c72c77a939cbd72f36 ./inc/functions_archive.php
