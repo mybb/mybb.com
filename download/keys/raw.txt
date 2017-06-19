@@ -1,0 +1,34 @@
+---
+layout: blank
+section: download
+---
+
+MyBB Release Signing Keys
+
+## ACTIVE KEYS BEGIN
+{% assign active_keys = (site.keys | where: "status", "active" | sort: 'add_date') | reverse %}
+{% for key in active_keys %}
+USER: {{ key.username }}
+BRANCHES: {{ key.branches | join: '; ' }}
+FINGERPRINT: {{ key.fingerprint  }}
+ADD_DATE: {{ key.add_date | date_to_string }}
+ADD_ANNOUNCEMENT: {{ key.add_announcement }}
+
+{{ key.content }}
+{% endfor %}
+## ACTIVE KEYS END
+
+## REMOVED KEYS BEGIN
+{% assign removed_keys = (site.keys | where: "status", "removed" | sort: 'remove_date') | reverse %}
+{% for key in removed_keys %}
+USER: {{ key.username }}
+BRANCHES: {{ key.branches | join: '; ' }}
+FINGERPRINT: {{ key.fingerprint  }}
+ADD_DATE: {{ key.add_date | date_to_string }}
+ADD_ANNOUNCEMENT: {{ key.add_announcement }}
+REMOVE_DATE: {{ key.remove_date | date_to_string }}
+REMOVE_ANNOUNCEMENT: {{ key.remove_announcement }}
+
+{{ key.content }}
+{% endfor %}
+## REMOVED KEYS END

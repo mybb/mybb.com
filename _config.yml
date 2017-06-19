@@ -11,6 +11,9 @@ collections:
   rfcs:
     output: true
     permalink: /about/rfcs/:path/
+  keys:
+    output: true
+    permalink: /download/keys/:path/
 
 sass:
   sass_dir: _sass
