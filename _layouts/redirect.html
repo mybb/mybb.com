@@ -2,9 +2,9 @@
 <html lang="en-US">
 <meta charset="utf-8">
 <title>Redirecting…</title>
-<link rel="canonical" href="{{ page.redirect.to }}">
-<meta http-equiv="refresh" content="0; url={{ page.redirect.to }}">
+<link rel="canonical" href="{{ page.redirect.to | default: content }}">
+<meta http-equiv="refresh" content="0; url={{ page.redirect.to | default:  content }}">
 <h1>Redirecting…</h1>
-<a href="{{ page.redirect.to }}">Click here if you are not redirected.</a>
-<script>location="{{ page.redirect.to }}"</script>
+<a href="{{ page.redirect.to | default: content }}">Click here if you are not redirected.</a>
+<script>location="{{ page.redirect.to | default:  content }}"</script>
 </html>
