@@ -33,6 +33,17 @@ Reputable third-party archiving services providing snapshots of Package Signing 
 
  - [web.archive.org](https://web.archive.org/)
 
+# Software setup
+
+[GnuPG](https://www.gnupg.org/) is used for key and signature management &mdash; it is recommended to use version 2.1 or higher.
+
+Before following any step of the Protocol, the GnuPG configuration file (`~/.gnupg/gpg.conf` &mdash; the location can be checked with `gpg --version`) should be updated to prioritize strong algorithms:
+```
+personal-digest-preferences SHA512
+cert-digest-algo SHA512
+default-preference-list SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB BZIP2 ZIP Uncompressed
+```
+
 #### Package Signing Permissions
 Team members of at least 90 days, familiar with PGP basics and related safety practices, and own PGP key published on the Team page are permitted to participate in the package signing process. The eligibility is assessed during internal interviews.
 
@@ -48,14 +59,10 @@ Although not required, it is recommended that Team members verify the authentici
 1. Create a 4096-bit _RSA (sign only)_ key with _Real name_ including your Community Forums name, your `*@mybb.com` e-mail address, and `CODE SIGNING KEY` as a comment.
 
    ```
-   gpg --gen-key
+   gpg --full-gen-key
    ```
- 
-   If you are on a Mac and using the [GPG Suite](https://gpgtools.org), you need to run the following to generate key and see all of the necessary prompts:
- 
-   ```
-   gpg --full-generate-key
-   ```
+
+   (`gpg --gen-key` on older versions)
 
 2. Sign the created key with your Team Member Key.
 
