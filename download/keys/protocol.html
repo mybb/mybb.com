@@ -33,7 +33,16 @@ Reputable third-party archiving services providing snapshots of Package Signing 
 
  - [web.archive.org](https://web.archive.org/)
 
-# Software setup
+#### Package Signing Permissions
+Team members of at least 90 days, familiar with PGP basics and related safety practices, and own PGP key published on the Team page are permitted to participate in the package signing process. The eligibility is assessed during internal interviews.
+
+#### Package Signing Key Signing Permissions
+At least one member of the Management Team or a team Leader is required to authorize any signing key before adding it to the list by signing it with their Team Member Key. Authorizing own signing keys is not allowed.
+
+#### Team Web of Trust
+Although not required, it is recommended that Team members verify the authenticity of one another's Team Member Keys by cross-signing them and uploading the signatures to public keyservers.
+
+# Software Setup
 
 [GnuPG](https://www.gnupg.org/) is used for key and signature management &mdash; it is recommended to use version 2.1 or higher.
 
@@ -44,16 +53,7 @@ cert-digest-algo SHA512
 default-preference-list SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB BZIP2 ZIP Uncompressed
 ```
 
-#### Package Signing Permissions
-Team members of at least 90 days, familiar with PGP basics and related safety practices, and own PGP key published on the Team page are permitted to participate in the package signing process. The eligibility is assessed during internal interviews.
-
-#### Package Signing Key Signing Permissions
-At least one member of the Management Team or a team Leader is required to authorize any signing key before adding it to the list by signing it with their Team Member Key. Authorizing own signing keys is not allowed.
-
-#### Team Web of Trust
-Although not required, it is recommended that Team members verify the authenticity of one another's Team Member Keys by cross-signing them and uploading the signatures to public keyservers.
-
-# Key management
+# Key Management
 
 #### Creating Package Signing Keys
 1. Create a 4096-bit _RSA (sign only)_ key with _Real name_ including your Community Forums name, your `*@mybb.com` e-mail address, and `CODE SIGNING KEY` as a comment.
@@ -119,7 +119,7 @@ The key can be used to sign packages after 14 days have passed since it was adde
 #### Package Signing Key Signature Continuity
 At all times the Package Signing Keys should have at least one valid signature according to _Package Signing Key Signing Permissions_. Package Signing Key signatures that are invalidated due to personnel changes (e.g. the signing party is no longer a Team member) should be replaced by new ones.
 
-# Package signing
+# Package Signing
 
 1. #### Individual signing
    If any issues have been found, do not proceed and report them internally.
