@@ -14,6 +14,16 @@ collections:
   keys:
     output: true
     permalink: /download/keys/:path/
+  versions:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: versions
+    values:
+      layout: "version"
+      title: ""
 
 sass:
   sass_dir: _sass
