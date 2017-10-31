@@ -70,7 +70,7 @@ Download links are provided on this page for older versions for non-production-s
     </thead>
 {% assign versions_sorted = (site.versions | sort: 'release_date') | reverse %}
 {% for version in versions_sorted %}
-    {% if version.version_number contains '1.8.' %}
+    {% if version.version_number contains '1.8.' and version.release_date != '' %}
         {% capture type %}{% include release_type.html version = version %}{% endcapture %}
 
         <tr>

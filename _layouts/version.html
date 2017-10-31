@@ -1,70 +1,76 @@
 ---
 layout: default
 ---
-{% if page.type_major %}
-    {% assign type = 'Major' %}
+{% if page.resolved_security_issues_number %}
+    {% assign resolved_security_issues_number = page.resolved_security_issues_number %}
 {% else %}
-    {% assign typesCsv = '' %}
+    {% assign resolved_security_issues_number = page.resolved_security_issues | size %}
+{% endif %}
+
+{% if page.type_major %}
+    {% assign typesAppended = 'Major' %}
+{% else %}
+    {% assign typesAppended = '' %}
 
     {% if page.type_feature == true or page.type contains 'feature' %}
-        {% assign typesCsv = typesCsv | append: ' Feature' %}
+        {% assign typesAppended = typesAppended | append: ' Feature' %}
     {% endif %}
-    {% if page.fixed_issues_number or page.type contains 'maintenance' %}
-        {% if page.type_maintenance != false or page.type_maintenance == true %}
-            {% assign typesCsv = typesCsv | append: ' Maintenance' %}
-        {% endif %}
-    {% endif %}
-    {% if page.fixed_security_issues_number or page.type contains 'security' %}
+    {% if page.resolved_security_issues or page.resolved_security_issues_number or page.type contains 'security' %}
         {% if page.type_security != false or page.type_security == true %}
-            {% assign typesCsv = typesCsv | append: ' Security' %}
+            {% assign typesAppended = typesAppended | append: ' Security' %}
         {% endif %}
     {% endif %}
-
-    {% assign type = typesCsv | strip | replace: ' ', ', ' %}
+    {% if page.resolved_issues_number or page.type contains 'maintenance' %}
+        {% if page.type_maintenance != false or page.type_maintenance == true %}
+            {% assign typesAppended = typesAppended | append: ' Maintenance' %}
+        {% endif %}
+    {% endif %}
 {% endif %}
-
-{% if page.version_code %}
-    {% assign version_code = page.version_code %}
-{% else %}
-    {% assign version_code = page.version_number | replace: '.', '' %}
-{% endif %}
+{% assign typesString = typesAppended | strip | replace: ' ', ', ' %}
+{% assign typesHtml = typesAppended | strip | replace: ' ', '</span><span>' %}
+{% assign typesHtml = '<span>' | append: typesHtml | append: '</span>' %}
 
 
 <div class="releaseNotes">
 
-<h1>MyBB {{ page.version_number }}</h1>
-<strong>Version:</strong> {{ page.version_number }} (code {{ version_code }})<br>
-<strong>Release date:</strong> {{ page.release_date | date: '%e %B %Y' }}<br>
-<strong>Type:</strong> {{ type }}<br>
-<br>
+<div class="releaseNotes__title">
+    <p class="releaseNotes__title__package">MyBB {{ page.version_number }}</p>
+    <p class="releaseNotes__title__time">(<time>{{ page.release_date | date: '%e %B %Y' }}</time>)</p>
+</div>
+<div class="releaseNotes__details">
+    {% if page.version_code %}
+        <p class="releaseNotes__details__code">code {{ page.version_code }}</p>
+    {% endif %}
+    <p class="releaseNotes__details__types">{{ typesHtml }}</p>
+</div>
 
 {% if page.packages %}
     <div class="downloadPackages">
         {% for package in page.packages %}
-            {% for package_type in site.data.packaging.types %}
-                {% if package_type.type == package.type %}
-                    {% assign package_type = package_type %}
+            {% for type_data in site.data.packaging.types %}
+                {% if type_data.name == package.type %}
+                    {% assign type_data = type_data %}
                     {% break %}
                 {% endif %}
             {% endfor %}
 
-            <div class="downloadPackages__package downloadPackages__package--{{ package.type }}">
-                <p class="downloadPackages__package__title"><i class="fa fa-fw {{ package_type.icon }}"></i> {{ package_type.name }}</p>
-                <p class="downloadPackages__package__description">{{ package_type.description }}</p>
+            <div class="downloadPackages__package downloadPackages__package--{{ type_data.name }}">
+                <p class="downloadPackages__package__title"><i class="fa fa-fw {{ type_data.icon }}"></i> {{ type_data.title }}</p>
+                <p class="downloadPackages__package__description">{{ type_data.description }}</p>
                 {% for format in package.formats %}
-                    <div class="downloadPackages__format downloadPackages__format--{{ format.name }}">
+                    <div class="downloadPackages__format downloadPackages__format--{{ format.type }}">
                         {% for location in format.locations %}
-                            {% for package_location in site.data.packaging.locations %}
-                                {% if package_location.id == location.id %}
-                                    {% assign package_location = package_location %}
+                            {% for location_data in site.data.packaging.locations %}
+                                {% if location_data.name == location.name %}
+                                    {% assign location_data = location_data %}
                                     {% break %}
                                 {% endif %}
                             {% endfor %}
 
-                            {% assign url = package_location.url | replace: '{TYPE}', package.type | replace: '{VERSION_CODE}', version_code | replace: '{FORMAT}', format.name %}
+                            {% assign url = location_data.url | replace: '{TYPE}', type_data.name | replace: '{VERSION_CODE}', version_code | replace: '{FORMAT}', format_data.name %}
 
-                            <a href="{{ url }}" class="downloadPackages__location downloadPackages__location--{{ location.id }}">
-                                <p class="downloadPackages__location__name"><i class="fa fa-fw fa-cloud-download"></i> Download from <strong>{{ package_location.name }}</strong></p>
+                            <a href="{{ url }}" class="downloadPackages__location downloadPackages__location--{{ location_data.name }}">
+                                <p class="downloadPackages__location__name"><i class="fa fa-fw fa-cloud-download"></i> Download from <strong>{{ location_data.title }}</strong></p>
                             </a>
                         {% endfor %}
 
@@ -112,9 +118,9 @@ layout: default
 
 <br>
 
-{% if page.fixed_security_issues_number %}
-    <h2>Security vulnerabilities addressed ({{ page.fixed_security_issues_number }})</h2>
-    {% if page.fixed_security_issues %}
+{% if page.resolved_security_issues_number %}
+    <h2>Security vulnerabilities addressed ({{ page.resolved_security_issues_number }})</h2>
+    {% if page.resolved_security_issues %}
         <table class="standard_table">
             <thead>
                 <tr>
@@ -124,7 +130,7 @@ layout: default
                 </tr>
             </thead>
             <tbody>
-                {% for issue in page.fixed_security_issues %}
+                {% for issue in page.resolved_security_issues %}
                     <tr>
                         <td>{{ issue.severity | capitalize }} risk</td>
                         <td>{{ issue.description }}</td>
@@ -132,8 +138,8 @@ layout: default
                             {% if issue.reported_by.name %}
                                 {% assign reported_by = '<i>' | append: (issue.reported_by.name | markdownify | replace: '<p>', '' | replace: '</p>
 ', '') %}
-                                {% if issue.reported_by.association %}
-                                    {% assign reported_by = reported_by | append: '<i>' | append: '<br><small>' | append: (issue.reported_by.association | markdownify | replace: '<p>', '' | replace: '</p>
+                                {% if issue.reported_by.affiliation %}
+                                    {% assign reported_by = reported_by | append: '<i>' | append: '<br><small>' | append: (issue.reported_by.affiliation | markdownify | replace: '<p>', '' | replace: '</p>
 ', '') | append: '</small>' %}
                                 {% endif %}
                                 {{ reported_by }}
@@ -147,14 +153,14 @@ layout: default
     <br>
 {% endif %}
 
-{% if page.fixed_issues_number %}
-    <h2>Issues resolved ({{ page.fixed_issues_number }})</h2>
-    {% if page.fixed_issues_link %}
-        <a href="{{ page.fixed_issues_link }}"><strong>{{ page.fixed_issues_link }}</strong></a>
+{% if page.resolved_issues_number %}
+    <h2>Issues resolved ({{ page.resolved_issues_number }})</h2>
+    {% if page.resolved_issues_link %}
+        <a href="{{ page.resolved_issues_link }}"><strong>{{ page.resolved_issues_link }}</strong></a>
     {% endif %}
-    {% if page.fixed_issues %}
+    {% if page.resolved_issues %}
         <ul>
-            {% for issue in page.fixed_issues %}
+            {% for issue in page.resolved_issues %}
                 <li>{{ issue.description | markdownify }}</li>
             {% endfor %}
         </ul>
