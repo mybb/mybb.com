@@ -72,7 +72,7 @@ Lists changed files in a flat or nested array.
 Lists modified templates.
 
 ## `_data/packaging.yml` definitions
-### `types`
+#### `types`
 List of package types.
 
 - `name`: identifier,
@@ -82,7 +82,7 @@ List of package types.
   `icon`: icon variable.
 
 
-### `locations`
+#### `locations`
 List of locations for package downloads.
 
 - `name`: identifier,
