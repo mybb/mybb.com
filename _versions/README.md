@@ -40,26 +40,31 @@ Optional page body is appended at the end of the information generated based on 
 Lists packages for the release.
 
 - `type`: identifier of the package type,
+
   `formats`:
   Lists formats (file extensions) for the package type.
-
   - `type`: the format name,
-    `locations`:
-    - `name`: the location identifier,
-      `checksums`:
-      Lists checksums for the package in specific format.
 
-      - `type`: the checksum type,
-        `value` the checksum value.
+  `locations`:
+    - `name`: the location identifier,
+
+   `checksums`:
+   Lists checksums for the package in specific format.
+   - `type`: the checksum type,
+    `value` the checksum value.
+
 
 #### `resolved_security_issues`
 Lists resolved security issues.
 
-- `description`: issue description
-  `severity`: issue severity
+- `description`: issue description,
+
+  `severity`: issue severity,
+
   `reported_by`:
-    `name`: The reporter name (Markdown links allowed)
-    `affiliation`: The organization, group, company or other association of the reporter (Markdown links allowed)
+    `name`: The reporter name (Markdown links allowed),
+    `affiliation`: The organization, group, company or other association of the reporter (Markdown links allowed).
+
 
 #### `resolved_issues`
 Lists resolved issues. 
@@ -78,7 +83,9 @@ List of package types.
 - `name`: identifier,
 
   `title`: display name,
+
   `description`: description,
+
   `icon`: icon variable.
 
 
@@ -86,5 +93,8 @@ List of package types.
 List of locations for package downloads.
 
 - `name`: identifier,
+
   `url`: URL for package downloads with possible `{TYPE}` (identifier from the `types` list), `{VERSION_CODE}`, and `{FORMAT}` (file extension provided in the version data file),
+
   `title`: display name.
+
