@@ -1,0 +1,57 @@
+{% capture _blackhole %}
+
+    {% assign versions = (site.versions | sort: 'release_date') | reverse %}
+    {% for version in versions %}
+        {% if version.release_date != '' %}
+            {% assign latest_version = version %}
+            {% break %}
+        {% endif %}
+    {% endfor %}
+
+    {% if version.type_major %}
+        {% assign typesAppended = 'Major' %}
+    {% else %}
+        {% assign typesAppended = '' %}
+
+        {% if latest_version.type_feature == true or latest_version.type contains 'feature' %}
+            {% assign typesAppended = typesAppended | append: ' Feature' %}
+        {% endif %}
+        {% if latest_version.resolved_security_issues or latest_version.resolved_security_issues_number or latest_version.type contains 'security' %}
+            {% if latest_version.type_security != false or latest_version.type_security == true %}
+                {% assign typesAppended = typesAppended | append: ' Security' %}
+            {% endif %}
+        {% endif %}
+        {% if latest_version.resolved_issues_number or latest_version.type contains 'maintenance' %}
+            {% if latest_version.type_maintenance != false or latest_version.type_maintenance == true %}
+                {% assign typesAppended = typesAppended | append: ' Maintenance' %}
+            {% endif %}
+        {% endif %}
+    {% endif %}
+    {% assign latest_version_types_string = typesAppended | strip | replace: ' ', ', ' %}
+    {% assign latest_version_types_html = typesAppended | strip | replace: ' ', '</span><span>' %}
+    {% assign latest_version_types_html = '<span>' | append: latest_version_types_html | append: '</span>' %}
+    {% assign latest_version_types_amp = latest_version_types_string | downcase | replace: ', ', ' &amp; ' %}
+
+    {% for package in latest_version.packages %}
+        {% for format in package.formats %}
+            {% for location in format.locations %}
+                {% assign latest_version_first_location = location %}
+                {% break %}
+            {% endfor %}
+            {% assign latest_version_first_format = format %}
+            {% break %}
+        {% endfor %}
+        {% assign latest_version_first_package = package %}
+        {% break %}
+    {% endfor %}
+
+    {% for location_data in site.data.packaging.locations %}
+        {% if location_data.name == latest_version_first_location.name %}
+            {% assign latest_version_first_location_data = location_data %}
+            {% break %}
+        {% endif %}
+    {% endfor %}
+
+    {% assign latest_version_first_location_url = latest_version_first_location_data.url | replace: '{TYPE}', latest_version_first_package.type | replace: '{VERSION_CODE}', latest_version.version_code | replace: '{FORMAT}', latest_version_first_format.type %}
+
+{% endcapture %}

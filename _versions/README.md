@@ -48,9 +48,12 @@ Lists packages for the release.
   `locations`:
     - `name`: the location identifier,
 
-   `checksums`:
-   Lists checksums for the package in specific format.
-   - `type`: the checksum type,
+  `filesize`: size of the package with specified unit of information,
+
+  `checksums`:
+  Lists checksums for the package in specific format.
+  - `type`: the checksum type,
+
     `value` the checksum value.
 
 

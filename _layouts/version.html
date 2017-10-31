@@ -59,6 +59,13 @@ layout: default
                 <p class="downloadPackages__package__description">{{ type_data.description }}</p>
                 {% for format in package.formats %}
                     <div class="downloadPackages__format downloadPackages__format--{{ format.type }}">
+                        <p class="downloadPackages__format__title">
+                            <span class="downloadPackages__format__type">.{{ format.type }}</span>
+                        {% if format.filesize %}
+                            <span class="downloadPackages__format__size">&mdash; {{ format.filesize }}</span>
+                        {% endif %}
+                        </p>
+
                         {% for location in format.locations %}
                             {% for location_data in site.data.packaging.locations %}
                                 {% if location_data.name == location.name %}
@@ -67,7 +74,7 @@ layout: default
                                 {% endif %}
                             {% endfor %}
 
-                            {% assign url = location_data.url | replace: '{TYPE}', type_data.name | replace: '{VERSION_CODE}', version_code | replace: '{FORMAT}', format_data.name %}
+                            {% assign url = location_data.url | replace: '{TYPE}', type_data.name | replace: '{VERSION_CODE}', page.version_code | replace: '{FORMAT}', format.type %}
 
                             <a href="{{ url }}" class="downloadPackages__location downloadPackages__location--{{ location_data.name }}">
                                 <p class="downloadPackages__location__name"><i class="fa fa-fw fa-cloud-download"></i> Download from <strong>{{ location_data.title }}</strong></p>
