@@ -26,8 +26,9 @@ layout: default
         {% endif %}
     {% endif %}
 {% endif %}
-{% assign typesString = typesAppended | strip | replace: ' ', ', ' %}
-{% assign typesHtml = typesAppended | strip | replace: ' ', '</span><span>' %}
+{% assign typesAppended = typesAppended | strip %}
+{% assign typesString = typesAppended | replace: ' ', ', ' %}
+{% assign typesHtml = typesAppended | replace: ' ', '</span><span>' %}
 {% assign typesHtml = '<span>' | append: typesHtml | append: '</span>' %}
 
 
@@ -35,13 +36,17 @@ layout: default
 
 <div class="releaseNotes__title">
     <p class="releaseNotes__title__package">MyBB {{ page.version_number }}</p>
-    <p class="releaseNotes__title__time">(<time>{{ page.release_date | date: '%e %B %Y' }}</time>)</p>
+    {% if page.release_date %}
+        <p class="releaseNotes__title__time">(<time>{{ page.release_date | date: '%d %B %Y' }}</time>)</p>
+    {% endif %}
 </div>
 <div class="releaseNotes__details">
     {% if page.version_code %}
         <p class="releaseNotes__details__code">code {{ page.version_code }}</p>
     {% endif %}
-    <p class="releaseNotes__details__types">{{ typesHtml }}</p>
+    {% if typesAppended.size != 0 %}
+        <p class="releaseNotes__details__types">{{ typesHtml }}</p>
+    {% endif %}
 </div>
 
 {% if page.packages %}
@@ -125,8 +130,8 @@ layout: default
 
 <br>
 
-{% if page.resolved_security_issues_number %}
-    <h2>Security vulnerabilities addressed ({{ page.resolved_security_issues_number }})</h2>
+{% if resolved_security_issues_number %}
+    <h2>Security vulnerabilities addressed ({{ resolved_security_issues_number }})</h2>
     {% if page.resolved_security_issues %}
         <table class="standard_table">
             <thead>
