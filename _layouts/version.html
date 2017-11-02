@@ -200,10 +200,35 @@ layout: default
         <small>
             {{ list_output }}
         </small>
+        {% assign recursive_count = 0 %}
     {% else %}
         <h3>Changed Files</h3>
         <small>
             {{ page.changed_files | markdownify }}
+        </small>
+    {% endif %}
+    <br>
+{% endif %}
+
+{% if page.removed_files_list %}
+    <h3>Removed Files ({{ page.removed_files_list | size }})</h3>
+    <code>{{ page.removed_files_list | join: '<br>' }}</code>
+    <br>
+    <br>
+{% elsif page.removed_files %}
+    {% if page.removed_files.first %}
+        {% capture list_output %}
+            {% include recursive_list.html list = page.removed_files parent_suffix = '/' %}
+        {% endcapture %}
+        <h3>Removed Files ({{ recursive_count }})</h3>
+        <small>
+            {{ list_output }}
+        </small>
+        {% assign recursive_count = 0 %}
+    {% else %}
+        <h3>Removed Files</h3>
+        <small>
+            {{ page.removed_files | markdownify }}
         </small>
     {% endif %}
     <br>
