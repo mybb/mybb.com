@@ -13,5 +13,5 @@ locations:
     url: https://resources.mybb.com/downloads/{TYPE}_{VERSION_CODE}.{FORMAT}
     title: MyBB.com
   - name: github.com/mybb/mybb/releases/
-    url: https://github.com/mybb/mybb/releases/{TYPE}_{VERSION_CODE}.{FORMAT}
+    url: https://github.com/mybb/mybb/releases/download/mybb_{VERSION_CODE}/{TYPE}_{VERSION_CODE}.{FORMAT}
     title: GitHub
