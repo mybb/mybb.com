@@ -1,0 +1,54 @@
+---
+layout: default
+section: home
+
+title: Report Abuse
+description: The MyBB Project provides free and open-source software that anyone can use, modify, contribute to and redistribute. Development and support environment free of nuisances across our <a href="https://mybb.com/about/ecosystem/">our platforms</a> is defined in the Project's <a href="https://mybb.com/about/conduct/">Code of Conduct</a> and enforced by the MyBB Team. Learn how you can report content that may be deemed inappropriate, depending on its location.
+
+redirect_from:
+- /abuse/
+---
+<aside id="sidebar">
+	<section>
+	<h1>Report Abuse</h1>
+		{% include section_nav.html section='about' parent='contact' %}
+	</section>
+	<section class="alt">
+		<h1>Connect with MyBB</h1>
+		{% include social_buttons.html %}
+	</section>
+</aside>
+
+<div id="contentBlock">
+	<section class="general">
+{% capture markdown %}
+
+# MyBB Project-managed Web Presence
+_Includes Community.MyBB.com, other MyBB.com websites and  MyBB Project's Trello boards_
+
+You can reach the MyBB Team by creating a private thread, visible only to you and staff members, in the [**Private Inquiries**](https://community.mybb.com/forum-135.html) section on the Community Forums.
+Alternatively, administrators can be reached via e-mail:  `contact@mybb.com`.
+
+- #### Discord channels
+  You can reach online MyBB Team members by sending them a Message. Discord also allows you to [block certain users](https://support.discordapp.com/hc/en-us/articles/217916488-Blocking-Privacy-Settings-).
+
+
+- #### GitHub code repositories
+  It is also possible to report problematic behavior [directly to GitHub](https://github.com/contact/report-abuse).
+
+
+# Forums Powered by MyBB
+
+While the MyBB Project creates and maintains software that powers numerous discussion boards, it does not have the tools to control, modify or block specific MyBB forums.
+
+If you suspect a website or forum is involved in illegal activities, you can use the [WHOIS Search tool](https://whois.icann.org/en/) to find out:
+ - which company keeps a specific **domain** online (_Registrar_ fields in the report),
+ - which company that **hosts** the website/forum in question on their servers (_Names Servers_  fields in the report).
+
+Contacts to given companies, if not shown explicitly, can be found using a search engine ([DuckDuckGo](https://duckduckgo.com/), [Google](https://google.com/), [Bing](https://www.bing.com/)) by searching for `[company name] abuse` or `[company name] contact`.
+
+Forums that do not meet our [Support Eligibility](https://mybb.com/support/eligibility-policy/) criteria can be denied official technical support if such is being sought.
+{% endcapture %}
+{{ markdown | markdownify }}
+	</section>
+</div>
