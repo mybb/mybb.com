@@ -74,10 +74,10 @@ Download links are provided on this page for older versions for non-production-s
         {% capture type %}{% include release_type.html version = version %}{% endcapture %}
 
         <tr>
-            <td><a href="{{ version.version_number }}">{{ version.version_number }}</a></td>
+            <td><a href="{{ version.version_number }}/">{{ version.version_number }}</a></td>
             <td>{{ version.release_date | date: '%e %B %Y' }}</td>
             <td>{{ type }}</td>
-            <td><a href="https://resources.mybb.com/downloads/mybb_{{ version.version_number | replace: '.', '' }}.zip">Download</a></td>
+            <td><a href="{{ version.version_number }}/">Download</a></td>
         </tr>
     {% endif %}
 {% endfor %}

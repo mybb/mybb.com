@@ -111,6 +111,11 @@ layout: default
         <i class="fa fa-fw fa-cogs"></i>
         <p>Running the <strong>upgrade script</strong> is required.</p>
     </div>
+{% else %}
+    <div class="note">
+        <i class="fa fa-fw fa-cogs"></i>
+        <p>This release does <strong>not</strong> need running the upgrade script.</p>
+    </div>
 {% endif %}
 
 {% if page.version_number contains '1.8.' %}
