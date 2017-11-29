@@ -12,3 +12,11 @@
   name: "Filippo"
   github: "shade-"
   website: "http://www.mybboost.com"
+- username: "kawaii"
+  uid: 90781
+  name: "Kane Valentine"
+  github: "kawaii"
+  website: "https://cute.im"
+  keybase: "kawaii"
+  pgp_fingerprint: "5613 A3E7 3410 AC9A A49D A5F2 E2C7 A79A FD80 B1E8"
+  pgp_link: "https://keybase.io/kawaii/pgp_keys.asc"
