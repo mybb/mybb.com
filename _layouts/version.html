@@ -49,6 +49,43 @@ layout: default
     {% endif %}
 </div>
 
+{% assign versionSeries = page.version_number | split: '.' %}
+{% assign versionSeriesSize = versionSeries | size %}
+
+{% for eol in site.data.eol_versions %}
+    {% assign eolSeries = eol.series | split: '.' %}
+    {% assign eolSeriesSize = eolSeries | size %}
+
+    {% assign matchedSeries = true %}
+
+    {% if eolSeriesSize > versionSeriesSize %}
+        {% assign matchedSeries = false %}
+    {% else %}
+        {% for part in eolSeries %}
+            {% if part != versionSeries[forloop.index0] %}
+                {% assign matchedSeries = false %}
+                {% break %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    {% if matchedSeries %}
+        <div class="note note--eolNotice">
+            <i class="fa fa-fw fa-exclamation-triangle"></i>
+            <p><strong>This version is no longer supported</strong></p>
+            {% if eol.text %}
+                <p>{{ eol.text | markdownify }}</p>
+            {% endif %}
+            <p>
+                This means there will be no more security or maintenance releases for this series and forums running this version of MyBB may be at risk of unfixed security issues. <strong>The MyBB Group strongly encourages all communities to upgrade to the latest release of MyBB as soon as possible.</strong>
+            </p>
+            {% if eol.link %}
+                <p><a href="{{ eol.link }}">Find out more &rarr;</a></p>
+            {% endif %}
+        </div>
+        {% break %}
+    {% endif %}
+{% endfor %}
+
 {% if page.packages %}
     <div class="downloadPackages">
         {% for package in page.packages %}
