@@ -172,7 +172,8 @@ layout: default
 
 <br>
 
-{% if resolved_security_issues_number %}
+{% assign resolved_security_issues_number = resolved_security_issues_number | plus:0 %}
+{% if resolved_security_issues_number > 0 %}
     <h2>Security vulnerabilities addressed ({{ resolved_security_issues_number }})</h2>
     {% if page.resolved_security_issues %}
         <table class="standard_table">
