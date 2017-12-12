@@ -6,6 +6,7 @@ layout: default
 {% else %}
     {% assign resolved_security_issues_number = page.resolved_security_issues | size %}
 {% endif %}
+{% assign resolved_security_issues_number = resolved_security_issues_number | plus:0 %}
 
 {% if page.type_major %}
     {% assign typesAppended = 'Major' %}
@@ -172,7 +173,6 @@ layout: default
 
 <br>
 
-{% assign resolved_security_issues_number = resolved_security_issues_number | plus:0 %}
 {% if resolved_security_issues_number > 0 %}
     <h2>Security vulnerabilities addressed ({{ resolved_security_issues_number }})</h2>
     {% if page.resolved_security_issues %}
