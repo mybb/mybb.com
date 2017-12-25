@@ -126,7 +126,8 @@ layout: default
 
                         {% if format.checksums %}
                         <div class="downloadPackages__checksums">
-                            {% for checksum in format.checksums %}
+                            {% assign checksums = format.checksums | sort: 'type' | reverse %}
+                            {% for checksum in checksums %}
                                 <div class="downloadPackages__checksums_checksum">
                                     <p class="downloadPackages__checksums__type">{{ checksum.type }}:</p>
                                     <p class="downloadPackages__checksums__value">{{ checksum.value }}</code>
