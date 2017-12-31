@@ -8,6 +8,22 @@ url: https://mybb.com
 collections:
   features:
     output: true
+  rfcs:
+    output: true
+    permalink: /about/rfcs/:path/
+  keys:
+    output: true
+    permalink: /download/keys/:path/
+  versions:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: versions
+    values:
+      layout: "version"
+      title: ""
 
 sass:
   sass_dir: _sass
@@ -15,3 +31,5 @@ sass:
 
 gems:
   - jekyll-redirect-from
+
+exclude: ["CNAME", "README.md", "CONTRIBUTING.md"]

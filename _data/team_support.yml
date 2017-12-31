@@ -1,25 +1,5 @@
-- name: ".m."
+- username: ".m."
   uid: 52123
-  username: ".m."
-- name: "mmadhankumar"
-  uid: 60940
-  username: "mmadhankumar"
-  github: "mmadhankumar"
-- name: "Destroy666"
-  uid: 58253
-  username: "Destroy666"
-  github: "Destroy666x"
-  lead: true
-- name: "Frances Leese"
-  uid: 23276
-  username: "Leefish"
-  github: "leefish"
-  website: "http://leefish.nl/mybb"
-- name: "Matt Rogowski"
-  uid: 13556
-  username: "Matt"
-  github: "MattRogowski"
-  website: "https://matt.rogow.ski"
-- name: "Phil Marsh"
+- username: "katos"
   uid: 104958
-  username: "Katos"
+  name: "Phil Marsh"

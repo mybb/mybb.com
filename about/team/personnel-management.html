@@ -1,0 +1,127 @@
+---
+layout: default
+section: home
+title: Personnel management
+description: The guideline for Team additions and removals.
+meta_description: The guideline for Team additions and removals.
+---
+
+<aside id="sidebar">
+	<section>
+	<h1>All About MyBB</h1>
+		{% include section_nav.html section='about' parent='about/team' %}
+	</section>
+	<section class="alt">
+		<h1>Joining the MyBB Team</h1>
+		<p>Interested in joining the MyBB team? It all starts by getting involved with the community such as through development or support.</p>
+		<p><a href="{{ site.url }}/get-involved/"><strong>Get Involved &rarr;</strong></a></p>
+	</section>
+</aside>
+
+<div id="contentBlock">
+	<section class="general">
+
+{% capture markdown %}
+## Adding members
+1. #### Initiation
+   - ##### Application
+     A user submits their Team application in the _Private Inquiries_ section on the Community Forums.
+
+   - ##### Invitation
+     The Team discusses the proposed invitation of a given Community member.
+
+2. #### _[Recruitment]_ discussion &amp; voting thread in _Personnel_
+   **Thread title:** `Username to Team`  (e.g. _Eve to Development_), or `username` if destination team not (yet) chosen
+
+   **Poll:** `Recruitment of Username` (e.g.g _Recruitment of Eve_)
+
+   **Poll options:**
+
+   - _Yes_
+   - _No_
+   - _More information needed_
+   - _More involvement needed_
+
+3. #### Decision
+   Current Team members discuss and vote in the recruitment thread. Once a common agreement is reached, the candidate is informed about the conclusion in their _Private Inquiries_ thread if the process was initiated with an Application, or a member of the Management Team or any Team Leader invites the user over a non-public channel to determine whether the process should continue.
+
+3. #### Non-Disclosure Agreement
+   A member of the Management Team or the Community Team Leader contacts the candidate over a private channel and provides a blank MyBB Non-Disclosure Agreement to be signed and sent back.
+
+   The signed NDA document is placed in a MyBB Organization Google Drive folder accessible only to aforementioned members.
+
+4. #### Introducing team members
+   1. The recruitment discussion thread in _Personnel_ is deleted.
+   2. A welcome thread (_[welcome]_`Username`) is created in _Personnel_, where the new member can provide details necessary to grant them access to the remaining platforms.
+   3. _MyBB Staff_, _Super Moderator Access_ and specific team group(s) are assigned to the Community account.
+
+5. #### Onboarding
+   1. A welcome message is sent over a non-public channel:
+
+      **Title (if applicable):** `Welcome to the MyBB Team`
+
+      ```
+      Hello Username,
+
+      Congratulations and welcome to the MyBB Team! Here is some information that might help you get started.
+
+      Your Community Forums account now belongs to the staff user group and has access to restricted areas and moderation tools.
+
+      Please note that all information located in non-public Community Forums sections and services used by the MyBB Team are confidential and should never be provided to any third party without explicit permission in order to protect our users' security and privacy and to assure uninterrupted operation of the Project's services.
+
+      You can find our Code of Conduct, which applies project-wide, here: https://mybb.com/about/conduct/
+
+      As you might have noticed, we use a number of platforms when working on MyBB and if you wan to join, we will need some details - you can find the list here: https://mybb.com/about/ecosystem/
+
+      Remember to have 2-Factor Authentication enabled on all of those services (if you use Single Sign-On you can simply use 2FA there) as well as the e-mail account you are using and to follow common security recommendations, like:
+       - choosing unique, very strong passwords,
+       - never using potentially insecure public devices or Internet access points,
+       - not leaving your devices unlocked when unattended,
+       - keeping your software up to date,
+       - using firewall and anti-virus protection (if applicable),
+       - looking out for phishing attempts.
+      Changing your passwords might be a good idea given the elevation of permissions.
+      If you notice anything suspicious, do not hesitate to report it to other MyBB Team members.
+
+      Team-specific tasks are described in: https://mybb.com/about/team/groups/
+
+      We have created a thread where you can provide necessary information so that Team members operating our organizations on additional services and platforms can add you there - you can also use it if you have any questions or feedback:
+      https://...
+
+      Have a great day,
+      MyBB Team Management
+      ```
+
+   2. Service operators grant access based on identifiers provided in the Welcome thread.
+   3. The new member is added to `https://mybb.com/about/team/` (action noted in the Welcome thread).
+
+7. #### End of 3-month probation period
+   The probation period provides an opportunity to assess performance and quality as well as for the new member to decide whether they would like to continue their involvement.
+   Unless concerns are raised, the probation ends without any actions performed.
+
+   During the probation period access to some sections and services may be limited.
+
+## Removing team members
+1. #### Initiation
+   - ##### Resignation
+     A Team member submits their resignation request in the _Private Inquiries_ section on Community Forums or by contacting a member of the Management Team or the Community Team Leader.
+
+     If the member was a team leader, they should not be removed until a vote for a new team leader has been passed if possible. This is to prevent there being long periods with no management within a team.
+
+   - ##### Removal
+     A Team member is removed due to inactivity, insufficient quality of input, security risks, conduct-related issues or other concerns, following internal discussion.
+
+2. #### _[Removal]_ thread in _Personnel_
+   A _[Removal]_`Username` thread is created in _Personnel_, providing details on the removal.
+
+3. #### Permissions &amp; access revocation
+   - Service operators revoke the removed member's permissions and access to services and platforms and execute additional related steps (if any), noting these actions in the removal thread.
+   - The member is removed from `https://mybb.com/about/team/` (action noted in the removal thread).
+
+4. #### Removal information
+   A member of the Management Team or the Community Team Leader contacts the removed member over a non-public channel, providing details on the removal.
+
+{% endcapture %}
+{{ markdown | markdownify }}
+	</section>
+</div>

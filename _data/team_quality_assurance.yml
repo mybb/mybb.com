@@ -1,18 +1,23 @@
-- name: "Jones"
-  uid: 57502
-  username: "Jones H"
-  website: "http://jonesboard.de"
-  github: "JN-Jones"
-  lead: true
-- name: "Tomasz Mlynski"
+- username: "Devilshakerz"
   uid: 47371
-  username: "Devilshakerz"
-  github: "Devilshakerz"
+  name: "Tomasz Mlynski"
+  github: "dvz"
   website: "https://devilshakerz.com"
   keybase: "devilshakerz"
   pgp_fingerprint: "DF3A 34D9 A627 42E5 BC6A 6750 1F2F B8AA 28FF E1BC"
   pgp_link: "https://devilshakerz.com/pgp"
-- name: "Nathan"
-  uid: 84380
-  username: "nth"
-  github: "dequeues"
+  lead: true
+- username: "Shade"
+  uid: 58598
+  name: "Filippo"
+  github: "shade-"
+  website: "http://www.mybboost.com"
+- username: "kawaii"
+  uid: 90781
+  name: "Kane Valentine"
+  github: "kawaii"
+  twitter: "kane_sql"
+  website: "https://cute.im"
+  keybase: "kawaii"
+  pgp_fingerprint: "5613 A3E7 3410 AC9A A49D A5F2 E2C7 A79A FD80 B1E8"
+  pgp_link: "https://keybase.io/kawaii/pgp_keys.asc"

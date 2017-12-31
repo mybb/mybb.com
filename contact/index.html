@@ -5,19 +5,14 @@ section: home
 title: Contact
 description: The MyBB Group can be contacted through the <a href="https://community.mybb.com">MyBB Community Forums</a>. Head there for support, suggestions, questions, website issues, and more.
 meta_description: Contact the MyBB Group through the Community Forums for support, suggestions, questions, etc.
+
+redirect_from:
+- /contact/piracy/
 ---
 <aside id="sidebar">
 	<section>
 	<h1>All About MyBB</h1>
-		<nav>
-			<ul>
-				<li><a href="{{ site.url }}/about/">About MyBB</a></li>
-				<li><a href="{{ site.url }}/about/team/">About the Team</a></li>
-				<li><a href="{{ site.url }}/about/license/">License Agreement</a></li>
-				<li><a href="{{ site.url }}/about/donations/">Donate to MyBB</a></li>
-				<li class="selected"><a href="{{ site.url }}/contact/">Contact the MyBB Group</a></li>
-			</ul>
-		</nav>
+		{% include section_nav.html section='about' %}
 	</section>
 	<section class="alt">
 		<h1>Connect with MyBB</h1>
@@ -43,5 +38,10 @@ meta_description: Contact the MyBB Group through the Community Forums for suppor
 		<h1>Get in touch regarding MyBB.com</h1>
 		<p>All issues and feedback relating to the MyBB website and the community forums can be posted in the <a href="https://community.mybb.com/forum-19.html">MyBB.com Community and Site Issues</a> forum.</p>
 		<p>If you have an issue relating to your account on the Community Forums or other personal matters, please post in the <a href="https://community.mybb.com/forum-135.html">Private Inquiries</a> forum.</p>
+	</section>
+
+	<section class="general">
+		<h1>Report Abuse</h1>
+		<p>Visit the <a href="{{ site.url }}/contact/abuse/">Report Abuse</a> page to learn how to report cases of potential abuse of our platforms.</p>
 	</section>
 </div>

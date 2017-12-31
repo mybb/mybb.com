@@ -1,0 +1,26 @@
+{% include header.html %}
+
+	<article>
+    	<header id="mainFeature">
+    		<div class="wrapper">
+				<h1>RFC Documents</h1>
+				<p class="description">Accepted MyBB RFC documents and the Request For Comments process.</p>
+			</div>
+		</header>
+		<div class="wrapper">
+            <aside id="sidebar">
+            	<section>
+            		<h1>All About MyBB</h1>
+					{% include section_nav.html section='about' parent='about/rfcs' %}
+            	</section>
+            </aside>
+
+            <div id="contentBlock">
+            	<section class="general">
+			        {{ content }}
+                </section>
+            </div>
+		</div>
+	</article>
+
+{% include footer.html %}

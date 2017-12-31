@@ -30,7 +30,7 @@ Warning levels are the automatic actions that occur when users warning levels re
 
 <p class="tourScreenshot"><img alt="MyBB Admin Control Panel (Add New Warning Level)" src="{{ site.url }}/assets/images/tour/warnings/warning-levels.png" /></p>
 
-## Full warning history available for forum staff</h2>
+## Full warning history available for forum staff
 
 Forum staff can view a full warning history from each user's profile. There is also a warning log of all warnings issued on the forum in both the administrator control panel and the moderator control panel.
 

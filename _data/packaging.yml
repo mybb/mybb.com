@@ -1,0 +1,17 @@
+types:
+  - name: mybb
+    title: Full Package
+    description: Install a new MyBB forum or upgrade from older versions.
+    icon: fa-cube
+  - name: changed_files
+    title: Changed Files
+    description: Upgrade from the previous version.
+    icon: fa-arrow-up
+
+locations:
+  - name: resources.mybb.com/downloads/
+    url: https://resources.mybb.com/downloads/{TYPE}_{VERSION_CODE}.{FORMAT}
+    title: MyBB.com
+  - name: github.com/mybb/mybb/releases/
+    url: https://github.com/mybb/mybb/releases/download/mybb_{VERSION_CODE}/{TYPE}_{VERSION_CODE}.{FORMAT}
+    title: GitHub

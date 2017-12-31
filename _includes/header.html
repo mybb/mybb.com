@@ -6,6 +6,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; default-src https: 'unsafe-inline' 'unsafe-eval'">
 	<meta name="google-site-verification" content="Awa2VKMGyn9S-X_Q7u0xJRiLeF5IQbgSbtTtONdDbU4" />
 	<title>
 		{% if page.url == "/" %}
@@ -19,7 +20,7 @@
 	<meta name="description" content="{{ page.meta_description }}" />
 	{% endif %}
 	<link rel="stylesheet" href="{{ site.url }}/assets/css/syntax.min.css" />
-	<link rel="stylesheet" href="{{ site.url }}/assets/css/main.css" />
+	<link rel="stylesheet" href="{{ site.url }}/assets/css/main.css?rev8" />
 	<link rel="stylesheet" href="{{ site.url }}/assets/css/anythingslider.min.css" />
 	<link rel="stylesheet" href="{{ site.url }}/assets/js/fancyBox/jquery.fancybox.min.css" />
 
@@ -28,13 +29,6 @@
 		<link rel="shortcut icon" type="image/x-icon" href="{{ site.url }}/assets/images/mybb-icon.ico" sizes="16x16" />
 		<link rel="icon" type="image/x-icon" href="{{ site.url }}/assets/images/mybb-icon.ico" sizes="16x16" />
 	<!-- end icons -->
-
-	<script>
-		if ((window.location.host == "mybb.com") && (window.location.protocol != "https:")) {
-			window.location.protocol = "https";
-		}
-	</script>
-
 </head>
 <body>
 	<div id="container">

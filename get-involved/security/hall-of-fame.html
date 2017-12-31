@@ -10,15 +10,7 @@ meta_description: Security researchers who have responsibly disclosed software v
 <aside id="sidebar">
 	<section>
 		<h1>Get Involved</h1>
-		<nav>
-			<ul>
-				<li><a href="{{ site.url }}/get-involved/development/">Development</a></li>
-				<li><a href="{{ site.url }}/get-involved/resources/">Resources</a></li>
-				<li><a href="{{ site.url }}/get-involved/support/">Support</a></li>
-				<li class="selected"><a href="{{ site.url }}/get-involved/security/">Security Research</a></li>
-				<li><a href="{{ site.url }}/get-involved/irc-channel/">IRC Channel</a></li>
-			</ul>
-		</nav>
+		{% include section_nav.html section='get-involved' parent='get-involved/security' %}
 	</section>
 </aside>
 
@@ -64,5 +56,28 @@ meta_description: Security researchers who have responsibly disclosed software v
 		<br>
 		<p>If you have an understanding of web application security and wish to help track down and report security issues to us, please take a look at the <a href="{{ site.url }}/get-involved/security/">Security Research</a> page to understand what we're looking for and what the conditions are.</p>
 		<p>If you're not on the list and feel you should be, please feel free to <a href="{{ site.url }}/contact/">contact us</a>.</p>
+
+		<header>
+			<h1>The Rules</h1>
+			<p>How to be eligible</p>
+		</header>
+		<p>To be eligible for a place in the Security Hall of Fame you must follow a set of rules:</p>
+		<ul>
+			<li>Don't attempt to exploit any MyBB forum without the expressed permission of the owner. If possible, use a local copy of MyBB to confirm whether the vulnerability exists or not.</li>
+			<li>Under <strong>no circumstances</strong> should you try to exploit the MyBB Community Forums or any other resource owned by the MyBB Group.</li>
+			<li>Don't publicly disclose the vulnerability before it has been fixed.</li>
+			<li>The software in question is limited to the MyBB Forum Software. Vulnerabilities within third party MyBB plugins do not count.</li>
+			<li>The vulnerability must be a <strong>technical</strong> vulnerability. Social engineering or phishing attacks do not count.</li>
+			<li>Bugs which introduce PHP warnings or SQL errors (that aren't due to SQL injection) do not count.</li>
+			<li>Only the person who discovered the vulnerability is eligible.</li>
+			<li>Spam attacks (Bypassing captchas for instance) do not count.</li>
+			<li>The vulnerability must be present in the <strong>latest</strong> stable release of MyBB. Vulnerabilities within development releases or older versions do not count.</li>
+		</ul>
+
+		<header>
+			<h1>Third Party Content</h1>
+			<p>How to handle third party software</p>
+		</header>
+		<p>While only vulnerabilities you find within the MyBB forum software make you eligible for a place in the hall of fame, we do encourage you to report any vulnerabilities you may find within third party content to the authors. Our aim is to keep our users safe and plugins play a major role in introducing security issues.</p>
 	</section>
 </div>

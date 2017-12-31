@@ -1,0 +1,46 @@
+{% include header.html %}
+	<article>
+    	<header id="mainFeature">
+    		<div class="wrapper">
+				<h1>Release Signing Keys</h1>
+				<p class="description">Keys used for MyBB release packages verification.</p>
+			</div>
+		</header>
+		<div class="wrapper">
+            <aside id="sidebar">
+				<div>
+	        		<h3>Status</h3>
+					<p>{{ page.status | capitalize }}</p>
+				</div>
+				<div>
+	        		<h3>Username</h3>
+					<p>{{ page.username }}</p>
+				</div>
+				<div>
+	        		<h3>Branches</h3>
+					<p>{{ page.branches | join: '; ' }}</p>
+				</div>
+				<div>
+	        		<h3>Fingerprint</h3>
+					<p><span class="hextet">{{ page.fingerprint | replace: ' ', '</span><span class="hextet">' }}</span></p>
+				</div>
+				<div>
+	        		<h3>Date added</h3>
+					<p><a href="{{ page.add_announcement }}">{{ page.add_date | date_to_string }}</a></p>
+				</div>
+				{% if page.remove_date %}
+				<div>
+	        		<h3>Date removed</h3>
+					<p><a href="{{ page.remove_announcement }}">{{ page.remove_date | date_to_string }}</a></p>
+				</div>
+				{% endif %}
+            </aside>
+            <div id="contentBlock">
+            	<section class="general">
+					<pre><code>{{ content }}</code></pre>
+                </section>
+            </div>
+		</div>
+	</article>
+
+{% include footer.html %}

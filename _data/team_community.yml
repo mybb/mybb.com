@@ -1,25 +1,23 @@
-- name: "José F."
+- username: "José F."
   uid: 14772
-  username: "José F."
   website: ""
-- name: "Paul Hedman"
-  uid: 37431
-  username: "Paul H."
-  github: "PenguinPaul"
-  website: "https://paulhedman.com"
-  lead: true
-- name: "Tom Kent"
+- username: "Tom K."
   uid: 22017
-  username: "Tom K."
+  name: "Tom Kent"
   github: "tommykent1210"
   website: "https://tomkent.me"
-- name: "Ben C"
+  keybase: "tomkent"
+  pgp_fingerprint: "A1D0 FD17 3275 FE38 6210 72FD BE0D 5DC8 5562 2BEF"
+  pgp_link: "https://keybase.io/tomkent/key.asc"
+  lead: true
+- username: "Ben"
   uid: 90348
-  username: "Ben"
-  github: "Ben-Conway"
-  website: "http://www.gamersix.com"
-- name: "Andrew Shemo"
+  github: "Ben-MyBB"
+  website: "https://www.mybbthings.com"
+- username: "andrewjs18"
   uid: 10832
-  username: "andrewjs18"
-  website: ""
+  name: "Andrew Shemo"
   github: "andrewjs18"
+  keybase: "andrewshemo"
+  pgp_fingerprint: "6D65 7CF3 05F0 C841 EBF5 F33A 846F BC15 05AA ED3F"
+  pgp_link: "https://keybase.io/andrewshemo/pgp_keys.asc"

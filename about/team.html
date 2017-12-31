@@ -9,15 +9,7 @@ meta_description: Take a closer look at the people who make MyBB possible.
 <aside id="sidebar">
 	<section>
 	<h1>All About MyBB</h1>
-		<nav>
-			<ul>
-				<li><a href="{{ site.url }}/about/">About MyBB</a></li>
-				<li class="selected"><a href="{{ site.url }}/about/team/">About the Team</a></li>
-				<li><a href="{{ site.url }}/about/license/">License Agreement</a></li>
-				<li><a href="{{ site.url }}/about/donations/">Donate to MyBB</a></li>
-				<li><a href="{{ site.url }}/contact/">Contact the MyBB Group</a></li>
-			</ul>
-		</nav>
+		{% include section_nav.html section='about' %}
 	</section>
 	<section class="alt">
 		<h1>Joining the MyBB Team</h1>
@@ -28,8 +20,9 @@ meta_description: Take a closer look at the people who make MyBB possible.
 
 <div id="contentBlock">
 	<section class="general">
-		<p>
-			The MyBB team is composed of volunteers committed to developing, supporting, and managing the MyBB forum software project. They have a single mission: to make the best forum software possible. While the MyBB team is divided into separate groups below, these groups represent only primary tasks. Each member of the MyBB team is charged with pushing the MyBB project forward in any way they see fit.</p>
+		<p>The MyBB team is composed of volunteers committed to developing, supporting, and managing the MyBB forum software project. They have a single mission: to make the best forum software possible.</p>
+		<p>All members have a <a href="{{ site.url }}/about/team/groups/">Team group</a> assigned, which indicates their main focus within the Project.</p>
+		<p>All Team changes follow the <a href="{{ site.url }}/about/team/personnel-management/">Personnel management guide</a>.</p>
 	</section>
 	<section class="general">
 		<header>
