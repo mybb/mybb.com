@@ -1,0 +1,16 @@
+---
+layout: blank
+permalink: version_check.json
+---
+{% include releases/latest_version.html %}{
+  "mybb":
+  {
+	"friendly_name": "MyBB {{ latest_version.version_number }}",
+	"latest_version": "{{ latest_version.version_number }}",
+	"version_code": "{{ latest_version.version_code }}",
+	"download_url": "{{ latest_version_first_location_url }}",
+	"release_date": "{{ latest_version.release_date | date: "%b %d, %Y" }}",
+	"download_size": "{{ latest_version_first_format.filesize }}",
+	"type": "{{ latest_version_types_amp }}"
+  }
+}

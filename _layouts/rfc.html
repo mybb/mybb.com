@@ -1,26 +1,23 @@
-{% include header.html %}
+{% include layout/header.html %}
 
-	<article>
-    	<header id="mainFeature">
-    		<div class="wrapper">
-				<h1>RFC Documents</h1>
-				<p class="description">Accepted MyBB RFC documents and the Request For Comments process.</p>
-			</div>
-		</header>
+<article class="main main--rfc">
+	<header class="main-feature">
 		<div class="wrapper">
-            <aside id="sidebar">
-            	<section>
-            		<h1>All About MyBB</h1>
-					{% include section_nav.html section='about' parent='about/rfcs' %}
-            	</section>
-            </aside>
-
-            <div id="contentBlock">
-            	<section class="general">
-			        {{ content }}
-                </section>
-            </div>
+			<h1 class="main-feature__page-title">RFC Documents</h1>
+			<p class="main-feature__description">Accepted MyBB RFC documents and the Request For Comments process.</p>
 		</div>
-	</article>
+	</header>
+	<div class="wrapper">
+		<aside class="page-sidebar">
+			{% include section_nav.html section='about' parent='about/rfcs' %}
+		</aside>
 
-{% include footer.html %}
+		<div class="page-content page-content--sidebar">
+			<section class="block block--markdown">
+				{{ content }}
+			</section>
+		</div>
+	</div>
+</article>
+
+{% include layout/footer.html %}

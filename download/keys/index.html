@@ -10,11 +10,11 @@ redirect_from:
 - /keys/
 ---
 
-<section class="general">
-	<p><a href="{{ site.url }}/download/keys/protocol">Open the Release Signing Protocol &rarr;</a></p>
+<section class="block">
+	<p><a href="{{ site.baseurl }}/download/keys/protocol">Open the Release Signing Protocol &rarr;</a></p>
 </section>
 
-<section class="general">
+<section class="block block--basic">
 	<h1>Current Release Signing Keys</h1>
 	<p>Active keys belonging to MyBB Team members that can be used for signing MyBB release packages.</p>
 	<table class="standard_table" summary="Current Release Signing Keys">
@@ -27,7 +27,7 @@ redirect_from:
 			</tr>
 		</thead>
 		<tbody>
-			{% assign active_keys = (site.keys | where: "status", "active" | sort: 'add_date') | reverse %}
+			{% assign active_keys = site.keys | where: "status", "active" | sort: 'add_date' | reverse %}
 			{% if active_keys == empty %}
 				<tr>
 					<td colspan="4" style="text-align: center;">No active signing keys registered.</td>
@@ -37,7 +37,7 @@ redirect_from:
 					<tr>
 				  		<td>{{ key.username }}</td>
 				  		<td>{{ key.branches | join: '; ' }}</td>
-				  		<td><a href="{{ site.url }}/download/keys/{{ key.fingerprint | replace: ' ', '' }}"><span class="hextet">{{ key.fingerprint | replace: ' ', '</span><span class="hextet">' }}</span></a></td>
+				  		<td><a href="{{ site.baseurl }}/download/keys/{{ key.fingerprint | replace: ' ', '' }}"><span class="hextet">{{ key.fingerprint | replace: ' ', '</span><span class="hextet">' }}</span></a></td>
 						<td><a href="{{ key.add_announcement }}">{{ key.add_date | date_to_string }}</a></td>
 			  		</tr>
 				{% endfor %}
@@ -46,7 +46,7 @@ redirect_from:
 	</table>
 </section>
 
-<section class="general">
+<section class="block block--basic">
 	<h1>Removed Release Signing Keys</h1>
 	<p>Removed signing keys that were used to sign past releases. These keys are not used for signing releases past the removal date.</p>
 	<table class="standard_table" summary="Removed Release Signing Keys">
@@ -60,7 +60,7 @@ redirect_from:
 			</tr>
 		</thead>
 		<tbody>
-			{% assign removed_keys = (site.keys | where: "status", "removed" | sort: 'remove_date') | reverse %}
+			{% assign removed_keys = site.keys | where: "status", "removed" | sort: 'remove_date' | reverse %}
 			{% if removed_keys == empty %}
 				<tr>
 					<td colspan="4" style="text-align: center;">No removed signing keys registered.</td>
@@ -70,7 +70,7 @@ redirect_from:
 					<tr>
 				  		<td>{{ key.username }}</td>
 				  		<td>{{ key.branches | join: '; ' }}</td>
-				  		<td><a href="{{ site.url }}/download/keys/{{ key.fingerprint | replace: ' ', '' }}"><span class="hextet">{{ key.fingerprint | replace: ' ', '</span><span class="hextet">' }}</span></a></td>
+				  		<td><a href="{{ site.baseurl }}/download/keys/{{ key.fingerprint | replace: ' ', '' }}"><span class="hextet">{{ key.fingerprint | replace: ' ', '</span><span class="hextet">' }}</span></a></td>
 						<td><a href="{{ key.add_announcement }}">{{ key.add_date | date_to_string }}</a></td>
 						<td><a href="{{ key.remove_announcement }}">{{ key.remove_date | date_to_string }}</a></td>
 			  		</tr>

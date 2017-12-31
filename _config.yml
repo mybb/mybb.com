@@ -3,7 +3,13 @@ markdown: kramdown
 highlighter: rouge
 category-list: [features]
 permalink: pretty
-url: https://mybb.com
+baseurl: /wip.mybb.com # THIS MUST BE REMOVED BEFORE THE PULL REQUEST IS SUBMITTED #
+mainsiteurl: "https://mybb.com"
+
+search_site: mybb.com
+search_field_placeholder: Search MyBB.com
+
+remote_theme: mybb/mybb-website-theme
 
 collections:
   features:
@@ -29,7 +35,8 @@ sass:
   sass_dir: _sass
   style: compressed
 
-gems:
+plugins:
   - jekyll-redirect-from
+  - jekyll-remote-theme
 
 exclude: ["CNAME", "README.md", "CONTRIBUTING.md"]

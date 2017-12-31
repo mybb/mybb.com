@@ -1,7 +1,21 @@
-- about
-- about/team
-- about/conduct
-- about/rfcs
-- about/ecosystem
-- contact
-- about/donations
+- url: about
+  title: About MyBB
+  icon: info-circle
+- url: about/team
+  title: About the Team
+  icon: users
+- url: about/conduct
+  title: Code of Conduct
+  icon: thumbtack
+- url: about/rfcs
+  title: RFC Documents
+  icon: book
+- url: about/ecosystem
+  title: MyBB Ecosystem
+  icon: globe
+- url: contact
+  title: Contact Us
+  icon: envelope
+- url: about/donations
+  title: Donate
+  icon: dollar-sign

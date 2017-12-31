@@ -1,60 +1,82 @@
 ---
 layout: simple
 section: download
-
 title: Download
+description:
 meta_description: Download the latest version of MyBB, a free and open source PHP forum software.
 
 redirect_from:
 - /downloads/
 ---
-{% include latest_version.html %}
+{% include releases/latest_version.html %}
 
-<article id="download">
-	<header id="mainFeature" class="download clearFix">
-		<div class="wrapper clearFix">
-			<h1>Download MyBB to get your community rolling.</h1>
-			<p class="description">The latest MyBB release is <strong>MyBB {{ latest_version.version_number }}</strong>. It was released {{ latest_version.release_date | date: "%b %d, %Y" }}, and is a {{ latest_version_types_amp }} release. Once you have downloaded MyBB, we have a <a href="https://docs.mybb.com/1.8/install/">complete installation guide</a> to help you through the setup process.</p>
-			<div class="downloadBit">
-				<a href="{{ latest_version_first_location_url }}" class="download" data-no-instant>
-					<span>Download MyBB {{ latest_version.version_number }}</span>
-				</a>
-				<span class="details">.{{ latest_version_first_format.type }} {% if latest_version_first_format.filesize %} &ndash; {{ latest_version_first_format.filesize }}{% endif %}<br />
-                <a href="{{ site.url }}/versions/{{ latest_version.version_number }}/">Release details, upgrading, verifying &rarr;</a></span>
-			</div>
-		</div>
-	</header>
-	<div class="wrapper">
-		<div class="actions clearFix">
-			<aside id="connect">
-				<h1>Connect with MyBB</h1>
-				<p>Stay on top of what's happening.</p>
-				{% include social_buttons_large.html %}
-			</aside>
-			<aside id="gettingStarted">
-				<h1>Need help getting started?</h1>
-				<p>
-					MyBB offers a <a href="https://docs.mybb.com/1.8/install/" title="Installing MyBB">complete installation guide</a> to guide you through the setup process. If you need more help, the <a href="https://community.mybb.com/forum-175.html">support forums</a> are always open for your questions, monitored by our dedicated support team.</p>
-			</aside>
-		</div>
-		<div class="more clearFix">
-			<section id="mergeSystem">
-				<h1>Merge System</h1>
-				<p>
-					MyBB's Merge System allows you to directly convert from several forum softwares and merge into a single MyBB forum. The Merge System allows you to convert only the items you want - such as only users, forums, posts, and threads.</p>
-				<p><a href="{{ site.url }}/download/merge-system/">Download the MyBB Merge System &rarr;</a></p>
-			</section>
-			<section id="translations">
-				<h1>Translations</h1>
-				<p>
-					MyBB comes with an English language pack; however, the MyBB Community has also produced a large number of official MyBB translations for visitors who don't speak English. There are even language packs available for right-to-left languages.</p>
-				<p><a href="https://community.mybb.com/mods.php?action=browse&category=19">View a list of MyBB translations &rarr;</a></p>
-			</section>
-			<section id="extendMyBB">
-				<h1>Extend MyBB further</h1>
-				<p>There are two ways to push MyBB beyond the default installation: plugins and themes. Plugins extend the default functionality of MyBB, and take just a few clicks to install. Themes give your discussion board a distinctive feel.</p>
-				<p><a href="https://community.mybb.com/mods.php">Visit Extend MyBB &rarr;</a></p>
-			</section>
-		</div>
-	</div>
+<article class="main main--download">
+    <section class="download-block download-block--latest-version latest-version">
+        <div class="wrapper">
+            <h1 class="latest-version__title">Download MyBB to get your community rolling.</h1>
+            <div class="latest-version__download"><a href="{{ latest_version_first_location_url }}" class="latest-version__download__link button button--invert" data-no-instant>{% include icon.html icon='download' %} Download MyBB {{ latest_version.version_number }}</a></div>
+            <div class="latest-version__details">
+                <p class="latest-version__details__item latest-version__details__item--file-type">.{{ latest_version_first_format.type }}</p>
+                {% if latest_version_first_format.filesize %}<p class="latest-version__details__item latest-version__details__item--file-size">{{ latest_version_first_format.filesize }}</p>{% endif %}
+                <p class="latest-version__details__item latest-version__details__item--date">{{ latest_version.release_date | date: "%b %d, %Y" }}</p>
+                <p class="latest-version__details__item latest-version__details__item--release-type">{{ latest_version_types_amp }} release</p>
+            </div>
+            <div class="latest-version__actions">
+                <p class="latest-version__actions__item"><a href="{{ site.baseurl }}/versions/{{ latest_version.version_number }}/" class="latest-version__actions__item__link">{% include icon.html icon='info-circle' %} <span>Release Notes, Upgrading, Verifying</span></a></p>
+                <p class="latest-version__actions__item"><a href="https://docs.mybb.com/1.8/install/" class="latest-version__actions__item__link">{% include icon.html icon='book' %} <span>Installation Guide</span></a></p>
+                <p class="latest-version__actions__item"><a href="https://community.mybb.com/forum-175.html" class="latest-version__actions__item__link">{% include icon.html icon='question-circle' %} <span>Support Forums</span></a>
+                    <p class="latest-version__actions__item"><a href="https://docs.mybb.com/1.8/install/requirements/" class="latest-version__actions__item__link">{% include icon.html icon='check-circle' %} <span>Minimum Requirements</span></a>
+            </div>
+        </div>
+    </section>
+    <section class="download-block download-block--connect">
+        <div class="wrapper">
+            <h2 class="download-block--connect__title">Connect with MyBB</h2>
+            <p class="download-block--connect__description">Stay on top of what's happening.</p>
+            <div class="social-buttons">
+                <div class="social-buttons__button social-buttons__button--blog"><a href="https://blog.mybb.com/follow/" class="button button--secondary button--primary-border">{% include icon.html icon='envelope' %} Subscribe to Blog</a></div>
+                <div class="social-buttons__button social-buttons__button--twitter"><a href="https://twitter.com/MyBB?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-dnt="true" data-show-count="false">Follow @MyBB</a></div>
+                <div class="social-buttons__button social-buttons__button--twitter"><a href="https://twitter.com/MyBBSecurity?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-dnt="true" data-show-count="false">Follow @MyBBSecurity</a></div>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+        </div>
+    </section>
+    <section class="download-block download-block--more">
+        <div class="wrapper">
+            <h1 class="download-block--more__title">Do even more with MyBB</h1>
+            <div class="action-cards action-cards--three">
+				<div class="action-cards__card">
+                    <a href="{{ site.baseurl }}/download/merge-system/" class="action-cards__card__link">
+    					<span class="action-cards__card__icon">{% include icon.html icon='arrow-right' %}</span>
+    					<h3 class="action-cards__card__title">Merge System</h3>
+    					<p class="action-cards__card__description">MyBB's Merge System allows you to directly convert from several popular forum softwares and merge into a single MyBB forum. You can also combine multiple MyBB forums into one.</p>
+    					<p class="action-cards__card__action"><span>Download Merge System</span> {% include icon.html icon='arrow-right' %}</p>
+                    </a>
+				</div>
+                <div class="action-cards__card">
+                    <a href="https://community.mybb.com/mods.php?action=browse&category=19" class="action-cards__card__link">
+    					<span class="action-cards__card__icon">{% include icon.html icon='language' %}</span>
+    					<h3 class="action-cards__card__title">Translations</h3>
+    					<p class="action-cards__card__description">MyBB comes with an English language pack; however, the MyBB Community has also produced a large number of translations for visitors who don't speak English, including right-to-left languages.</p>
+    					<p class="action-cards__card__action"><span>Browse translations</span> {% include icon.html icon='arrow-right' %}</p>
+                    </a>
+				</div>
+                <div class="action-cards__card">
+                    <a href="https://community.mybb.com/mods.php" class="action-cards__card__link">
+    					<span class="action-cards__card__icon">{% include icon.html icon='cogs' %}</span>
+    					<h3 class="action-cards__card__title">Extend MyBB</h3>
+    					<p class="action-cards__card__description">Plugins and themes let you make your MyBB forum your own. Plugins add new features to MyBB, and take just a few clicks to install. Themes give your discussion board a distinctive feel.</p>
+    					<p class="action-cards__card__action"><span>Visit Extend MyBB</span> {% include icon.html icon='arrow-right' %}</p>
+                    </a>
+				</div>
+            </div>
+        </div>
+    </section>
+    <section class="download-block download-block--previous-versions">
+        <div class="wrapper">
+            <h1 class="download-block--previous-versions__title">MyBB Version History</h1>
+            <p class="download-block--previous-versions__description">Browse release notes for previous versions of MyBB and an overview of the MyBB versioning scheme.</p>
+            <div class="download-block--previous-versions__button"><a href="{{ site.baseurl }}/versions/" class="button button--medium">{% include icon.html icon='cubes' %} MyBB Versions</a></div>
+        </div>
+    </section>
 </article>
