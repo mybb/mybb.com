@@ -1,5 +1,6 @@
 - username: "Euan T"
   uid: 21114
+  name: "Euan Torano"
   website: "http://mybbstuff.com"
   twitter: "euantor"
   github: "euantorano"
@@ -36,9 +37,11 @@
   pgp_fingerprint: "79D4 5D23 079A F220 2312 E4AA 90B3 F250 C1BF 7C81"
   pgp_link: "https://keybase.io/mattrogowski/key.asc"
 - username: "Wildcard"
+  name: "Mark Vincent"
   uid: 55383
-- username: "Eric J"
+- username: "Eric J."
   uid: 13376
+  name: "Eric Jackson"
   github: "Eric-Jackson"
   website: "http://digitalrelativity.com"
 - username: "effone"
