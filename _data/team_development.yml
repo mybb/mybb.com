@@ -41,3 +41,16 @@
   uid: 13376
   github: "Eric-Jackson"
   website: "http://digitalrelativity.com"
+- username: "effone"
+  uid: 61867
+  name: "Debabrata Trivedi"
+  github: "effone"
+  website: "https://eff.one"
+  keybase: "effone"
+  pgp_fingerprint: "0CB4 140A 2BF2 48E4 6BA8  BB8D C386 35EE EC47 2CD0"
+  pgp_link: "https://keybase.io/effone/key.asc"
+- username: "Omar G."
+  uid: 25096
+  name: "Omar Uriel González Cornejo"
+  github: "Sama34"
+  website: "http://omarg.me/"
