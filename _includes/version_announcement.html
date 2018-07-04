@@ -35,7 +35,7 @@ MyBB {{ version.version_number }} is now available, and is a {{ type | downcase 
 {%
 if version.comment %}
 {{
-    version.comment
+    version.comment | markdownify
 }}<br><br>
 {% endif %}{%
 
