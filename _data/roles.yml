@@ -1,0 +1,44 @@
+- name: "Management"
+  code: "MAN"
+  color: "#008a00"
+  description: "The Management group supervises legal aspects of the MyBB Project."
+
+- name: "Development"
+  code: "DEV"
+  color: "#d23b67"
+  description: "The Development group is formed by core contibutors to MyBB codebase and maintains the development discussion and suggestions."
+
+- name: "Design"
+  code: "DES"
+  color: "#657d08"
+  description: "The Design group is comprised of developers contributing to visual aspects of the software and its user experience practices."
+
+- name: "Security"
+  code: "SEC"
+  color: "#927878"
+  description: "The Security group includes members responsible for triage and response to vulnerability reports, secure development practices and cooperation with security researchers."
+
+- name: "Devops"
+  code: "OPS"
+  color: "#8967de"
+  description: "The Devops group is responsible for maintenance of development tools, repositories and release processes of MyBB Project's software."
+
+- name: "Support"
+  code: "SUP"
+  color: "#f35858"
+  description: "The Support group organizes and provides support for the MyBB core on the Community Forums and chat platforms."
+
+- name: "Community"
+  code: "COM"
+  color: "#2bb7c7"
+  description: "The Community group oversees the communication and cooperation with and within the MyBB Community, handles external inquiries, forms official statements and manages social media accounts."
+
+- name: "Web"
+  code: "WEB"
+  color: "#2ba4eb"
+  description: "The Web group consists of members tasked with maintaining the Project's websites and forums."
+
+- name: "Editorial"
+  code: "EDI"
+  color: "#62c9a1"
+  description: "The Editorial group members regularly contribute to the MyBB Blog and social media platforms."

@@ -1,25 +1,27 @@
 {% assign member = include.member %}
-<div class="team-cards__card card">
-	<h3 class="card__username {% if member.name %}card__username--has-name{% endif %}">{{ member.username }}</h3>
-    {% if member.name %}
-        <p class="card__name">{{ member.name }}</p>
-    {% endif %}
-	<p class="card__role card__role--{{ include.team_name | replace: ' ', '-' | downcase }}">
-		<span class="card__role__container">
-			{% if include.team_name == "Management" %}
-			{% include icon.html icon='briefcase' %}
-			{% elsif include.team_name == "Support" %}
-			{% include icon.html icon='question-circle' %}
-			{% elsif include.team_name == "Development" %}
-			{% include icon.html icon='cogs' %}
-			{% elsif include.team_name == "Quality Assurance" %}
-			{% include icon.html icon='flask' %}
-			{% elsif include.team_name == "Community" %}
-			{% include icon.html icon='users' %}
-			{% endif %}
-			{{ include.team_name }}{% if member.lead == true %} Lead{% endif %}
-		</span>
-	</p>
+<div class="team-cards__card card" id="member-{{ member.username | replace: ' ', '-' }}">
+	<a href="#member-{{ member.username | replace: ' ', '-' }}" class="team-cards__card__anchor">
+		<h3 class="card__username {% if member.name %}card__username--has-name{% endif %}">{{ member.username }}</h3>
+	</a>
+	{% if member.name %}
+		<p class="card__name">{{ member.name }}</p>
+	{% endif %}
+	<div class="card__roles">
+	{% for member_role_membership_type in member.role_memberships %}
+		{% for member_role_name in member_role_membership_type[1] %}
+			{% for data_role in site.data.roles %}
+				{% if member_role_name == data_role.name %}
+					{% assign role = data_role %}
+					{% break %}
+				{% endif %}
+			{% endfor %}
+			{% assign role_name_normalized = role.name | replace: ' ', '-' | downcase %}
+			<a href="#role-{{ role_name_normalized }}" class="team-cards__card__anchor">
+				<p class="team-role{% if member_role_membership_type[0] == 'lead' %} team-role--lead{% endif %} team-role--{{ role_name_normalized }}" data-role-color="{{ role.color }}">{{ role.name }}</p>
+			</a>
+		{% endfor %}
+	{% endfor %}
+	</div>
 	<p class="card__detail card__detail--profile">
 		<a href="https://community.mybb.com/user-{{ member.uid }}.html" class="card__detail__link" title="Profile - {{ member.username }}">
 			{% include icon.html icon='user-circle' %}

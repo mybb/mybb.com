@@ -1,0 +1,10 @@
+---
+layout: blank
+---
+
+{% for role in site.data.roles %}{% assign role_name_normalized = role.name | replace: ' ', '-' | downcase %}
+.team-role--{{ role_name_normalized }} {
+	color: {{ role.color }};
+	background-color: {{ role.color }};
+	border-color: {{ role.color }};
+}{% endfor %}

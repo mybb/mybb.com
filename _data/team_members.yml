@@ -1,0 +1,202 @@
+- username: "Chris Boulton"
+  uid: 1
+  website: "http://chrisboulton.com"
+  github: "chrisboulton"
+  twitter: "surfichris"
+  keybase: "chrisboulton"
+  pgp_fingerprint: "EBBA FB32 E168 60D6 88B2 9E7E 331D EF09 F700 31FA"
+  pgp_link: "https://keybase.io/chrisboulton/key.asc"
+  role_memberships:
+    standard:
+    - Management
+    - Web
+
+- username: "Euan T"
+  uid: 21114
+  website: "http://mybbstuff.com"
+  twitter: "euantor"
+  github: "euantorano"
+  keybase: "euantorano"
+  pgp_fingerprint: "3705 B534 4400 C2AC 5C1E FFB8 8DCD 87C3 275A 7B24"
+  pgp_link: "https://keybase.io/euantorano/key.asc"
+  role_memberships:
+    lead:
+    - Development
+    standard:
+    - Security
+    - Web
+
+- username: "Justin"
+  uid: 1830
+  name: "Justin Soltesz"
+  github: "justinsoltesz"
+  twitter: "justinsoltesz"
+  website: "http://jsoltesz.com"
+  role_memberships:
+    lead:
+    - Design
+
+- username: "Starpaul20"
+  uid: 4041
+  name: "Paul Bender"
+  github: "PaulBender"
+  twitter: "Paul_Bender"
+  website: "http://galaxiesrealm.com"
+  keybase: "paulbender"
+  pgp_fingerprint: "6DF4 335B 945A 1B35 FE65 8761 04C2 36D1 6780 088B"
+  pgp_link: "https://keybase.io/paulbender/key.asc"
+  role_memberships:
+    standard:
+    - Development
+
+- username: "Tomm M"
+  uid: 14621
+  name: "Tom Moore"
+  github: "tommm"
+  twitter: "mooseypx"
+  role_memberships:
+    standard:
+    - Development
+
+- username: "Matt"
+  uid: 13556
+  name: "Matt Rogowski"
+  github: "MattRogowski"
+  website: "https://matt.rogow.ski"
+  keybase: "mattrogowski"
+  pgp_fingerprint: "79D4 5D23 079A F220 2312 E4AA 90B3 F250 C1BF 7C81"
+  pgp_link: "https://keybase.io/mattrogowski/key.asc"
+  role_memberships:
+    standard:
+    - Development
+
+- username: "Wildcard"
+  uid: 55383
+  role_memberships:
+    standard:
+    - Development
+
+- username: "Eric J"
+  uid: 13376
+  github: "Eric-Jackson"
+  website: "http://digitalrelativity.com"
+  role_memberships:
+    standard:
+    - Design
+
+- username: "Devilshakerz"
+  uid: 47371
+  name: "Tomasz Mlynski"
+  github: "dvz"
+  website: "https://devilshakerz.com"
+  keybase: "devilshakerz"
+  pgp_fingerprint: "DF3A 34D9 A627 42E5 BC6A 6750 1F2F B8AA 28FF E1BC"
+  pgp_link: "https://devilshakerz.com/pgp"
+  role_memberships:
+    lead:
+    - Devops
+    - Security
+    standard:
+    - Web
+
+- username: "Shade"
+  uid: 58598
+  name: "Filippo"
+  github: "shade-"
+  website: "http://www.mybboost.com"
+  role_memberships:
+    standard:
+    - Design
+    - Devops
+
+- username: "kawaii"
+  uid: 90781
+  name: "Kane Valentine"
+  github: "kawaii"
+  twitter: "kane_sql"
+  website: "https://cute.im"
+  keybase: "kawaii"
+  pgp_fingerprint: "5613 A3E7 3410 AC9A A49D A5F2 E2C7 A79A FD80 B1E8"
+  pgp_link: "https://keybase.io/kawaii/pgp_keys.asc"
+  role_memberships:
+    standard:
+    - Devops
+
+- username: "José F."
+  uid: 14772
+  website: ""
+  role_memberships:
+    standard:
+    - Community
+
+- username: ".m."
+  uid: 52123
+  role_memberships:
+    standard:
+    - Support
+
+- username: "katos"
+  uid: 104958
+  name: "Phil Marsh"
+  role_memberships:
+    standard:
+    - Support
+
+- username: "Tom K."
+  uid: 22017
+  name: "Tom Kent"
+  github: "tommykent1210"
+  website: "https://tomkent.me"
+  keybase: "tomkent"
+  pgp_fingerprint: "A1D0 FD17 3275 FE38 6210 72FD BE0D 5DC8 5562 2BEF"
+  pgp_link: "https://keybase.io/tomkent/key.asc"
+  role_memberships:
+    lead:
+    - Community
+
+- username: "Ben"
+  uid: 90348
+  github: "Ben-MyBB"
+  website: "https://www.mybbthings.com"
+  role_memberships:
+    standard:
+    - Community
+    - Editorial
+    - Support
+
+- username: "andrewjs18"
+  uid: 10832
+  name: "Andrew Shemo"
+  github: "andrewjs18"
+  keybase: "andrewshemo"
+  pgp_fingerprint: "6D65 7CF3 05F0 C841 EBF5 F33A 846F BC15 05AA ED3F"
+  pgp_link: "https://keybase.io/andrewshemo/pgp_keys.asc"
+  role_memberships:
+    standard:
+    - Community
+    - Editorial
+
+- username: "Omar G."
+  uid: 25096
+  name: "Omar González"
+  github: "Sama34"
+  website: "http://omarg.me/"
+  twitter: "omaruri_gc"
+  keybase: "omarg"
+  pgp_fingerprint: "99F0 82A5 6381 8E48 7736 A065 55E7 9BE4 3D6C 38A0"
+  pgp_link: "https://keybase.io/omarg/key.asc"
+  role_memberships:
+    standard:
+    - Development
+
+- username: "effone"
+  uid: 61867
+  name: "Debabrata Trivedi"
+  github: "effone"
+  website: "https://eff.one"
+  keybase: "effone"
+  pgp_fingerprint: "0CB4 140A 2BF2 48E4 6BA8  BB8D C386 35EE EC47 2CD0"
+  pgp_link: "https://keybase.io/effone/key.asc"
+  role_memberships:
+    standard:
+    - Development

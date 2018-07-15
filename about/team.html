@@ -9,6 +9,19 @@ meta_description: Take a closer look at the people who make MyBB possible.
 <aside class="page-sidebar">
 	{% include section_nav.html section='about' %}
 
+	<section class="block block--basic">
+		<h1 class="block__heading">Roles</h1>
+		{% for role in site.data.roles %}
+			{% assign role_name_normalized = role.name | replace: ' ', '-' | downcase %}
+			<div class="team-role-legend__role" id="role-{{ role_name_normalized }}">
+				<a href="#role-{{ role_name_normalized }}">
+					<p class="team-role team-role--{{ role_name_normalized }}" data-role-color="{{ role.color }}">{{ role.name }}</p>
+				</a>
+				<p class="team-role-legend__role__description"><span class="team-role-legend__role__code">{{ role.code }}</span> {{ role.description }}</p>
+			</div>
+		{% endfor %}
+	</section>
+
 	<section class="block">
 		<h1 class="block__heading">Joining the MyBB Team</h1>
 		<div class="block__container">
@@ -24,11 +37,10 @@ meta_description: Take a closer look at the people who make MyBB possible.
 			<h1 class="block__heading__title">The MyBB Team</h1>
 		</header>
 		<div class="team-cards">
-			{% include team_cards.html team_name="Management" team_data=site.data.team_management %}
-			{% include team_cards.html team_name="Support" team_data=site.data.team_support %}
-			{% include team_cards.html team_name="Development" team_data=site.data.team_development %}
-			{% include team_cards.html team_name="Quality Assurance" team_data=site.data.team_quality_assurance %}
-			{% include team_cards.html team_name="Community" team_data=site.data.team_community %}
+			{% assign sorted_team_data = site.data.team_members | sort:"uid" %}
+			{% for member in sorted_team_data %}
+				{% include team_card.html member=member %}
+			{% endfor %}
 		</div>
 	</section>
 </div>
