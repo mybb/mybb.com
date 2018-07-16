@@ -35,7 +35,7 @@ MyBB {{ version.version_number }} is now available, and is a {{ type | downcase 
 {%
 if version.comment %}
 {{
-    version.comment
+    version.comment | markdownify
 }}<br><br>
 {% endif %}{%
 
@@ -88,7 +88,7 @@ endif %}
 <br>
 Check <a href="https://mybb.com/versions/{{ version.version_number }}/"><strong>Release Notes</strong></a> for a list of changes to language files, templates and unresolved issues.<br><br>
 
-<a href="https://mybb.com/download"><h3>Get latest MyBB Full &amp; Upgrade Packages &rarr;</h3></a>
+<a href="https://mybb.com/download"><strong>Get latest MyBB Full &amp; Upgrade Packages &rarr;</strong></a>
 {%
 if responsible_disclosure_reports %}
 The MyBB Project extends thanks to reporters and researchers following responsible disclosure.<br>{%
