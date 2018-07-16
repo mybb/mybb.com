@@ -39,10 +39,10 @@ if version.comment %}
 }}<br><br>
 {% endif %}{%
 
-if resolved_security_issues_number || version.resolved_issues_number
+if resolved_security_issues_number != 0 or version.resolved_issues_number != 0
 %}
 <ul>{%
-    if resolved_security_issues_number %}{%
+    if resolved_security_issues_number != 0 %}{%
         if resolved_security_issues_number == 1 %}{%
             assign vulnerability_inflexed = 'vulnerability' %}{%
         else %}{%
