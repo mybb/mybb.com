@@ -1,5 +1,6 @@
 - username: "Euan T"
   uid: 21114
+  name: "Euan Torano"
   website: "http://mybbstuff.com"
   twitter: "euantor"
   github: "euantorano"
@@ -13,11 +14,6 @@
   github: "justinsoltesz"
   twitter: "justinsoltesz"
   website: "http://jsoltesz.com"
-- username: "Omar G."
-  uid: 25096
-  name: "Omar Gonzalez"
-  github: "Sama34"
-  website: "http://omarg.me"
 - username: "Starpaul20"
   uid: 4041
   name: "Paul Bender"
@@ -42,15 +38,28 @@
   pgp_link: "https://keybase.io/mattrogowski/key.asc"
 - username: "Wildcard"
   uid: 55383
-- username: "Matslom"
-  uid: 69440
-  github: "Matslom"
-  twitter: "Matslom"
-  website: "http://matslom.pl"
-  keybase: "matslom"
-  pgp_fingerprint: "EE1A EF3A A53B B082 B8A4 6C93 7C5B B98A 936D F4DE"
-  pgp_link: "https://keybase.io/matslom/key.asc"
-- username: "Eric J"
+  name: "Mark Vincent"
+  github: "WildcardSearch"
+  website: "http://www.rantcentralforums.com"
+- username: "Eric J."
   uid: 13376
+  name: "Eric Jackson"
   github: "Eric-Jackson"
   website: "http://digitalrelativity.com"
+- username: "effone"
+  uid: 61867
+  name: "Debabrata Trivedi"
+  github: "effone"
+  website: "https://eff.one"
+  keybase: "effone"
+  pgp_fingerprint: "0CB4 140A 2BF2 48E4 6BA8  BB8D C386 35EE EC47 2CD0"
+  pgp_link: "https://keybase.io/effone/key.asc"
+- username: "Omar G."
+  uid: 25096
+  name: "Omar González"
+  github: "Sama34"
+  website: "http://omarg.me/"
+  twitter: "omaruri_gc"
+  keybase: "omarg"
+  pgp_fingerprint: "99F0 82A5 6381 8E48 7736 A065 55E7 9BE4 3D6C 38A0"
+  pgp_link: "https://keybase.io/omarg/key.asc"
