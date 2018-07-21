@@ -9,7 +9,7 @@ assign versions = site.versions | sort: 'release_date' | reverse
 for version in versions %}{%
     if version.release_date != '' %}{%
         capture output %}{%
-            include version_announcement.html %}{%
+            include releases/version_announcement.html %}{%
         endcapture %}<pre>{{ output | escape }}</pre>{%
         break %}{%
     endif %}{%
