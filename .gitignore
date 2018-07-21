@@ -1,5 +1,4 @@
 _site/
-Gemfile
 Gemfile.lock
 _local_config.yml
 .jekyll-metadata

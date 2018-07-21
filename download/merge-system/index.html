@@ -1,53 +1,32 @@
 ---
 layout: default
 section: download
-
 title: Merge System
-description: MyBB offers a merge system for easy merging of multiple forums from various different popular forum software, allowing an easy conversion process to MyBB. More information on the <a href="https://docs.mybb.com/1.8/merge/">Merge System</a> and <a href="https://docs.mybb.com/1.8/merge/running">Running the Merge System</a> can be found at the <a href="https://docs.mybb.com/">MyBB Documentation</a>.
+description: MyBB offers a merge system for easy merging of multiple forums from various different popular forum software, allowing an easy conversion process to MyBB.
 meta_description: MyBB offers a merge system to seamlessly convert to MyBB from other forum softwares.
-
-redirect_from:
-- /downloads/merge-system/
 ---
-
-<aside id="sidebar">
-	<section class="downloadBit mergeSystem">
-		<p><a class="download" href="{{ site.data.latest_merge.url }}"><span>Download Merge System</span> </a> <span class="details">MyBB Merge System {{ site.data.latest_merge.version }} — {{ site.data.latest_merge.size }}</span></p>
+<aside class="page-sidebar">
+	<section class="sidebar-download">
+		<p class="sidebar-download__button"><a class="button button--big button--full-width" href="{{ site.data.latest_merge.url }}">{% include icon.html icon='download' %} Download Merge System</a></p>
+        <p class="sidebar-download__details">MyBB Merge System {{ site.data.latest_merge.version }} — {{ site.data.latest_merge.size }}</p>
 	</section>
-	<section>
-	<h1>
-		MyBB Merge System</h1>
-		<nav>
-			<ul>
-				<li><a href="https://docs.mybb.com/1.8/merge/">Merge System Documentation</a></li>
-				<li><a href="https://docs.mybb.com/1.8/merge/running">Performing the Merge</a></li>
-				<li><a href="{{ site.url }}/download/merge-system/license/">License &amp; Liability Agreement</a></li>
+	<section class="block">
+    	<h1 class="block__heading">MyBB Merge System</h1>
+        <nav class="sidebar__nav">
+            <ul class="sidebar__nav__links">
+                <li class="sidebar__nav__links__item"><a href="https://docs.mybb.com/1.8/merge/" class="sidebar__nav__links__item__link">Merge System Documentation</a></li>
+				<li class="sidebar__nav__links__item"><a href="https://docs.mybb.com/1.8/merge/running" class="sidebar__nav__links__item__link">Performing the Merge</a></li>
+				<li class="sidebar__nav__links__item"><a href="{{ site.baseurl }}/download/merge-system/license/" class="sidebar__nav__links__item__link">License &amp; Liability Agreement</a></li>
 			</ul>
 		</nav>
 	</section>
-	<section class="alt">
-	<h1>Included Modules</h1>
-		<ul>
-			<li>bbPress 2.5</li>
-			<li>FluxBB</li>
-			<li>Invision Power Board 3, 4 (Pre Release Version)</li>
-			<li>MyBB 1.8 (merge)</li>
-			<li>phpBB 3</li>
-			<li>SMF 1.1, 2.0</li>
-			<li>PunBB 1.2</li>
-			<li>Vanilla</li>
-			<li>vBulletin 3, 4</li>
-			<li>WoltLab Burning Board 3, 4, Lite 2</li>
-			<li>XenForo</li>
-		</ul>
-	</section>
 </aside>
 
-<div id="contentBlock">
-	<section class="general">
-		<header>
-			<h1>Download the Merge System</h1>
-			<p>An additional package for merging forums</p>
+<div class="page-content page-content--sidebar">
+	<section class="block">
+		<header class="block__heading">
+			<h1 class="block__heading__title">Download the Merge System</h1>
+			<p class="block__heading__subtitle">An additional package for merging forums</p>
 		</header>
 		<p>
 			The latest release of the merge system is <strong>{{ site.data.latest_merge.version }}</strong>. It was released on <strong>{{ site.data.latest_merge.release }}</strong> and is a {{ site.data.latest_merge.type }} product. The package is <strong>{{ site.data.latest_merge.size }}</strong> in size and is available as a <a class="download" href="{{ site.data.latest_merge.url }}">.zip</a> package.</p>
@@ -67,19 +46,19 @@ redirect_from:
 			<li>XenForo</li>
 		</ul>
 	</section>
-	<section class="general">
-		<header>
-			<h1>Performing the Merge</h1>
-			<p>The need-to-know for a successful merge</p>
+	<section class="block">
+		<header class="block__heading">
+			<h1 class="block__heading__title">Performing the Merge</h1>
+			<p class="block__heading__subtitle">The need-to-know for a successful merge</p>
 		</header>
 		<p>
 			To convert or merge a forum, you must have a version of <strong>MyBB 1.8</strong> installed on your server, as well as a copy of the database of the forum to be merged on your server. You must also have the latest version of the merge system uploaded to your server as a subdirectory of your copy of MyBB. You can download the MyBB Merge System above.</p>
-		<p><a href="https://docs.mybb.com/1.8/merge/running/">Full documentation on performing the merge &rarr;</a></p>
+		<p class="block__action"><a href="https://docs.mybb.com/1.8/merge/running/" class="link">{% include icon.html icon='book' %}<span class="link__text">Full documentation on performing the merge &rarr;</span></a></p>
 	</section>
-	<section class="general">
-		<header>
-			<h1>Getting Support for the Merge System</h1>
-			<p>Getting support for the merge system is as easy as getting support for MyBB</p>
+	<section class="block">
+		<header class="block__heading">
+			<h1 class="block__heading__title">Getting Support for the Merge System</h1>
+			<p class="block__heading__subtitle">Getting support for the merge system is as easy as getting support for MyBB</p>
 		</header>
 		<p>
 			MyBB offers support for the Merge System on its <a href="https://community.mybb.com/">forum</a> and on the <a href="https://docs.mybb.com/">MyBB Documentation</a>. Before asking for support, please check the <a href="https://docs.mybb.com/1.8/merge/running/">MyBB Documentation (Running the Merge System)</a>. If your question is not answered, feel free to post your question in the <a href="https://community.mybb.com/forum-180.html">Merge Support</a> forum after searching the forum to see if your question has already been answered.</p>

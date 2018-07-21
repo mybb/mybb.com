@@ -3,18 +3,37 @@ layout: feature
 section: features
 
 title: Performance
-meta_description: MyBB has been designed to be efficient for all forums, large or small.
+meta_description: MyBB has been carefully developed to be both powerful and extremely efficient.
+icon: database
 
 redirect_from:
 - /features/14-performance/
 ---
-## So fast, you're still going to be chasing it
 
-MyBB 1.2 was fast and efficient for what it needed to do. We made further improvements with MyBB 1.4 though to make it even faster and handle larger sized forums than what were previously possible.
+# Database support
 
-Working closely some of the largest forums on the web has allowed us to determine the bottlenecks in MyBB 1.2 and completely eradicate them from MyBB 1.4.
+## Support for multiple database types
 
-While developing MyBB 1.8 we dug deeper to find areas which had fallen behind. With the introduction of new cache handlers, improve debugging information, and the removal of unnecessary queries, we're proud to say MyBB is still one of the fastest yet feature rich forum solutions available today.
+MyBB supports the following types of database servers:
+
+* MySQL v5 and above
+* PostgreSQL v8.1 and above
+* SQLite v3
+
+## Database fall-over support
+
+With MyBB, it's possible to specify a list of database servers that MyBB should attempt to connect to. If the connection fails or an error message is received while connecting, MyBB will then move on to the next available database server in the list.
+
+This is fantastic for large forums who have database replication configured and multiple master servers spread out over multiple locations.
+
+## Master/slave replication support
+
+MyBB also contains built-in support for master/slave replication support. Larger forums requiring more than one database server will be able to set up automatic replication between their servers and have all write database queries fed off to a separate server than all content is fetched from.
+
+
+# Built for speed
+
+Working closely with some of the largest forums on the web, we have determined some of the bottlenecks in previous versions of MyBB and completely eradicated them, allowing MyBB to handle larger sized forums than were previously possible. With the introduction of new cache handlers, improved debugging information, and the removal of unnecessary queries, we're proud to say that MyBB is still one of the fastest, yet feature rich forum solutions available today.
 
 ## Built-in support for eAccelerator, APC, memcached and X-Cache caching
 
@@ -22,8 +41,32 @@ In a standard installation of MyBB, we already cache the most frequently accesse
 
 MyBB also has the ability to store cached information using built-in shared memory caching from PHP modules such as X-Cache and eAccelerator and also has the ability to interface with memcached servers for cache storage.
 
-# Delayed thread view counter updates
+# Keeping your forum in tip-top shape
 
-MyBB keeps track of whenever a user views a thread to provide the number of views it's received. For larger forums, constantly updating this in the threads table meant tables were locked by the database server and posting time & modification would be affected.
+A built-in schedule system in MyBB helps keep your forum performing at its best. Running behind the scenes on your forum, the task system will automatically execute different jobs at different times.
 
-It's now possible to have the number of views a thread receives updated in batches by the automated task scheduling system. The number of views a thread receives can now optionally be updated every X minutes instead of instantly.
+This includes things like:
+
+* Checking for database tables that are corrupt and need repairing
+* Rebuilding the daily list of birthdays to be shown on the home page
+* Updating the “most popular” thread and post statistics
+* Cleaning up old Captcha images, search history and thread redirects
+* Promoting users to new user groups based on the group promotions
+* Sending out mass-emails and newsletters
+* Lifting expired user account bans and suspensions
+
+<div class="feature-tour__screenshot">
+	<a href="{{ site.baseurl }}/assets/images/features/performance/tasks.png" class="feature-tour__screenshot__link">
+		<img src="{{ site.baseurl }}/assets/images/features/performance/tasks.png" class="feature-tour__screenshot__image" />
+	</a>
+</div>
+
+## View when a task was run & what it actually did
+It's great that there’s a lot of automation happening behind the scenes but how can you tell that it's actually working? MyBB will let you know when a task was last run, when it is next due to run and also keeps a complete history when a task was run and if it was successful or not.
+
+
+<div class="feature-tour__screenshot">
+	<a href="{{ site.baseurl }}/assets/images/features/performance/tasklog.png" class="feature-tour__screenshot__link">
+		<img src="{{ site.baseurl }}/assets/images/features/performance/tasklog.png" class="feature-tour__screenshot__image" />
+	</a>
+</div>

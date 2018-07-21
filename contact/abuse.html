@@ -8,19 +8,12 @@ description: The MyBB Project provides free and open-source software that anyone
 redirect_from:
 - /abuse/
 ---
-<aside id="sidebar">
-	<section>
-	<h1>All About MyBB</h1>
-		{% include section_nav.html section='about' parent='contact' %}
-	</section>
-	<section class="alt">
-		<h1>Connect with MyBB</h1>
-		{% include social_buttons.html %}
-	</section>
+<aside class="page-sidebar">
+	{% include section_nav.html section='about' parent='contact' %}
 </aside>
 
-<div id="contentBlock">
-	<section class="general">
+<div class="page-content page-content--sidebar">
+	<section class="block block--markdown">
 {% capture markdown %}
 
 # MyBB Project-managed Web Presence

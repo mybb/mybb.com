@@ -1,9 +1,13 @@
-[![MyBB](https://raw.github.com/mybb/mybb/feature/images/logo.png "MyBB")](https://www.mybb.com "MyBB")
+This is a the repository for development of the [MyBB website](https://mybb.com).
 
-# New MyBB.com Website
-This repository is available to aid in the collaboration and development of MyBB's new website.
+This repository utilizes the Jekyll theme for the MyBB website hosted at [mybb/mybb-website-theme](https://github.com/mybb/mybb-website-theme). Theme related issues and pull requests should be made there.
 
-## Copyright and Reuse
-The website content available in this repository is Copyright 2014 MyBB Group.
+This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [MyBB Code of Conduct](https://mybb.com/about/conduct/).
 
-While you are welcome to fork this repository to contribute to the development of MyBB's new website, this is the only permitted use for the content within this repository. You may not duplicate, copy, or reuse any portion of the HTML, CSS, Javascript, or visual design elements of the website content available in this repository without express written permission from MyBB except to contribute to the development of MyBB's website. Any other uses are prohibited.
+## Development
+
+To set up your environment to develop this website, run `bundle install`.
+
+## Reuse
+
+While the content and theme of the MyBB website is freely available, it is intended only for use on the MyBB.com website.

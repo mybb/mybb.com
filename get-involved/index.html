@@ -1,31 +1,26 @@
 ---
 layout: default
-section: get-involved
-
+section: home
 title: Get Involved
-description: |
-  MyBB is an open source project that depends on the contributions of volunteers. Below, find out how you can contribute to the best forum software through <a href="!SITE_url!/get-involved/development/">development</a>, <a href="!SITE_url!/get-involved/resources/">resources</a>, <a href="!SITE_url!/get-involved/support/">support</a>, and <a href="!SITE_url!/get-involved/security/">security research</a>.
-meta_description: Find out how to get involved with the best forum software through development, resources, support, and security research.
-
-redirect_from:
-- /about/apply/
+description: MyBB is an open source project that depends on the contributions of volunteers. Below, find out how you can contribute to the best forum software through development, resources, support, and security research.
 ---
+<aside class="page-sidebar">
+	{% include section_nav.html section='get-involved' %}
 
-<aside id="sidebar">
-	<section>
-		<h1>Get Involved</h1>
-		{% include section_nav.html section='get-involved' %}
+	<section class="block">
+		<h1 class="block__heading">MyBB on GitHub</h1>
+		<div class="block__container">
+			<p>Through GitHub, you can follow development, download the latest source code to test and report issues, and contribute to the MyBB resources.</p>
+			<p class="block__action"><a href="https://github.com/mybb" class="button">{% include icon.html icon='github' %}Visit MyBB on GitHub</a></p>
+		</div>
 	</section>
-	<section class="alt">
-		<h1>MyBB on GitHub</h1>
-		<p>Through GitHub, you can follow development, download the latest source code to test and report issues, and contribute to the MyBB resources.</p>
-		<p><a href="https://github.com/mybb">Visit MyBB on GitHub &rarr;</a></p>
-		{% include github_buttons.html %}
-	</section>
-	<section>
-		<h1>MyBB Discord Channel</h1>
-		<p>MyBB has its own Discord channel at Freenode.net where you can chat with other MyBB users and staff.</p>
-		<p><a href="{{ site.url }}/get-involved/discord/">Join the Discord Channel &rarr;</a></p>
+
+	<section class="block">
+		<h1 class="block__heading">MyBB Discord Server</h1>
+		<div class="block__container">
+			<p>MyBB has its own Discord server where you can chat with other MyBB users and staff.</p>
+			<p class="block__action"><a href="{{ site.baseurl }}/get-involved/discord/" class="button">{% include icon.html icon='discord' %}Join us on Discord</a></p>
+		</div>
 	</section>
 	<section class="alt">
 		<h1>Joining the MyBB Team</h1>
@@ -34,50 +29,45 @@ redirect_from:
 	</section>
 </aside>
 
-<div id="contentBlock">
-	<section class="general">
-		<header>
-			<h1>Development</h1>
-			<p>Test the latest source code and report issues</p>
+<div class="page-content page-content--sidebar">
+	<section class="block">
+		<header class="block__heading">
+			<h1 class="block__heading__title">Development</h1>
+			<p class="block__heading__subtitle">Test the latest source code and report issues</p>
 		</header>
-		<p>
-			MyBB is under active, continuous development, both by members of the official Development Team and by members of the community. We use <a href="https://github.com/mybb">GitHub</a> to offer public access to our development allowing the community to contribute to the project. You can contribute by testing the latest source code, reporting issues, and forking the project to submit bug fixes or add new features.</p>
-		<p><a href="{{ site.url }}/get-involved/development/">More information on development &rarr;</a></p>
+		<p>MyBB is under active, continuous development, both by members of the official Development Team and by members of the community. We use <a href="https://github.com/mybb">GitHub</a> to offer public access to our development allowing the community to contribute to the project. You can contribute by testing the latest source code, reporting issues, and forking the project to submit bug fixes or add new features.</p>
+		<p class="block__action"><a href="{{ site.baseurl }}/get-involved/development/" class="link">{% include icon.html icon='code' %}<span class="link__text">More information on development &rarr;</span></a></p>
 	</section>
-	<section class="general">
-		<header>
-			<h1>Resources</h1>
-			<p>Contribute to the official documentation or translations</p>
+	<section class="block">
+		<header class="block__heading">
+			<h1 class="block__heading__title">Resources</h1>
+			<p class="block__heading__subtitle">Contribute to the official documentation or translations</p>
 		</header>
-		<p>
-			The MyBB Community Team maintains the official <a href="https://docs.mybb.com">MyBB documentation</a> and manages third-party language translations. We use <a href="https://github.com/mybb">GitHub</a> to both manage the documentation and as a central repository for third-party translations. You can contribute by adding to or revising the documentation or by helping with or creating a third-party translation.</p>
-		<p><a href="{{ site.url }}/get-involved/resources/">More information on resources &rarr;</a></p>
+		<p>The MyBB Community Team maintains the official <a href="https://docs.mybb.com">MyBB documentation</a> and manages third-party language translations. We use <a href="https://github.com/mybb">GitHub</a> to both manage the documentation and as a central repository for third-party translations. You can contribute by adding to or revising the documentation or by helping with or creating a third-party translation.</p>
+		<p class="block__action"><a href="{{ site.baseurl }}/get-involved/resources/" class="link">{% include icon.html icon='book' %}<span class="link__text">More information on resources &rarr;</span></a></p>
 	</section>
-	<section class="general">
-		<header>
-			<h1>Support</h1>
-			<p>Troubleshoot users' problems with MyBB</p>
+	<section class="block">
+		<header class="block__heading">
+			<h1 class="block__heading__title">Support</h1>
+			<p class="block__heading__subtitle">Troubleshoot users' problems with MyBB</p>
 		</header>
-		<p>
-			The MyBB Support Team is dedicated to helping users solve problems with their MyBB forums. Community members with extensive knowledge of MyBB and troubleshooting problems are encouraged to help out wherever they feel comfortable.</p>
-		<p><a href="{{ site.url }}/get-involved/support/">More information on support &rarr;</a></p>
+		<p>The MyBB Support Team is dedicated to helping users solve problems with their MyBB forums. Community members with extensive knowledge of MyBB and troubleshooting problems are encouraged to help out wherever they feel comfortable.</p>
+		<p class="block__action"><a href="{{ site.baseurl }}/get-involved/support/" class="link">{% include icon.html icon='question-circle' %}<span class="link__text">More information on support &rarr;</span></a></p>
 	</section>
-	<section class="general">
-		<header>
-			<h1>Security Research</h1>
-			<p>Help improve MyBB's security</p>
+	<section class="block">
+		<header class="block__heading">
+			<h1 class="block__heading__title">Security Research</h1>
+			<p class="block__heading__subtitle">Help improve MyBB's security</p>
 		</header>
-		<p>
-			The MyBB Team takes security very seriously and we investigate every report we recieve. Those with knowledge of web application security are encouraged to look for vulnerabilities and responsibly disclose them.</p>
-		<p><a href="{{ site.url }}/get-involved/security/">More information on security research &rarr;</a></p>
+		<p>The MyBB Team takes security very seriously and we investigate every report we recieve. Those with knowledge of web application security are encouraged to look for vulnerabilities and responsibly disclose them.</p>
+		<p class="block__action"><a href="{{ site.baseurl }}/get-involved/security/">{% include icon.html icon='bug' %}<span class="link_text">More information on security research &rarr;</span></a></p>
 	</section>
-	<section class="general">
-		<header>
-			<h1>Discord Channel</h1>
-			<p>Collaborate with other MyBB enthusiasts</p>
+	<section class="block">
+		<header class="block__heading">
+			<h1 class="block__heading__title">Discord Channel</h1>
+			<p class="block__heading__subtitle">Collaborate with other MyBB enthusiasts</p>
 		</header>
-		<p>
-			The Discord channel is a place where you can just chat with other enthusiastic MyBB users and staff, to gain knowledge and exchange tips.</p>
-		<p><a href="{{ site.url }}/get-involved/discord/">More information on the Discord Channel &rarr;</a></p>
+		<p>The Discord channel is a place where you can just chat with other enthusiastic MyBB users and staff, to gain knowledge and exchange tips.</p>
+		<p class="block__action"><a href="{{ site.baseurl }}/get-involved/security/">{% include icon.html icon='discord' %}<span class="link_text">More information on security research &rarr;</span></a></p>
 	</section>
 </div>

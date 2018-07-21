@@ -2,41 +2,48 @@
 layout: default
 section: home
 title: About the Team
-description: Take a closer look at the people who make MyBB possible.
+description: The MyBB team is composed of volunteers committed to developing, supporting, and managing the MyBB forum software project. All members have of the team have one or more roles assigned, which indicates their focuses within the project. All team changes follow the <a href="!SITE_BASEURL!/about/team/personnel-management/">personnel management guide</a>.
 meta_description: Take a closer look at the people who make MyBB possible.
 
 redirect_from:
 - /credits
 ---
 
-<aside id="sidebar">
-	<section>
-	<h1>All About MyBB</h1>
-		{% include section_nav.html section='about' %}
+<aside class="page-sidebar">
+	{% include section_nav.html section='about' %}
+
+	<section class="block block--basic">
+		<h1 class="block__heading">Roles</h1>
+		{% for role in site.data.roles %}
+			{% assign role_name_normalized = role.name | replace: ' ', '-' | downcase %}
+			<div class="team-role-legend__role" id="role-{{ role_name_normalized }}">
+				<a href="#role-{{ role_name_normalized }}">
+					<p class="team-role team-role--{{ role_name_normalized }}" data-role-color="{{ role.color }}">{{ role.name }}</p>
+				</a>
+				<p class="team-role-legend__role__description"><span class="team-role-legend__role__code">{{ role.code }}</span> {{ role.description }}</p>
+			</div>
+		{% endfor %}
 	</section>
-	<section class="alt">
-		<h1>Joining the MyBB Team</h1>
-		<p>Interested in joining the MyBB team? It all starts by getting involved with the community such as through development or support.</p>
-		<p><a href="{{ site.url }}/get-involved/"><strong>Get Involved &rarr;</strong></a></p>
+
+	<section class="block">
+		<h1 class="block__heading">Joining the MyBB Team</h1>
+		<div class="block__container">
+			<p>Interested in joining the MyBB team? It all starts by getting involved with the community such as through development or support.</p>
+			<p class="block__action"><a href="{{ site.baseurl }}/get-involved/" class="button icon icon--after fa-arrow-right">Get Involved</a></p>
+		</div>
 	</section>
 </aside>
 
-<div id="contentBlock">
-	<section class="general">
-		<p>The MyBB team is composed of volunteers committed to developing, supporting, and managing the MyBB forum software project. They have a single mission: to make the best forum software possible.</p>
-		<p>All members have a <a href="{{ site.url }}/about/team/groups/">Team group</a> assigned, which indicates their main focus within the Project.</p>
-		<p>All Team changes follow the <a href="{{ site.url }}/about/team/personnel-management/">Personnel management guide</a>.</p>
-	</section>
-	<section class="general">
-		<header>
-			<h1>The MyBB Team</h1>
+<div class="page-content page-content--sidebar">
+	<section class="block">
+		<header class="block__heading">
+			<h1 class="block__heading__title">The MyBB Team</h1>
 		</header>
 		<div class="team-cards">
-			{% include team_cards.html team_name="Management" team_data=site.data.team_management %}
-			{% include team_cards.html team_name="Support" team_data=site.data.team_support %}
-			{% include team_cards.html team_name="Development" team_data=site.data.team_development %}
-			{% include team_cards.html team_name="Quality Assurance" team_data=site.data.team_quality_assurance %}
-			{% include team_cards.html team_name="Community" team_data=site.data.team_community %}
+			{% assign sorted_team_data = site.data.team_members | sort:"uid" %}
+			{% for member in sorted_team_data %}
+				{% include team_card.html member=member %}
+			{% endfor %}
 		</div>
 	</section>
 </div>
