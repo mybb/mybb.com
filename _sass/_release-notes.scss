@@ -32,7 +32,7 @@
     }
 
     .packagesVerifyingNote { margin-bottom: 20px; text-align: right; }
-    .packagesVerifyingNote a { text-decoration: none; font-size: 12px; color: #AAA; }
+    .packagesVerifyingNote a { text-decoration: none; font-size: 12px; color: #757575; }
 
     .note { margin: 10px 0; padding: 10px; border-left: solid 4px #DDD; background-color: #FAFAFA; color: #AAA; }
     .note .fa { float: left; margin-top: 8px; }
@@ -41,5 +41,5 @@
     .note--upgradeScriptRequired { border-color: #ff7600; color: #ff7600; }
     .note--comment { border: none; background: none; }
     .note--comment .fa { margin-top: 10px; font-size: 18px; }
-    .note--comment p { margin-left: 34px; font-size: 15px; font-style: italic; color: #AAA; }
+    .note--comment p { margin-left: 34px; font-size: 15px; font-style: italic; color: #444; }
 }
