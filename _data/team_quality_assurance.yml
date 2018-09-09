@@ -7,11 +7,6 @@
   pgp_fingerprint: "DF3A 34D9 A627 42E5 BC6A 6750 1F2F B8AA 28FF E1BC"
   pgp_link: "https://devilshakerz.com/pgp"
   lead: true
-- username: "Shade"
-  uid: 58598
-  name: "Filippo"
-  github: "shade-"
-  website: "http://www.mybboost.com"
 - username: "kawaii"
   uid: 90781
   name: "Kane Valentine"
