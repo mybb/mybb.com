@@ -2,7 +2,7 @@
 layout: blank
 permalink: version_check.xml
 ---
-{% include latest_version.html %}<?xml version="1.0" encoding="utf-8"?>
+{% include releases/latest_version.html %}<?xml version="1.0" encoding="utf-8"?>
 <mybb>
 	<friendly_name>MyBB {{ latest_version.version_number }}</friendly_name>
 	<latest_version>{{ latest_version.version_number }}</latest_version>

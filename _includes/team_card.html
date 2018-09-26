@@ -1,35 +1,37 @@
 {% assign member = include.member %}
-<div class="team-cards__card card">
-	<h3 class="card__username {% if member.name %}card__username--has-name{% endif %}">{{ member.username }}</h3>
-    {% if member.name %}
-        <p class="card__name">{{ member.name }}</p>
-    {% endif %}
-	<p class="card__role card__role--{{ include.team_name | replace: ' ', '-' | downcase }}">
-		<span class="card__role__container">
-			{% if include.team_name == "Management" %}
-			<i class="fa fa-briefcase"></i>
-			{% elsif include.team_name == "Support" %}
-			<i class="fa fa-question-circle"></i>
-			{% elsif include.team_name == "Development" %}
-			<i class="fa fa-cogs"></i>
-			{% elsif include.team_name == "Quality Assurance" %}
-			<i class="fa fa-flask"></i>
-			{% elsif include.team_name == "Community" %}
-			<i class="fa fa-group"></i>
-			{% endif %}
-			{{ include.team_name }}{% if member.lead == true %} Lead{% endif %}
-		</span>
-	</p>
+<div class="team-cards__card card" id="member-{{ member.username | replace: ' ', '-' }}">
+	<a href="#member-{{ member.username | replace: ' ', '-' }}" class="team-cards__card__anchor">
+		<h3 class="card__username {% if member.name %}card__username--has-name{% endif %}">{{ member.username }}</h3>
+	</a>
+	{% if member.name %}
+		<p class="card__name">{{ member.name }}</p>
+	{% endif %}
+	<div class="card__roles">
+	{% for member_role_membership_type in member.role_memberships %}
+		{% for member_role_name in member_role_membership_type[1] %}
+			{% for data_role in site.data.roles %}
+				{% if member_role_name == data_role.name %}
+					{% assign role = data_role %}
+					{% break %}
+				{% endif %}
+			{% endfor %}
+			{% assign role_name_normalized = role.name | replace: ' ', '-' | downcase %}
+			<a href="#role-{{ role_name_normalized }}" class="team-cards__card__anchor">
+				<p class="team-role{% if member_role_membership_type[0] == 'lead' %} team-role--lead{% endif %} team-role--{{ role_name_normalized }}" data-role-color="{{ role.color }}">{{ role.name }}</p>
+			</a>
+		{% endfor %}
+	{% endfor %}
+	</div>
 	<p class="card__detail card__detail--profile">
 		<a href="https://community.mybb.com/user-{{ member.uid }}.html" class="card__detail__link" title="Profile - {{ member.username }}">
-			<i class="fa fa-fw fa-user"></i>
+			{% include icon.html icon='user-circle' %}
 			<span class="card__detail__title">Profile</span>
 		</a>
 	</p>
 	{% if member.website %}
 	<p class="card__detail card__detail--website">
 		<a href="{{ member.website }}" class="card__detail__link" title="Website - {{ member.website || remove: "https://" | remove: "http://" }}">
-			<i class="fa fa-fw fa-globe"></i>
+			{% include icon.html icon='globe' %}
 			<span class="card__detail__title">Website</span>
 		</a>
 	</p>
@@ -37,7 +39,7 @@
 	{% if member.github %}
 	<p class="card__detail card__detail--github">
 		<a href="https://github.com/{{ member.github }}" class="card__detail__link" title="GitHub - {{ member.github }}">
-			<i class="fa fa-fw fa-github"></i>
+			{% include icon.html icon='github' %}
 			<span class="card__detail__title">GitHub</span>
 		</a>
 	</p>
@@ -45,7 +47,7 @@
 	{% if member.twitter %}
 	<p class="card__detail card__detail--twitter">
 		<a href="https://twitter.com/{{ member.twitter }}" class="card__detail__link" title="Twitter - @{{ member.twitter }}">
-			<i class="fa fa-fw fa-twitter"></i>
+			{% include icon.html icon='twitter' %}
 			<span class="card__detail__title">Twitter</span>
 		</a>
 	</p>
@@ -53,7 +55,7 @@
 	{% if member.keybase %}
 	<p class="card__detail card__detail--keybase">
 		<a href="https://keybase.io/{{ member.keybase }}" class="card__detail__link" title="keybase.io/{{ member.keybase }}">
-			<i class="fa fa-fw fa-user-secret"></i>
+			{% include icon.html icon='user-secret' %}
 			<span class="card__detail__title">Keybase.io</span>
 		</a>
 	</p>
@@ -61,7 +63,7 @@
 	{% if member.pgp_fingerprint and member.pgp_link %}
 	<p class="card__detail card__detail--pgp">
 		<a href="{{ member.pgp_link }}" class="card__detail__link" data-powertip="PGP Fingerprint - &lt;span class=&quot;pgp_key&quot;&gt;{{ member.pgp_fingerprint | replace: ' ', '&lt;/span&gt;&lt;span class=&quot;pgp_key&quot;&gt;' }}&lt;/span&gt;">
-			<i class="fa fa-fw fa-key"></i>
+			{% include icon.html icon='key' %}
 			<span class="card__detail__title">PGP</span>
 		</a>
 	</p>

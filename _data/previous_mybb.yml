@@ -1,0 +1,8 @@
+show: false
+series_header: "Download the latest release from the 1.6 series"
+version: "1.6.18"
+version_code: 1618
+release: "September 7, 2015"
+size: "1.89 MB"
+type: "security"
+url: "https://resources.mybb.com/downloads/mybb_1618.zip"

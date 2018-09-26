@@ -6,39 +6,27 @@ description: Accepted MyBB RFC documents and the Request For Comments process.
 meta_description: Accepted MyBB RFC documents and the Request For Comments process.
 ---
 
-<aside id="sidebar">
-	<section>
-		<h1>All About MyBB</h1>
-		{% include section_nav.html section='about' %}
-	</section>
+<aside class="page-sidebar">
+	{% include section_nav.html section='about' %}
 </aside>
 
-<div id="contentBlock">
-	<section class="general">
+<div class="page-content page-content--sidebar">
+	<section class="block">
 		<h1>Accepted RFC documents</h1>
-		<table class="standard_table" summary="Accepted RFC documents">
-			<thead>
-				<tr>
-					<th>MyBB RFC</th>
-					<th>Document title</th>
-					<th>Date accepted</th>
-				</tr>
-			</thead>
-			<tbody>
-				{% assign documents = (site.rfcs | sort: 'rfc_date') | reverse %}
-				{% for document in documents %}
-					{% assign rfc_title_words = document.relative_path | replace: "_rfcs/" | replace: ".md" | split: "-" %}
-					{% assign rfc_public_id = rfc_title_words[0] %}
-					<tr>
-				  		<td><a href="{{ document.url }}"><strong>#{{ rfc_public_id }}</strong></a></td>
-				  		<td><a href="{{ document.url }}">{{ document.title }}</a></td>
-				  		<td>{{ document.date | date_to_string }}</td>
-			  		</tr>
-				{% endfor %}
-			</tbody>
-		</table>
+		<ul class="rfcs-list">
+			{% assign documents = site.rfcs | sort: 'rfc_date' | reverse %}
+			{% for document in documents %}
+				{% assign rfc_title_words = document.relative_path | replace: "_rfcs/" | replace: ".md" | split: "-" %}
+				{% assign rfc_public_id = rfc_title_words[0] %}
+				<li class="rfcs-list__item">
+					<span class="rfcs-list__item__number"><a href="{{ site.baseurl }}{{ document.url }}" class="rfcs-list__item__number__link">#{{ rfc_public_id }}</a></span>
+					<h3 class="rfcs-list__item__title"><a href="{{ site.baseurl }}{{ document.url }}" class="rfcs-list__item__title__link">{{ document.title }}</a></h3>
+					<p class="rfcs-list__item__date">{{ document.date | date_to_string }}</p>
+				</li>
+			{% endfor %}
+		</ul>
 	</section>
-	<section class="general">
+	<section class="block block--markdown">
 {% capture markdown %}
 # MyBB RFC Process
 This document serves to outline the details of MyBB’s internal RFC process, including vocabulary, rule and procedures.

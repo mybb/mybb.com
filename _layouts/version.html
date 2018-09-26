@@ -1,5 +1,6 @@
 ---
-layout: default
+layout: simple
+section: download
 ---
 {% if page.resolved_security_issues_number %}
     {% assign resolved_security_issues_number = page.resolved_security_issues_number %}
@@ -29,277 +30,290 @@ layout: default
 {% endif %}
 {% assign typesAppended = typesAppended | strip %}
 {% assign typesString = typesAppended | replace: ' ', ', ' %}
-{% assign typesHtml = typesAppended | replace: ' ', '</span><span>' %}
-{% assign typesHtml = '<span>' | append: typesHtml | append: '</span>' %}
+{% assign typesHtml = typesAppended | replace: ' ', '</span><span class="release-notes__details__types__item">' %}
+{% assign typesHtml = '<span class="release-notes__details__types__item">' | append: typesHtml | append: '</span>' %}
 
-
-<div class="releaseNotes">
-
-<div class="releaseNotes__title">
-    <p class="releaseNotes__title__package">MyBB {{ page.version_number }}</p>
-    {% if page.release_date %}
-        <p class="releaseNotes__title__time">(<time>{{ page.release_date | date: '%d %B %Y' }}</time>)</p>
-    {% endif %}
-</div>
-<div class="releaseNotes__details">
-    {% if page.version_code %}
-        <p class="releaseNotes__details__code">code {{ page.version_code }}</p>
-    {% endif %}
-    {% if typesAppended.size != 0 %}
-        <p class="releaseNotes__details__types">{{ typesHtml }}</p>
-    {% endif %}
-</div>
-
-{% assign versionSeries = page.version_number | split: '.' %}
-{% assign versionSeriesSize = versionSeries | size %}
-
-{% for eol in site.data.eol_versions %}
-    {% assign eolSeries = eol.series | split: '.' %}
-    {% assign eolSeriesSize = eolSeries | size %}
-
-    {% assign matchedSeries = true %}
-
-    {% if eolSeriesSize > versionSeriesSize %}
-        {% assign matchedSeries = false %}
-    {% else %}
-        {% for part in eolSeries %}
-            {% if part != versionSeries[forloop.index0] %}
-                {% assign matchedSeries = false %}
-                {% break %}
-            {% endif %}
-        {% endfor %}
-    {% endif %}
-    {% if matchedSeries %}
-        <div class="note note--eolNotice">
-            <i class="fa fa-fw fa-exclamation-triangle"></i>
-            <p><strong>This version is no longer supported</strong></p>
-            {% if eol.text %}
-                <p>{{ eol.text | markdownify }}</p>
-            {% endif %}
-            <p>
-                This means there will be no more security or maintenance releases for this series and forums running this version of MyBB may be at risk of unfixed security issues. <strong>The MyBB Group strongly encourages all communities to upgrade to the latest release of MyBB as soon as possible.</strong>
-            </p>
-            {% if eol.link %}
-                <p><a href="{{ eol.link }}">Find out more &rarr;</a></p>
+<article class="main main--release-notes release-notes">
+    <div class="wrapper">
+        <div class="release-notes__title">
+            <p class="release-notes__title__package">MyBB {{ page.version_number }}</p>
+            {% if page.release_date %}
+                <p class="release-notes__title__time"><time>{{ page.release_date | date: '%d %B %Y' }}</time></p>
             {% endif %}
         </div>
-        {% break %}
-    {% endif %}
-{% endfor %}
+        <div class="release-notes__details">
+            {% if page.version_code %}
+                <p class="release-notes__details__code">code {{ page.version_code }}</p>
+            {% endif %}
+            {% if typesAppended.size != 0 %}
+                <p class="release-notes__details__types">{{ typesHtml }}</p>
+            {% endif %}
 
-{% if page.packages %}
-    <div class="downloadPackages">
-        {% for package in page.packages %}
-            {% for type_data in site.data.packaging.types %}
-                {% if type_data.name == package.type %}
-                    {% assign type_data = type_data %}
-                    {% break %}
-                {% endif %}
-            {% endfor %}
+            {% assign versionSeries = page.version_number | split: '.' %}
+            {% assign versionSeriesSize = versionSeries | size %}
+            {% unless page.eol %}
+                {% assign page.eol = false %}
+                {% for eol in site.data.eol_versions %}
+                    {% assign eolSeries = eol.series | split: '.' %}
+                    {% assign eolSeriesSize = eolSeries | size %}
 
-            <div class="downloadPackages__package downloadPackages__package--{{ type_data.name }}">
-                <p class="downloadPackages__package__title"><i class="fa fa-fw {{ type_data.icon }}"></i> {{ type_data.title }}</p>
-                <p class="downloadPackages__package__description">{{ type_data.description }}</p>
-                {% for format in package.formats %}
-                    <div class="downloadPackages__format downloadPackages__format--{{ format.type }}">
-                        <p class="downloadPackages__format__title">
-                            <span class="downloadPackages__format__type">.{{ format.type }}</span>
-                        {% if format.filesize %}
-                            <span class="downloadPackages__format__size">&mdash; {{ format.filesize }}</span>
-                        {% endif %}
-                        </p>
+                    {% assign matchedSeries = true %}
 
-                        {% for location in format.locations %}
-                            {% for location_data in site.data.packaging.locations %}
-                                {% if location_data.name == location.name %}
-                                    {% assign location_data = location_data %}
-                                    {% break %}
-                                {% endif %}
-                            {% endfor %}
-
-                            {% assign url = location_data.url | replace: '{TYPE}', type_data.name | replace: '{VERSION_CODE}', page.version_code | replace: '{FORMAT}', format.type %}
-
-                            <a href="{{ url }}" class="downloadPackages__location downloadPackages__location--{{ location_data.name }}">
-                                <p class="downloadPackages__location__name"><i class="fa fa-fw fa-cloud-download"></i> Download from <strong>{{ location_data.title }}</strong></p>
-                            </a>
+                    {% if eolSeriesSize > versionSeriesSize %}
+                        {% assign matchedSeries = false %}
+                    {% else %}
+                        {% for part in eolSeries %}
+                            {% if part != versionSeries[forloop.index0] %}
+                                {% assign matchedSeries = false %}
+                                {% break %}
+                            {% endif %}
                         {% endfor %}
-
-                        {% if format.checksums %}
-                        <div class="downloadPackages__checksums">
-                            {% assign checksums = format.checksums | sort: 'type' | reverse %}
-                            {% for checksum in checksums %}
-                                <div class="downloadPackages__checksums_checksum">
-                                    <p class="downloadPackages__checksums__type">{{ checksum.type }}:</p>
-                                    <p class="downloadPackages__checksums__value">{{ checksum.value }}</code>
+                    {% endif %}
+                    {% if matchedSeries %}
+                        {% if page.eol != false %}
+                            <div class="release-notes__note package-notes__note--important">
+                                {% include icon.html icon='exclamation-triangle' %}
+                                <p><strong>This version is no longer supported</strong></p>
+                                {% if eol.text %}
+                                    <p>{{ eol.text | markdownify }}</p>
+                                {% endif %}
+                                <p>
+                                    This means there will be no more security or maintenance releases for this series and forums running this version of MyBB may be at risk of unfixed security issues. <strong>The MyBB Group strongly encourages all communities to upgrade to the latest release of MyBB as soon as possible.</strong>
+                                </p>
+                                <div class="release-notes__note__buttons">
+                                    <a href="{{ site.baseurl }}/download/" class="button button--big">
+                                        {% include icon.html icon="download" %} Download latest
+                                    </a>
+                                    {% if eol.link %}
+                                        <a href="{{ eol.link }}" class="button button--big button--secondary button--default-background-border">
+                                            {% include icon.html icon="info-circle" %} Find out more
+                                        </a>
+                                    {% endif %}
                                 </div>
-                            {% endfor %}
-                        </div>
+                            </div>
                         {% endif %}
+                        {% break %}
+                    {% endif %}
+                {% endfor %}
+            {% endunless %}
+        </div>
+
+        {% if page.packages %}
+            <div class="download-packages">
+                {% for package in page.packages %}
+                    {% for type_data in site.data.packaging.types %}
+                        {% if type_data.name == package.type %}
+                            {% assign type_data = type_data %}
+                            {% break %}
+                        {% endif %}
+                    {% endfor %}
+
+                    <div class="download-packages__package download-packages__package--{{ type_data.name }}">
+                        <p class="download-packages__package__title">{% include icon.html icon=type_data.icon %} {{ type_data.title }}</p>
+                        <p class="download-packages__package__description">{{ type_data.description }}</p>
+                        {% for format in package.formats %}
+                            <div class="download-packages__format download-packages__format--{{ format.type }}">
+                                <p class="download-packages__format__details">
+                                    <span class="download-packages__format__type">.{{ format.type }}</span>
+                                {% if format.filesize %}
+                                    <span class="download-packages__format__size">&ndash; {{ format.filesize }}</span>
+                                {% endif %}
+                                </p>
+
+                                {% for location in format.locations %}
+                                    {% for location_data in site.data.packaging.locations %}
+                                        {% if location_data.name == location.name %}
+                                            {% assign location_data = location_data %}
+                                            {% break %}
+                                        {% endif %}
+                                    {% endfor %}
+
+                                    {% assign url = location_data.url | replace: '{TYPE}', type_data.name | replace: '{VERSION_CODE}', page.version_code | replace: '{FORMAT}', format.type %}
+
+                                    <a href="{{ url }}" class="button download-packages__location download-packages__location--{{ location_data.short_name }} download-packages__location--{{ type_data.name }}">
+                                        {% include icon.html icon=location_data.icon %} Download from <strong>{{ location_data.title }}</strong>
+                                    </a>
+                                {% endfor %}
+
+                                {% if format.checksums %}
+                                <div class="download-packages__checksums">
+                                    {% assign checksums = format.checksums | sort: 'type' | reverse %}
+                                    {% for checksum in format.checksums %}
+                                        <div class="download-packages__checksums_checksum">
+                                            <p class="download-packages__checksums__type">{{ checksum.type }}:</p>
+                                            <p class="download-packages__checksums__value">{{ checksum.value }}</code>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+                            </div>
+                        {% endfor %}
                     </div>
                 {% endfor %}
             </div>
-        {% endfor %}
+            <p class="download-packages__verifying-note">
+                <a href="{{ site.baseurl }}/download/verifying/" class="download-packages__verifying-note__link">{% include icon.html icon='check-circle' %} <span>How to verify packages</span></a>
+            </p>
+        {% endif %}
     </div>
-    <p class="packagesVerifyingNote">
-        <a href="{{ site.url }}/download/verifying/">How to verify packages &rarr;</a>
-    </p>
-{% endif %}
+    {% if page.upgrade_script_required or page.version_number contains '1.8.' or page.comment %}
+    <div class="package-notes">
+        <div class="wrapper">
+            <h2 class="package-notes__title">Important Notes</h2>
+            {% if page.upgrade_script_required %}
+                <div class="package-notes__note package-notes__note--important">
+                    {% include icon.html icon='cogs' %}
+                    <p>Running the <strong>upgrade script</strong> is required.</p>
+                </div>
+            {% else %}
+                <div class="package-notes__note package-notes__note--important">
+                    {% include icon.html icon='cogs' %}
+                    <p>The upgrade script does <strong>not</strong> need to be run when upgrading to this release with the Changed Files package.</p>
+                </div>
+            {% endif %}
 
-{% if page.upgrade_script_required %}
-    <div class="note note--upgradeScriptRequired">
-        <i class="fa fa-fw fa-cogs"></i>
-        <p>Running the upgrade script is <strong>required</strong> when upgrading to this release.</p>
+            {% if page.version_number contains '1.8.' %}
+            <div class="package-notes__note">
+                {% include icon.html icon='arrow-up' %}
+                <p>Before performing any upgrade please remember to backup your forum’s files and database and store them safely. If you have edited core files, including language files, please make sure you make a changelog for these changes so you can make them again (if necessary) once the upgrade is complete.</p>
+                <p>Follow the <a href="https://docs.mybb.com/1.8/install/upgrade/">Upgrade Documentation</a> for more detailed instructions.</p>
+            </div>
+            {% endif %}
+
+            {% if page.comment %}
+                <div class="package-notes__note package-notes__note--comment">
+                    {% include icon.html icon='quote-left' %}
+                    {{ page.comment | markdownify }}
+                </div>
+            {% endif %}
+        </div>
     </div>
-{% else %}
-    <div class="note">
-        <i class="fa fa-fw fa-cogs"></i>
-        <p>The upgrade script does <strong>not</strong> need to be run when upgrading to this release with the Changed Files package.</p>
-    </div>
-{% endif %}
+    {% endif %}
+    <div class="release-details">
+        <div class="wrapper">
+            {% if resolved_security_issues_number > 0 %}
+            <section class="release-details__block">
+                <h1 class="release-details__block__title">Security vulnerabilities addressed ({{ resolved_security_issues_number }})</h1>
+                {% if page.resolved_security_issues %}
+                <div class="security-issues">
+                    {% for issue in page.resolved_security_issues %}
+                    <div class="security-issues__issue">
+                        <span class="security-issues__issue__severity">{{ issue.severity | capitalize }} risk</span>
+                        <h2 class="security-issues__issue__description">{{ issue.description }}</h2>
+                        {% if issue.reported_by.name %}
+                            <p class="security-issues__issue__reporter">
+                                Reported by
 
-{% if page.version_number contains '1.8.' %}
-<div class="note">
-    <i class="fa fa-fw fa-arrow-up"></i>
-    <p>Before performing any upgrade please remember to backup your forum’s files and database and store them safely. If you have edited core files, including language files, please make sure you make a changelog for these changes so you can make them again (if necessary) once the upgrade is complete.</p>
-    <p>Follow the <a href="https://docs.mybb.com/1.8/install/upgrade/">Upgrade Documentation</a> for more detailed instructions.</p>
-</div>
-{% endif %}
-
-{% if page.comment %}
-    <div class="note note--comment">
-        <i class="fa fa-fw fa-quote-left"></i>
-        {{ page.comment | markdownify }}
-    </div>
-{% endif %}
-
-<br>
-
-{% if resolved_security_issues_number > 0 %}
-    <h2>Security vulnerabilities addressed ({{ resolved_security_issues_number }})</h2>
-    {% if page.resolved_security_issues %}
-        <table class="standard_table">
-            <thead>
-                <tr>
-                    <th>Severity</th>
-                    <th>Description</th>
-                    <th>Reported by</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for issue in page.resolved_security_issues %}
-                    <tr>
-                        <td>{{ issue.severity | capitalize }} risk</td>
-                        <td>{{ issue.description }}</td>
-                        <td>
-                            {% if issue.reported_by.name %}
-                                {% assign reported_by = '<i>' | append: (issue.reported_by.name | markdownify | replace: '<p>', '' | replace: '</p>
-', '') %}
+                                {% assign reported_by = issue.reported_by.name | markdownify | replace: '<p>', '' | replace: '</p>', '' %}
                                 {% if issue.reported_by.affiliation %}
-                                    {% assign reported_by = reported_by | append: '<i>' | append: '<br><small>' | append: (issue.reported_by.affiliation | markdownify | replace: '<p>', '' | replace: '</p>
-', '') | append: '</small>' %}
+                                    {% assign reported_by = reported_by | append: '<span class="security-issues__issue__reporter__affiliation">' | append: issue.reported_by.affiliation | markdownify | replace: '<p>', '' | replace: '</p>', '' | append: '</span>' %}
                                 {% endif %}
                                 {{ reported_by }}
-                            {% endif %}
-                        </td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    {% endif %}
-    <br>
-{% endif %}
+                            </p>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </section>
+            {% endif %}
 
-{% if page.resolved_issues_number %}
-    <h2>Issues resolved ({{ page.resolved_issues_number }})</h2>
-    {% if page.resolved_issues_link %}
-        <a href="{{ page.resolved_issues_link }}"><strong>{{ page.resolved_issues_link }}</strong></a>
-    {% endif %}
-    {% if page.resolved_issues %}
-        <ul>
-            {% for issue in page.resolved_issues %}
-                <li>{{ issue.description | markdownify }}</li>
-            {% endfor %}
-        </ul>
-    {% endif %}
-    <br>
-    <br>
-{% endif %}
+            {% if page.resolved_issues_number %}
+            <section class="release-details__block">
+                <h1 class="release-details__block__title">Issues resolved ({{ page.resolved_issues_number }})</h1>
+                {% if page.resolved_issues_link %}
+                    <a href="{{ page.resolved_issues_link }}" class="button button--medium button--no-margin">{% include icon.html icon='github' %} View issues on GitHub</a>
+                {% endif %}
+                {% if page.resolved_issues %}
+                    <ul>
+                        {% for issue in page.resolved_issues %}
+                            <li>{{ issue.description | markdownify }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </section>
+            {% endif %}
 
+            {% if page.changed_files_list %}
+            <section class="release-details__block">
+                <h1 class="release-details__block__title">Changed Files ({{ page.changed_files_list | size }})</h1>
+                <code>{{ page.changed_files_list | join: '<br>' }}</code>
+            </section>
+            {% elsif page.changed_files %}
+                {% if page.changed_files.first %}
+                    {% capture list_output %}
+                        {% include releases/recursive_list.html list = page.changed_files parent_suffix = '/' %}
+                    {% endcapture %}
+                    <section class="release-details__block">
+                        <h1 class="release-details__block__title">Changed Files ({{ recursive_count }})</h1>
+                        <small>
+                            {{ list_output }}
+                        </small>
+                    </section>
+                    {% assign recursive_count = 0 %}
+                {% else %}
+                    <section class="release-details__block">
+                        <h1 class="release-details__block__title">Changed Files</h1>
+                        <small>
+                            {{ page.changed_files | markdownify }}
+                        </small>
+                    </section>
+                {% endif %}
+            {% endif %}
 
-{% if page.changed_templates or page.changed_files %}
-<h2>Update Details</h2>
-{% endif %}
+            {% if page.removed_files_list %}
+            <section class="release-details__block">
+                <h1 class="release-details__block__title">Removed Files ({{ page.removed_files_list | size }})</h1>
+                <code>{{ page.removed_files_list | join: '<br>' }}</code>
+            </section>
+            {% elsif page.removed_files %}
+                {% if page.removed_files.first %}
+                    {% capture list_output %}
+                        {% include releases/recursive_list.html list = page.removed_files parent_suffix = '/' %}
+                    {% endcapture %}
+                    <section class="release-details__block">
+                        <h1 class="release-details__block__title">Removed Files ({{ recursive_count }})</h1>
+                        <small>
+                            {{ list_output }}
+                        </small>
+                    </section>
+                    {% assign recursive_count = 0 %}
+                {% else %}
+                    <section class="release-details__block">
+                        <h1 class="release-details__block__title">Removed Files</h1>
+                        <small>
+                            {{ page.removed_files | markdownify }}
+                        </small>
+                    </section>
+                {% endif %}
+            {% endif %}
 
-{% if page.changed_files_list %}
-    <h3>Changed Files ({{ page.changed_files_list | size }})</h3>
-    <code>{{ page.changed_files_list | join: '<br>' }}</code>
-    <br>
-    <br>
-{% elsif page.changed_files %}
-    {% if page.changed_files.first %}
-        {% capture list_output %}
-            {% include recursive_list.html list = page.changed_files parent_suffix = '/' %}
-        {% endcapture %}
-        <h3>Changed Files ({{ recursive_count }})</h3>
-        <small>
-            {{ list_output }}
-        </small>
-        {% assign recursive_count = 0 %}
-    {% else %}
-        <h3>Changed Files</h3>
-        <small>
-            {{ page.changed_files | markdownify }}
-        </small>
-    {% endif %}
-    <br>
-{% endif %}
+            {% if page.changed_language_files_number %}
+            <section class="release-details__block">
+                <h1 class="release-details__block__title">Changed Language Files ({{ page.changed_language_files_number }})</h1>
+                There are changes to <strong>{{ page.changed_language_files_number }}</strong> language file(s). Changed languages files can be cross-referenced from the list above.
+            </section>
+            {% endif %}
 
-{% if page.removed_files_list %}
-    <h3>Removed Files ({{ page.removed_files_list | size }})</h3>
-    <code>{{ page.removed_files_list | join: '<br>' }}</code>
-    <br>
-    <br>
-{% elsif page.removed_files %}
-    {% if page.removed_files.first %}
-        {% capture list_output %}
-            {% include recursive_list.html list = page.removed_files parent_suffix = '/' %}
-        {% endcapture %}
-        <h3>Removed Files ({{ recursive_count }})</h3>
-        <small>
-            {{ list_output }}
-        </small>
-        {% assign recursive_count = 0 %}
-    {% else %}
-        <h3>Removed Files</h3>
-        <small>
-            {{ page.removed_files | markdownify }}
-        </small>
-    {% endif %}
-    <br>
-{% endif %}
+            {% if page.changed_templates %}
+            <section class="release-details__block">
+                <h1 class="release-details__block__title">Changed Templates ({{ page.changed_templates | size }})</h1>
+                <ul>
+                    {% for name in page.changed_templates %}
+                        <li><code>{{ name }}</code></li>
+                    {% endfor %}
+                </ul>
+            </section>
+            {% endif %}
 
-{% if page.changed_language_files_number %}
-    <h3>Changed Language Files ({{ page.changed_language_files_number }})</h3>
-    There are changes to <strong>{{ page.changed_language_files_number }}</strong> language file(s). Changed languages files can be cross-referenced from the list above.
-    <br>
-    <br>
-{% endif %}
+            {% assign contentStripped = page.content | strip %}
 
-{% if page.changed_templates %}
-    <h3>Changed Templates ({{ page.changed_templates | size }})</h3>
-    <ul>
-        {% for name in page.changed_templates %}
-            <li><code>{{ name }}</code></li>
-        {% endfor %}
-    </ul>
-    <br>
-{% endif %}
-
-{% assign contentStripped = page.content | strip %}
-
-</div>
-
-{% if contentStripped != '' %}
-    <hr>
-    {{ page.content }}
-{% endif %}
+            {% if contentStripped != '' %}
+                <section class="release-details__block block block--markdown">
+                    {{ page.content }}
+                </section>
+            {% endif %}
+            </div>
+        </div>
+    </div>
+</article>

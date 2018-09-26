@@ -2,7 +2,7 @@
 layout: blank
 permalink: version_check.json
 ---
-{% include latest_version.html %}{
+{% include releases/latest_version.html %}{
   "mybb":
   {
 	"friendly_name": "MyBB {{ latest_version.version_number }}",

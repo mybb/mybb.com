@@ -6,20 +6,20 @@ description: The guideline for Team additions and removals.
 meta_description: The guideline for Team additions and removals.
 ---
 
-<aside id="sidebar">
-	<section>
-	<h1>All About MyBB</h1>
-		{% include section_nav.html section='about' parent='about/team' %}
-	</section>
-	<section class="alt">
-		<h1>Joining the MyBB Team</h1>
-		<p>Interested in joining the MyBB team? It all starts by getting involved with the community such as through development or support.</p>
-		<p><a href="{{ site.url }}/get-involved/"><strong>Get Involved &rarr;</strong></a></p>
+<aside class="page-sidebar">
+	{% include section_nav.html section='about' parent='about/team' %}
+
+	<section class="block">
+		<h1 class="block__heading">Joining the MyBB Team</h1>
+		<div class="block__container">
+			<p>Interested in joining the MyBB team? It all starts by getting involved with the community such as through development or support.</p>
+			<p class="block__action"><a href="{{ site.baseurl }}/get-involved/" class="button icon icon--after fa-arrow-right">Get Involved</a></p>
+		</div>
 	</section>
 </aside>
 
-<div id="contentBlock">
-	<section class="general">
+<div class="page-content page-content--sidebar">
+	<section class="block block--markdown">
 
 {% capture markdown %}
 ## Adding members
