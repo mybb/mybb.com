@@ -72,11 +72,14 @@
 
 - username: "Wildcard"
   uid: 55383
+  name: "Mark Vincent"
+  github: "WildcardSearch"
+  website: "http://www.rantcentralforums.com"
   role_memberships:
     standard:
     - Development
 
-- username: "Eric J"
+- username: "Eric"
   uid: 13376
   github: "Eric-Jackson"
   website: "http://digitalrelativity.com"
@@ -98,16 +101,6 @@
     - Security
     standard:
     - Web
-
-- username: "Shade"
-  uid: 58598
-  name: "Filippo"
-  github: "shade-"
-  website: "http://www.mybboost.com"
-  role_memberships:
-    standard:
-    - Design
-    - Devops
 
 - username: "kawaii"
   uid: 90781
@@ -161,7 +154,6 @@
   role_memberships:
     standard:
     - Community
-    - Editorial
     - Support
 
 - username: "andrewjs18"
@@ -174,7 +166,6 @@
   role_memberships:
     standard:
     - Community
-    - Editorial
 
 - username: "Omar G."
   uid: 25096
