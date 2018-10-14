@@ -2,4 +2,4 @@
 layout: blank
 ---
 
-{{ site.data.team_members | json }}
+{{ site.data.team_members | jsonify }}

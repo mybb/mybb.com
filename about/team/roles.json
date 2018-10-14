@@ -2,4 +2,4 @@
 layout: blank
 ---
 
-{{ site.data.roles | json }}
+{{ site.data.roles | jsonify }}
