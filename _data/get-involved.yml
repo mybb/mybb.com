@@ -1,5 +1,15 @@
-- get-involved/development
-- get-involved/resources
-- get-involved/support
-- get-involved/security
-- get-involved/discord
+- url: get-involved/development
+  title: Development
+  icon: code
+- url: get-involved/resources
+  title: Resources
+  icon: book
+- url: get-involved/support
+  title: Support
+  icon: question-circle
+- url: get-involved/security
+  title: Security Research
+  icon: bug
+- url: get-involved/discord
+  title: Discord
+  icon: discord

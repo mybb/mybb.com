@@ -7,86 +7,66 @@ redirect_from:
 - /sep/
 ---
 
-<aside id="sidebar">
-	<section>
-		<h1>Support Methods</h1>
-		<nav>
-			<ul>
-				<li><a href="https://docs.mybb.com">MyBB Documentation</a></li>
-				<li><a href="https://community.mybb.com">MyBB Community Forums</a></li>
+<aside class="page-sidebar">
+	<section class="block">
+		<h1 class="block__heading">Support Methods</h1>
+		<nav class="sidebar__nav">
+			<ul class="sidebar__nav__links">
+				<li class="sidebar__nav__links__item"><a href="https://docs.mybb.com" class="sidebar__nav__links__item__link">MyBB Documentation</a></li>
+				<li class="sidebar__nav__links__item"><a href="https://community.mybb.com" class="sidebar__nav__links__item__link">MyBB Community Forums</a></li>
 			</ul>
 		</nav>
 	</section>
-	<section>
-		<h1>Support Eligibility Policy</h1>
-		<nav>
-			<ul>
-				<li class="selected"><a href="{{ site.url }}/support/eligibility-policy/">Support Eligibility Policy</a></li>
+	<section class="block">
+		<h1 class="block__heading">Support Eligibility Policy</h1>
+		<nav class="sidebar__nav">
+			<ul class="sidebar__nav__links">
+				<li class="sidebar__nav__links__item"><a href="{{ site.baseurl }}/support/eligibility-policy/" class="sidebar__nav__links__item__link">Support Eligibility Policy</a></li>
 			</ul>
 		</nav>
 	</section>
-	<section class="alt">
-		<h1>International Support</h1>
-		<p>Various third-party communities exist for international users to receive support in their language. You can find <a href="https://community.mybb.com/forum-168.html">a list of international support communities</a> at the MyBB Community Forums.
+	<section class="block">
+		<h1 class="block__heading">International Support</h1>
+		<p>Various third-party communities exist for international users to receive support in their language. You can find <a href="https://community.mybb.com/forum-168.html">a list of them at the Community Forums</a>.</p>
 	</section>
 </aside>
 
-<div id="contentBlock">
-	<section class="general">
-		<header>
-			<h1>Minimum Copyright</h1>
+<div class="page-content page-content--sidebar">
+	<section class="block">
+		<header class="block__heading">
+			<h1 class="block__heading__title">Minimum Copyright</h1>
 		</header>
-		<p>
-			MyBB is licensed under the LGPL and therefore users may remove the MyBB copyright and credit notice from the footer of their forum, however those who choose to do so are ineligible for official support on the Community Forums.
-		</p>
-		<p>
-			To receive support users must display a <i>powered by</i> notice on every page of their forum:
-		</p>
+		<p>MyBB is licensed under the LGPL and therefore users may remove the MyBB copyright and credit notice from the footer of their forum, however those who choose to do so are ineligible for official support on the Community Forums.</p>
+		<p>To receive support users must display a <em>powered by</em> notice on every page of their forum:</p>
 		<blockquote>
 			Powered by <a rel="nofollow" class="external text" href="https://mybb.com">MyBB</a>.
 		</blockquote>
-		<p>
-			The text can be rephrased in a non-derogatory way, can be presented using images and equivalent forms and must link to <a rel="nofollow" href="https://mybb.com">https://mybb.com</a>.
-		</p>
-		<p>
-			If your theme does not already carry the <i>powered by</i> message it can be added by going to <strong>Templates &amp; Styles &rarr; Templates &rarr; <i>Select template</i> &rarr; Footer templates &rarr; Footer</strong> in your Admin Control Panel and then adding the following code:
-		</p>
-			<pre>Powered by &lt;a href=&quot;https://mybb.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;MyBB&lt;/a&gt;.</pre>
+		<p>The text can be rephrased in a non-derogatory way, can be presented using images and equivalent forms and must link to <a rel="nofollow" href="https://mybb.com">https://mybb.com</a>.</p>
+		<p>If your theme does not already carry the <i>powered by</i> message it can be added by going to <strong>Templates &amp; Styles &rarr; Templates &rarr; <em>Select template</em> &rarr; Footer templates &rarr; Footer</strong> in your Admin Control Panel and then adding the following code:</p>
+		<pre>Powered by &lt;a href=&quot;https://mybb.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;MyBB&lt;/a&gt;.</pre>
 	</section>
 
-	<section class="general">
-		<header>
-			<h1>Appropriateness of Content</h1>
+	<section class="block">
+		<header class="block__heading">
+			<h1 class="block__heading__title">Appropriateness of Content</h1>
 		</header>
-		<p>
-			For ethical and legal reasons the MyBB Group does not provide support to websites violating the Project's <a href="{{ site.url }}/about/conduct/">Code of Conduct</a>.
-		</p>
+		<p>For ethical and legal reasons the MyBB Group does not provide support to websites violating the Project's <a href="{{ site.baseurl }}/about/conduct/">Code of Conduct</a>.</p>
 	</section>
 
-	<section class="general">
-		<header>
-			<h1>Support Denial</h1>
+	<section class="block">
+		<header class="block__heading">
+			<h1 class="block__heading__title">Support Denial</h1>
 		</header>
-		<p>
-			Users that are found to violate the Support Eligibility Policy will be denied official support temporarily (for the first offense) until rectified, or permanently for repeated offenders.
-		</p>
-		<p>
-			The support is denied on a per user basis, regardless of whether the support is intended for another acceptable site operated by the user. This is because otherwise MyBB staff can not be certain if their support is benefiting an acceptable site or one that is not.
-		</p>
-		<p>
-			The MyBB Group reserves the right to deny support to any member in any case they feel it is an appropriate consequence to other rule violations committed by the user. Examples of this might be abuse towards staff or members in a support threads, or if the user repeatedly sends mass private messages to staff for support.
-		</p>
+		<p>Users that are found to violate the Support Eligibility Policy will be denied official support temporarily (for the first offense) until rectified, or permanently for repeated offenders.</p>
+		<p>The support is denied on a per user basis, regardless of whether the support is intended for another acceptable site operated by the user. This is because otherwise MyBB staff can not be certain if their support is benefiting an acceptable site or one that is not.</p>
+		<p>The MyBB Group reserves the right to deny support to any member in any case they feel it is an appropriate consequence to other rule violations committed by the user. Examples of this might be abuse towards staff or members in a support threads, or if the user repeatedly sends mass private messages to staff for support.</p>
 	</section>
 
-	<section class="general">
-		<header>
-			<h1>I have been denied support, what now?</h1>
+	<section class="block">
+		<header class="block__heading">
+			<h1 class="block__heading__title">I have been denied support, what now?</h1>
 		</header>
-		<p>
-			The MyBB Community Forums are not the only source of support available for MyBB. You may be able to find an answer to your problem on the <a href="https://docs.mybb.com/">Docs site</a> or on another unofficial MyBB resource website.
-		</p>
-		<p>
-			If you believe your support denial was unjustified, or you have rectified the issue that resulted in the denial, you may discuss the matter in the <a href="https://community.mybb.com/forum-135.html" title="Private Inquiries" target="_blank">Private Inquiries</a>, which may include removal of the support denial, at the sole judgment of the MyBB Group.
-		</p>
+		<p>The MyBB Community Forums are not the only source of support available for MyBB. You may be able to find an answer to your problem on the <a href="https://docs.mybb.com/">Docs site</a> or on another unofficial MyBB resource website.</p>
+		<p>If you believe your support denial was unjustified, or you have rectified the issue that resulted in the denial, you may discuss the matter in the <a href="https://community.mybb.com/forum-135.html" title="Private Inquiries">Private Inquiries</a>, which may include removal of the support denial, at the sole judgment of the MyBB Group.</p>
 	</section>
 </div>

@@ -1,4 +1,6 @@
 _site/
+_themes/
+vendor/
 Gemfile
 Gemfile.lock
 _local_config.yml

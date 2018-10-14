@@ -6,7 +6,7 @@ section: download
 MyBB Release Signing Keys
 
 ## ACTIVE KEYS BEGIN
-{% assign active_keys = (site.keys | where: "status", "active" | sort: 'add_date') | reverse %}
+{% assign active_keys = site.keys | where: "status", "active" | sort: 'add_date' | reverse %}
 {% for key in active_keys %}
 USER: {{ key.username }}
 BRANCHES: {{ key.branches | join: '; ' }}
@@ -19,7 +19,7 @@ ADD_ANNOUNCEMENT: {{ key.add_announcement }}
 ## ACTIVE KEYS END
 
 ## REMOVED KEYS BEGIN
-{% assign removed_keys = (site.keys | where: "status", "removed" | sort: 'remove_date') | reverse %}
+{% assign removed_keys = site.keys | where: "status", "removed" | sort: 'remove_date' | reverse %}
 {% for key in removed_keys %}
 USER: {{ key.username }}
 BRANCHES: {{ key.branches | join: '; ' }}

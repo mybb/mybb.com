@@ -1,22 +1,83 @@
 ---
-layout: default
-section: home
+layout: simple
 
-title: 404 - File Not Found
-description: empty
+title: File Not Found
 permalink: /404.html
 ---
-
-	<section class="general">
-		<p class="body_intro"><strong>Unfortunately, the page you tried to access could not be found.</strong> If you were brought to this page from our website, please <a href="{{ site.url }}/contact/">contact us</a> with a description of how you came to this page. You can also search for what you were looking for below.
-	</section>
-	<form method="get" action="https://www.google.com/search">
-	<section class="general form page_search">
-		<p>
-			<label for="q">Search MyBB</label>
-			<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="mybb.com">
-			<input name="q" id="q" type="search" class="searchField inputText" placeholder="Search keyword" />
-		</p>
-		<p class="submit"><input id="submit" type="submit" value="Search" class="searchSubmit inputSubmit" /></p>
-	</section>
-	</form>
+<article class="main">
+    <header class="main-feature">
+        <div class="wrapper">
+            <h1 class="main-feature__page-title">{{ page.title }}</h1>
+            <p class="main-feature__description"><strong>Unfortunately, the page you tried to access could not be found.</strong> If you were brought to this page from our website, please <a href="{{ site.baseurl }}/contact/">contact us</a> with a description of how you came to this page. You can also search for what you were looking for below.</p>
+        </div>
+    </header>
+    <section class="home-block home-block--search">
+        <div class="wrapper">
+            <div class="page-content page-content--centered">
+                <form method="get" action="https://www.google.com/search">
+                    <section class="block form">
+                        <div class="form__section">
+                            <div class="form__row">
+                                <h1 class="form__row__title"><label for="q">Search MyBB.com</label></h1>
+                        		<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="mybb.com">
+                                <input name="q" id="q" type="text" class="searchField inputText" placeholder="Search keyword" />
+                            </div>
+                            <div class="form__submit">
+                                <button id="submit" type="submit" class="button">{% include icon.html icon='search' %} Search</button>
+                            </div>
+                        </div>
+                    </section>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="home-block home-block--why">
+        <div class="wrapper">
+			<h1 class="home-block__title">Is this what you were looking for?</h1>
+			<h2 class="home-block__subtitle">These are a few of MyBB.com's most popular destinations.</h2>
+			<div class="action-cards action-cards--three">
+				<div class="action-cards__card">
+					<a href="{{ site.baseurl }}/download/" class="action-cards__card__link">
+						<span class="action-cards__card__icon">{% include icon.html icon='download' %}</span>
+						<h3 class="action-cards__card__title">Download</h3>
+                        <p class="action-cards__card__description">Download the latest version of MyBB or browse past versions.</p>
+						<p class="action-cards__card__action"><span>Download MyBB</span> {% include icon.html icon='arrow-right' %}</p>
+					</a>
+				</div>
+                <div class="action-cards__card">
+					<a href="{{ site.baseurl }}/get-involved/" class="action-cards__card__link">
+						<span class="action-cards__card__icon">{% include icon.html icon='users' %}</span>
+						<h3 class="action-cards__card__title">Get Involved</h3>
+                        <p class="action-cards__card__description">Find out how you can contribute to the MyBB Project.</p>
+						<p class="action-cards__card__action"><span>Get Involved</span> {% include icon.html icon='arrow-right' %}</p>
+					</a>
+				</div>
+                <div class="action-cards__card">
+					<a href="{{ site.baseurl }}/about/" class="action-cards__card__link">
+						<span class="action-cards__card__icon">{% include icon.html icon='info-circle' %}</span>
+						<h3 class="action-cards__card__title">MyBB Project</h3>
+                        <p class="action-cards__card__description">Learn more about the MyBB team and its inner workings.</p>
+						<p class="action-cards__card__action"><span>About the MyBB Project</span> {% include icon.html icon='arrow-right' %}</p>
+					</a>
+				</div>
+			</div>
+        </div>
+    </section>
+    <section class="home-block home-block--features" id="features">
+        <div class="wrapper">
+            <h1 class="home-block__title">MyBB Feature Tour</h1>
+            <h2 class="home-block__subtitle">Don't miss any of the great features you can get with MyBB!</h2>
+            <div class="feature-tour__footer__list">
+                {% for item in site.data.features %}
+                    {% assign item_url = item | prepend:"/features/" | append:"/" %}
+                    {% assign p = site.features | where:"url", item_url | first %}
+                  <div class="feature-tour__footer__list__item">
+                      {% include icon.html icon=p.icon %}
+                      <h2 class="feature-tour__footer__list__item__title"><a href="{{ site.baseurl }}{{ item_url }}" class="feature-tour__footer__list__item__link">{{ p.title }}</a></h2>
+                      <p class="feature-tour__footer__list__item__description">{{ p.meta_description }}</p>
+                  </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</article>
