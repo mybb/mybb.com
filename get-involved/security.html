@@ -17,7 +17,7 @@ redirect_from:
 <div class="page-content page-content--sidebar">
 {% capture markdown %}
 # Introduction
-## An insight in to the program
+### An insight in to the program
 
 At MyBB, maintaining secure software is one of our strategic priorities. Both ourselves and our users need to trust that the software they're using is secure and will remain secure throughout the years. We've encountered vulnerabilities which have been disclosed to us by members of the Community and encountered some which have been spread around the web. The latter is something which we want to avoid to protect our users and make understanding the issue easier.
 
@@ -26,7 +26,7 @@ Security contributors to the 1.8.x branch will be listed in the Release Notes of
 In case of vulnerabilities affecting themes or plugins, we recommend additionally contacting their authors.
 
 # Reporting
-## How to report a vulnerability
+### How to report a vulnerability
 
 If you have discovered a potential vulnerability or security risk, we encourage you to responsibly disclose it to us via the [**Private Inquiries**](https://community.mybb.com/forum-135.html) forum.
 
@@ -34,7 +34,7 @@ Do not use the form if you notice your browser displays HTTPS warnings, or anyth
 
 You can also reach us at <security@mybb.com> for security concerns, however we recommend using Private Inquiries for best feedback.
 
-### Composing a Good Report
+## Composing a Good Report
 
 Create a short and descriptive subject (identification, location and vulnerability type) with the _[Vulnerability Report]_ prefix for each vulnerability found (or suspected).
 
@@ -66,7 +66,7 @@ In order to minimize threats to privacy, safety and security of installations, t
 
 
 # Attribution Eligibility
-## How to be recognized for discovered issues
+### How to be recognized for discovered issues
 
 In order to have the name and affiliation included in Release Notes and the Release Blog Post, the submissions satisfy the following criteria:
 
@@ -85,7 +85,7 @@ If you are not sure whether you are eligible &mdash; contact us. In rare cases, 
 Even if you do not meet the requirements to be eligible for a bragging rights or have information not directly related to vulnerabilities (such as suspicion of security breaches or exploitation of MyBB boards in the wild), do not hesitate to contact us &mdash; the MyBB Team members are in the best position to coordinate efforts to improve security of our ecosystem.
 
 # Security Workflow for Researchers
-## Handling of submitted reports
+### Handling of submitted reports
 
 As MyBB is a not-for-profit FOSS project, release times may vary greatly, nonetheless the next upcoming version is expected to address all known vulnerabilities up to the point of release. In case of exceptions we will contact the reporter and continue providing follow-up information when such appears. In other cases the summary of vulnerabilities is posted publicly by the Team in `SECURITY.md` files in software repositories.
 
@@ -116,5 +116,7 @@ As a vulnerability reporter or external security researcher, you will likely rec
 You can learn how MyBB handles vulnerability reports internally from the [Security Workflow](https://docs.mybb.com/1.8/development/security-workflow/).
 
 {% endcapture %}
+<div class="block--markdown">
 {{ markdown | markdownify }}
+</div>
 </div>
