@@ -97,9 +97,9 @@
   pgp_link: "https://devilshakerz.com/pgp"
   role_memberships:
     lead:
-    - Devops
     - Security
     standard:
+    - Devops
     - Web
 
 - username: "kawaii"
