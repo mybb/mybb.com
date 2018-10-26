@@ -78,6 +78,7 @@
   role_memberships:
     standard:
     - Development
+    - Support
 
 - username: "Eric"
   uid: 13376
