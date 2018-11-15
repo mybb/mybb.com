@@ -80,14 +80,6 @@
     - Development
     - Support
 
-- username: "Eric"
-  uid: 13376
-  github: "Eric-Jackson"
-  website: "http://digitalrelativity.com"
-  role_memberships:
-    standard:
-    - Design
-
 - username: "Devilshakerz"
   uid: 47371
   name: "Tomasz Mlynski"
