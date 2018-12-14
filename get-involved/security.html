@@ -28,9 +28,9 @@ In case of vulnerabilities affecting themes or plugins, we recommend additionall
 # Reporting
 ### How to report a vulnerability
 
-If you have discovered a potential vulnerability or security risk, we encourage you to responsibly disclose it to us via the [**Private Inquiries**](https://community.mybb.com/forum-135.html) forum.
+**If you have discovered a potential vulnerability or security risk, we encourage you to responsibly disclose it to us via the [Private Inquiries](https://community.mybb.com/forum-135.html) forum.**
 
-Do not use the form if you notice your browser displays HTTPS warnings, or anything otherwise suspicious happens. You can optionally encrypt your message using GPG keys of at least 3 _Lead_ staffers, available at <https://mybb.com/about/team/>.
+Do not use the form if you notice your browser displays HTTPS warnings, or anything otherwise suspicious happens. You can optionally encrypt your message using GPG keys of at least 3 _role leaders_, available at <https://mybb.com/about/team/>.
 
 You can also reach us at <security@mybb.com> for security concerns, however we recommend using Private Inquiries for best feedback.
 
@@ -68,26 +68,23 @@ In order to minimize threats to privacy, safety and security of installations, t
 # Attribution Eligibility
 ### How to be recognized for discovered issues
 
-In order to have the name and affiliation included in Release Notes and the Release Blog Post, the submissions satisfy the following criteria:
+Attribution is applicable to persons/entities who, having discovered security issues, follow the disclosure process satisfying the following criteria:
+- the software in question is limited to the MyBB forum software (vulnerabilities within third party extensions do not count),
+- the vulnerability is technical (techniques such as social engineering or phishing do not count),
+- the vulnerability affects confidentiality, integrity or availability of the software directly (disclosure of operational information included in PHP or SQL errors, spam attacks, bypassing CAPTCHAs do not count),
+- the vulnerability is present in the latest stable release of a supported software branch (vulnerabilities within development releases or older versions do not count),
+- no MyBB installations are tested or exploited without explicit permission of their owners,
+- no part of the MyBB Project infrastructure or resources (including the Community Forums) is exploited,
+- no details regarding the vulnerability are published before it has been addressed.
 
-- the software in question is limited to the MyBB forum software &mdash; vulnerabilities within third party MyBB plugins do not count,
-- the vulnerability in question is technical &mdash; techniquest such as social engineering or phishing do not count,
-- disclosure of operational information included in PHP or SQL errors do not count,
-- spam attacks (e.g. bypassing CAPTCHAs) do not count,
-- the vulnerability must be present in the latest stable release of MyBB &mdash; vulnerabilities within development releases or older versions do not count,
-- do not exploit MyBB forums without explicit permission of their owners,
-- under no circumstances should you try to exploit the MyBB Community Forums or any other resource owned by the MyBB Group,
-- do not publicly disclose the vulnerability before it has been fixed,
-- only the person who discovered the vulnerability is eligible.
+If you are not sure whether you are eligible &mdash; contact us: depending on circumstances, exceptions are possible.
 
-If you are not sure whether you are eligible &mdash; contact us. In rare cases, some exceptions are possible depending on circumstances.
-
-Even if you do not meet the requirements to be eligible for a bragging rights or have information not directly related to vulnerabilities (such as suspicion of security breaches or exploitation of MyBB boards in the wild), do not hesitate to contact us &mdash; the MyBB Team members are in the best position to coordinate efforts to improve security of our ecosystem.
+Even if you do not meet the requirements to be eligible for bragging rights or have information that don't directly translate to vulnerabilities (such as suspicion of security breaches or exploitation of MyBB boards in the wild), do not hesitate to reach us &mdash; the MyBB Team members are in the best position to coordinate efforts to improve security of our ecosystem.
 
 # Security Workflow for Researchers
 ### Handling of submitted reports
 
-As MyBB is a not-for-profit FOSS project, release times may vary greatly, nonetheless the next upcoming version is expected to address all known vulnerabilities up to the point of release. In case of exceptions we will contact the reporter and continue providing follow-up information when such appears. In other cases the summary of vulnerabilities is posted publicly by the Team in `SECURITY.md` files in software repositories.
+As MyBB is a not-for-profit FOSS project, release times may vary greatly; nonetheless, subsequent versions are expected to address all known vulnerabilities up to the point of their release. In exceptional cases we will otherwise contact the reporter and continue providing follow-up information when such appears. Summaries of vulnerabilities that are not intended to be addressed in near future are published by the Team in `SECURITY.md` files in software repositories.
 
 As a vulnerability reporter or external security researcher, you will likely receive multiple responses as your report is processed:
 
@@ -95,12 +92,12 @@ As a vulnerability reporter or external security researcher, you will likely rec
    Your report is posted in the Private Inquiries section, tagged _[Vulnerability Report]_.
 
 2. #### Acknowledgement
-   If no instant assessment is possible, a Team member will initially recognize your submission and notify members responsible for handling security issues and take preliminary actions to make sure the responsible disclosure process is correctly followed.
+   If no instant assessment is possible, a Team member will initially recognize your report, notify members responsible for handling security issues and take preliminary actions to make sure the responsible disclosure process is correctly followed.
 
 3. #### Technical Assessment
    Following internal analysis, the Team will inform you whether your submission is confirmed, invalid, or no fix is expected.
 
-   In case of rejection, we recommend delaying public disclosure (if applicable) by at least 7 days to mitigate risk of mistaken or hostile responses. If necessary, you can attempt to reach individual Team members personally via details provided at <https://mybb.com/about/team/>.
+   In case of rejection, we recommend delaying public disclosure (if applicable) by at least 7 days to mitigate risk of mistaken and malicious responses. If necessary, you can attempt to reach individual Team members personally via details provided at <https://mybb.com/about/team/>.
 
 4. #### Consultation
    Team members might ask for additional details related to the report or disclosure process. During and after the solution development the patch details may be forwarded to you to verify that all vulnerabilities will be properly addressed in the upcoming solution.
@@ -109,9 +106,9 @@ As a vulnerability reporter or external security researcher, you will likely rec
    You will be notified once the software version addressing the issue is released.
 
 6. #### (Follow-up)
-   MyBB aims to promote security research and increase security awareness. If you have published, or intend to publish, an analysis externally after all issues have been resolved, we encourage you to point us to these resources.
+   MyBB aims to promote security research and increase security awareness. If you have published &mdash; or intend to publish &mdash; an analysis, article or summary after all issues have been resolved, we encourage you to point us to these resources.
 
-   We recommend delaying the publication by at least 14 days starting from the day the solutions were officially published to give administrators time to update their installations before exploitation methods are widely known.
+   We recommend delaying the publication by at least 14 days starting from the day the solutions were officially published to give administrators time to update their installations before exploitation techniques are widely known.
 
 You can learn how MyBB handles vulnerability reports internally from the [Security Workflow](https://docs.mybb.com/1.8/development/security-workflow/).
 
