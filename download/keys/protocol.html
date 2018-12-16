@@ -73,7 +73,7 @@ default-preference-list SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB
    gpg -u TEAM-MEMBER-KEY-ID --sign-key MYBB-KEY-ID
    ```
 
-3. Add [delegated revokers](#definitions) (their public keys need to present in the keyring).
+3. Add [designated revokers](#definitions) (their public keys need to present in the keyring).
 
    ```
    gpg --edit-key MYBB-KEY-ID
@@ -94,7 +94,7 @@ default-preference-list SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB
    and post it internally for further processing.
 
 #### Adding MyBB Signing Keys
-1. Verify the key's correctness (e.g. using [pgpdump](https://www.mew.org/~kazu/proj/pgpdump/en/)) and that it's correctly signed and contains necessary [delegated revokers](#definitions).
+1. Verify the key's correctness (e.g. using [pgpdump](https://www.mew.org/~kazu/proj/pgpdump/en/)) and that it's correctly signed and contains necessary [designated revokers](#definitions).
 1. Have the key signed according to _MyBB Signing Keys_.
 
    ```
@@ -112,7 +112,7 @@ default-preference-list SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB
 The key can be used to sign packages after 14 days have passed since it was added to the website and announced on Announcement Channels.
 
 #### Removing MyBB Signing Keys
-1. Have the key revoked as a [delegated revoker](#definitions) and import the revocation certificate into `gpg`.
+1. Have the key revoked as a [designated revoker](#definitions) and import the revocation certificate into `gpg`.
 
    ```
    gpg --desig-revoke MYBB-KEY-ID | gpg --import
