@@ -25,7 +25,7 @@ You can get notified of updates by:
 
 Links to latest Release Blog Posts are also pinned in the `#18-support` channel on our [Discord server](https://mybb.com/get-involved/discord/).
 
-Additionally, we recommend subscribing to used plugins and themes on the [Extend](https://community.mybb.com/mods.php) section to get notified of extension updates. 
+Additionally, we recommend subscribing to used plugins and themes on the [Extend](https://community.mybb.com/mods.php) section to get notified of extension updates.
 # Checksums
 ## Integrity of downloaded packages
 
@@ -62,11 +62,13 @@ After downloading the package, its checksum should be compared to the one that w
 
 _Digital signatures, when checked against public keys, show whether certain data was signed using private keys owned by developers, thus allowing to verify the authenticity of published packages. Make sure your system has [GnuPG](https://gnupg.org/download/index.html) installed (version 2.1 or higher is recommended) to be able to use the commands below._
 
-1. **Fetch the list of public keys** used to sign official releases from `https://mybb.com/download/keys/raw` and import them:
+1. **Fetch the [list of MyBB Signing Keys](https://mybb.com/download/keys/)** used to sign official releases and import them:
 
    ```
-   gpg --import KEYS
+   curl https://mybb.com/download/keys/raw.txt | gpg --import
    ```
+
+   You can also download the above URL manually and import it with `gpg --import raw.txt`.
 
 2. **Verify the signature** of the downloaded file:
 
@@ -85,17 +87,17 @@ _Digital signatures, when checked against public keys, show whether certain data
      Once pasted, press **Ctrl + D** (`^D`) and **Enter** on Linux, or **Ctrl + Z** (`^Z`) and **Enter** on Windows.
 
 ### Key verification
-All code signing keys are maintained in accordance with the Project's [**Package Signing Protocol**]({{ site.url }}/download/keys/protocol):
- - signatures from keys listed on [mybb.com/download/keys/](https://mybb.com/download/keys/):
-   - with `CODE SIGNING KEY` as the key's comment,
-   - active and belonging to Team members at the time of release,
- - each key must have a corresponding _`ADDING...`_ announcement with its fingerprint and owner's username on [twitter.com/mybbsecurity](https://twitter.com/mybbsecurity),
- - each key must **not** have a corresponding _`REMOVING...`_ announcement with its fingerprint on [twitter.com/mybbsecurity](https://twitter.com/mybbsecurity),
- - each key must have been added at least 14 days before it was used for signing,
- - each key must be signed by its owner with a key listed on [mybb.com/about/team/](https://mybb.com/about/team/),
- - each key must be signed by a current member of the Management Team or a current team Leader, other than the key's owner, listed on [mybb.com/about/team/](https://mybb.com/about/team/).
+All code signing keys are maintained in accordance with the Project's [**MyBB Signing Keys Protocol**]({{ site.url }}/download/keys/protocol). Each key:
+ - is listed on [mybb.com/download/keys/](https://mybb.com/download/keys/),
+ - contains a comment `CODE SIGNING KEY`,
+ - is active and belongs to a Team member at the time of release,
+ - has a corresponding _`Adding...`_ announcement with its fingerprint on [twitter.com/mybbsecurity](https://twitter.com/mybbsecurity),
+ - does **not** have a corresponding _`Removing...`_ announcement with its fingerprint on [twitter.com/mybbsecurity](https://twitter.com/mybbsecurity),
+ - has been added at least 14 days before the signing date,
+ - is signed by its owner with a key listed on [mybb.com/about/team/](https://mybb.com/about/team/),
+ - is signed by a current Role Leader, other than the key's owner, listed on [mybb.com/about/team/](https://mybb.com/about/team/).
 
- Note that the [keys file](https://mybb.com/download/keys/raw.txt) is updated with revoked signatures whenever keys are removed.
+ Note that the [keys file](https://mybb.com/download/keys/raw.txt) is updated with revoked keys and new signatures when changes occur.
 
 {% endcapture %}
 {{ markdown | markdownify }}

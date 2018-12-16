@@ -141,7 +141,18 @@ section: download
                                     {% for checksum in format.checksums %}
                                         <div class="download-packages__checksums_checksum">
                                             <p class="download-packages__checksums__type">{{ checksum.type }}:</p>
-                                            <p class="download-packages__checksums__value">{{ checksum.value }}</code>
+                                            <p class="download-packages__checksums__value">{{ checksum.value }}</p>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+
+                                {% if format.signatures %}
+                                <div class="download-packages__signatures">
+                                    {% for signature in format.signatures %}
+                                        <div class="download-packages__signatures_signature">
+                                            <p class="download-packages__signatures__type">PGP Signatures</p>
+                                            <textarea class="download-packages__signatures__value" onclick="this.select()" readonly>{{ signature }}</textarea>
                                         </div>
                                     {% endfor %}
                                 </div>

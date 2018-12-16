@@ -21,7 +21,6 @@ redirect_from:
 		<thead>
 			<tr>
 				<th>Username</th>
-				<th>Branches</th>
 				<th>Key and fingerprint</th>
 				<th>Date added</th>
 			</tr>
@@ -36,7 +35,6 @@ redirect_from:
 				{% for key in active_keys %}
 					<tr>
 				  		<td>{{ key.username }}</td>
-				  		<td>{{ key.branches | join: '; ' }}</td>
 				  		<td><a href="{{ site.baseurl }}/download/keys/{{ key.fingerprint | replace: ' ', '' }}"><span class="hextet">{{ key.fingerprint | replace: ' ', '</span><span class="hextet">' }}</span></a></td>
 						<td><a href="{{ key.add_announcement }}">{{ key.add_date | date_to_string }}</a></td>
 			  		</tr>
@@ -69,7 +67,6 @@ redirect_from:
 				{% for key in removed_keys %}
 					<tr>
 				  		<td>{{ key.username }}</td>
-				  		<td>{{ key.branches | join: '; ' }}</td>
 				  		<td><a href="{{ site.baseurl }}/download/keys/{{ key.fingerprint | replace: ' ', '' }}"><span class="hextet">{{ key.fingerprint | replace: ' ', '</span><span class="hextet">' }}</span></a></td>
 						<td><a href="{{ key.add_announcement }}">{{ key.add_date | date_to_string }}</a></td>
 						<td><a href="{{ key.remove_announcement }}">{{ key.remove_date | date_to_string }}</a></td>
