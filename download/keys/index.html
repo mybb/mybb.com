@@ -17,7 +17,7 @@ redirect_from:
 <section class="block block--basic">
 	<h1>Current Release Signing Keys</h1>
 	<p>Active keys belonging to MyBB Team members that can be used for signing MyBB release packages.</p>
-	<table class="standard_table" summary="Current Release Signing Keys">
+	<table class="simple-table" summary="Current Release Signing Keys">
 		<thead>
 			<tr>
 				<th>Username</th>
@@ -36,7 +36,7 @@ redirect_from:
 					<tr>
 				  		<td>{{ key.username }}</td>
 				  		<td><a href="{{ site.baseurl }}/download/keys/{{ key.fingerprint | replace: ' ', '' }}"><span class="hextet">{{ key.fingerprint | replace: ' ', '</span><span class="hextet">' }}</span></a></td>
-						<td><a href="{{ key.add_announcement }}">{{ key.add_date | date_to_string }}</a></td>
+						<td>{{ key.add_date | date_to_string }}</td>
 			  		</tr>
 				{% endfor %}
 			{% endif %}
@@ -47,11 +47,10 @@ redirect_from:
 <section class="block block--basic">
 	<h1>Removed Release Signing Keys</h1>
 	<p>Removed signing keys that were used to sign past releases. These keys are not used for signing releases past the removal date.</p>
-	<table class="standard_table" summary="Removed Release Signing Keys">
+	<table class="simple-table" summary="Removed Release Signing Keys">
 		<thead>
 			<tr>
 				<th>Username</th>
-				<th>Branches</th>
 				<th>Key and fingerprint</th>
 				<th>Date added</th>
 				<th>Date removed</th>
@@ -68,8 +67,8 @@ redirect_from:
 					<tr>
 				  		<td>{{ key.username }}</td>
 				  		<td><a href="{{ site.baseurl }}/download/keys/{{ key.fingerprint | replace: ' ', '' }}"><span class="hextet">{{ key.fingerprint | replace: ' ', '</span><span class="hextet">' }}</span></a></td>
-						<td><a href="{{ key.add_announcement }}">{{ key.add_date | date_to_string }}</a></td>
-						<td><a href="{{ key.remove_announcement }}">{{ key.remove_date | date_to_string }}</a></td>
+						<td>{{ key.add_date | date_to_string }}</td>
+						<td>{{ key.remove_date | date_to_string }}</td>
 			  		</tr>
 				{% endfor %}
 			{% endif %}

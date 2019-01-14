@@ -33,6 +33,8 @@ The Protocol allows to mitigate the following risks related to end user packages
   - is signed by at least one Role Leader, other than the owner, with their current Team Member Key (authorization),
   - has at least one Role Leader's current Team Member Key, other than the owner's, set as a designated revoker.
 
+  The Keys are updated with new, valid values when authorization/revocation continuity is broken (e.g. as a result of personnel changes).
+
 - **Announcement Channels**
 
   Reputable third-party recordkeeping solutions allowing to independently establish dates of protocol events:
@@ -59,7 +61,7 @@ default-preference-list SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB
 # Key Management
 
 #### Creating MyBB Signing Keys
-1. Create a 4096-bit _RSA (sign only)_ key with _Real name_ including your Community Forums name, _Email address_ your `*@mybb.com` e-mail address, and _Comment_: `CODE SIGNING KEY`. These details must match exactly.
+1. Create a 4096-bit _RSA (sign only)_ key with _Real name_ set to your Community Forums name, _Email address_ to your `*@mybb.com` e-mail address, and _Comment_ to `CODE SIGNING KEY`. These details must match exactly.
 
    ```
    gpg --full-gen-key
@@ -81,6 +83,9 @@ default-preference-list SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB
    ```
    > addrevoker
    ```
+
+    Provide the revoker's Team Member Key fingerprint when prompted and save:
+
    ```
    > save
    ```
