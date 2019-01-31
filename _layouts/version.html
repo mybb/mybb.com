@@ -252,16 +252,11 @@ section: download
             </section>
             {% elsif page.changed_files %}
                 {% if page.changed_files.first %}
-                    {% capture list_output %}
-                        {% include releases/recursive_list.html list = page.changed_files parent_suffix = '/' %}
-                    {% endcapture %}
                     <section class="release-details__block">
-                        <h1 class="release-details__block__title">Changed Files ({{ recursive_count }})</h1>
-                        <small>
-                            {{ list_output }}
-                        </small>
+                        <data hidden data-recursivelist="changed_files">{{ page.changed_files | jsonify }}</data>
+                        <h1 class="release-details__block__title">Changed Files (<span data-recursivelist-count="changed_files"></span>)</h1>
+                        <small data-recursivelist-content="changed_files"></small>
                     </section>
-                    {% assign recursive_count = 0 %}
                 {% else %}
                     <section class="release-details__block">
                         <h1 class="release-details__block__title">Changed Files</h1>
@@ -279,16 +274,11 @@ section: download
             </section>
             {% elsif page.removed_files %}
                 {% if page.removed_files.first %}
-                    {% capture list_output %}
-                        {% include releases/recursive_list.html list = page.removed_files parent_suffix = '/' %}
-                    {% endcapture %}
                     <section class="release-details__block">
-                        <h1 class="release-details__block__title">Removed Files ({{ recursive_count }})</h1>
-                        <small>
-                            {{ list_output }}
-                        </small>
+                        <data hidden data-recursivelist="removed_files">{{ page.removed_files | jsonify }}</data>
+                        <h1 class="release-details__block__title">Removed Files (<span data-recursivelist-count="removed_files"></span>)</h1>
+                        <small data-recursivelist-content="removed_files"></small>
                     </section>
-                    {% assign recursive_count = 0 %}
                 {% else %}
                     <section class="release-details__block">
                         <h1 class="release-details__block__title">Removed Files</h1>
