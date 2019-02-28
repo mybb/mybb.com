@@ -1,6 +1,6 @@
 ---
 layout: feature
-section: features
+section: home
 
 title: Moderation
 meta_description: Powerful and convenient tools for forum moderators and staff to work by your side.

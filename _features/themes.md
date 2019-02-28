@@ -1,6 +1,6 @@
 ---
 layout: feature
-section: features
+section: home
 
 title: Themes
 meta_description: MyBB's built-in template and theme editor gives you complete control over your forum's design.

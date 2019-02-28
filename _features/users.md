@@ -1,6 +1,6 @@
 ---
 layout: feature
-section: features
+section: home
 
 title: Users
 meta_description: Features to keep your users engaged and active.

@@ -1,6 +1,6 @@
 ---
 layout: feature
-section: features
+section: home
 
 title: Plugins
 meta_description: MyBB offers an advanced plugin system to make adding more features to your forum easy.

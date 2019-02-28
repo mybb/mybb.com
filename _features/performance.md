@@ -1,6 +1,6 @@
 ---
 layout: feature
-section: features
+section: home
 
 title: Performance
 meta_description: MyBB has been carefully developed to be both powerful and extremely efficient.

@@ -1,6 +1,6 @@
 ---
 layout: feature
-section: features
+section: home
 
 title: Administration
 meta_description: Developed and refined to put you in full control of your forum.

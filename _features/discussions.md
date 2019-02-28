@@ -1,6 +1,6 @@
 ---
 layout: feature
-section: features
+section: home
 
 title: Discussions
 meta_description: Infinite possibilities arise from every conversation on your forum.
