@@ -138,7 +138,7 @@ section: download
                                 {% if format.checksums %}
                                 <div class="download-packages__checksums">
                                     {% assign checksums = format.checksums | sort: 'type' | reverse %}
-                                    {% for checksum in format.checksums %}
+                                    {% for checksum in checksums %}
                                         <div class="download-packages__checksums_checksum">
                                             <p class="download-packages__checksums__type">{{ checksum.type }}:</p>
                                             <p class="download-packages__checksums__value">{{ checksum.value }}</p>
