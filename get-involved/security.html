@@ -48,8 +48,10 @@ Please compose a brief summary of the issue, followed by more detailed technical
  - whether the vulnerability is public or known to anyone else,
  - how the issue was discovered (which tools, regular expressions, checklists, etc.),
  - related external resources and references (e.g. reports, analyses for similar issues in other software),
+ - whether other software packages are affected,
  - suggested solutions (code change descriptions, patch/diff files),
- - how the process can be improved to prevent similar issues in the future.
+ - how the process can be improved to prevent similar issues in the future,
+ - whether publications related to the issue are planned or expected.
 
 You can refer to the MyBB codebase using the repository - for example, you can point anyone to lines 13-16 (`#L13-16`) of file `inc/class_session.php` in MyBB 1.8.17 (`/mybb_1817/`) like this:
 ```
@@ -109,6 +111,8 @@ As a vulnerability reporter or external security researcher, you will likely rec
    MyBB aims to promote security research and increase security awareness. If you have published &mdash; or intend to publish &mdash; an analysis, article or summary after all issues have been resolved, we encourage you to point us to these resources.
 
    We recommend delaying the publication by at least 14 days starting from the day the solutions were officially published to give administrators time to update their installations before exploitation techniques are widely known.
+
+   As MyBB currently does not automatically request CVE numbers for vulnerabilities, researchers can request them individually from appropriate [Numbering Authorities](https://cve.mitre.org/cve/request_id.html).
 
 You can learn how MyBB handles vulnerability reports internally from the [Security Workflow](https://docs.mybb.com/1.8/development/security-workflow/).
 
