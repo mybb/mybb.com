@@ -5,6 +5,8 @@
         {% assign resolved_security_issues_number = version.resolved_security_issues | size %}
     {% endif %}
 
+    {% assign notable_contributions_number = version.notable_contributions | size %}
+
     {% if version.type_major %}
         {% assign type = 'Major' %}
     {% else %}
@@ -82,6 +84,24 @@ if version.resolved_issues_number %}{%
         endif %}
     </li>{%
     endif %}
+</ul>{%
+endif %}{%
+
+if notable_contributions_number != 0
+%}
+
+<br>
+Notable contributions:
+<ul>{%
+    for issue in version.notable_contributions %}
+    <li>{{ issue.description }}{%
+        if issue.author.name %} &mdash; by {{ issue.author.name | markdownify | replace: '<p>', '' | replace: '</p>
+', '' }}{%
+            if issue.author.affiliation %} of {{ issue.author.affiliation | markdownify | replace: '<p>', '' | replace: '</p>
+', '' }}{%
+            endif %}{%
+        endif %}</li>{%
+    endfor %}
 </ul>{%
 endif %}
 

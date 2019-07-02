@@ -3,8 +3,7 @@ layout: default
 section: home
 
 title: Security Research
-description: While MyBB is designed with security in mind, the possibility of security issues being introduced is ever a problem. Learn how to responsibly disclose any vulnerabilities you may find.
-meta_description: Learn how to responsibly disclose vulnerabilities within MyBB.
+description: While MyBB is designed with security in mind, the possibility of security issues being introduced is ever a problem. Learn how to report potential security issues and be recognized for any vulnerabilities you may find.
 
 redirect_from:
 - /security/
@@ -17,32 +16,38 @@ redirect_from:
 <div class="page-content page-content--sidebar">
 {% capture markdown %}
 # Introduction
-### An insight in to the program
+### An insight into the program
 
-At MyBB, maintaining secure software is one of our strategic priorities. Both ourselves and our users need to trust that the software they're using is secure and will remain secure throughout the years. We've encountered vulnerabilities which have been disclosed to us by members of the Community and encountered some which have been spread around the web. The latter is something which we want to avoid to protect our users and make understanding the issue easier.
+At MyBB, maintaining secure software is one of our strategic priorities. Both ourselves and our users need to trust that the software they're using is secure and will remain secure throughout the years. We've encountered vulnerabilities which have been disclosed to us by members of the Community or external researchers, and encountered some which have been spread around the web. The latter is something we want to avoid to protect our users by delivering updates that eliminate security risks before they are used to cause harm.
 
-Security contributors to the 1.8.x branch will be listed in the Release Notes of corresponding releases as well as associated Release Blog Posts.
+We cooperate with security contributors on triage, resolution, analysis, and public disclosure. Confirmed vulnerability reports are recognized in the Release Notes of corresponding releases as well as associated Release Blog Posts. Attribution for contributors, in addition to released stable software, also includes [reviewed but unreleased code](https://github.com/mybb/mybb/tree/feature).
 
-In case of vulnerabilities affecting themes or plugins, we recommend additionally contacting their authors.
+In case of vulnerabilities affecting themes or plugins, we additionally recommend contacting and cooperating with their authors privately in similar fashion.
 
 # Reporting
 ### How to report a vulnerability
 
 **If you have discovered a potential vulnerability or security risk, we encourage you to responsibly disclose it to us via the [Private Inquiries](https://community.mybb.com/forum-135.html) forum.**
 
-Do not use the form if you notice your browser displays HTTPS warnings, or anything otherwise suspicious happens. You can optionally encrypt your message using GPG keys of at least 3 _role leaders_, available at <https://mybb.com/about/team/>.
+Do not use the form if you notice your browser displays HTTPS warnings, or anything otherwise suspicious happens. You can optionally encrypt your message using public keys of at least 3 _role leaders_, available at <https://mybb.com/about/team/>.
 
 You can also reach us at <security@mybb.com> for security concerns, however we recommend using Private Inquiries for best feedback.
 
+## Coordination
+
+In order to minimize threats to privacy, safety and security of installations, their administrators and users, we urge you to not disclose any information related to your report to parties other than the MyBB Team through official communication channels until an official solution is published. The Private Inquiries section is monitored daily &mdash; avoid notifying or reminding the Team members in publicly accessible channels.
+
+You should not test, demonstrate or exploit the vulnerability on any active MyBB installations not created to test such vulnerabilities nor the MyBB Project infrastructure or its resources (we recommend using a local copy).
+
 ## Composing a Good Report
 
-Create a short and descriptive subject (identification, location and vulnerability type) with the _[Vulnerability Report]_ prefix for each vulnerability found (or suspected).
+Create a short and descriptive subject (identification, location, and type of the vulnerability) with the _[Vulnerability Report]_ prefix for each vulnerability found (or suspected).
 
 Please compose a brief summary of the issue, followed by more detailed technical analysis. This can include:
  - factors contributing to the problem,
  - how the vulnerability might be exploited,
  - which version was tested,
- - proof-of-concept (PoC) - simple demonstration of how the vulnerability might be exploited,
+ - proof-of-concept (PoC) &mdash; simple demonstration of how the vulnerability might be exploited,
  - steps to reproduce the issue or arrive at a vulnerable state,
  - error/access/action logs (if applicable),
  - whether the vulnerability is public or known to anyone else,
@@ -53,7 +58,7 @@ Please compose a brief summary of the issue, followed by more detailed technical
  - how the process can be improved to prevent similar issues in the future,
  - whether publications related to the issue are planned or expected.
 
-You can refer to the MyBB codebase using the repository - for example, you can point anyone to lines 13-16 (`#L13-16`) of file `inc/class_session.php` in MyBB 1.8.17 (`/mybb_1817/`) like this:
+You can refer to the MyBB codebase using the repository &mdash; for example, you can point anyone to lines 13-16 (`#L13-16`) of file `inc/class_session.php` in MyBB 1.8.17 (`/mybb_1817/`) like this:
 ```
 https://github.com/mybb/mybb/blob/mybb_1817/inc/class_session.php#L13-L16
 ```
@@ -62,39 +67,34 @@ More information will likely reduce the estimated resolution time. Please remain
 
 Additionally, you can include your name, company/group affiliation and personal website (if applicable) that may be used for disclosure attribution in Release Notes and the Release Blog Post.
 
-You should not test, demonstrate or exploit the vulnerability on any active MyBB installations not created to test such vulnerabilities (we recommend using a local copy) nor the MyBB Group infrastructure or its resources.
-
-In order to minimize threats to privacy, safety and security of installations, their administrators and users, we urge you to not disclose any information related to your report to parties other than the MyBB Team through official communication channels until an official solution is published. The Private Inquiries section is monitored daily &mdash; avoid notifying or reminding the Team members in publicly accessible channels.
-
-
 # Attribution Eligibility
 ### How to be recognized for discovered issues
 
 Attribution is applicable to persons/entities who, having discovered security issues, follow the disclosure process satisfying the following criteria:
 - the software in question is limited to the MyBB forum software (vulnerabilities within third party extensions do not count),
 - the vulnerability is technical (techniques such as social engineering or phishing do not count),
-- the vulnerability affects confidentiality, integrity or availability of the software directly (disclosure of operational information included in PHP or SQL errors, spam attacks, bypassing CAPTCHAs do not count),
-- the vulnerability is present in the latest stable release of a supported software branch (vulnerabilities within development releases or older versions do not count),
+- the vulnerability affects confidentiality, integrity or availability of the software directly (disclosure of operational information included in PHP or SQL errors, spam attacks, or bypassing CAPTCHAs do not count),
+- the vulnerability is present in the latest stable release or reviewed, pre-release codebase of a supported software branch (vulnerabilities within unstable development releases or older versions do not count),
 - no MyBB installations are tested or exploited without explicit permission of their owners,
 - no part of the MyBB Project infrastructure or resources (including the Community Forums) is exploited,
 - no details regarding the vulnerability are published before it has been addressed.
 
 If you are not sure whether you are eligible &mdash; contact us: depending on circumstances, exceptions are possible.
 
-Even if you do not meet the requirements to be eligible for bragging rights or have information that don't directly translate to vulnerabilities (such as suspicion of security breaches or exploitation of MyBB boards in the wild), do not hesitate to reach us &mdash; the MyBB Team members are in the best position to coordinate efforts to improve security of our ecosystem.
+Even if you do not meet the requirements to be eligible for bragging rights or have information that don't directly translate to vulnerabilities (such as suspicion of security breaches or exploitation of MyBB boards in the wild), do not hesitate to reach us &mdash; the MyBB Team is in the best position to coordinate efforts to improve the security of our ecosystem.
 
 # Security Workflow for Researchers
 ### Handling of submitted reports
 
-As MyBB is a not-for-profit FOSS project, release times may vary greatly; nonetheless, subsequent versions are expected to address all known vulnerabilities up to the point of their release. In exceptional cases we will otherwise contact the reporter and continue providing follow-up information when such appears. Summaries of vulnerabilities that are not intended to be addressed in near future are published by the Team in `SECURITY.md` files in software repositories.
+As MyBB is a not-for-profit FOSS project, release times may vary greatly; nonetheless, subsequent versions are expected to address all known vulnerabilities up to the point of their release. In exceptional cases we will, otherwise, contact the reporter and continue providing follow-up information when such appears. Summaries of vulnerabilities that are not intended to be addressed in near future are published in `SECURITY.md` files in software repositories.
 
 As a vulnerability reporter or external security researcher, you will likely receive multiple responses as your report is processed:
 
-1. #### Submission
-   Your report is posted in the Private Inquiries section, tagged _[Vulnerability Report]_.
+1. #### Report
+   Your information is posted in the Private Inquiries section, tagged _[Vulnerability Report]_, or otherwise reported to the Team.
 
 2. #### Acknowledgement
-   If no instant assessment is possible, a Team member will initially recognize your report, notify members responsible for handling security issues and take preliminary actions to make sure the responsible disclosure process is correctly followed.
+   If no instant assessment is possible, a Team member will initially recognize your report, notify members responsible for handling security issues and take preliminary actions to make sure the disclosure process is correctly followed.
 
 3. #### Technical Assessment
    Following internal analysis, the Team will inform you whether your submission is confirmed, invalid, or no fix is expected.

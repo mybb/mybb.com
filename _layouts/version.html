@@ -9,6 +9,8 @@ section: download
 {% endif %}
 {% assign resolved_security_issues_number = resolved_security_issues_number | plus:0 %}
 
+{% assign notable_contributions_number = page.notable_contributions | size %}
+
 {% if page.type_major %}
     {% assign typesAppended = 'Major' %}
 {% else %}
@@ -204,7 +206,7 @@ section: download
         <div class="wrapper">
             {% if resolved_security_issues_number > 0 %}
             <section class="release-details__block">
-                <h1 class="release-details__block__title">Security vulnerabilities addressed ({{ resolved_security_issues_number }})</h1>
+                <h1 class="release-details__block__title">Security Vulnerabilities Addressed ({{ resolved_security_issues_number }})</h1>
                 {% if page.resolved_security_issues %}
                 <div class="security-issues">
                     {% for issue in page.resolved_security_issues %}
@@ -229,9 +231,33 @@ section: download
             </section>
             {% endif %}
 
+            {% if notable_contributions_number > 0 %}
+            <section class="release-details__block">
+                <h1 class="release-details__block__title">Notable Contributions</h1>
+                <div class="security-issues">
+                    {% for issue in page.notable_contributions %}
+                    <div class="security-issues__issue">
+                        <h2 class="security-issues__issue__description">{{ issue.description }}</h2>
+                        {% if issue.author.name %}
+                            <p class="security-issues__issue__reporter">
+                                by
+
+                                {% assign author = issue.author.name | markdownify | replace: '<p>', '' | replace: '</p>', '' %}
+                                {% if issue.author.affiliation %}
+                                    {% assign author = author | append: '<span class="security-issues__issue__reporter__affiliation">' | append: issue.author.affiliation | markdownify | replace: '<p>', '' | replace: '</p>', '' | append: '</span>' %}
+                                {% endif %}
+                                {{ author }}
+                            </p>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>
+            {% endif %}
+
             {% if page.resolved_issues_number %}
             <section class="release-details__block">
-                <h1 class="release-details__block__title">Issues resolved ({{ page.resolved_issues_number }})</h1>
+                <h1 class="release-details__block__title">Issues Resolved ({{ page.resolved_issues_number }})</h1>
                 {% if page.resolved_issues_link %}
                     <a href="{{ page.resolved_issues_link }}" class="button button--medium button--no-margin">{% include icon.html icon='github' %} View issues on GitHub</a>
                 {% endif %}

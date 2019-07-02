@@ -65,12 +65,22 @@ Lists resolved security issues.
   `severity`: issue severity,
 
   `reported_by`:
-    `name`: The reporter name (Markdown links allowed),
-    `affiliation`: The organization, group, company or other association of the reporter (Markdown links allowed).
+  - `name`: The reporter name (Markdown links allowed),
+  - `affiliation`: The organization, group, company or other association of the reporter (Markdown links allowed).
+
+
+#### `notable_contributions`
+Lists recognized contributions.
+
+- `description`: issue description,
+
+  `author`:
+  - `name`: Author name (Markdown links allowed),
+  - `affiliation`: The organization, group, company or other association of the author (Markdown links allowed).
 
 
 #### `resolved_issues`
-Lists resolved issues. 
+Lists resolved issues.
 - `description`: issue description
 
 #### `changed_files`
@@ -100,4 +110,3 @@ List of locations for package downloads.
   `url`: URL for package downloads with possible `{TYPE}` (identifier from the `types` list), `{VERSION_CODE}`, and `{FORMAT}` (file extension provided in the version data file),
 
   `title`: display name.
-
