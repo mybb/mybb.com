@@ -1,4 +1,4 @@
-# mybb.com
+# mybb.com [![Uptime Robot status](https://img.shields.io/uptimerobot/status/m779165693-cac9f6eb9c43ffc13e61097d.svg) ![Uptime Robot ratio (30 days)](https://img.shields.io/uptimerobot/ratio/m779165693-cac9f6eb9c43ffc13e61097d.svg)](https://stats.uptimerobot.com/W7xgYf0vg) [![Mozilla HTTP Observatory Grade](https://img.shields.io/mozilla-observatory/grade-score/mybb.com.svg)](https://observatory.mozilla.org/analyze/mybb.com) ![Chromium HSTS preload](https://img.shields.io/hsts/preload/mybb.com.svg)
 
 The source of the [**MyBB.com**](https://mybb.com) website.
 
