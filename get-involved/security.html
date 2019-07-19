@@ -20,7 +20,11 @@ redirect_from:
 
 At MyBB, maintaining secure software is one of our strategic priorities. Both ourselves and our users need to trust that the software they're using is secure and will remain secure throughout the years. We've encountered vulnerabilities which have been disclosed to us by members of the Community or external researchers, and encountered some which have been spread around the web. The latter is something we want to avoid to protect our users by delivering updates that eliminate security risks before they are used to cause harm.
 
-We cooperate with security contributors on triage, resolution, analysis, and public disclosure. Confirmed vulnerability reports are recognized in the Release Notes of corresponding releases as well as associated Release Blog Posts. Attribution for contributors, in addition to released stable software, also includes [reviewed but unreleased code](https://github.com/mybb/mybb/tree/feature).
+We cooperate with security contributors on triage, resolution, analysis, and public disclosure. Confirmed vulnerability reports are recognized in the Release Notes of corresponding releases as well as associated Release Blog Posts.
+
+The scope of Security Research recognition currently includes:
+- [MyBB 1.8.x releases](https://mybb.com/versions/),
+- [MyBB 1.8.x pre-release codebase](https://github.com/mybb/mybb/tree/feature).
 
 In case of vulnerabilities affecting themes or plugins, we additionally recommend contacting and cooperating with their authors privately in similar fashion.
 
@@ -74,10 +78,12 @@ Attribution is applicable to persons/entities who, having discovered security is
 - the software in question is limited to the MyBB forum software (vulnerabilities within third party extensions do not count),
 - the vulnerability is technical (techniques such as social engineering or phishing do not count),
 - the vulnerability affects confidentiality, integrity or availability of the software directly (disclosure of operational information included in PHP or SQL errors, spam attacks, or bypassing CAPTCHAs do not count),
-- the vulnerability is present in the latest stable release or reviewed, pre-release codebase of a supported software branch (vulnerabilities within unstable development releases or older versions do not count),
+- the vulnerability is present in the latest stable release or reviewed, pre-release codebase of a supported software branch (vulnerabilities within development releases or older versions do not count),
 - no MyBB installations are tested or exploited without explicit permission of their owners,
 - no part of the MyBB Project infrastructure or resources (including the Community Forums) is exploited,
 - no details regarding the vulnerability are published before it has been addressed.
+
+While simultaneous discoveries are evaluated on a case-by-case basis, attribution may apply to the first reporter only.
 
 If you are not sure whether you are eligible &mdash; contact us: depending on circumstances, exceptions are possible.
 
