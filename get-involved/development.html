@@ -2,7 +2,7 @@
 layout: default
 section: home
 
-title: Development
+title: Features & Development
 description: MyBB is under active, continuous development under the guidance of the <a href="!SITE_BASEURL!/about/team/">development team</a>. We use <a href="https://github.com/mybb">GitHub</a> to offer public access to our development allowing the community to contribute to the project. You can contribute by testing the latest source code, reporting issues, and forking the project.
 meta_description: Get involved with MyBB's development by testing the latest source code and reporting issues through GitHub.
 ---
@@ -11,49 +11,87 @@ meta_description: Get involved with MyBB's development by testing the latest sou
 	{% include section_nav.html section='get-involved' %}
 
 	<section class="block">
-		<h1 class="block__heading">Development Resources</h1>
+		<h2 class="block__heading">Development Resources</h2>
 		<nav class="sidebar__nav">
 			<ul class="sidebar__nav__links">
-				<li class="sidebar__nav__links__item"><a href="https://github.com/mybb" class="sidebar__nav__links__item__link">MyBB on GitHub</a></li>
-				<li class="sidebar__nav__links__item"><a href="https://community.mybb.com/forum-161.html" class="sidebar__nav__links__item__link">Development Discussion Forum</a></li>
+				<li class="sidebar__nav__links__item"><a href="https://github.com/mybb/mybb/blob/feature/.github/CONTRIBUTING.md" class="sidebar__nav__links__item__link">CONTRIBUTING.md</a></li>
+				<li class="sidebar__nav__links__item"><a href="https://docs.mybb.com/1.8/development/" class="sidebar__nav__links__item__link">MyBB Development Documentation</a></li>
+				<li class="sidebar__nav__links__item"><a href="https://github.com/mybb/mybb/milestones" class="sidebar__nav__links__item__link">Milestones</a></li>
+				<li class="sidebar__nav__links__item"><a href="https://github.com/mybb/mybb/projects" class="sidebar__nav__links__item__link">Projects</a></li>
 			</ul>
 		</nav>
+	</section>
+	<section class="block">
+		<h2 class="block__heading">MyBB on GitHub</h2>
+		<div class="block__container">
+			<p>Through GitHub, you can follow development, download the latest source code to test and report issues, and contribute to the MyBB resources.</p>
+			<p class="block__action"><a href="https://github.com/mybb" class="button">{% include icon.html icon='github' %}Visit MyBB on GitHub</a></p>
+		</div>
+	</section>
+	<section class="block">
+		<h2 class="block__heading">Community Forums</h2>
+		<div class="block__container">
+			<p>Join the Community Forums to discuss the development of MyBB, issues affecting the Project and Community activities.</p>
+			<p class="block__action"><a href="https://community.mybb.com/" class="button button--secondary">{% include icon.html icon='comments' %}Visit Community Forums</a></p>
+		</div>
+	</section>
+	<section class="block">
+		<h2 class="block__heading">MyBB Discord Server</h2>
+		<div class="block__container">
+			<p>MyBB has its own Discord server where you can chat with other MyBB users and staff.</p>
+			<p class="block__action"><a href="{{ site.baseurl }}/get-involved/discord/" class="button button--secondary">{% include icon.html icon='discord' %}Join us on Discord</a></p>
+		</div>
 	</section>
 </aside>
 
 <div class="page-content page-content--sidebar">
-	<section class="block">
-		<header class="block__heading">
-			<h1 class="block__heading__title">MyBB on GitHub</h1>
-			<p class="block__heading__subtitle">Follow development, get the source, test the code, and contribute</p>
-		</header>
-		<p>MyBB uses GitHub to maintain its development repositories, allowing you to follow development and download the latest source code to test and report issues.</p>
-		{% include github_buttons.html %}
-		<p class="block__action"><a href="https://github.com/mybb" class="link">{% include icon.html icon='github' %}<span class="link__text">Visit MyBB on GitHub &rarr;</span></a></p>
+	<section class="block block--symbol">
+		<div class="block__icon">{% include icon.html icon='drafting-compass' %}</div>
+		<div class="block__content">
+			<header class="block__heading">
+				<h2 class="block__heading__title">Design and Features</h2>
+				<p class="block__heading__subtitle">Share thoughts, suggestions and feedback</p>
+			</header>
+			<h3>Community Feedback</h3>
+			<p>If you have a feature you would love to see added to MyBB or feedback on existing components, visit the <a href="https://community.mybb.com/forum-199.html" class="link">Suggestions and Feedback section</a> to get behind posted ideas and add ones of your own.</p>
+
+			<h3>Issue Prioritization</h3>
+			<p>Vote for new features you'd like to see in MyBB by adding a "👍" reaction to repository <a href="https://github.com/mybb/mybb/issues">Issues</a> for planned changes.</p>
+
+			<h3>Technical Discussions</h3>
+			<p>Contribute technical comments and best practices to planning and design discussions in the <a href="https://community.mybb.com/forum-161.html">Development category</a> on the Forums, as well as <a href="https://github.com/mybb/mybb/issues">Issues</a> and <a href="https://github.com/mybb/mybb/pulls">Pull Requests</a> in the repository.</p>
+		</div>
 	</section>
-	<section class="block">
-		<header class="block__heading">
-			<h1 class="block__heading__title">Development Discussion</h1>
-			<p class="block__heading__subtitle">Community contributors can participate in the planning MyBB's future</p>
-		</header>
-		<p>MyBB maintains a set of Development forums on the MyBB Community Forums to allow all MyBB users to report bugs and issues with their forums, make suggestions for features to be included in future releases, and view discussions related to MyBB development. Additionally, active community members can get involved with development discussions by joining a special Contributors group on the MyBB Community Forums. </p>
-		<p class="block__action"><a href="https://community.mybb.com/forum-161.html" class="link">{% include icon.html icon='comments' %}<span class="link_text">Development discussions on the MyBB Community Forums &rarr;</span></a></p>
+	<section class="block block--symbol">
+		<div class="block__icon">{% include icon.html icon='code' %}</div>
+		<div class="block__content">
+			<header class="block__heading">
+				<h2 class="block__heading__title">Codebase</h2>
+				<p class="block__heading__subtitle">Work with MyBB's source code</p>
+			</header>
+			<h3>Contributions</h3>
+			<p>Resolve existing <a href="https://github.com/mybb/mybb/issues">Issues</a> by submitting suggested code changes using <a href="https://github.com/mybb/mybb/pulls">Pull Requests</a>. Read the <a href="https://github.com/mybb/mybb/blob/feature/.github/CONTRIBUTING.md"><code>CONTRIBUTING.md</code> file</a> for information on branching, standards, and practices in our code repositories.</p>
+
+			<h3>Code Review</h3>
+			<p>Examine submitted <a href="https://github.com/mybb/mybb/pulls">Pull Requests</a> and leave <a href="https://help.github.com/en/articles/about-pull-request-reviews">reviews</a> of proposed changes to make sure the new code is free of potential problems and adheres to best practices and recommendations.</p>
+		</div>
 	</section>
-	<section class="block">
-		<header class="block__heading">
-			<h1 class="block__heading__title">Reporting Bugs and Issues</h1>
-			<p class="block__heading__subtitle">Help MyBB find and resolve issues with the software</p>
-		</header>
-		<p>When you experience a problem with your MyBB forum, it's important you report the issue so the MyBB Team can investigate the issue and fix the issue if necessary. Bug reports can be created using your MyBB Community account in the bug reports forum for the appropriate version of MyBB within the <a href="http://community.mybb.com/forum-161.html">Development category</a> on the MyBB Community Forums.</p>
-		<p class="block__action"><a href="https://community.mybb.com/announcement-22.html" class="link">{% include icon.html icon='bug' %}<span class="link_text">More information on reporting bugs and issues &rarr;</span></a></p>
-	</section>
-	<section class="block">
-		<header>
-			<h1>Development Workflow</h1>
-			<p>MyBB uses a workflow to manage how development occurs on GitHub</p>
-		</header>
-		<p>
-			To help streamline the coordination of development between MyBB Team members and members of the MyBB community, MyBB follows a documented workflow for the development of all of its products, including MyBB 1.6, 1.8, 2.0, and the MyBB Merge System.</p>
-		<p class="block__action"><a href="https://community.mybb.com/announcement-25.html" class="link">{% include icon.html icon='rocket' %}<span class="link_text">More information on MyBB's development workflow &rarr;</span></a></p>
+	<section class="block block--symbol">
+		<div class="block__icon">{% include icon.html icon='tools' %}</div>
+		<div class="block__content">
+			<header class="block__heading">
+				<h2 class="block__heading__title">Bugs and Maintenance</h2>
+				<p class="block__heading__subtitle">Help MyBB find and resolve issues with the software</p>
+			</header>
+			<p>The <i>Bugs and Issues</i> subforums are where defects found in MyBB can be documented by users with no GitHub account or less technical experience. Later, they are pushed to GitHub by the MyBB Team, where solutions and expected target versions can be tracked.</p>
+
+			<p class="block__action"><a href="https://community.mybb.com/announcement-22.html" class="link"><span class="link_text">More information on reporting bugs and issues &rarr;</span></a></p>
+
+			<h3>Problem Reports</h3>
+			<p>Create bug reports on the Community Forums for the appropriate version of MyBB within the <a href="http://community.mybb.com/forum-161.html">Development category</a>, if the problem was not reported already on the Forums or as <a href="https://github.com/mybb/mybb/issues">Issues</a> on GitHub. If it is, but receives little attention, you can share details on how it impacts your forum to help diagnose the problem.</p>
+
+			<h3>Issue Verification</h3>
+			<p>Help developers confirm and prioritize bugs by providing additional information or simply by adding a "👍" reaction to existing <a href="https://github.com/mybb/mybb/issues">Issues</a> to let them know they are affecting you.</p>
+		</div>
 	</section>
 </div>

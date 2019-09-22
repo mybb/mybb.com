@@ -1,15 +1,12 @@
 - url: get-involved/development
-  title: Development
-  icon: code
-- url: get-involved/resources
-  title: Resources
-  icon: book
+  title: Features & Development
+  icon: rocket
 - url: get-involved/support
   title: Support
-  icon: question-circle
+  icon: hands-helping
+- url: get-involved/resources
+  title: Web Resources
+  icon: book
 - url: get-involved/security
   title: Security Research
-  icon: bug
-- url: get-involved/discord
-  title: Discord
-  icon: discord
+  icon: shield-alt

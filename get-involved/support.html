@@ -3,27 +3,54 @@ layout: default
 section: home
 
 title: Support
-description: MyBB has a <a href="!SITE_BASEURL!/about/team/">support team</a> dedicated to helping users fix problems with their forums. If you have extensive experience with MyBB, however, additional help is always welcomed and encouraged! Some basic guidelines on providing support are provided below.
+description: MyBB has a <a href="!SITE_BASEURL!/about/team/">support team</a> dedicated to helping users fix problems with their forums on <a href="!SITE_BASEURL!/support/">official support platforms</a>. If you have extensive experience with MyBB, however, additional help is always welcomed and encouraged! Some basic guidelines on providing support are provided below.
 meta_description: Guidelines for providing support to other MyBB users.
 ---
 
 <aside class="page-sidebar">
 	{% include section_nav.html section='get-involved' %}
+
+	<section class="block">
+		<h1 class="block__heading">Community Forums</h1>
+		<div class="block__container">
+			<p>Join the Community Forums to discuss the development of MyBB, issues affecting the Project and Community activities.</p>
+			<p class="block__action"><a href="https://community.mybb.com/" class="button">{% include icon.html icon='comments' %}Visit Community Forums</a></p>
+		</div>
+	</section>
+	<section class="block">
+		<h1 class="block__heading">MyBB Discord Server</h1>
+		<div class="block__container">
+			<p>MyBB has its own Discord server where you can chat with other MyBB users and staff.</p>
+			<p class="block__action"><a href="{{ site.baseurl }}/get-involved/discord/" class="button">{% include icon.html icon='discord' %}Join us on Discord</a></p>
+		</div>
+	</section>
 </aside>
 
 <div class="page-content page-content--sidebar">
 	<section class="block">
 		<header class="block__heading">
-			<h1 class="block__heading__title">MyBB Support Guidelines</h1>
+			<h1 class="block__heading__title">Guidelines</h1>
 			<p class="block__heading__subtitle">Some ground rules for when you're helping MyBB users</p>
 		</header>
-		<p>When you're helping other MyBB users with their issues, it is important to remember that you only respond <strong>if you are comfortable and knowledgable in the topic the user needs help with</strong>. If you don't know how to help, it's better to leave the issue for someone who knows an answer than make a guess.</p>
+		<p>When you're helping other MyBB users with their issues, it is important to remember that you only respond <strong>if you are comfortable and knowledgeable in the topic the user needs help with</strong>. If you don't know how to help, it's better to leave the issue for someone who knows an answer than make a guess.</p>
 		<p>Beyond that, there are some basic guidelines to keep in mind while providing support to users:</p>
 		<ul>
-			<li><strong>Be nice.</strong> Many users looking for support are new to MyBB. There's never a good reason to be rude or condescending, even if a user doesn't understand the help you're giving.</li>
-			<li><strong>Use proper English.</strong> It's important to be clear and concise when providing support. Also, remember that while not all of our users speak English, support provided on the <a href="https://community.mybb.com">Community Forums</a> is provided in English only.</li>
-			<li><strong>Don't ask for sensitive information, such as administrative credentials.</strong> For the safety of other users, only MyBB staff members should be trusted with sensitive information.</li>
-			<li><strong>Give support to help, not for reputation.</strong> While getting a positive rating for a post is a nice reward for helping users, you should not expect anything for giving support. Do not get upset if your reputation doesn't get a boost every time you provide support.</li>
+			<li><strong>Be nice.</strong> Many users looking for support are new to MyBB. There's never a good reason to be rude or condescending, even if a user doesn't understand the help you're giving.
+			<li><strong>Use proper English.</strong> It's important to be clear and concise when providing support. Remember that while support provided on the <a href="https://community.mybb.com">Community Forums</a> is provided in English only, for it's not the first language for many users, and you may need to simplify or rephrase your responses.
+			<li><strong>Don't ask for sensitive information or administrative credentials.</strong> Seek alternative means to limit safety risks and leave written instructions for other users looking for a solution. Help users watch out for <a href="https://docs.mybb.com/1.8/administration/security/protection/#inadvertent-data-disclosures">inadvertent data disclosures</a> and report messages with sensitive information to staff.
+			<li><strong>Build on existing resources.</strong> A link to exhaustive Documentation article is generally better than custom answer, since the Docs can be updated and improved, and thus stay up-to-date. Similarly, you can refer to high quality responses on the Forums and supplement any missing details.
+			<li><strong>Create long-lived knowledge base.</strong> When possible, use more general examples and explanation to let users who discover the discussion later fix similar problems. Avoid including or referring to external images and resources that may be removed at a later point. Your answers may be more popular, and should remain applicable after months or even years.
+			<li><strong>Make your reply easily readable</strong> and take advantage of formatting options:
+				<ul>
+					<li><code>`short code`</code> (Discord, Forums) and <code>[code=language]long code[/code]</code> (Forums),
+					<li><code>[i]Option Value[/i]</code> (Forums) / <code>_Option Value_</code> (Discord),
+					<li>link selected names and terms to explanations and additional reading: <code>[url=https://...]technical term[/url]</code>,
+					<li><code>[b]Category &rarr; Page Location[/b]</code> (Forums) / <code>**Section &rarr; Location**</code> (Discord),
+					<li>refer to locations and features by copying their exact names and letter case (e.g. <code>Tools & Maintenance &rarr; Task Manager</code>),
+					<li>refer to MyBB's source code, use GitHub and specific version branches and line numbers &mdash; for example, you can point anyone to lines 13-16 of file <code>inc/class_session.php</code> in MyBB 1.8.17 like this:<br> <pre><code>https://github.com/mybb/mybb/blob/mybb_1817/inc/class_session.php#L13-L16</code></pre>
+				</ul>
+			</li>
+			<li>Give support to help, not for reputation. While getting a positive rating for a post is a nice reward for helping users, you should not expect anything for giving support. Do not get upset if your reputation doesn't get a boost every time you provide support.
 		</ul>
 	</section>
 </div>

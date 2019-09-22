@@ -1,8 +1,8 @@
 ---
 layout: default
 section: home
-title: Support
-description: Even though MyBB has been designed to be as easy to use as possible, you may at some point have problems with MyBB. Information about all MyBB features and common MyBB problems is available in the <a href="https://docs.mybb.com">MyBB Documentation</a>, while the <a href="https://community.mybb.com">MyBB Community Forums</a> are available to help you with more complex problems.
+title: Support & Discussion
+description: Even though MyBB has been designed to be as easy to use as possible, you may at some point have problems with MyBB. Information about all MyBB features and common MyBB problems is available in the <a href="https://docs.mybb.com">MyBB Documentation</a>, while the discussion platforms are available to help you with more complex problems.
 meta_description: MyBB offers a comprehensive documentation of its features and offers forum support for more complex problems.
 ---
 
@@ -13,6 +13,7 @@ meta_description: MyBB offers a comprehensive documentation of its features and 
 			<ul class="sidebar__nav__links">
 				<li class="sidebar__nav__links__item"><a href="https://docs.mybb.com" class="sidebar__nav__links__item__link">MyBB Documentation</a></li>
 				<li class="sidebar__nav__links__item"><a href="https://community.mybb.com" class="sidebar__nav__links__item__link">MyBB Community Forums</a></li>
+				<li class="sidebar__nav__links__item"><a href="{{ site.baseurl }}/get-involved/discord/" class="sidebar__nav__links__item__link">Discord Server</a></li>
 			</ul>
 		</nav>
 	</section>
@@ -24,35 +25,46 @@ meta_description: MyBB offers a comprehensive documentation of its features and 
 			</ul>
 		</nav>
 	</section>
+	<!--
 	<section class="block">
 		<h1 class="block__heading">International Support</h1>
 		<p>Various third-party communities exist for international users to receive support in their language. You can find <a href="https://community.mybb.com/forum-168.html">a list of them at the Community Forums</a>.</p>
 	</section>
+	-->
 </aside>
 
 <div class="page-content page-content--sidebar">
-	<section class="block">
-		<header class="block__heading">
-			<h1 class="block__heading__title">MyBB Documentation</h1>
-			<p class="block__heading__subtitle">Find information about all MyBB features and common problems</p>
-		</header>
-		<p>The <a href="https://docs.mybb.com">MyBB Documentation</a> is the first place to go for help with MyBB's features. The documentation includes solutions to common problems and a list of all the MyBB features and how to use them.</p>
-		<p class="block__action"><a href="https://docs.mybb.com">Visit the MyBB Documentation &rarr;</a></p>
+	<section class="block block--symbol">
+		<div class="block__icon">{% include icon.html icon='book' %}</div>
+		<div class="block__content">
+			<header class="block__heading">
+				<h2 class="block__heading__title">MyBB Documentation</h2>
+				<p class="block__heading__subtitle">Find information about all features and common problems</p>
+			</header>
+			<p>The Documentation is the first place to go for help with MyBB's features. Includes information on MyBB features and how to use them, solutions to common problems, and best practices.</p>
+			<p class="block__action"><a href="https://docs.mybb.com">Visit the MyBB Documentation &rarr;</a></p>
+		</div>
 	</section>
-	<section class="block">
-		<header class="block__heading">
-			<h1 class="block__heading__title">MyBB Community Forums</h1>
-			<p class="block__heading__subtitle">Ask MyBB staff and other users to assist you</p>
-		</header>
-		<p>If you can't find a solution to your problem on the <a href="https://docs.mybb.com">MyBB Documentation</a>, you can ask for help on the <a href="https://community.mybb.com">MyBB Community Forums</a>. Be sure to <a href="https://community.mybb.com/search.php">search for an answer</a> before posting your question. When posting your question, please follow the instructions to receive support more quickly.</p>
-		<p class="block__action"><a href="https://community.mybb.com">Visit the MyBB Community Forums &rarr;</a></p>
+	<section class="block block--symbol">
+		<div class="block__icon">{% include logomark-trim.svg %}</div>
+		<div class="block__content">
+			<header class="block__heading">
+				<h2 class="block__heading__title">MyBB Community Forums</h2>
+				<p class="block__heading__subtitle">Ask for assistance and discuss MyBB</p>
+			</header>
+			<p>If you can't find a solution to your problem on Documentation pages, you can ask for help on the Community Forums. Be sure to <a href="https://community.mybb.com/search.php">search for an answer</a> before posting your question.</p>
+			<p class="block__action"><a href="https://community.mybb.com">Visit the MyBB Community Forums &rarr;</a></p>
+		</div>
 	</section>
-	<section class="block">
-		<header class="block__heading">
-			<h1 class="block__heading__title">Discord Server</h1>
-			<p class="block__heading__subtitle">Collaborate with other MyBB enthusiasts</p>
-		</header>
-		<p>The Discord server is a place where you can just chat with other enthusiastic MyBB users and staff, to gain knowledge and exchange tips.</p>
-		<p class="block__action"><a href="{{ site.baseurl }}/get-involved/discord/"><span class="link_text">More information on the Discord server &rarr;</span></a></p>
+	<section class="block block--symbol">
+		<div class="block__icon">{% include icon.html icon='discord' %}</div>
+		<div class="block__content">
+			<header class="block__heading">
+				<h2 class="block__heading__title">Discord Server</h2>
+				<p class="block__heading__subtitle"><i>#random</i> chat about the <i>#mybbproject</i></p>
+			</header>
+			<p>The Discord server is a place where you can just chat with other enthusiastic MyBB users and staff, to gain knowledge and exchange tips.</p>
+			<p class="block__action"><a href="{{ site.baseurl }}/get-involved/discord/"><span class="link_text">More information on the Discord server &rarr;</span></a></p>
+		</div>
 	</section>
 </div>
