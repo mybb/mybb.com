@@ -1,0 +1,138 @@
+---
+title:  "Release Insights"
+layout: default
+section: download
+categories: [versions]
+---
+
+<div class="page-content">
+    <section class="block">
+        <header class="block__heading">
+            <h1 class="block__heading__title">MyBB 1.8.x</h1>
+        </header>
+    </section>
+    <section class="block">
+        <header class="block__heading">
+            <h2 class="block__heading__title">Issues Addressed</h2>
+        </header>
+        <canvas id="chart_18_issues"></canvas>
+    </section>
+    <section class="block">
+        <header class="block__heading">
+            <h2 class="block__heading__title">Time Since Preceding Release</h2>
+        </header>
+        <canvas id="chart_18_cycle"></canvas>
+    </section>
+</div>
+
+{% assign versionsData = "" | split: "" %}
+{% assign versions = site.versions | where_exp: "item", "item.version_number contains '1.8.'" | sort: 'release_date' %}
+{% for version in versions %}
+    {% assign severities = "" | split: "" %}
+    {% for issue in version.resolved_security_issues %}
+        {% assign severities = severities | push: issue.severity %}
+    {% endfor %}
+    {% capture versionData %}{{ version.version_number }}|{{ version.release_date }}|{{ version.resolved_issues_number }}|{{ severities | join: "," }}{% endcapture %}
+    {% assign versionData = versionData | split: '|' %}
+    {% assign versionsData = versionsData | push: versionData %}
+{% endfor %}
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+<script data-input="{{ versionsData | jsonify | escape }}">
+let input = JSON.parse(document.currentScript.getAttribute('data-input'));
+
+let chart_18_issues = new Chart(document.querySelector('#chart_18_issues').getContext('2d'), {
+    type: 'bar',
+    data: {
+        labels: input.map(e => e[0]),
+        datasets: [
+            {
+                label: 'Bugs & Maintenance',
+                data: input.map(value => value[2]),
+                backgroundColor: '#BBBBBB',
+            },
+            {
+                label: 'High Risk',
+                yAxisID: 'security-axis',
+                data: input.map(value => value[3] ? value[3].split(',').filter(v => v === 'high').length : 0),
+                backgroundColor: '#DD0000',
+                stack: 'security-stack',
+            },
+            {
+                label: 'Medium Risk',
+                yAxisID: 'security-axis',
+                data: input.map(value => value[3] ? value[3].split(',').filter(v => v === 'medium').length : 0),
+                backgroundColor: '#FF7700',
+                stack: 'security-stack',
+            },
+            {
+                label: 'Low Risk',
+                yAxisID: 'security-axis',
+                data: input.map(value => value[3] ? value[3].split(',').filter(v => v === 'low').length : 0),
+                backgroundColor: '#FFCC00',
+                stack: 'security-stack',
+            }
+        ]
+    },
+    options: {
+        scales: {
+            yAxes: [
+                {
+                    ticks: {
+                        beginAtZero: true,
+                    },
+                    gridLines: {
+                        drawOnChartArea: false,
+                    },
+                },
+                {
+                    id: 'security-axis',
+                    position: 'right',
+                },
+            ]
+        }
+    }
+});
+let chart_18_cycle = new Chart(document.querySelector('#chart_18_cycle').getContext('2d'), {
+    type: 'line',
+    data: {
+        labels: input.map(e => e[0]),
+        datasets: [{
+            label: 'Days',
+            data: input.map((value, index) => {
+                if (index === 0) {
+                    return 0;
+                } else {
+                    return Math.ceil(
+                        (new Date(value[1]) - new Date(input[index-1][1]))
+                        / 86400000
+                    );
+                }
+            }),
+            fill: false,
+            borderColor: '#007fd0',
+            pointBorderWidth: 4,
+        }]
+    },
+    options: {
+        legend: {
+            display: false,
+        },
+        scales: {
+            xAxes: [{
+                gridLines: {
+                    drawOnChartArea: false,
+                },
+            }],
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true,
+                },
+                gridLines: {
+                    drawOnChartArea: false,
+                }
+            }]
+        }
+    }
+});
+</script>
