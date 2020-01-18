@@ -51,7 +51,7 @@ permalink: /404.html
 					</a>
 				</div>
                 <div class="action-cards__card">
-					<a href="{{ site.baseurl }}/about/" class="action-cards__card__link">
+					<a href="https://docs.mybb.com/" class="action-cards__card__link">
 						<span class="action-cards__card__icon">{% include icon.html icon='book' %}</span>
 						<h3 class="action-cards__card__title">Docs</h3>
                         <p class="action-cards__card__description">Read tutorials and online documentation about MyBB and find solutions to common problems.</p>
