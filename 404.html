@@ -16,15 +16,13 @@ permalink: /404.html
             <div class="page-content page-content--centered">
                 <form method="get" action="https://www.google.com/search">
                     <section class="block form">
-                        <div class="form__section">
-                            <div class="form__row">
-                                <h1 class="form__row__title"><label for="q">Search MyBB.com</label></h1>
-                        		<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="mybb.com">
-                                <input name="q" id="q" type="text" class="searchField inputText" placeholder="Search keyword" />
-                            </div>
-                            <div class="form__submit">
-                                <button id="submit" type="submit" class="button">{% include icon.html icon='search' %} Search</button>
-                            </div>
+                        <div class="row row--form field">
+                            <h1 class="field__name"><label for="q">Search MyBB.com</label></h1>
+                    		<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="mybb.com">
+                            <input name="q" id="q" type="text" class="textbox searchField inputText" placeholder="Search keyword" />
+                        </div>
+                        <div class="form__submit">
+                            <button id="submit" type="submit" class="button">{% include icon.html icon='search' %} Search</button>
                         </div>
                     </section>
                 </form>
