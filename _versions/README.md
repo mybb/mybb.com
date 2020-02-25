@@ -65,8 +65,8 @@ Lists resolved security issues.
   `severity`: issue severity,
 
   `reported_by`:
-  - `name`: The reporter name (Markdown links allowed),
-  - `affiliation`: The organization, group, company or other association of the reporter (Markdown links allowed).
+    - - `name`: The reporter name (Markdown links allowed),
+      - `affiliation`: The organization, group, company or other association of the reporter (Markdown links allowed).
 
 
 #### `notable_contributions`

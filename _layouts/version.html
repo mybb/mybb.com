@@ -213,14 +213,21 @@ section: download
                     <div class="security-issues__issue">
                         <span class="security-issues__issue__severity">{{ issue.severity | capitalize }} risk</span>
                         <h2 class="security-issues__issue__description">{{ issue.description }}</h2>
-                        {% if issue.reported_by.name %}
+                        {% if issue.reported_by != null %}
                             <p class="security-issues__issue__reporter">
                                 Reported by
 
-                                {% assign reported_by = issue.reported_by.name | markdownify | replace: '<p>', '' | replace: '</p>', '' %}
-                                {% if issue.reported_by.affiliation %}
-                                    {% assign reported_by = reported_by | append: '<span class="security-issues__issue__reporter__affiliation">' | append: issue.reported_by.affiliation | markdownify | replace: '<p>', '' | replace: '</p>', '' | append: '</span>' %}
-                                {% endif %}
+                                {% assign reported_by = "" %}
+                                {% for reporter in issue.reported_by %}
+                                    {% assign string = reporter.name | markdownify | replace: '<p>', '' | replace: '</p>', '' %}
+                                    {% if reporter.affiliation %}
+                                        {% assign string = string | append: '<span class="security-issues__issue__reporter__affiliation">' | append: reporter.affiliation | markdownify | replace: '<p>', '' | replace: '</p>', '' | append: '</span>' %}
+                                    {% endif %}
+                                    {% if reported_by != "" %}
+                                        {% assign reported_by = reported_by | append: ', ' %}
+                                    {% endif %}
+                                    {% assign reported_by = reported_by | append: string | strip %}
+                                {% endfor %}
                                 {{ reported_by }}
                             </p>
                         {% endif %}
