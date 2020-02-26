@@ -88,21 +88,21 @@ description: Here you will find a description of the MyBB versioning scheme and 
                     <div class="version-list__item__details">
                         <h2 class="version-list__item__number">
                             {% if version.release_notes %}
-                                {% if version.release_notes == 'none' %}
-                                {{ version.version }}
+                                {% if version.release_notes != 'none' %}
+                                    <a href="{{ version.release_notes }}" class="version-list__number__link">{{ version.version }}</a>
                                 {% else %}
-                                <a href="{{ version.release_notes }}" class="version-list__number__link">{{ version.version }}</a>
+                                    {{ version.version }}
                                 {% endif %}
                             {% else %}
-                            <a href="{{ site.baseurl }}/versions/{{ version.version }}/" class="version-list__number__link">{{ version.version }}</a>
+                                <a href="{{ site.baseurl }}/versions/{{ version.version }}/" class="version-list__number__link">{{ version.version }}</a>
                             {% endif %}
                         </h2>
                         <p class="version-list__item__date">{{ version.date }}</p>
                         <p class="version-list__item__type">{{ version.type }}</p>
                     </div>
-                    {% if version.availability %}
-                        <p class="version-list__item__download"><a href="{{ version.availability }}" class="button button--secondary version-list__item__download__link">Download</a></p>
-                    {% endif %}
+                    {% unless version.release_notes %}
+                        <p class="version-list__item__download"><a href="{{ site.baseurl }}/versions/{{ version.version }}/" class="button{% if counter > 1 %} button--secondary{% endif %} version-list__item__download__link">Download</a></p>
+                    {% endunless %}
                 </div>
                 {% endfor %}
             </div>

@@ -40,171 +40,130 @@
     date: 15 December 2012
     type: Security Release
     availability: https://resources.mybb.com/downloads/mybb_1609.zip
-    release_notes: https://blog.mybb.com/2012/12/14/mybb-1-6-9-security-release/
   - version: 1.6.8
     date: 27 May 2012
     type: Maintenance Release
-    release_notes: https://blog.mybb.com/2012/05/27/mybb-1-6-8-released-maintenance-release/
   - version: 1.6.7
     date: 1 April 2012
     type: Feature, Security, Maintenance Release
-    release_notes: https://blog.mybb.com/2012/04/01/mybb-1-6-7-update-1-8-development/
   - version: 1.6.6
     date: 10 February 2012
     type: Security Release
-    release_notes: https://blog.mybb.com/2012/02/10/mybb-1-6-6-security-release/
   - version: 1.6.5
     date: 25 November 2011
     type: Feature, Security, Maintenance Release
-    release_notes: https://blog.mybb.com/2011/11/25/mybb-1-6-5-released-feature-update-security-maintenance-release/
   - version: 1.6.4
     date: 26 July 2011
     type: Feature, Security, Maintenance Release
-    release_notes: https://blog.mybb.com/2011/07/26/mybb-1-6-4-released-feature-update-security-maintenance-release/
   - version: 1.6.3
     date: 17 April 2011
     type: Security Release
-    release_notes: https://blog.mybb.com/2011/04/17/mybb-1-6-3-and-1-4-16-security-update/
   - version: 1.6.2
     date: 22 February 2011
     type: Security, Maintenance Release
-    release_notes: https://blog.mybb.com/2011/02/22/mybb-1-6-2-and-1-4-15-security-update/
   - version: 1.6.1
     date: 15 December 2010
     type: Security, Maintenance Release
-    release_notes: https://blog.mybb.com/2010/12/15/mybb-1-6-1-release-1-4-14-update/
   - version: 1.6.0
     date: 3 August 2010
     type: Major Release
-    release_notes: https://blog.mybb.com/2010/08/03/mybb-1-6-released/
 - series: 1.4.x series
   versions:
   - version: 1.4.16
     date: 17 April 2011
     type: Security Release
-    release_notes: https://blog.mybb.com/2011/04/17/mybb-1-6-3-and-1-4-16-security-update/
   - version: 1.4.15
     date: 22 February 2011
     type: Maintenance Release
-    release_notes: https://blog.mybb.com/2011/02/22/mybb-1-6-2-and-1-4-15-security-update/
   - version: 1.4.14
     date: 2 August 2010
     type: Maintenance Release
-    release_notes: https://blog.mybb.com/2010/12/15/mybb-1-6-1-release-1-4-14-update/
   - version: 1.4.13
     date: 19 April 2010
     type: Security Release
-    release_notes: https://blog.mybb.com/2010/04/19/mybb-1-4-13-released-security-patches-to-mybb-1-4-12/
   - version: 1.4.12
     date: 13 April 2010
     type: Security, Maintenance Release
-    release_notes: https://blog.mybb.com/2010/04/13/mybb-1-4-12-released-security-maintenance-update/
   - version: 1.4.11
     date: 29 December 2009
     type: Security, Minor Maintenance Release
-    release_notes: https://blog.mybb.com/2009/12/29/mybb-1-4-11-released-minor-patch-security-update/
   - version: 1.4.10
     date: 1 December 2009
     type: Maintenance Release
-    release_notes: https://blog.mybb.com/2009/12/01/mybb-1-4-10-released-maintenance-release/
   - version: 1.4.9
     date: 21 September 2009
     type: Security Release
-    release_notes: https://blog.mybb.com/2009/09/21/mybb-1-4-9-released-security-update/
   - version: 1.4.8
     date: 26 June 2009
     type: Security, Maintenance Release
-    release_notes: https://community.mybb.com/thread-51952.html
   - version: 1.4.7
     date: 15 June 2009
     type: Security Release
-    release_notes: https://community.mybb.com/thread-51349.html
   - version: 1.4.6
     date: 3 May 2009
     type: Security Release
-    release_notes: https://community.mybb.com/thread-49231.html
   - version: 1.4.5
     date: 19 April 2009
     type: Security, Maintenance Release
-    release_notes: https://community.mybb.com/thread-48484.html
   - version: 1.4.4
     date: 27 November 2008
     type: Security, Maintenance Release
-    release_notes: https://community.mybb.com/thread-41036.html
   - version: 1.4.3
     date: 29 October 2008
     type: Security Release
-    release_notes: https://community.mybb.com/thread-39705.html
   - version: 1.4.2
     date: 17 September 2008
     type: Security, Maintenance Release
-    release_notes: https://community.mybb.com/thread-37792.html
   - version: 1.4.1
     date: 17 August 2008
     type: Security, Maintenance Release
-    release_notes: https://community.mybb.com/thread-36022.html
   - version: 1.4.0
     date: 3 August 2008
     type: Major Release
-    release_notes: https://community.mybb.com/thread-34565.html
 - series: 1.2.x series
   versions:
   - version: 1.2.14
     date: 18 July 2008
     type: Security, Maintenance Release
-    release_notes: https://community.mybb.com/thread-33865.html
   - version: 1.2.13
     date: 21 May 2008
     type: Security Release
-    release_notes: https://community.mybb.com/thread-31666.html
   - version: 1.2.12
     date: 20 January 2008
     type: Security, Maintenance Release
-    release_notes: https://community.mybb.com/thread-27675.html
   - version: 1.2.11
     date: 8 January 2008
     type: Security Release
-    release_notes: https://community.mybb.com/thread-27227.html
   - version: 1.2.10
     date: 1 December 2007
     type: Maintenance Release
-    release_notes: https://community.mybb.com/thread-26083.html
   - version: 1.2.9
     date: 10 July 2007
     type: Security Release
-    release_notes: https://community.mybb.com/thread-20910.html
   - version: 1.2.8
     date: 28 June 2007
     type: Security, Maintenance Release
-    release_notes: https://community.mybb.com/thread-20463.html
   - version: 1.2.7
     date: 15 May 2007
     type: Security, Maintenance Release
-    release_notes: https://community.mybb.com/thread-19241.html
   - version: 1.2.6
     date: 25 April 2007
     type: Security Release
-    release_notes: https://community.mybb.com/thread-18632.html
   - version: 1.2.5
     date: 13 April 2007
     type: Security Release
-    release_notes: https://community.mybb.com/thread-18301.html
   - version: 1.2.4
     date: 4 April 2007
     type: Security Release
-    release_notes: https://community.mybb.com/thread-18002.html
   - version: 1.2.3
     date: 14 February 2007
     type: Security, Maintenance Release
-    release_notes: https://community.mybb.com/thread-16273.html
   - version: 1.2.2
     date: 1 December 2006
     type: Security, Maintenance Release
-    release_notes: https://community.mybb.com/thread-14181.html
-  - version: 1.2.1
+  - version: 1.2.1pl1
     date: 26 November 2006
-    type: Security Patch (version number unchanged)
-    release_notes: https://community.mybb.com/thread-14090.html
+    type: Security Patch
   - version: 1.2.1
     date: 27 September 2006
     type: Security, Maintenance Release
@@ -212,65 +171,50 @@
   - version: 1.2.0
     date: 2 September 2006
     type: Major Release
-    release_notes: https://community.mybb.com/thread-11781.html
 - series: 1.0x and 1.1.x series
   versions:
   - version: 1.1.8
     date: 30 August 2006
     type: Security Release
-    release_notes: https://community.mybb.com/thread-11697.html
   - version: 1.1.7
     date: 27 July 2006
     type: Security Release
-    release_notes: https://community.mybb.com/thread-10853.html
   - version: 1.1.6
     date: 25 July 2006
     type: Security Release
-    release_notes: https://community.mybb.com/thread-10555.html
   - version: 1.1.5
     date: 27 June 2006
     type: Security Release
-    release_notes: https://community.mybb.com/thread-10115.html
   - version: 1.1.4
     date: 22 June 2006
     type: Security Release
-    release_notes: https://community.mybb.com/thread-9955.html
   - version: 1.1.3
     date: 10 June 2006
     type: Security Release
-    release_notes: https://community.mybb.com/thread-9622.html
   - version: 1.1.2
     date: 6 May 2006
     type: Security Release
-    release_notes: https://community.mybb.com/thread-8733.html
   - version: 1.1.1
     date: 14 April 2006
     type: Security Release
-    release_notes: https://community.mybb.com/thread-8232.html
   - version: 1.1.0
     date: 8 March 2006
     type: Security, Maintenance Release
-    release_notes: https://community.mybb.com/thread-7368.html
   - version: 1.04
     date: 15 February 2006
     type: Security Release
-    release_notes: https://community.mybb.com/thread-6777.html
   - version: 1.03
     date: 31 January 2006
     type: Security Release
-    release_notes: https://community.mybb.com/thread-6418.html
   - version: 1.02
     date: 11 January 2006 (Originally released 7 January 2006)
     type: Security Release
-    release_notes: https://community.mybb.com/thread-5852.html
   - version: 1.01
     date: 28 December 2005
     type: Security Release
-    release_notes: https://community.mybb.com/thread-5633.html
   - version: 1.0
     date: 9 December 2005
     type: Major Release
-    release_notes: https://community.mybb.com/thread-5184.html
 - series: Preview releases
   versions:
   - version: PR2 Sec.Update
@@ -284,7 +228,6 @@
   - version: PR2
     date: 30 August 2005
     type: Major Release (included significant updates since RC4)
-    release_notes: https://community.mybb.com/thread-4507.html
   - version: PR1
     date: March 2005
     type: Private Beta Release
@@ -294,7 +237,6 @@
   - version: RC4
     date: 4 October 2004
     type: Release Candidate 4
-    release_notes: none
   - version: RC3
     date: 10 July 2004
     type: Release Candiate 3
