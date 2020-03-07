@@ -73,6 +73,27 @@ After downloading the package, its checksum should be compared to the one that w
 {{ markdown | markdownify }}
         </div>
     </section>
+	<section class="block">
+		<section class="block block--symbol">
+			<div class="block__icon">{% include icon.html icon='balance-scale' %}</div>
+			<div class="block__content">
+				<header class="block__heading">
+					<h2 class="block__heading__title">Reproducibility</h2>
+					<p class="block__heading__subtitle">Tracing the packaging process</p>
+				</header>
+	{% capture markdown %}
+Distributed packages (`mybb_*.zip`, `changed_files_*.zip`) can be reproduced using:
+ - the [build script](https://github.com/mybb/mybb-build), and
+ - `build_*.zip` archives on the [Releases page on GitHub](https://github.com/mybb/mybb/releases), which include input for the script (`input/`):
+   - references to the [MyBB source code repository](https://github.com/mybb/mybb) at a specific state to pull the code from,
+   - security patches (`.diff` format),
+   - metadata.
+ 
+The generated packages (`output/`) should be binary-identical to published packages.
+{% endcapture %}
+{{ markdown | markdownify }}
+			</div>
+		</section>
     <!--
 	<section class="block block--symbol">
 		<div class="block__icon">{% include icon.html icon='file-signature' %}</div>
@@ -127,4 +148,7 @@ Note that the [keys file](https://mybb.com/download/keys/raw.txt) is updated wit
         </div>
     </section>
     -->
+	<div class="alert">
+		<p class="alert__message">If you encounter discrepancies or notice suspicious content in any of the packages, <a href="https://mybb.com/get-involved/security/">contact the MyBB Security Team</a>.
+	</div>
 </section>
