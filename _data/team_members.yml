@@ -112,6 +112,13 @@
   role_memberships:
     standard:
     - Support
+    
+- username: "noyle"
+  uid: 129519
+  role_memberships:
+    standard:
+    - Support
+    - Development
 
 - username: "katos"
   uid: 104958
