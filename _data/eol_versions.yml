@@ -1,4 +1,9 @@
+- series: "RC"
+  codes: ["DevBB", "Beta4", "RC1", "RC2", "RC3", "RC4"]
+- series: "PR"
+  codes: ["PR1", "PR2"]
 - series: "1.0"
+  codes: ["100", "101", "102", "103", "104"]
 - series: "1.1"
 - series: "1.2"
   text: "The MyBB 1.2 series reached end of life on June 1, 2009."

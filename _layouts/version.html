@@ -61,7 +61,9 @@ section: download
 
                     {% assign matchedSeries = true %}
 
-                    {% if eolSeriesSize > versionSeriesSize %}
+                    {% if eol.codes and eol.codes contains page.version_code %}
+                        {% assign matchedSeries = true %}
+                    {% elsif eolSeriesSize > versionSeriesSize %}
                         {% assign matchedSeries = false %}
                     {% else %}
                         {% for part in eolSeries %}
@@ -83,11 +85,11 @@ section: download
                                     This means there will be no more security or maintenance releases for this series and forums running this version of MyBB may be at risk of unfixed security issues. <strong>The MyBB Group strongly encourages all communities to upgrade to the latest release of MyBB as soon as possible.</strong>
                                 </p>
                                 <div class="release-notes__note__buttons">
-                                    <a href="{{ site.baseurl }}/download/" class="button button--big">
+                                    <a href="{{ site.baseurl }}/download/" class="button button--medium">
                                         {% include icon.html icon="download" %} Download latest
                                     </a>
                                     {% if eol.link %}
-                                        <a href="{{ eol.link }}" class="button button--big button--secondary button--default-background-border">
+                                        <a href="{{ eol.link }}" class="button button--medium button--secondary button--default-background-border">
                                             {% include icon.html icon="info-circle" %} Find out more
                                         </a>
                                     {% endif %}
