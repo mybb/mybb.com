@@ -79,6 +79,16 @@
     standard:
     - Development
     - Support
+    
+- username: "JordanMussi"
+  uid: 51459
+  name: "Jordan Mussi"
+  github: "JordanMussi"
+  role_memberships:
+    standard:
+    - Development
+    - Web
+    - Security
 
 - username: "Devilshakerz"
   uid: 47371
