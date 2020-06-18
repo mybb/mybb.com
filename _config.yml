@@ -39,4 +39,5 @@ plugins:
   - jekyll-redirect-from
   - jekyll-remote-theme
 
+include: [".well-known"]
 exclude: ["CNAME", "README.md", "CONTRIBUTING.md", "vendor"]
