@@ -16,12 +16,13 @@ redirect_from:
 		<h1 class="block__heading">Security Resources</h1>
 		<nav class="sidebar__nav">
 			<ul class="sidebar__nav__links">
-				<li class="sidebar__nav__links__item"><a href="https://docs.mybb.com/1.8/development/security-workflow/" class="sidebar__nav__links__item__link">Security Workflow</a></li>
-				<li class="sidebar__nav__links__item"><a href="{{ site.baseurl }}/download/verifying/" class="sidebar__nav__links__item__link">Verifying Releases</a></li>
-				<li class="sidebar__nav__links__item"><a href="https://github.com/mybb/mybb/blob/feature/.github/SECURITY.md" class="sidebar__nav__links__item__link">SECURITY.md</a></li>
-				<li class="sidebar__nav__links__item"><a href="https://docs.mybb.com/1.8/administration/security/protection/" class="sidebar__nav__links__item__link">MyBB Security Guide</a></li>
-				<li class="sidebar__nav__links__item"><a href="https://docs.mybb.com/1.8/administration/security/recovery/" class="sidebar__nav__links__item__link">Security Incident Response & Recovery</a></li>
-				<li class="sidebar__nav__links__item"><a href="https://twitter.com/mybbsecurity" class="sidebar__nav__links__item__link">MyBB Security on Twitter</a></li>
+				<li class="sidebar__nav__links__item"><a href="https://docs.mybb.com/1.8/administration/security/protection/" class="sidebar__nav__links__item__link">MyBB Security Guide</a>
+					<li class="sidebar__nav__links__item"><a href="https://docs.mybb.com/1.8/administration/security/recovery/" class="sidebar__nav__links__item__link">Security Incident Response & Recovery</a>
+					<li class="sidebar__nav__links__item"><a href="https://github.com/mybb/mybb/blob/feature/.github/SECURITY.md" class="sidebar__nav__links__item__link">SECURITY.md</a>
+					<li class="sidebar__nav__links__item"><a href="{{ site.baseurl }}/download/verifying/" class="sidebar__nav__links__item__link">Verifying Releases</a>
+					<li class="sidebar__nav__links__item"><a href="https://docs.mybb.com/1.8/development/security-workflow/" class="sidebar__nav__links__item__link">Security Workflow</a>
+					<li class="sidebar__nav__links__item"><a href="{{ site.baseurl }}/versions/security-issues/" class="sidebar__nav__links__item__link">Resolved Security Issues</a>
+				<li class="sidebar__nav__links__item"><a href="https://twitter.com/mybbsecurity" class="sidebar__nav__links__item__link">MyBB Security on Twitter</a>
 			</ul>
 		</nav>
 	</section>
@@ -46,7 +47,9 @@ redirect_from:
 {% capture markdown %}
 At MyBB, maintaining secure software is one of our strategic priorities. Both ourselves and our users need to trust that the software they're using is secure and will remain secure throughout the years. We've encountered vulnerabilities which have been disclosed to us by members of the Community or external researchers, and encountered some which have been spread around the web. The latter is something we want to avoid to protect our users by delivering updates that eliminate security risks before they are used to cause harm.
 
-We cooperate with security contributors on triage, resolution, analysis, and public disclosure. Confirmed vulnerability reports are recognized in the Release Notes of corresponding releases as well as associated Release Blog Posts.
+We cooperate with security contributors on triage, resolution, analysis, and public disclosure.
+
+Confirmed vulnerability reports are recognized in the Release Notes of corresponding releases, the [Resolved Security Issues list]({{ site.baseurl }}/versions/security-issues/), as well as associated Release Blog Posts.
 
 The scope of Security Research recognition currently includes:
 - [MyBB 1.8.x releases](https://mybb.com/versions/),
