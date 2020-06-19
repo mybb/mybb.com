@@ -9,6 +9,6 @@ Contact: mailto:security@mybb.com
 Encryption: https://mybb.com/about/team/
 
 Policy: https://mybb.com/get-involved/security/
-Acknowledgments: {{ site.url }}/versions/security-issues/
+Acknowledgments: https://mybb.com/versions/security-issues/
 
-Canonical: {{ site.url }}/.well-known/security.txt
+Canonical: https://mybb.com/.well-known/security.txt
