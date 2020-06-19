@@ -12,7 +12,8 @@ description: Here you will find documented security issues addressed in past MyB
             <tr>
                 <th>Version Addressed</th>
                 <th>Severity</th>
-                <th>Description</th>
+                <th>CWE-ID</th>
+                <th>CVSS Score, Description</th>
                 <th>Reported By</th>
             </tr>
         </thead>
@@ -29,8 +30,20 @@ description: Here you will find documented security issues addressed in past MyB
                                 <p><small>{{ version.release_date | date: '%e %B %Y' }}</small>
                             </td>
                         {% endif %}
-                        <td>{{ issue.severity | capitalize }}</td>
-                        <td>{{ issue.description }}</td>
+                        <td>
+                            {{ issue.severity | capitalize }}
+                        </td>
+                        <td>
+                            {% if issue.cwe_id %}
+                                <a href="https://cwe.mitre.org/data/definitions/{{ issue.cwe_id | replace: 'CWE-', '' }}.html" title="{{ issue.cwe_name }}{% if issue.cwe_type %}, {{ issue.cwe_type }}{% endif %}" class="nowrap">{{ issue.cwe_id }}</a>
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if issue.cvss_score %}
+                                <span title="CVSS score">{{ issue.cvss_score }}</span> &middot;
+                            {% endif %}
+                            {{ issue.description }}
+                        </td>
                         <td>
                             {% if issue.reported_by != null %}
                                     {% assign reported_by = "" %}

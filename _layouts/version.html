@@ -213,8 +213,17 @@ section: download
                 <div class="security-issues">
                     {% for issue in page.resolved_security_issues %}
                     <div class="security-issues__issue">
-                        <span class="security-issues__issue__severity">{{ issue.severity | capitalize }} risk</span>
+                        <div class="security-issues__issue__labels">
+                            {% if issue.cwe_id %}
+                                <a href="https://cwe.mitre.org/data/definitions/{{ issue.cwe_id | replace: 'CWE-', '' }}.html" title="{{ issue.cwe_name }}{% if issue.cwe_type %}, {{ issue.cwe_type }}{% endif %}"><span class="security-issues__issue__label">{{ issue.cwe_id }}</span></a>
+                            {% endif %}
+                            {% if issue.cvss_score %}
+                                <span class="security-issues__issue__label" title="CVSS score">{{ issue.cvss_score }}</span>
+                            {% endif %}
+                            <span class="security-issues__issue__label security-issues__issue__label--primary">{{ issue.severity | capitalize }} risk</span>
+                        </div>
                         <h2 class="security-issues__issue__description">{{ issue.description }}</h2>
+                        
                         {% if issue.reported_by != null %}
                             <p class="security-issues__issue__reporter">
                                 Reported by
