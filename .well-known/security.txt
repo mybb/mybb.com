@@ -1,15 +1,12 @@
-# Security contact email
-Contact: mailto:security@mybb.com
-# Contact MyBB Group via Private Inquiries forum
+# Private Inquiries forum (account required)
 Contact: https://community.mybb.com/forum-135.html
 
-# When contacting an individual team member use their public key
-Encryption: {{ site.mainsiteurl }}/about/team/
+Contact: mailto:security@mybb.com
 
-# Information on responsible disclosure
-Policy: {{ site.mainsiteurl }}/get-involved/security/
+# Individual Team members' public keys
+Encryption: https://mybb.com/about/team/
 
-# Security Hall Of Fame
-Acknowledgments: {{ site.mainsiteurl }}/get-involved/security/hall-of-fame/
+Policy: https://mybb.com/get-involved/security/
+Acknowledgments: https://mybb.com/versions/security-issues/
 
-Canonical: {{ site.mainsiteurl }}/.well-known/security.txt
+Canonical: https://mybb.com/.well-known/security.txt
