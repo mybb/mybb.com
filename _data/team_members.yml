@@ -79,11 +79,15 @@
     standard:
     - Development
     - Support
-    
+
 - username: "JordanMussi"
   uid: 51459
   name: "Jordan Mussi"
   github: "JordanMussi"
+  twitter: "JordanLMussi"
+  keybase: "jordanmussi"
+  pgp_fingerprint: "61D7 A864 200A 9009 8F61 DEAB 6F6B 458A BB9B 0598"
+  pgp_link: "https://keybase.io/jordanmussi/key.asc"
   role_memberships:
     standard:
     - Development
@@ -122,7 +126,7 @@
   role_memberships:
     standard:
     - Support
-    
+
 - username: "noyle"
   uid: 129519
   role_memberships:
