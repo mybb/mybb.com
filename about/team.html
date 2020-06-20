@@ -9,6 +9,25 @@ redirect_from:
 - /credits
 ---
 
+<style>
+.team-members-clear-filter {
+	display: none;
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	font-weight: normal;
+	line-height: 1;
+}
+{%- assign team_cards_divs_open = '' -%}
+{%- assign team_cards_divs_close = '' -%}
+{% for data_role in site.data.roles %}
+{%- assign role_name_normalized = data_role.name | replace: ' ', '-' | downcase -%}
+{%- assign team_cards_divs_open = team_cards_divs_open | append: '<div id="team-members-' | append: role_name_normalized | append: '">' -%}
+{%- assign team_cards_divs_close = team_cards_divs_open | append: '</div>' -%}
+#team-members-{{ role_name_normalized }}:target .team-cards__card:not(.team-member--{{ role_name_normalized }}) { display: none; }
+#team-members-{{ role_name_normalized }}:target .team-members-clear-filter { display: inline; }
+#team-members-{{ role_name_normalized }}:target .team-members-button-{{ role_name_normalized }} { background: #f7f7f7; }
+{% endfor %}
+</style>
 <aside class="page-sidebar">
 	{% include section_nav.html section='about' %}
 
@@ -41,9 +60,16 @@ redirect_from:
 </aside>
 
 <div class="page-content page-content--sidebar">
-	<section class="block">
+	{{ team_cards_divs_open }}
+	<section class="block" id="team-members">
 		<header class="block__heading">
-			<h1 class="block__heading__title">The MyBB Team</h1>
+			<h1 class="block__heading__title">The MyBB Team <a href="#team-members" class="team-members-clear-filter">Clear filter</a></h1>
+			<p class="block__heading__subtitle">
+				{% for role in site.data.roles %}
+				{% assign role_name_normalized = role.name | replace: ' ', '-' | downcase %}
+					<a href="#team-members-{{ role_name_normalized }}"><span class="team-role team-role--{{ role_name_normalized }} team-members-button-{{ role_name_normalized }}" data-role-color="{{ role.color }}">{{ role.name }}</span></a>
+				{% endfor %}
+			</p>
 		</header>
 		<div class="team-cards">
 			{% assign sorted_team_data = site.data.team_members | sort:"uid" %}
@@ -52,4 +78,5 @@ redirect_from:
 			{% endfor %}
 		</div>
 	</section>
+	{{ team_cards_divs_close }}
 </div>
