@@ -222,8 +222,15 @@ section: download
                             {% endif %}
                             <span class="security-issues__issue__label security-issues__issue__label--primary">{{ issue.severity | capitalize }} risk</span>
                         </div>
-                        <h2 class="security-issues__issue__description">{{ issue.description }}</h2>
-                        
+                        <h2 class="security-issues__issue__description">
+                            {{ issue.description }}
+                            {% if issue.references %}
+                                {% for ref in issue.references %}
+                                    <small><a href="{{ ref.url | escape_once }}"{% if ref.title %} title="{{ ref.title | escape_once }}"{% endif %}>[{{ forloop.index }}]</a></small>
+                                {% endfor %}
+                            {% endif %}
+                        </h2>
+
                         {% if issue.reported_by != null %}
                             <p class="security-issues__issue__reporter">
                                 Reported by
