@@ -54,19 +54,26 @@ if resolved_security_issues_number != 0 or version.resolved_issues_number != 0
         <strong>{{ resolved_security_issues_number }} security {{ vulnerability_inflexed }} addressed{%
         if version.resolved_security_issues %}:{% endif %}</strong>{%
         if version.resolved_security_issues %}<br>
-        <ul>{%
-            for issue in version.resolved_security_issues %}
-            <li>{{ issue.severity | capitalize }} risk: {{ issue.description }}{%
-                if issue.reported_by.name %}{%
-                    assign responsible_disclosure_reports = true
-                    %} &mdash; reported by {{ issue.reported_by.name | markdownify | replace: '<p>', '' | replace: '</p>
-', '' }}{%
-                    if issue.reported_by.affiliation %} of {{ issue.reported_by.affiliation | markdownify | replace: '<p>', '' | replace: '</p>
-', '' }}{%
-                    endif %}{%
-                endif %}</li>{%
-            endfor %}
-        </ul>{%
+            <ul>{%
+                for issue in version.resolved_security_issues %}
+                    <li>{{ issue.severity | capitalize }} risk: {{ issue.description }}{%
+                    assign reported_by = "" %}{%
+                    for reporter in issue.reported_by %}{%
+                        assign responsible_disclosure_reports = true %}{%
+                        assign string = reporter.name | markdownify | replace: '<p>', '' | replace: '</p>', '' %}{%
+                        if reporter.affiliation %}{%
+                            assign string = string | append: reporter.affiliation | markdownify | replace: '<p>', '' | replace: '</p>', '' %}{%
+                        endif %}{%
+                        if reported_by != "" %}{%
+                            assign reported_by = reported_by | append: ', ' %}{%
+                        endif %}{%
+                        assign reported_by = reported_by | append: string | strip %}{%
+                    endfor %}{%
+                    if reported_by
+                        %} &mdash; reported by {{ reported_by }}{%
+                    endif %}</li>{%
+                endfor %}
+            </ul>{%
         endif %}
     </li>{%
 endif %}{%
