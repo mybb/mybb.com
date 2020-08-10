@@ -19,13 +19,16 @@ redirect_from:
                 <p class="latest-version__details__item latest-version__details__item--file-type">.{{ latest_version_first_format.type }}</p>
                 {% if latest_version_first_format.filesize %}<p class="latest-version__details__item latest-version__details__item--file-size">{{ latest_version_first_format.filesize }}</p>{% endif %}
                 <p class="latest-version__details__item latest-version__details__item--date">{{ latest_version.release_date | date: "%b %d, %Y" }}</p>
-                <p class="latest-version__details__item latest-version__details__item--release-type">{{ latest_version_types_amp }} release</p>
             </div>
-            <div class="latest-version__actions">
-                <p class="latest-version__actions__item"><a href="{{ site.baseurl }}/versions/{{ latest_version.version_number }}/" class="latest-version__actions__item__link">{% include icon.html icon='info-circle' %} <span>Release Notes, Upgrading, Verifying</span></a></p>
-                <p class="latest-version__actions__item"><a href="https://docs.mybb.com/1.8/install/requirements/" class="latest-version__actions__item__link">{% include icon.html icon='check-circle' %} <span>Minimum Requirements</span></a>
-                <p class="latest-version__actions__item"><a href="https://docs.mybb.com/1.8/install/" class="latest-version__actions__item__link">{% include icon.html icon='book' %} <span>Installation Guide</span></a></p>
-                <p class="latest-version__actions__item"><a href="https://community.mybb.com/forum-175.html" class="latest-version__actions__item__link">{% include icon.html icon='question-circle' %} <span>Support Forums</span></a>
+            <a href="{{ site.baseurl }}/versions/{{ latest_version.version_number }}/" class="latest-version__read-more"><span>Release Notes, Upgrading, Verifying</span> {% include icon.html icon='arrow-right' %}</a>
+        </div>
+    </section>
+    <section class="download-block support--support support">
+        <div class="wrapper">
+            <div class="support__actions">
+                <p class="support__actions__item"><a href="https://docs.mybb.com/1.8/install/requirements/" class="support__actions__item__link">{% include icon.html icon='check-circle' %} <span>Minimum Requirements</span></a>
+                <p class="support__actions__item"><a href="https://docs.mybb.com/1.8/install/" class="support__actions__item__link">{% include icon.html icon='book' %} <span>Installation Guide</span></a></p>
+                <p class="support__actions__item"><a href="https://community.mybb.com/forum-175.html" class="support__actions__item__link">{% include icon.html icon='question-circle' %} <span>Support Forums</span></a>
             </div>
         </div>
     </section>
