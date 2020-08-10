@@ -214,12 +214,6 @@ section: download
                     {% for issue in page.resolved_security_issues %}
                     <div class="security-issues__issue">
                         <div class="security-issues__issue__labels">
-                            {% if issue.cwe_id %}
-                                <a href="https://cwe.mitre.org/data/definitions/{{ issue.cwe_id | replace: 'CWE-', '' }}.html" title="{{ issue.cwe_name }}{% if issue.cwe_type %}, {{ issue.cwe_type }}{% endif %}"><span class="security-issues__issue__label">{{ issue.cwe_id }}</span></a>
-                            {% endif %}
-                            {% if issue.cvss_score %}
-                                <span class="security-issues__issue__label" title="CVSS score">{{ issue.cvss_score }}</span>
-                            {% endif %}
                             <span class="security-issues__issue__label security-issues__issue__label--primary">{{ issue.severity | capitalize }} risk</span>
                         </div>
                         <h2 class="security-issues__issue__description">
@@ -230,11 +224,23 @@ section: download
                                 {% endfor %}
                             {% endif %}
                         </h2>
-
-                        {% if issue.reported_by != null %}
-                            <p class="security-issues__issue__reporter">
-                                Reported by
-
+                        <p class="security-issues__issue__details">
+                            {% if issue.cwe_id %}
+                                <span class="security-issues__issue__details__item">
+                                    <a class="" href="https://cwe.mitre.org/data/definitions/{{ issue.cwe_id | replace: 'CWE-', '' }}.html" title="{{ issue.cwe_name }}{% if issue.cwe_type %}, {{ issue.cwe_type }}{% endif %}">{{ issue.cwe_id }}</a>
+                                </span>
+                            {% endif %}
+                            {% if issue.cvss_score %}
+                                <span class="security-issues__issue__details__item">
+                                    <code title="CVSS score">{{ issue.cvss_score }}</code>
+                                </span>
+                            {% endif %}
+                            {% if issue.cve_id %}
+                                <span class="security-issues__issue__details__item">
+                                    <span title="CVE ID">{{ issue.cve_id }}</span>
+                                </span>
+                            {% endif %}
+                            {% if issue.reported_by != null %}
                                 {% assign reported_by = "" %}
                                 {% for reporter in issue.reported_by %}
                                     {% assign string = reporter.name | markdownify | replace: '<p>', '' | replace: '</p>', '' %}
@@ -246,9 +252,11 @@ section: download
                                     {% endif %}
                                     {% assign reported_by = reported_by | append: string | strip %}
                                 {% endfor %}
-                                {{ reported_by }}
-                            </p>
-                        {% endif %}
+                                <span class="security-issues__issue__details__item security-issues__issue__reporter">
+                                    Reported by {{ reported_by }}
+                                </span>
+                            {% endif %}
+                        </p>
                     </div>
                     {% endfor %}
                 </div>

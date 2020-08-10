@@ -12,9 +12,8 @@ description: Here you will find documented security issues addressed in past MyB
             <tr>
                 <th>Version Addressed</th>
                 <th>Severity</th>
-                <th>CWE-ID</th>
-                <th>CVSS Score, Description</th>
-                <th>Reported By</th>
+                <th>Description, References, Classification</th>
+                <th style="width: 20%;">Reported By</th>
             </tr>
         </thead>
         <tbody>
@@ -34,20 +33,31 @@ description: Here you will find documented security issues addressed in past MyB
                             {{ issue.severity | capitalize }}
                         </td>
                         <td>
-                            {% if issue.cwe_id %}
-                                <a href="https://cwe.mitre.org/data/definitions/{{ issue.cwe_id | replace: 'CWE-', '' }}.html" title="{{ issue.cwe_name }}{% if issue.cwe_type %}, {{ issue.cwe_type }}{% endif %}" class="nowrap">{{ issue.cwe_id }}</a>
-                            {% endif %}
-                        </td>
-                        <td>
-                            {% if issue.cvss_score %}
-                                <span title="CVSS score">{{ issue.cvss_score }}</span> &middot;
-                            {% endif %}
                             {{ issue.description }}
                             {% if issue.references %}
                                 {% for ref in issue.references %}
                                     <small><a href="{{ ref.url | escape_once }}"{% if ref.title %} title="{{ ref.title | escape_once }}"{% endif %}>[{{ forloop.index }}]</a></small>
                                 {% endfor %}
                             {% endif %}
+                            <p class="security-issues__issue__details">
+                                <small>
+                                    {% if issue.cwe_id %}
+                                        <span class="security-issues__issue__details__item">
+                                            <a href="https://cwe.mitre.org/data/definitions/{{ issue.cwe_id | replace: 'CWE-', '' }}.html" title="{{ issue.cwe_name }}{% if issue.cwe_type %}, {{ issue.cwe_type }}{% endif %}" class="nowrap">{{ issue.cwe_id }}</a>
+                                        </span>
+                                    {% endif %}
+                                    {% if issue.cvss_score %}
+                                        <span class="security-issues__issue__details__item">
+                                            <code title="CVSS score">{{ issue.cvss_score }}</code>
+                                        </span>
+                                    {% endif %}
+                                    {% if issue.cve_id %}
+                                        <span class="security-issues__issue__details__item">
+                                            <span title="CVE ID">{{ issue.cve_id }}</span>
+                                        </span>
+                                    {% endif %}
+                                </small>
+                            </p>
                         </td>
                         <td>
                             {% if issue.reported_by != null %}
@@ -62,7 +72,7 @@ description: Here you will find documented security issues addressed in past MyB
                                         {% endif %}
                                         {% assign reported_by = reported_by | append: string | strip %}
                                     {% endfor %}
-                                    {{ reported_by }}
+                                    <small>{{ reported_by }}</small>
                             {% endif %}
                         </td>
                     </tr>
