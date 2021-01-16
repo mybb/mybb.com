@@ -112,6 +112,7 @@
 - username: "kawaii"
   uid: 90781
   name: "Kane Valentine"
+  locale: "EU"
   github: "kawaii"
   twitter: "kane_sql"
   keybase: "kawaii"
