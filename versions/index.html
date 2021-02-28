@@ -8,35 +8,35 @@ description: Here you will find a description of the MyBB versioning scheme and 
 
     <div class="page-sidebar">
         <section class="block">
-            <h1 class="block__heading">Version system</h1>
-            <p>Starting with MyBB 1.2.0, MyBB uses a 3-number versioning system, x.y.z, where x is the major version number, y is the minor version number, and z is the maintenance and/or security patch release number.</p>
-            <p>The major version number is incremented when there is a major change in MyBB, such as a rewrite of the core.</p>
-            <p>The minor version number indicates one of two things. Even numbers (i.e. 2, 4, 6, etc) indicate public releases. Odd numbers (i.e. 3, 5, 7, etc) indicate a development version.</p>
-            <p>The maintenance/security patch version is incremented every time a security or maintenance update is released. These patches usually will not contain new features, but are usually crucial to the security or functionality of your forum.</p>
+            <h1 class="block__heading">Versioning System</h1>
+            <p>MyBB uses a 3-number versioning system, <code>MAJOR.MINOR.PATCH</code>.</p>
+            <p>The first &mdash; <i>major</i> &mdash; number is incremented when there is a significant change in MyBB's features, behavior, and compatibility.</p>
+            <p>The second &mdash; <i>minor</i> &mdash; number indicates new features and potential breaking changes for extensions.</p>
+            <p>The third &mdash; <i>patch</i> &mdash; number is incremented every time a security or maintenance update is released. These releases usually will not contain new features, but can be crucial to the security and stability of your forum.</p>
+            <hr>
             <p>Whatever the version number is, MyBB always urges users to upgrade to the latest version for the highest security of MyBB installations. Even minor patches that seem insignificant could protect from potentially critical security vulnerabilities.</p>
         </section>
         <section class="block">
-            <h1 class="block__heading">Release cycle</h1>
-            <h2 class="block__section__title">Major releases</h2>
-            <p>Major releases increment the major or minor version number (see version system above). Usually these will have new features and changes to the database schema, and therefore may break existing forum customizations, such as themes and plugins. Major releases may also contain security vulnerability patches and bug fixes.
-            <p>Major releases usually end with a 0 (zero) in the version number (eg. x.y.0 or x.0.0) and usually mark the start of a new <em>series</em>.</p>
-            <p>MyBB's major releases to date include 1.00, 1.2.0, 1.4.0, 1.6.0, and 1.8.0.</p>
-            <h2 class="block__section__title">Minor releases</h2>
-            <p>Minor releases are produced as necessary in between major releases. They fall into two categories, but may be combined in a release. Customizations (plugins, themes, etc.) generally are compatible across releases in one series.</p>
-            <h3 class="block__section__subtitle">Security Vulnerability Patches</h3>
-            <p>These are released as often as necessary to fix any known security holes. Upgrading should be completed as soon as possible, or forum security could be compromised.</p>
-            <h3 class="block__section__subtitle">Maintenance (Bug Fix) Releases</h3>
-            <p>These releases fix bugs and small errors in MyBB. Upgrading is not as immediately necessary with simple maintenance releases as it is with security vulnerability patches, but it is recommended and encouraged to upgrade as soon as it is convenient.</p>
+            <h1 class="block__heading">Release Cycle</h1>
+
+            <h3 class="block__section__title">Series Releases</h3>
+            <p>New series increment the <i>major</i> or <i>minor</i> version number. Usually these will have new features and changes to the database schema, and therefore may break existing forum customizations, such as themes and plugins. They may also contain security vulnerability patches and bug fixes.
+            <p>In the past, they were called <i>major releases</i>, and odd minor numbers indicated development-only releases.</p>
+
+            <h3 class="block__section__title">Patch Releases</h3>
+            <p>The most common <i>patch</i> releases introduce small enhancements, and are produced in response to bug reports and security problems. Customizations (plugins, themes, etc.) generally are compatible across releases within given series.</p>
+            <p>Security Releases appear to fix any known security holes. Upgrading should be completed as soon as possible, otherwise forum security could be compromised.</p>
+            <p>Maintenance Releases fix bugs and contain other stability or performance improvements. Upgrading is not as immediately necessary with simple maintenance releases as it is with security releases, but it is recommended and encouraged to upgrade as soon as it is convenient.</p>
         </section>
         <section class="block">
             <h1 class="block__heading">Release Insights</h1>
             <p>Compare the development cycle length and resolved issue numbers in MyBB releases.
-			<p class="block__action"><a href="{{ site.baseurl }}/versions/insights/" class="button button--secondary">{% include icon.html icon='chart-bar' %}Release Insights</a></p>
+            <p class="block__action"><a href="{{ site.baseurl }}/versions/insights/" class="button button--secondary">{% include icon.html icon='chart-bar' %}Release Insights</a></p>
         </section>
         <section class="block">
             <h1 class="block__heading">Resolved Security Issues</h1>
             <p>View a list of vulnerabilities addressed in the past.
-			<p class="block__action"><a href="{{ site.baseurl }}/versions/security-issues/" class="button button--secondary">{% include icon.html icon='chart-bar' %}Resolved Security Issues</a></p>
+            <p class="block__action"><a href="{{ site.baseurl }}/versions/security-issues/" class="button button--secondary">{% include icon.html icon='chart-bar' %}Resolved Security Issues</a></p>
         </section>
     </div>
     <div class="page-content page-content--sidebar">
@@ -73,7 +73,7 @@ description: Here you will find a description of the MyBB versioning scheme and 
         <section class="block">
             <div class="version-list-eol-note">
                 {% include icon.html icon='exclamation-triangle' %}
-                <p><strong>Versions prior to MyBB 1.8.0 are no longer supported.</strong></p>
+                <p><strong>Series prior to MyBB 1.8.x are no longer supported</strong></p>
                 {% if eol.text %}
                     <p>{{ eol.text | markdownify }}</p>
                 {% endif %}
