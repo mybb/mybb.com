@@ -69,7 +69,7 @@ if resolved_security_issues_number != 0 or version.resolved_issues_number != 0
                         endif %}{%
                         assign reported_by = reported_by | append: string | strip %}{%
                     endfor %}{%
-                    if reported_by
+                    if reported_by != ""
                         %} &mdash; reported by {{ reported_by }}{%
                     endif %}</li>{%
                 endfor %}

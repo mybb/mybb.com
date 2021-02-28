@@ -13,9 +13,7 @@ locations:
     short_name: mybb-resources
     url: https://resources.mybb.com/downloads/{TYPE}_{VERSION_CODE}.{FORMAT}
     title: MyBB.com
-    icon: download
   - name: github.com/mybb/mybb/releases/
     short_name: github
     url: https://github.com/mybb/mybb/releases/download/mybb_{VERSION_CODE}/{TYPE}_{VERSION_CODE}.{FORMAT}
-    title: GitHub
-    icon: github
+    title: GitHub.com

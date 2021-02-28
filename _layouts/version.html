@@ -44,11 +44,11 @@ section: download
             {% endif %}
         </div>
         <div class="release-notes__details">
-            {% if page.version_code %}
-                <p class="release-notes__details__code">code {{ page.version_code }}</p>
-            {% endif %}
             {% if typesAppended.size != 0 %}
                 <p class="release-notes__details__types">{{ typesHtml }}</p>
+            {% endif %}
+            {% if page.version_code %}
+                <p class="release-notes__details__code">code {{ page.version_code }}</p>
             {% endif %}
 
             {% assign versionSeries = page.version_number | split: '.' %}
@@ -135,19 +135,33 @@ section: download
                                     {% assign url = location_data.url | replace: '{TYPE}', type_data.name | replace: '{VERSION_CODE}', page.version_code | replace: '{FORMAT}', format.type %}
 
                                     <a href="{{ url }}" class="button download-packages__location download-packages__location--{{ location_data.short_name }} download-packages__location--{{ type_data.name }}">
-                                        {% include icon.html icon=location_data.icon %} Download from <strong>{{ location_data.title }}</strong>
+                                        {% include icon.html icon='download' %} Download from <strong>{{ location_data.title }}</strong>
+                                        {% if forloop.first == false %}(mirror){% endif %}
                                     </a>
                                 {% endfor %}
 
                                 {% if format.checksums %}
                                 <div class="download-packages__checksums">
                                     {% assign checksums = format.checksums | sort: 'type' | reverse %}
-                                    {% for checksum in checksums %}
+
+                                    {% for checksum in checksums offset:0 limit:1 %}
                                         <div class="download-packages__checksums_checksum">
                                             <p class="download-packages__checksums__type">{{ checksum.type }}:</p>
                                             <p class="download-packages__checksums__value">{{ checksum.value }}</p>
                                         </div>
                                     {% endfor %}
+
+                                    {% if format.checksums.size > 1 %}
+                                        <details data-common-toggle="checksums">
+                                            <summary>More checksums…</summary>
+                                            {% for checksum in checksums offset:1 %}
+                                                <div class="download-packages__checksums_checksum">
+                                                    <p class="download-packages__checksums__type">{{ checksum.type }}:</p>
+                                                    <p class="download-packages__checksums__value">{{ checksum.value }}</p>
+                                                </div>
+                                            {% endfor %}
+                                        </details>
+                                    {% endif %}
                                 </div>
                                 {% endif %}
 
@@ -174,33 +188,37 @@ section: download
     {% if page.upgrade_script_required or page.version_number contains '1.8.' or page.comment %}
     <div class="package-notes">
         <div class="wrapper">
-            <h2 class="package-notes__title">Important Notes</h2>
-            {% if page.upgrade_script_required %}
-                <div class="package-notes__note package-notes__note--important">
-                    {% include icon.html icon='cogs' %}
-                    <p>Running the <strong>upgrade script</strong> is required.</p>
-                </div>
-            {% else %}
-                <div class="package-notes__note package-notes__note--important">
-                    {% include icon.html icon='cogs' %}
-                    <p>The upgrade script does <strong>not</strong> need to be run when upgrading to this release with the Changed Files package.</p>
-                </div>
-            {% endif %}
-
-            {% if page.version_number contains '1.8.' %}
-            <div class="package-notes__note">
-                {% include icon.html icon='arrow-up' %}
-                <p>Before performing any upgrade please remember to backup your forum’s files and database and store them safely. If you have edited core files, including language files, please make sure you make a changelog for these changes so you can make them again (if necessary) once the upgrade is complete.</p>
-                <p>Follow the <a href="https://docs.mybb.com/1.8/install/upgrade/">Upgrade Documentation</a> for more detailed instructions.</p>
-            </div>
-            {% endif %}
-
             {% if page.comment %}
                 <div class="package-notes__note package-notes__note--comment">
                     {% include icon.html icon='quote-left' %}
                     {{ page.comment | markdownify }}
                 </div>
             {% endif %}
+
+            <h2 class="package-notes__title">Upgrading to this Version</h2>
+            {% if page.upgrade_script_required != nil %}
+                {% if page.upgrade_script_required %}
+                    <div class="package-notes__note package-notes__note--important">
+                        {% include icon.html icon='cogs' %}
+                        <p>To upgrade: copy and overwrite the files, and run the <code>install/</code> <strong>upgrade script</strong>.</p>
+                    </div>
+                {% else %}
+                    <div class="package-notes__note package-notes__note">
+                        {% include icon.html icon='copy' %}
+                        <p>To upgrade from the previous version: copy and overwrite files from the <strong>Changed Files</strong> package.</p>
+                    </div>
+                {% endif %}
+            {% endif %}
+
+            {% if page.version_number contains '1.8.' %}
+            <div class="package-notes__note">
+                {% include icon.html icon='history' %}
+                <p>Before performing any upgrade, remember to <strong>backup</strong> your forum’s files and database and store them safely.</p>
+                <p>If you have edited core files, including language files, please make sure you make a changelog for these changes so you can make them again (if necessary) once the upgrade is complete.</p>
+            </div>
+            {% endif %}
+
+            <p>Follow the <a href="https://docs.mybb.com/1.8/install/upgrade/">Upgrade Documentation</a> for more detailed instructions.</p>
         </div>
     </div>
     {% endif %}
