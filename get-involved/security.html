@@ -18,10 +18,11 @@ redirect_from:
 			<ul class="sidebar__nav__links">
 				<li class="sidebar__nav__links__item"><a href="https://docs.mybb.com/1.8/administration/security/protection/" class="sidebar__nav__links__item__link">MyBB Security Guide</a>
 					<li class="sidebar__nav__links__item"><a href="https://docs.mybb.com/1.8/administration/security/recovery/" class="sidebar__nav__links__item__link">Security Incident Response & Recovery</a>
+						<li class="sidebar__nav__links__item"><a href="{{ site.baseurl }}/download/verifying/" class="sidebar__nav__links__item__link">Verifying Releases</a>
 					<li class="sidebar__nav__links__item"><a href="https://github.com/mybb/mybb/blob/feature/.github/SECURITY.md" class="sidebar__nav__links__item__link">SECURITY.md</a>
-					<li class="sidebar__nav__links__item"><a href="{{ site.baseurl }}/download/verifying/" class="sidebar__nav__links__item__link">Verifying Releases</a>
-					<li class="sidebar__nav__links__item"><a href="https://docs.mybb.com/1.8/development/security-workflow/" class="sidebar__nav__links__item__link">Security Workflow</a>
+					<li class="sidebar__nav__links__item"><a href="https://github.com/mybb/mybb/security/advisories?state=published" class="sidebar__nav__links__item__link">Security Advisories</a>
 					<li class="sidebar__nav__links__item"><a href="{{ site.baseurl }}/versions/security-issues/" class="sidebar__nav__links__item__link">Resolved Security Issues</a>
+					<li class="sidebar__nav__links__item"><a href="https://docs.mybb.com/1.8/development/security-workflow/" class="sidebar__nav__links__item__link">Security Workflow</a>
 				<li class="sidebar__nav__links__item"><a href="https://twitter.com/mybbsecurity" class="sidebar__nav__links__item__link">MyBB Security on Twitter</a>
 			</ul>
 		</nav>
@@ -45,17 +46,22 @@ redirect_from:
 				<p class="block__heading__subtitle">An insight into the program</p>
 			</header>
 {% capture markdown %}
-At MyBB, maintaining secure software is one of our strategic priorities. Both ourselves and our users need to trust that the software they're using is secure and will remain secure throughout the years. We've encountered vulnerabilities which have been disclosed to us by members of the Community or external researchers, and encountered some which have been spread around the web. The latter is something we want to avoid to protect our users by delivering updates that eliminate security risks before they are used to cause harm.
+At MyBB, maintaining secure software is one of our strategic priorities. We and our users need to trust that our software is secure, and will remain secure throughout the years. To stay ahead of potential threats, we conduct in-house audits, coordinate closely with external researchers, and promote security resources and insights, before any problems can be used to cause harm.
 
-We cooperate with security contributors on triage, resolution, analysis, and public disclosure.
+We cooperate with security contributors on triage, resolution, analysis, public disclosure, and promotion of relevant publications.
 
-Confirmed vulnerability reports are recognized in the Release Notes of corresponding releases, the [Resolved Security Issues list]({{ site.baseurl }}/versions/security-issues/), as well as associated Release Blog Posts.
+With consent, authors of confirmed vulnerability reports are credited publicly in:
+ - the Release Notes of corresponding releases,
+ - the Release <a href="https://blog.mybb.com/">Blog</a> Posts of corresponding releases,
+ - the [Resolved Security Issues list]({{ site.baseurl }}/versions/security-issues/)
+
+with an optional company/group affiliation, and links to own websites dedicated to security research.
 
 The scope of Security Research recognition currently includes:
 - [MyBB 1.8.x releases](https://mybb.com/versions/),
 - [MyBB 1.8.x pre-release codebase](https://github.com/mybb/mybb/tree/feature).
 
-In case of vulnerabilities affecting themes or plugins, we additionally recommend contacting and cooperating with their authors privately in similar fashion.
+In the case of vulnerabilities affecting themes or plugins, we additionally recommend contacting, and cooperating with, their authors privately in similar fashion.
 {% endcapture %}
 {{ markdown | markdownify }}
 		</div>
@@ -70,15 +76,15 @@ In case of vulnerabilities affecting themes or plugins, we additionally recommen
 {% capture markdown %}
 **If you have discovered a potential vulnerability or security risk, we encourage you to responsibly disclose it to us via the [Private Inquiries](https://community.mybb.com/forum-135.html) forum.**
 
-Do not use the form if you notice your browser displays HTTPS warnings, or anything otherwise suspicious happens. You can optionally encrypt your message using public keys of at least 3 _role leaders_, available at <https://mybb.com/about/team/>.
-
 You can also reach us at <security@mybb.com> for security concerns, however we recommend using Private Inquiries for best feedback.
+
+You can optionally encrypt your message using public keys of at least 3 _role leaders_, available at <https://mybb.com/about/team/>.
 
 ### Coordination
 
-In order to minimize threats to privacy, safety and security of installations, their administrators and users, we urge you to not disclose any information related to your report to parties other than the MyBB Team through official communication channels until an official solution is published. The Private Inquiries section is monitored daily &mdash; avoid notifying or reminding the Team members in publicly accessible channels.
+In order to minimize threats to privacy, safety and security of installations, their administrators and users, we urge you to not disclose any information related to your report to parties other than the MyBB Team through official communication channels until an official solution is published. The Private Inquiries section is monitored daily &mdash; avoid notifications in publicly accessible channels.
 
-You should not test, demonstrate or exploit the vulnerability on any active MyBB installations not created to test such vulnerabilities nor the MyBB Project infrastructure or its resources (we recommend using a local copy).
+You should not test, demonstrate or exploit the vulnerability on any active MyBB installations not created to test such vulnerabilities nor the MyBB Project infrastructure or its resources &mdash; we recommend using a local copy.
 
 ### Composing a Good Report
 
@@ -104,9 +110,11 @@ You can refer to the MyBB codebase using the repository &mdash; for example, you
 https://github.com/mybb/mybb/blob/mybb_1817/inc/class_session.php#L13-L16
 ```
 
-More information will likely reduce the estimated resolution time. Please remain available for contact in case more information is needed. The Private Inquiries thread will be used for feedback related to your submission by the MyBB Team.
+More information will likely reduce the estimated resolution time.
 
-Additionally, you can include your name, company/group affiliation and personal website (if applicable) that may be used for disclosure attribution in Release Notes and the Release Blog Post.
+Please remain available for contact in case more information is needed. The Private Inquiries thread will be used for feedback related to your submission by the MyBB Team.
+
+Additionally, if you wish to be recognized publicly, please include your name, company/group affiliation, and links to personal/organization websites dedicated to security research (if applicable).
 {% endcapture %}
 {{ markdown | markdownify }}
 		</div>
@@ -122,15 +130,14 @@ Additionally, you can include your name, company/group affiliation and personal 
 Attribution is applicable to persons/entities who, having discovered security issues, follow the disclosure process satisfying the following criteria:
 - the software in question is limited to the MyBB forum software (vulnerabilities within third party extensions do not count),
 - the vulnerability is technical (techniques such as social engineering or phishing do not count),
-- the vulnerability affects confidentiality, integrity or availability of the software directly (disclosure of operational information included in PHP or SQL errors, spam attacks, or bypassing CAPTCHAs do not count),
+- the vulnerability affects confidentiality, integrity or availability of the software directly (disclosure of operational information included in PHP or SQL errors, spam attacks, bypassing CAPTCHAs, etc. do not count),
 - the vulnerability is present in the latest stable release or reviewed, pre-release codebase of a supported software branch (vulnerabilities within development releases or older versions do not count),
-- no MyBB installations are tested or exploited without explicit permission of their owners,
-- no part of the MyBB Project infrastructure or resources (including the Community Forums) is exploited,
+- no live installations, infrastructure, or resources are tested or exploited without explicit permission of their owners (including the MyBB Project and the Community Forums),
 - no details regarding the vulnerability are published before it has been addressed.
 
 While simultaneous discoveries are evaluated on a case-by-case basis, attribution may apply to the first reporter only.
 
-If you are not sure whether you are eligible &mdash; contact us: depending on circumstances, exceptions are possible.
+If you are not sure whether you are eligible: contact us &mdash; depending on circumstances, exceptions are possible.
 
 Even if you do not meet the requirements to be eligible for bragging rights or have information that don't directly translate to vulnerabilities (such as suspicion of security breaches or exploitation of MyBB boards in the wild), do not hesitate to reach us &mdash; the MyBB Team is in the best position to coordinate efforts to improve the security of our ecosystem.
 {% endcapture %}
@@ -158,10 +165,10 @@ As a vulnerability reporter or external security researcher, you will likely rec
 3. #### Technical Assessment
    Following internal analysis, the Team will inform you whether your submission is confirmed, invalid, or no fix is expected.
 
-   In case of rejection, we recommend delaying public disclosure (if applicable) by at least 7 days to mitigate risk of mistaken and malicious responses. If necessary, you can attempt to reach individual Team members personally via details provided at <https://mybb.com/about/team/>.
+   In the case of rejection, we recommend delaying public disclosure (if applicable) by at least 7 days to mitigate risk of mistaken responses. If necessary, you can attempt to reach individual Team members personally via details provided at <https://mybb.com/about/team/>.
 
 4. #### Consultation
-   Team members might ask for additional details related to the report or disclosure process. During and after the solution development the patch details may be forwarded to you to verify that all vulnerabilities will be properly addressed in the upcoming solution.
+   You may be asked for additional details related to the report or disclosure process. During and after the solution development, the patch details may be forwarded to you to verify that all vulnerabilities will be properly addressed in the upcoming solution.
 
 5. #### Remediation
    You will be notified once the software version addressing the issue is released.
@@ -170,8 +177,6 @@ As a vulnerability reporter or external security researcher, you will likely rec
    MyBB aims to promote security research and increase security awareness. If you have published &mdash; or intend to publish &mdash; an analysis, article or summary after all issues have been resolved, we encourage you to point us to these resources.
 
    We recommend delaying the publication by at least 14 days starting from the day the solutions were officially published to give administrators time to update their installations before exploitation techniques are widely known.
-
-   As MyBB currently does not automatically request CVE numbers for vulnerabilities, researchers can request them individually from appropriate [Numbering Authorities](https://cve.mitre.org/cve/request_id.html).
 
 You can learn how MyBB handles vulnerability reports internally from the [Security Workflow](https://docs.mybb.com/1.8/development/security-workflow/).
 {% endcapture %}
