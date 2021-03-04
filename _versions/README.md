@@ -2,7 +2,8 @@
 
 ## YML version data files
 
-Each version has a corresponding `.md` file with the standard `title` tag and version metadata included in Jekyll's Front Matter in the YML format.
+Each version has a corresponding `.md` file with the standard `title` tag and version metadata included in [Jekyll's Front Matter](https://jekyllrb.com/docs/front-matter/) in the YML format.
+
 Optional page body is appended at the end of the information generated based on provided data.
 
 ### Basic variables
@@ -22,7 +23,6 @@ Optional page body is appended at the end of the information generated based on 
 | `upgrade_script_required`         | `true` / `false`                         |
 | `resolved_issues_number`          | number of resolved issues                |
 | `resolved_issues_link`            | link to resolved issues list             |
-| `resolved_security_issues_number` | number of resolved security issues; inferred from the `resolved_security_issues` list if omitted |
 | `changed_language_files_number`   | number of changed language files         |
 | `comment`                         | a human-friendly summary                 |
 
@@ -30,6 +30,7 @@ Optional page body is appended at the end of the information generated based on 
 
 | Variable name      | Notes                                    |
 | ------------------ | ---------------------------------------- |
+| `resolved_security_issues_number` | number of resolved security issues; inferred from the `resolved_security_issues` list if omitted |
 | `type_maintenance` | whether a release resolves issues; `true` / `false`; inferred  from `resolved_issues_number` if omitted |
 | `type_security`    | whether a release resolved security issues; `true` / `false`; inferred  from `resolved_security_issues_number` if omitted |
 | `type`             | string which `feature`, `maintenance`, and `security` types can be inferred from (legacy) |
@@ -64,9 +65,24 @@ Lists resolved security issues.
 
   `severity`: issue severity,
 
+  `cve_id`: CVE ID,
+
+  `cwe_id`: CWE ID,
+
+  `cwe_name`: CWE name,
+
+  `cwe_type`: CWE type name,
+
+  `cvss_score`: CVSS Vector String,
+
   `reported_by`:
     - - `name`: The reporter name (Markdown links allowed),
       - `affiliation`: The organization, group, company or other association of the reporter (Markdown links allowed).
+
+  `references`:
+    - - `url`: Link to the resource,
+      - `title`: Resource title,
+      - `type`: Type identifier (e.g. `advisory`, `analysis`).
 
 
 #### `notable_contributions`
@@ -98,8 +114,6 @@ List of package types.
   `title`: display name,
 
   `description`: description,
-
-  `icon`: icon variable.
 
 
 #### `locations`
