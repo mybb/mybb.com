@@ -29,7 +29,7 @@
         {% assign type = typesCsv | strip | replace: ' ', ', ' %}
     {% endif %}
 {% endcapture %}
-MyBB {{ version.version_number }} Released &mdash; {{ type | replace: ', ', ' &amp; ' }} Release
+MyBB {{ version.version_number }} Released — {{ type | replace: ', ', ' &amp; ' }} Release
 ----
 
 
@@ -57,12 +57,18 @@ if resolved_security_issues_number != 0 or version.resolved_issues_number != 0
             <ul>{%
                 for issue in version.resolved_security_issues %}
                     <li>{{ issue.severity | capitalize }} risk: {{ issue.description }}{%
+                    for reference in issue.references %}{%
+                        if reference.type == 'advisory'
+                            %} (<a href="{{ reference.url }}">advisory</a>){%
+                        endif %}{%
+                    endfor %}{%
+
                     assign reported_by = "" %}{%
                     for reporter in issue.reported_by %}{%
                         assign responsible_disclosure_reports = true %}{%
-                        assign string = reporter.name | markdownify | replace: '<p>', '' | replace: '</p>', '' %}{%
+                        assign string = reporter.name | markdownify | replace: '<p>', '' | replace: '</p>', '' | strip_newlines %}{%
                         if reporter.affiliation %}{%
-                            assign string = string | append: reporter.affiliation | markdownify | replace: '<p>', '' | replace: '</p>', '' %}{%
+                            assign string = string | append: ' (' | append: reporter.affiliation | append: ')' | markdownify | replace: '<p>', '' | replace: '</p>', '' | strip_newlines %}{%
                         endif %}{%
                         if reported_by != "" %}{%
                             assign reported_by = reported_by | append: ', ' %}{%
