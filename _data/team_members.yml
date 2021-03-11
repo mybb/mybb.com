@@ -68,7 +68,8 @@
   pgp_link: "https://keybase.io/mattrogowski/key.asc"
   role_memberships:
     standard:
-    - Development
+    - Community
+    - Support
 
 - username: "JordanMussi"
   uid: 51459
