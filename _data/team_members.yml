@@ -70,16 +70,6 @@
     standard:
     - Development
 
-- username: "Wildcard"
-  uid: 55383
-  name: "Mark Vincent"
-  github: "WildcardSearch"
-  website: "http://www.rantcentralforums.com"
-  role_memberships:
-    standard:
-    - Development
-    - Support
-
 - username: "JordanMussi"
   uid: 51459
   name: "Jordan Mussi"
