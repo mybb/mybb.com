@@ -1,7 +1,7 @@
-- name: "Management"
-  code: "MAN"
+- name: "Founder"
+  code: "FOU"
   color: "#008a00"
-  description: "The Management group supervises legal aspects of the MyBB Project."
+  description: "The Founder group supervises legal aspects of the MyBB Project and provides basic funding."
 
 - name: "Development"
   code: "DEV"
