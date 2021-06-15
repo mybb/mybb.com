@@ -15,7 +15,7 @@
         {% if version.type_feature == true %}
             {% assign typesCsv = typesCsv | append: ' Feature' %}
         {% endif %}
-        {% if resolved_security_issues_number %}
+        {% if resolved_security_issues_number != 0 %}
             {% if version.type_security != false or version.type_security == true %}
                 {% assign typesCsv = typesCsv | append: ' Security' %}
             {% endif %}
