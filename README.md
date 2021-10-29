@@ -2,14 +2,15 @@
 
 The source of the [**MyBB.com**](https://mybb.com) website.
 
-Hosted on [GitHub Pages](https://pages.github.com/) using the [Jekyll](https://jekyllrb.com/) server, [Markdown](https://daringfireball.net/projects/markdown/) formatting, [Liquid](https://shopify.github.io/liquid/) templates, and YAML data format.
+Hosted on [GitHub Pages](https://pages.github.com/) using the [Jekyll](https://jekyllrb.com/) site generator, [Markdown](https://daringfireball.net/projects/markdown/) formatting, [Liquid](https://shopify.github.io/liquid/) templates, and YAML data format.
 
 Some assets are pulled from the [`mybb-website-theme`](https://github.com/mybb/mybb-website-theme/).
 
 ## Development
 
-Download the repository content and use [Docker](https://www.docker.com/get-started) to serve the website from local source. Make sure to allow Docker to access the directory using _File sharing_ and run:
-```sh
+Clone the repository and install [Docker](https://www.docker.com/get-started) to serve the website from local source. Make sure to allow Docker to access the directory using _File sharing_ and run:
+
+```bash
 $ docker run -it --rm -p "4000:4000" -v "${PWD}:/usr/src/app" mybb/jekyll-docker
 ```
 
@@ -17,7 +18,8 @@ This will create a container from a [customized Jekyll image](https://github.com
 
 ### Using Local Theme
 To additionally preview changes made to [`mybb-website-theme`](https://github.com/mybb/mybb-website-theme/) in a sibling directory `../mybb-website-theme/`), run instead:
-```sh
+
+```bash
 $ docker run -it --rm -p "4000:4000" -v "${PWD}:/usr/src/app" -v "${PWD}/../mybb-website-theme:/usr/src/app/_themes/theme" mybb/jekyll-docker
 ```
 
