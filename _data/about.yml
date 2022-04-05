@@ -1,6 +1,9 @@
 - url: about
   title: About MyBB
   icon: info-circle
+- url: about/credits
+  title: Credits & Contributions
+  icon: award
 - url: about/team
   title: About the Team
   icon: users

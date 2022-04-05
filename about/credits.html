@@ -1,0 +1,83 @@
+---
+layout: default
+section: home
+
+title: Credits & Contributions
+description: Get to know the people that operate, contribute to, and support the MyBB Project and software.
+
+redirect_from:
+- /credits
+---
+
+<aside class="page-sidebar">
+	{% include section_nav.html section='about' %}
+</aside>
+
+<div class="page-content page-content--sidebar">
+	<div class="block block--symbol">
+		<div class="block__icon">{% include icon.html icon='users' %}</div>
+		<div class="block__content">
+			<header class="block__heading">
+				<h3 class="block__heading__title">MyBB Team</h3>
+			</header>
+			<p>Long-term volunteers involved in the Project's organization and management form the MyBB Team.
+			<p><a href="{{ site.baseurl }}/about/team/"><strong>About the Team &rarr;</strong></a>
+		</div>
+	</div>
+
+	<div class="block block--symbol">
+		<div class="block__icon">{% include icon.html icon='code-pull-request' %}</div>
+		<div class="block__content">
+			<header class="block__heading">
+				<h3 class="block__heading__title">Contributors</h3>
+			</header>
+			As open-source software, MyBB accepts external changes and improvements to its code and documentation in <a href="https://github.com/mybb">public repositories</a>.
+				
+			<p><a href="https://github.com/mybb/mybb/graphs/contributors"><strong>Core package contributors on GitHub &rarr;</strong></a>
+		</div>
+	</div>
+
+	<div class="block block--symbol">
+		<div class="block__icon">{% include icon.html icon='shield-alt' %}</div>
+		<div class="block__content">
+			<header class="block__heading">
+				<h3 class="block__heading__title">Security Reporters</h3>
+			</header>
+			<p>MyBB operates a <a href="https://mybb.com/get-involved/security/">Security Research</a> program to respond to discovered security problems, and credits authors of valid reports.
+			
+			<p><a href="{{ site.baseurl }}/versions/security-issues/"><strong>Resolved Security Issues &rarr;</strong></a>
+
+			<hr>
+
+			<h3 id="security-additional-credits">Additional Credits</h3>
+			<table class="standard-table">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Date</th>
+						<th>Summary</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Chirag Ketan Prajapati</td>
+						<td>2022-04-03</td>
+						<td>Extend platform security issue</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<div class="block block--symbol">
+		<div class="block__icon">{% include icon.html icon='dollar-sign' %}</div>
+		<div class="block__content">
+			<header class="block__heading">
+				<h3 class="block__heading__title">Donors</h3>
+			</header>
+			<p>The Project's expenses are partially covered by donations.
+				
+			<p><a href="https://opencollective.com/mybb#backer"><strong>Backers on OpenCollective &rarr;</strong></a>
+		</div>
+	</div>
+</div>
