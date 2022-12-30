@@ -166,10 +166,3 @@
   role_memberships:
     standard:
     - Development
-    
-- username: "Laird"
-  uid: 116662
-  github: "lairdshaw"
-  role_memberships:
-    standard:
-    - Development
