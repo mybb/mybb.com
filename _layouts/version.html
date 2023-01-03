@@ -264,7 +264,7 @@ section: download
                                 {% for reporter in issue.reported_by %}
                                     {% assign string = reporter.name | markdownify | replace: '<p>', '' | replace: '</p>', '' %}
                                     {% if reporter.affiliation %}
-                                        {% assign string = string | append: '<span class="security-issues__issue__reporter__affiliation">' | append: reporter.affiliation | markdownify | replace: '<p>', '' | replace: '</p>', '' | append: '</span>' %}
+                                        {% assign string = string | append: '<span class="security-issues__issue__reporter__affiliation">' | append: reporter.affiliation | markdownify | replace: '<p>', '' | replace: '</p>', '' %}
                                     {% endif %}
                                     {% if reported_by != "" %}
                                         {% assign reported_by = reported_by | append: ', ' %}
