@@ -1,44 +1,240 @@
+#- name: "Management"
 - name: "Founder"
+#  code: "MAN"
   code: "FOU"
-  color: "#008a00"
-  description: "The Founder group supervises legal aspects of the MyBB Project and provides basic funding."
-
-- name: "Development"
-  code: "DEV"
-  color: "#d23b67"
-  description: "The Development group is formed by core contibutors to MyBB codebase and maintains the development discussion and suggestions."
-
-- name: "Design"
-  code: "DES"
-  color: "#657d08"
-  description: "The Design group is comprised of developers contributing to visual aspects of the software and its user experience practices."
-
-- name: "Security"
-  code: "SEC"
-  color: "#927878"
-  description: "The Security group includes members responsible for triage and response to vulnerability reports, secure development practices and cooperation with security researchers."
-
-- name: "Devops"
-  code: "OPS"
-  color: "#8967de"
-  description: "The Devops group is responsible for maintenance of development tools, repositories and release processes of MyBB Project's software."
-
-- name: "Support"
-  code: "SUP"
-  color: "#f35858"
-  description: "The Support group organizes and provides support for the MyBB core on the Community Forums and chat platforms."
-
-- name: "Community"
-  code: "COM"
-  color: "#2bb7c7"
-  description: "The Community group oversees the communication and cooperation with and within the MyBB Community, handles external inquiries, forms official statements and manages social media accounts."
+  color: "#3aad3a"
+  icon: "circle-nodes"
+  description: "Supervising the MyBB Project and providing strategic direction."
+  tasks:
+    - division: Project
+      tasks:
+        - Project cohesion
+        - products oversight
+        - personnel management
+    - division: legal & funding
+      tasks:
+        - legal issues
+        - services, tools and subscriptions
 
 - name: "Web"
   code: "WEB"
   color: "#2ba4eb"
-  description: "The Web group consists of members tasked with maintaining the Project's websites and forums."
+  icon: "server"
+  description: "Providing a foundation for the Project with websites and infrastructure."
+  tasks:
+    - division: operations
+      tasks:
+        - infrastructure maintenance
+        - infrastructure monitoring
+        - infrastructure security management
+    - division: Project
+      tasks:
+        - websites development & maintenance
 
 - name: "Editorial"
   code: "EDI"
   color: "#62c9a1"
-  description: "The Editorial group members regularly contribute to the MyBB Blog and social media platforms."
+  icon: "book"
+  description: "Creating and curating digital content across the Project."
+  tasks:
+    - division: resources
+      tasks:
+        - "[Docs](https://docs.mybb.com/) maintenance & oversight"
+        - "[Blog](https://blog.mybb.com/) content & oversight"
+        - tutorials, support materials oversight
+    - division: project
+      tasks:
+        - "[MyBB.com](https://mybb.com/) maintenance"
+        - Project branding guides and oversight
+
+- name: "Development"
+  code: "DEV"
+  color: "#d23b81"
+  icon: "gear"
+  description: "Planning and building high-quality features with focus on the codebase."
+  tasks:
+    - division: architecture
+      tasks:
+        - feature planning
+        - development planning
+        - software architecture
+        - development standards & best practices
+    - division: development
+      tasks:
+        - product development
+        - codebase maintenance
+    - division: resources
+      tasks:
+        - technical documentation
+    - division: communication
+      tasks:
+        - feature feedback & discussion
+        - contributor <abbr title="necessary knowledge, simple task delegation & mentoring, good first issues">guidance</abbr>
+        - _Contributors_ group oversight
+
+- name: "Design"
+  code: "DES"
+  color: "#8db318"
+  icon: "pen-ruler"
+  description: "Enhancing visual and user experience aspects of MyBB."
+  tasks:
+    - division: architecture
+      tasks:
+        - UX aspects oversight
+        - UI, visuals oversight
+        - accessibility oversight
+        - usability oversight
+    - division: development
+      tasks:
+        - product visual design & styling
+    - division: resources
+      tasks:
+        - product style guides
+    - division: Project
+      tasks:
+        - websites design
+        - Project branding
+
+- name: "Security"
+  code: "SEC"
+  color: "#927878"
+  icon: "shield-alt"
+  description: "Managing and promoting product safety & security."
+  tasks:
+    - division: operations
+      tasks:
+        - "[vulnerability management](https://docs.mybb.com/1.8/development/security-workflow/)"
+        - "[secure package delivery](https://mybb.com/download/verifying/) oversight"
+    - division: architecture
+      tasks:
+        - secure development practices
+        - product safety oversight
+    - division: development
+      tasks:
+        - security patch oversight
+    - division: resources
+      tasks:
+        - security advisories
+        - security-related resources
+    - division: research
+      tasks:
+        - threat intelligence
+        - security auditing & analysis
+    - division: communication
+      tasks:
+        - security-related ecosystem cooperation
+        - safety communication & promotion
+
+- name: "Devops"
+  code: "OPS"
+  color: "#8967de"
+  icon: "tools"
+  description: "Sustaining development operations to deliver software efficiently."
+  tasks:
+    - division: operations
+      tasks:
+        - <abbr title="i.a. Issues, Pull Requests, branches">repository</abbr> maintenance
+        - <abbr title="internal tracking, MyBB.com data files">product metadata</abbr> maintenance
+        - "[release process](https://docs.mybb.com/1.8/development/release-workflow/) oversight"
+        - package building
+        - package distribution & availability
+        - official container images
+    - division: resources
+      tasks:
+        - development workflow & tools
+    - division: communication
+      tasks:
+        - containers usage
+
+- name: "SQA"
+  code: "SQA"
+  color: "#DA64E2"
+  icon: "flask"
+  description: "Bringing software quality assurance through testing and analysis."
+  tasks:
+    - division: operations
+      tasks:
+        - bug triage and documentation
+        - resolution feedback loop
+        - product testing oversight
+    - division: development
+      tasks:
+        - code review & testing
+    - division: resources
+      tasks:
+        - testing workflow & tools
+    - division: research
+      tasks:
+        - product analysis & benchmarking
+    - division: communication
+      tasks:
+        - public/group testing organization
+
+- name: "Support"
+  code: "SUP"
+  color: "#f35858"
+  icon: "life-ring"
+  description: "Providing and organizing assistance in software usage and customization."
+  tasks:
+    - division: operations
+      tasks:
+        - Community Forums support oversight
+        - problem troubleshooting & escalation
+        - bug report escalation & triage
+        - problem patterns & trends monitoring
+        - escalation of general product problems, friction and feedback
+    - division: resources
+      tasks:
+        - support materials maintenance
+
+- name: "Extensions"
+  code: "EXT"
+  color: "#BA47B2"
+  icon: "puzzle-piece"
+  description: "Fostering the ecosystem through developer relations and Extend curation."
+  tasks:
+    - division: operations
+      tasks:
+        - "[Extend](https://mybb.com/extend) platform oversight"
+        - "[Marketplace](https://community.mybb.com/forum-202.html) oversight"
+        - Extensions & <abbr title="i.a. bridges, integrations">related software</abbr> curation
+        - authoring support
+        - authoring feedback loop
+    - division: development
+      tasks:
+        - Extension-focused features
+    - division: resources
+      tasks:
+        - authoring resources
+    - division: communication
+      tasks:
+        - authoring features/APIs communication
+        - authoring promotion
+        - Extension quality promotion
+        - Extension interoperability promotion
+
+- name: "Community"
+  code: "COM"
+  color: "#2bb7c7"
+  icon: "users"
+  description: "Cultivating engagement, communication and interactions around the Project."
+  tasks:
+    - division: operations
+      tasks:
+        - <abbr title="Private Inquiries, e-mail, and other channels">inquiries</abbr> handling & oversight
+        - _Big Board Owners_ oversight
+        - cross-platform cohesion
+    - division: public relations
+      tasks:
+        - Community engagement
+        - official statements
+        - product promotion
+        - social media engagement
+        - ecosystem monitoring
+        - related products monitoring
+        - media monitoring & analysis
+    - division: moderation
+      tasks:
+        - moderation oversight
+        - "[Showcase](https://community.mybb.com/forum-137.html) moderation"
+        - "[Marketplace](https://community.mybb.com/forum-202.html), [R/S/J](https://community.mybb.com/forum-190.html) moderation"

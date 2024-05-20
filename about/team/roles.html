@@ -1,0 +1,45 @@
+---
+layout: default
+section: home
+title: Team Roles
+description: <a href="!SITE_BASEURL!/about/team/">MyBB Team</a> responsibilities are divided into the following areas.
+meta_description: The list of MyBB's Team roles.
+---
+
+<link rel="stylesheet" href="{{ site.baseurl }}/about/team/roles.css?v=1">
+
+<div class="page-content">
+    <div class="team-roles">
+        {% for role in site.data.roles %}
+            {% assign role_name_normalized = role.name | replace: ' ', '-' | downcase %}
+
+            <div class="team-roles__role team-role--{{ role_name_normalized }}" id="role-{{ role_name_normalized }}">
+                <a href="#role-{{ role_name_normalized }}" class="team-roles__role__header">
+                    <p class="team-roles__role__header__name">
+                        {% include icon.html icon=role.icon %} <span>{{ role.name }}</span>
+                    </p>
+                    <span
+                        class="team-roles__role__header__code"
+                        data-copy-value="[color={{ role.color }}]{{ role.code }}[/color]"
+                    >{{ role.code }}</span>
+                </a>
+                <div class="team-roles__role__body">
+                    <div class="team-roles__role__description">{{ role.description }}</div>
+
+                    <ul class="team-roles__role__tasks">
+                    {% for division in role.tasks %}
+                        <li class="team-roles__role__tasks__division">
+                            <p class="team-roles__role__tasks__division__title">{{ division.division }}</p>
+                            <ul>
+                                {% for task in division.tasks %}
+                                    <li>{{ task | markdownify }}</li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

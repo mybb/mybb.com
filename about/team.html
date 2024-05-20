@@ -2,13 +2,14 @@
 layout: default
 section: home
 title: About the Team
-description: The MyBB Team is composed of volunteers committed to developing, supporting, and managing the MyBB forum software project. All members have of the team have one or more roles assigned, which indicates their focuses within the project. All team changes follow the <a href="!SITE_BASEURL!/about/team/personnel-management/">personnel management guide</a>.
+description: The MyBB Team is composed of volunteers committed to developing, supporting, and managing the MyBB forum software project. Members may have one or more <a href="!SITE_BASEURL!/about/team/roles/">roles</a> assigned, which indicate their focus within the Project. All team changes follow the <a href="!SITE_BASEURL!/about/team/personnel-management/">personnel management guide</a>.
 meta_description: Take a closer look at the people who make MyBB possible.
 ---
 
+<link rel="stylesheet" href="{{ site.baseurl }}/about/team/roles.css">
+
 <aside class="page-sidebar">
 	{% include section_nav.html section='about' %}
-
 
 	<section class="block block--basic">
 		<p class="team-role team-role--default team-role--lead">Role Leader</p>
@@ -16,11 +17,12 @@ meta_description: Take a closer look at the people who make MyBB possible.
 	</section>
 
 	<section class="block block--basic">
-		<h1 class="block__heading">Roles</h1>
+		<h1 class="block__heading"><a href="{{ site.baseurl }}/about/team/roles/">Team Roles</a> summary</h1>
 		{% for role in site.data.roles %}
 			{% assign role_name_normalized = role.name | replace: ' ', '-' | downcase %}
+
 			<div class="team-role-legend__role" id="role-{{ role_name_normalized }}">
-				<a href="#role-{{ role_name_normalized }}">
+				<a href="{{ site.baseurl }}/about/team/roles/#role-{{ role_name_normalized }}">
 					<p class="team-role team-role--{{ role_name_normalized }}" data-role-color="{{ role.color }}">{{ role.name }}</p>
 				</a>
 				<p class="team-role-legend__role__description"><span class="team-role-legend__role__code">{{ role.code }}</span> {{ role.description }}</p>

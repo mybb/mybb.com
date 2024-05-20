@@ -16,7 +16,7 @@
 				{% endif %}
 			{% endfor %}
 			{% assign role_name_normalized = role.name | replace: ' ', '-' | downcase %}
-			<a href="#role-{{ role_name_normalized }}" class="team-cards__card__anchor">
+			<a href="{{ site.baseurl }}/about/team/roles/#role-{{ role_name_normalized }}" class="team-cards__card__anchor">
 				<p class="team-role{% if member_role_membership_type[0] == 'lead' %} team-role--lead{% endif %} team-role--{{ role_name_normalized }}" data-role-color="{{ role.color }}">{{ role.name }}</p>
 			</a>
 		{% endfor %}
