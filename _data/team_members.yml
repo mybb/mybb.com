@@ -19,8 +19,6 @@
   pgp_fingerprint: "3705 B534 4400 C2AC 5C1E FFB8 8DCD 87C3 275A 7B24"
   pgp_link: "https://keybase.io/euantorano/key.asc"
   role_memberships:
-    lead:
-    - Development
     standard:
     - Security
     - Web
@@ -97,18 +95,6 @@
   role_memberships:
     standard:
     - Support
-
-- username: "Tom K."
-  uid: 22017
-  name: "Tom Kent"
-  github: "tommykent1210"
-  website: "https://tomkent.me"
-  keybase: "tomkent"
-  pgp_fingerprint: "A1D0 FD17 3275 FE38 6210 72FD BE0D 5DC8 5562 2BEF"
-  pgp_link: "https://keybase.io/tomkent/key.asc"
-  role_memberships:
-    lead:
-    - Community
 
 - username: "Ben"
   uid: 90348
