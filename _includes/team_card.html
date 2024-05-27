@@ -1,5 +1,14 @@
 {% assign member = include.member %}
-<div class="team-cards__card card" id="member-{{ member.username | replace: ' ', '-' }}">
+{%- assign member_roles_classes = '' -%}
+{%- for member_role_membership_type in member.role_memberships -%}
+	{%- for member_role_name in member_role_membership_type[1] -%}
+		{%- assign role_name_normalized = member_role_name | replace: ' ', '-' | downcase -%}
+		{%- unless role_name_normalized == '' -%}
+			{%- assign member_roles_classes = member_roles_classes | append: ' team-member--' | append: role_name_normalized -%}
+		{%- endunless -%}
+	{%- endfor -%}
+{%- endfor -%}
+<div class="team-cards__card card{{ member_roles_classes }}" id="member-{{ member.username | replace: ' ', '-' }}">
 	<a href="#member-{{ member.username | replace: ' ', '-' }}" class="team-cards__card__anchor">
 		<h3 class="card__username {% if member.name %}card__username--has-name{% endif %}">{{ member.username }}</h3>
 	</a>
