@@ -2,7 +2,6 @@
   uid: 1
   website: "http://chrisboulton.com"
   github: "chrisboulton"
-  twitter: "surfichris"
   keybase: "chrisboulton"
   pgp_fingerprint: "EBBA FB32 E168 60D6 88B2 9E7E 331D EF09 F700 31FA"
   pgp_link: "https://keybase.io/chrisboulton/key.asc"
@@ -12,8 +11,6 @@
 
 - username: "Euan T"
   uid: 21114
-  website: "http://mybbstuff.com"
-  twitter: "euantor"
   github: "euantorano"
   keybase: "euantorano"
   pgp_fingerprint: "3705 B534 4400 C2AC 5C1E FFB8 8DCD 87C3 275A 7B24"
@@ -27,8 +24,7 @@
   uid: 1830
   name: "Justin Soltesz"
   github: "justinsoltesz"
-  twitter: "justinsoltesz"
-  website: "http://jsoltesz.com"
+  website: "https://jsoltesz.com"
   role_memberships:
     lead:
     - Design
@@ -74,7 +70,6 @@
   name: "Kane Valentine"
   locale: "EU"
   github: "kawaii"
-  twitter: "kane_sql"
   keybase: "kawaii"
   pgp_fingerprint: "5613 A3E7 3410 AC9A A49D A5F2 E2C7 A79A FD80 B1E8"
   pgp_link: "https://keybase.io/kawaii/pgp_keys.asc"
