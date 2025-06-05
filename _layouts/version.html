@@ -239,7 +239,7 @@ section: download
                             {{ issue.description }}
                             {% if issue.references %}
                                 {% for ref in issue.references %}
-                                    <small><a href="{{ ref.url | escape_once }}"{% if ref.title %} title="{{ ref.title | escape_once }}"{% endif %}>[{{ forloop.index }}]</a></small>
+                                    <a class="security-issues__issue__reference" data-type="{{ ref.type }}" href="{{ ref.url | escape_once }}"{% if ref.title %} title="{{ ref.title | escape_once }}"{% endif %}>{{ ref.type }}</a>
                                 {% endfor %}
                             {% endif %}
                         </h2>

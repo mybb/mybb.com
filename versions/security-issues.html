@@ -25,7 +25,7 @@ description: Here you will find documented security issues addressed in past MyB
                     <tr>
                         {% if count == 1 %}
                             <td rowspan="{{ version.resolved_security_issues | size }}">
-                                <p><a href="/versions/{{ version.version_number }}/"><strong>{{ version.version_number }}</strong></a>
+                                <h3><a href="/versions/{{ version.version_number }}/">{{ version.version_number }}</a></h3>
                                 <p><small>{{ version.release_date | date: '%e %B %Y' }}</small>
                             </td>
                         {% endif %}
@@ -36,7 +36,7 @@ description: Here you will find documented security issues addressed in past MyB
                             {{ issue.description }}
                             {% if issue.references %}
                                 {% for ref in issue.references %}
-                                    <small><a href="{{ ref.url | escape_once }}"{% if ref.title %} title="{{ ref.title | escape_once }}"{% endif %}>[{{ forloop.index }}]</a></small>
+                                    <a class="security-issues__issue__reference" data-type="{{ ref.type }}" href="{{ ref.url | escape_once }}"{% if ref.title %} title="{{ ref.title | escape_once }}"{% endif %}>{{ ref.type }}</a>
                                 {% endfor %}
                             {% endif %}
                             <p class="security-issues__issue__details">
