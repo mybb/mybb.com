@@ -18,7 +18,7 @@
 
 - name: "Web"
   code: "WEB"
-  color: "#2ba4eb"
+  color: "#449CCF"
   icon: "server"
   description: "Providing a foundation for the Project with websites and infrastructure."
   tasks:
@@ -33,7 +33,7 @@
 
 - name: "Editorial"
   code: "EDI"
-  color: "#62c9a1"
+  color: "#35A779"
   icon: "book"
   description: "Creating and curating digital content across the Project."
   tasks:
@@ -97,7 +97,7 @@
 
 - name: "Security"
   code: "SEC"
-  color: "#927878"
+  color: "#6d6bb5"
   icon: "shield-alt"
   description: "Managing and promoting product safety & security."
   tasks:
@@ -215,7 +215,7 @@
 
 - name: "Community"
   code: "COM"
-  color: "#2bb7c7"
+  color: "#27A2B0"
   icon: "users"
   description: "Cultivating engagement, communication and interactions around the Project."
   tasks:
