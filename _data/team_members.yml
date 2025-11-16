@@ -42,15 +42,6 @@
     standard:
     - Development
 
-- username: "Tomm M"
-  uid: 14621
-  name: "Tom Moore"
-  github: "tommm"
-  twitter: "mooseypx"
-  role_memberships:
-    standard:
-    - Development
-
 - username: "Devilshakerz"
   uid: 47371
   github: "dvz"
@@ -84,13 +75,6 @@
     - Support
     - Development
 
-- username: "katos"
-  uid: 104958
-  name: "Phil Marsh"
-  role_memberships:
-    standard:
-    - Support
-
 - username: "Ben"
   uid: 90348
   github: "Ben-MyBB"
@@ -98,17 +82,6 @@
     standard:
     - Community
     - Support
-
-- username: "andrewjs18"
-  uid: 10832
-  name: "Andrew Shemo"
-  github: "andrewjs18"
-  keybase: "andrewshemo"
-  pgp_fingerprint: "6D65 7CF3 05F0 C841 EBF5 F33A 846F BC15 05AA ED3F"
-  pgp_link: "https://keybase.io/andrewshemo/pgp_keys.asc"
-  role_memberships:
-    standard:
-    - Community
 
 - username: "Omar G."
   uid: 25096
@@ -141,3 +114,15 @@
     standard:
     - Community
     - Support
+
+- username: "arcalys"
+  uid: 143505
+  name: "Axel Fontana"
+  github: "arcalys"
+  keybase: "arcalys"
+  pgp_fingerprint: "92B7 6426 2122 11CD 8324 AB50 4ED6 1BE7 45B8 C4DC"
+  pgp_link: "https://keybase.io/arcalys/key.asc"
+  role_memberships:
+    standard:
+    - Development
+    - SQA
