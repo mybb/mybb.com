@@ -14,14 +14,23 @@ categories: [versions]
     <section class="block">
         <header class="block__heading">
             <h2 class="block__heading__title">Issues Addressed</h2>
+            <p class="block__heading__subtitle">Types of issues closed and severity of security issues addressed in each release</p>
         </header>
         <canvas id="chart_18_issues"></canvas>
     </section>
     <section class="block">
         <header class="block__heading">
             <h2 class="block__heading__title">Time Since Preceding Release</h2>
+            <p class="block__heading__subtitle">Number of days since preceding release</p>
         </header>
         <canvas id="chart_18_cycle"></canvas>
+    </section>
+    <section class="block">
+        <header class="block__heading">
+            <h2 class="block__heading__title">Issue Ages</h2>
+            <p class="block__heading__subtitle">Number of days issues were open for which were addressed in each release</p>
+        </header>
+        <canvas id="chart_18_issue_ages"></canvas>
     </section>
 </div>
 
@@ -32,7 +41,7 @@ categories: [versions]
     {% for issue in version.resolved_security_issues %}
         {% assign severities = severities | push: issue.severity %}
     {% endfor %}
-    {% capture versionData %}{{ version.version_number }}|{{ version.release_date }}|{{ version.resolved_issues_number }}|{{ severities | join: "," }}{% endcapture %}
+    {% capture versionData %}{{ version.version_number }}|{{ version.release_date }}|{{ version.resolved_issues_number }}|{{ severities | join: "," }}|{{ version.resolved_issues_age_median }}|{{ version.resolved_issues_age_mean }}{% endcapture %}
     {% assign versionData = versionData | split: '|' %}
     {% assign versionsData = versionsData | push: versionData %}
 {% endfor %}
@@ -118,6 +127,46 @@ let chart_18_cycle = new Chart(document.querySelector('#chart_18_cycle').getCont
         legend: {
             display: false,
         },
+        scales: {
+            xAxes: [{
+                gridLines: {
+                    drawOnChartArea: false,
+                },
+            }],
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true,
+                },
+                gridLines: {
+                    drawOnChartArea: false,
+                }
+            }]
+        }
+    }
+});
+let chart_18_issue_ages = new Chart(document.querySelector('#chart_18_issue_ages').getContext('2d'), {
+    type: 'line',
+    data: {
+        labels: input.map(e => e[0]),
+        datasets: [
+            {
+                label: 'Median Issue Age',
+                data: input.map(value => value[4]),
+                fill: false,
+                borderColor: '#007fd0',
+                pointBorderWidth: 4,
+            },
+            {
+                label: 'Mean Issue Age',
+                data: input.map(value => value[5]),
+                fill: false,
+                borderColor: '#ff7500',
+                pointBorderWidth: 4,
+            },
+        ]
+    },
+    options: {
+        spanGaps: true,
         scales: {
             xAxes: [{
                 gridLines: {
