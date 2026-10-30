@@ -220,18 +220,17 @@
   - version: PR2 Sec.Update
     date: 1 November 2005
     type: Security Release
-    release_notes: https://community.mybb.com/thread-4507.html
+    release_notes: PR2-20051101
   - version: PR2 Rev.686
     date: 3 September 2005
     type: Maintenance Release
-    release_notes: https://community.mybb.com/thread-3633.html
+    release_notes: PR2-686
   - version: PR2
     date: 30 August 2005
     type: Major Release (included significant updates since RC4)
   - version: PR1
     date: March 2005
     type: Private Beta Release
-    release_notes: none
 - series: Early development releases
   versions:
   - version: RC4
@@ -240,15 +239,12 @@
   - version: RC3
     date: 10 July 2004
     type: Release Candidate 3
-    release_notes: none
   - version: RC2
     date: 22 February 2004
     type: Release Candidate 2
-    release_notes: none
   - version: RC1
     date: 10 December 2003
     type: Release Candidate 1
-    release_notes: none
   - version: Beta 4
     date: August 2003
     type: Beta Release

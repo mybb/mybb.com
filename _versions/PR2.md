@@ -24,4 +24,4 @@ packages:
           - name: resources.mybb.com/downloads/
 ---
 
-<https://community.mybb.com/thread-4507.html>
+<https://community.mybb.com/thread-3528.html>
