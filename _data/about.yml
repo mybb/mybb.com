@@ -16,6 +16,9 @@
 - url: about/ecosystem
   title: MyBB Ecosystem
   icon: globe
+- url: about/branding
+  title: Branding
+  icon: trademark
 - url: contact
   title: Contact Us
   icon: envelope
