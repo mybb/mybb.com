@@ -19,9 +19,9 @@
 - url: about/branding
   title: Branding
   icon: trademark
-- url: contact
-  title: Contact Us
-  icon: envelope
 - url: about/donations
   title: Donate
   icon: dollar-sign
+- url: contact
+  title: Contact Us
+  icon: envelope
